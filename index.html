@@ -162,7 +162,7 @@ canvas{width:100%!important}
     <div class="nav-section">Mensal</div>
     <a onclick="navTo('mensal',this)"><span class="nav-icon">&#128197;</span> Resultados Mensais</a>
   </nav>
-  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 14/04/2026 10:32</div>
+  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 14/04/2026 10:34</div>
 </aside>
 
 <!-- MAIN -->
@@ -174,7 +174,7 @@ canvas{width:100%!important}
   </div>
   <div class="topbar-right">
     <div class="badge green">&#9679; Dados Atualizados</div>
-    <div class="badge">&#128197; 14/04/2026 10:32</div>
+    <div class="badge">&#128197; 14/04/2026 10:34</div>
   </div>
 </div>
 
@@ -278,8 +278,8 @@ canvas{width:100%!important}
     <div class="card"><div class="card-title">Lucro Bruto Mensal por Operacao <span class="tag">% Participacao</span></div><canvas id="cOpsEvolLucPct" height="220"></canvas></div>
   </div>
   <div class="g2">
-    <div class="card"><div class="card-title">Faturamento Mensal por Operacao <span class="tag">Valores</span></div><canvas id="cOpsEvolFat" height="220"></canvas></div>
-    <div class="card"><div class="card-title">Lucro Bruto Mensal por Operacao <span class="tag">Valores</span></div><canvas id="cOpsEvolLuc" height="220"></canvas></div>
+    <div class="card"><div class="card-title">Faturamento Mensal por Operacao <span class="tag">Empilhado</span></div><canvas id="cOpsEvolFat" height="220"></canvas></div>
+    <div class="card"><div class="card-title">Lucro Bruto Mensal por Operacao <span class="tag">Empilhado</span></div><canvas id="cOpsEvolLuc" height="220"></canvas></div>
   </div>
   <div class="full card">
     <div class="card-title">Detalhamento por Operacao</div>
@@ -3367,12 +3367,48 @@ function buildCharts(page){
         }
       });
     };lucPct();
-    // Evolucao valores - Faturamento (linhas)
-    const evolFat=opsLbl.map((l,i)=>({label:l,data:opsMeses[l]||[],borderColor:opsColors[i],backgroundColor:opsColors[i]+'22',fill:false}));
-    mkLine('cOpsEvolFat',meses6,evolFat,true);
-    // Evolucao valores - Lucro (linhas)
-    const evolLuc=opsLbl.map((l,i)=>({label:l,data:lopMeses[l]||[],borderColor:opsColors[i],backgroundColor:opsColors[i]+'22',fill:false}));
-    mkLine('cOpsEvolLuc',meses6,evolLuc,true);
+    // Evolucao empilhada - Faturamento
+    (function(){
+      const ds=opsLbl.map((l,i)=>{return {label:l,data:opsMeses[l]||[],backgroundColor:opsColors[i],borderRadius:4}});
+      const el=document.getElementById('cOpsEvolFat');
+      if(!el||el._chart)return;
+      el._chart=new Chart(el,{type:'bar',data:{labels:meses6,datasets:ds},
+        options:{responsive:true,
+          scales:{x:{stacked:true,grid:{display:false}},y:{stacked:true,ticks:{callback:v=>fmt(v)}}},
+          interaction:{mode:'index',intersect:false},
+          plugins:{legend:{position:'top'},tooltip:{mode:'index',intersect:false,
+            callbacks:{label:function(c){
+              const v=c.dataset.data[c.dataIndex];
+              if(!v)return '';
+              const tot=c.chart.data.datasets.reduce((s,d)=>s+(d.data[c.dataIndex]||0),0);
+              const pct=tot?(v/tot*100).toFixed(1):'0';
+              return ' '+c.dataset.label+': '+fmt(v)+' ('+pct+'%)';
+            }}
+          }}
+        }
+      });
+    })();
+    // Evolucao empilhada - Lucro
+    (function(){
+      const ds=opsLbl.map((l,i)=>{return {label:l,data:lopMeses[l]||[],backgroundColor:opsColors[i],borderRadius:4}});
+      const el=document.getElementById('cOpsEvolLuc');
+      if(!el||el._chart)return;
+      el._chart=new Chart(el,{type:'bar',data:{labels:meses6,datasets:ds},
+        options:{responsive:true,
+          scales:{x:{stacked:true,grid:{display:false}},y:{stacked:true,ticks:{callback:v=>fmt(v)}}},
+          interaction:{mode:'index',intersect:false},
+          plugins:{legend:{position:'top'},tooltip:{mode:'index',intersect:false,
+            callbacks:{label:function(c){
+              const v=c.dataset.data[c.dataIndex];
+              if(!v)return '';
+              const tot=c.chart.data.datasets.reduce((s,d)=>s+(d.data[c.dataIndex]||0),0);
+              const pct=tot?(v/tot*100).toFixed(1):'0';
+              return ' '+c.dataset.label+': '+fmt(v)+' ('+pct+'%)';
+            }}
+          }}
+        }
+      });
+    })();
   }
   if(page==='lojas'){
     mkBar('cLojasBar',lojasNomes,[{label:'Acumulado',data:lojasAcum,backgroundColor:green+'88'}],true,true);
