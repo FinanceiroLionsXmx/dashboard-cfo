@@ -162,7 +162,7 @@ canvas{width:100%!important}
     <div class="nav-section">Mensal</div>
     <a onclick="navTo('mensal',this)"><span class="nav-icon">&#128197;</span> Resultados Mensais</a>
   </nav>
-  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 13/04/2026 21:05</div>
+  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 13/04/2026 21:14</div>
 </aside>
 
 <!-- MAIN -->
@@ -174,7 +174,7 @@ canvas{width:100%!important}
   </div>
   <div class="topbar-right">
     <div class="badge green">&#9679; Dados Atualizados</div>
-    <div class="badge">&#128197; 13/04/2026 21:05</div>
+    <div class="badge">&#128197; 13/04/2026 21:14</div>
   </div>
 </div>
 
@@ -206,9 +206,9 @@ canvas{width:100%!important}
     <div class="card">
       <div class="card-title">Resumo Financeiro</div>
       <div class="fin-item"><div style="display:flex;align-items:center"><div class="fin-dot" style="background:var(--green)"></div><div><div class="fin-label">Faturamento Total</div><div class="fin-value" id="fv-fat">R$ 106,66M</div></div></div></div>
-      <div class="fin-item"><div style="display:flex;align-items:center"><div class="fin-dot" style="background:var(--blue)"></div><div><div class="fin-label">Lucro Bruto</div><div class="fin-value" id="fv-lb">R$ 15,77M</div></div></div><span class="pill green" id="fv-mgb">15,16%</span></div>
-      <div class="fin-item"><div style="display:flex;align-items:center"><div class="fin-dot" style="background:var(--red)"></div><div><div class="fin-label">(-) Custo Fixo</div><div class="fin-value" id="fv-cf">R$ 3,15M</div></div></div></div>
-      <div class="fin-item"><div style="display:flex;align-items:center"><div class="fin-dot" style="background:var(--yellow)"></div><div><div class="fin-label">Lucro Operacional</div><div class="fin-value" id="fv-lo">R$ 12,61M</div></div></div></div>
+      <div class="fin-item"><div style="display:flex;align-items:center"><div class="fin-dot" style="background:var(--blue)"></div><div><div class="fin-label">Lucro Bruto</div><div class="fin-value" id="fv-lb">R$ 16,69M</div></div></div><span class="pill green" id="fv-mgb">15,16%</span></div>
+      <div class="fin-item"><div style="display:flex;align-items:center"><div class="fin-dot" style="background:var(--red)"></div><div><div class="fin-label">(-) Custo Fixo</div><div class="fin-value" id="fv-cf">R$ 3,99M</div></div></div></div>
+      <div class="fin-item"><div style="display:flex;align-items:center"><div class="fin-dot" style="background:var(--yellow)"></div><div><div class="fin-label">Lucro Operacional</div><div class="fin-value" id="fv-lo">R$ 12,70M</div></div></div></div>
       <div class="fin-item"><div style="display:flex;align-items:center"><div class="fin-dot" style="background:var(--cyan)"></div><div><div class="fin-label">Lucro Liquido</div><div class="fin-value" id="fv-ll" style="color:var(--green)">R$ 12,39M</div></div></div><span class="pill green" id="fv-mgl">11,89%</span></div>
     </div>
   </div>
@@ -250,8 +250,8 @@ canvas{width:100%!important}
 <div class="content">
   <div class="g3">
     <div class="kpi accent"><div class="k-label">Faturamento Total</div><div class="k-value">R$ 106,66M</div></div>
-    <div class="kpi"><div class="k-label">Fat. Interno</div><div class="k-value">R$ 4,87M</div></div>
-    <div class="kpi"><div class="k-label">Fat. Afiliados</div><div class="k-value">R$ 101,79M</div></div>
+    <div class="kpi"><div class="k-label">Fat. Interno</div><div class="k-value">R$ 5,83M</div></div>
+    <div class="kpi"><div class="k-label">Fat. Afiliados</div><div class="k-value">R$ 115,05M</div></div>
   </div>
   <div class="full card"><div class="card-title">Faturamento Total por Mes <span class="tag">2026</span></div><canvas id="cFatTotal" height="130"></canvas></div>
   <div class="g2">
@@ -3149,9 +3149,9 @@ const chartOpts=(ylabel,isMoney)=>{return {
 }};
 
 // ── Dados ──
-const fat=[37169312.22347, 27320300.182724997, 42172109.700439, 0.0, 0.0, 0.0],lb=[7757051.319963862, 4364288.445614108, 3647988.978613485, 0.0, 0.0, 0.0],ll=[6309586.733391288, 3322024.018809686, 2762098.6897381544, 0.0, 0.0, 0.0],cf=[1338727.9012999998, 981086.7653999999, 834753.5601, 0.0, 0.0, 0.0],lo=[6418323.418663862, 3383201.680214108, 2813235.418513485, 0.0, 0.0, 0.0];
-const intMes=[1856919.5034633703, 1388895.561966395, 1622655.997649347, 0.0, 0.0, 0.0],afilMes=[35312392.72000663, 25931404.620758604, 40549453.70278965, 0.0, 0.0, 0.0],trafMes=[1021406.9910000004, 687704.9860000001, 792297.130947, 0.0, 0.0, 0.0];
-const mgBruta=[20.869504588427088, 15.974525962103842, 8.650240655557031, 0.0, 0.0, 0.0],mgOp=[17.267802481992412, 12.383471841767511, 6.670843451979828, 0.0, 0.0, 0.0],mgLiq=[16.975258233073234, 12.159544355629912, 6.549586229757439, 0.0, 0.0, 0.0],roas=[1.1137573389685163, 1.3849938777381496, 1.51121438019962, 1.3686149648656714, 0.0, 0.0];
+const fat=[37169312.22347, 27320300.182724997, 42172109.700439, 14218115.401863, 0.0, 0.0],lb=[7757051.319963862, 4364288.445614108, 3647988.978613485, 924113.4485982028, 0.0, 0.0],ll=[6309586.733391288, 3322024.018809686, 2762098.6897381544, 76405.86395052921, 0.0, 0.0],cf=[1338727.9012999998, 981086.7653999999, 834753.5601, 834753.5601, 0.0, 0.0],lo=[6418323.418663862, 3383201.680214108, 2813235.418513485, 89359.88849820278, 0.0, 0.0];
+const intMes=[1856919.5034633703, 1388895.561966395, 1622655.997649347, 959222.722539156, 0.0, 0.0],afilMes=[35312392.72000663, 25931404.620758604, 40549453.70278965, 13258892.679323843, 0.0, 0.0],trafMes=[1021406.9910000004, 687704.9860000001, 792297.130947, 560361.031279, 0.0, 0.0];
+const mgBruta=[20.869504588427088, 15.974525962103842, 8.650240655557031, 6.499549500611848, 0.0, 0.0],mgOp=[17.267802481992412, 12.383471841767511, 6.670843451979828, 0.6284932002063646, 0, 0],mgLiq=[17.267802481992412, 12.383471841767511, 6.670843451979828, 0.6284932002063646, 0.0, 0.0],roas=[1.1137573389685163, 1.3849938777381496, 1.51121438019962, 1.3686149648656714, 0.0, 0.0];
 const opsLbl=["Front End", "Logicall/HelpGrid", "No Tracking/Retry", "Wellness Box", "SalesBound", "SMS Nutra Select"],opsVal=[100855377.13577302, 8113322.583689001, 6967708.489679992, 3153600.8599999994, 1451095.9693550002, 338732.47000000003],opsLB=[4151654.5295893387, 4589451.904116846, 5046324.856437094, 1791245.2884799996, 1023713.5002549901, 91052.1139113915],opsMg=[4.116443413820484, 56.56686094724578, 72.42445437996298, 56.8, 70.54760828189896, 26.880243842992524];
 const opsColors=[green,blue,yellow,purple,red,cyan];
 const opsMeses={"Front End": [28568915.005140003, 21907719.0258, 37654379.12737801, 12724363.977455, 0.0, 0.0], "Logicall/HelpGrid": [3042666.196700001, 2347326.3847999997, 2052928.205855, 670401.7963340001, 0.0, 0.0], "No Tracking/Retry": [2820079.7454, 1736797.419, 1730638.177205992, 680193.148074, 0.0, 0.0], "Wellness Box": [1451229.65, 851252.4199999999, 708788.8299999998, 142329.96000000002, 0.0, 0.0], "SalesBound": [1157365.65623, 293730.313125, 0.0, 0.0, 0.0, 0.0], "SMS Nutra Select": [129055.97, 183474.62000000002, 25375.36, 826.52, 0.0, 0.0]};
@@ -3308,7 +3308,7 @@ function buildCharts(page){
     mkLine('cRoas',meses6,[{label:'ROAS',data:roas,borderColor:purple,backgroundColor:purple+'22',fill:true}],false);
     const el=document.getElementById('cRoas');
     if(el&&el._chart){el._chart.options.scales.y.ticks.callback=v=>v+'x';el._chart.options.plugins.tooltip.callbacks.label=c=>fmtX(c.parsed.y);el._chart.update();}
-    mkLine('cTrib',meses6,[{label:'Carga Trib.',data:[10.849999957288212, 10.530297050934362, 9.996663632990089, 0.0, 0.0, 0.0],borderColor:red,backgroundColor:red+'22',fill:true}],false);
+    mkLine('cTrib',meses6,[{label:'Carga Trib.',data:[0.2925442489191764, 0.22392748613759833, 0.1212572222223883, 0.09110929389401515, 0, 0],borderColor:red,backgroundColor:red+'22',fill:true}],false);
   }
   if(page==='comparativo'){
     mkBar('cCmpFat',meses12,[{label:'2025',data:rg25fat,backgroundColor:blue+'77'},{label:'2026',data:rg26fat,backgroundColor:green+'88'}]);
@@ -3320,7 +3320,7 @@ function buildCharts(page){
     mkLine('cKpiEfic',meses6,[
       {label:'Margem Bruta %',data:mgBruta,borderColor:green,backgroundColor:green+'22',fill:true},
       {label:'Margem Liquida %',data:mgLiq,borderColor:yellow},
-      {label:'CF/Fat %',data:[3.601702106434674, 3.5910541203363304, 1.9793972035772032, 0.0, 0.0, 0.0],borderColor:red},
+      {label:'CF/Fat %',data:[3.601702106434674, 3.5910541203363304, 1.9793972035772032, 5.871056300405483, 0, 0],borderColor:red},
     ],false);
   }
 }
