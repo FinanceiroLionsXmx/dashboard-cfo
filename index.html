@@ -162,7 +162,7 @@ canvas{width:100%!important}
     <div class="nav-section">Mensal</div>
     <a onclick="navTo('mensal',this)"><span class="nav-icon">&#128197;</span> Resultados Mensais</a>
   </nav>
-  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 14/04/2026 10:34</div>
+  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 14/04/2026 10:36</div>
 </aside>
 
 <!-- MAIN -->
@@ -174,7 +174,7 @@ canvas{width:100%!important}
   </div>
   <div class="topbar-right">
     <div class="badge green">&#9679; Dados Atualizados</div>
-    <div class="badge">&#128197; 14/04/2026 10:34</div>
+    <div class="badge">&#128197; 14/04/2026 10:36</div>
   </div>
 </div>
 
@@ -248,17 +248,22 @@ canvas{width:100%!important}
 <!-- ══ FATURAMENTO (sem trafego) ══ -->
 <div id="page-faturamento" class="page">
 <div class="content">
-  <div class="g3">
-    <div class="kpi accent"><div class="k-label">Faturamento Total</div><div class="k-value">R$ 120,88M</div></div>
-    <div class="kpi"><div class="k-label">Fat. Interno</div><div class="k-value">R$ 5,83M</div></div>
-    <div class="kpi"><div class="k-label">Fat. Afiliados</div><div class="k-value">R$ 115,05M</div></div>
+  <div class="filter-bar" style="margin-bottom:16px">
+    <label>Ano:</label>
+    <button class="filter-btn active" onclick="switchFatAno('2026',this)">2026</button>
+    <button class="filter-btn" onclick="switchFatAno('2025',this)">2025</button>
   </div>
-  <div class="full card"><div class="card-title">Faturamento Total por Mes <span class="tag">2026</span></div><canvas id="cFatTotal" height="130"></canvas></div>
+  <div class="g3">
+    <div class="kpi accent"><div class="k-label">Faturamento Total</div><div class="k-value" id="fat-kpi-total">R$ 120,88M</div></div>
+    <div class="kpi"><div class="k-label">Fat. Interno</div><div class="k-value" id="fat-kpi-int">R$ 5,83M</div></div>
+    <div class="kpi"><div class="k-label">Fat. Afiliados</div><div class="k-value" id="fat-kpi-afil">R$ 115,05M</div></div>
+  </div>
+  <div class="full card"><div class="card-title">Faturamento Total por Mes <span class="tag" id="fat-tag-ano">2026</span></div><canvas id="cFatTotal" height="130"></canvas></div>
   <div class="g2">
     <div class="card"><div class="card-title">Interno vs Afiliados por Mes</div><canvas id="cFatIntAfil" height="200"></canvas></div>
     <div class="card"><div class="card-title">Split Interno/Afiliados <span class="tag">Acumulado</span></div><canvas id="cFatSplit" height="200"></canvas></div>
   </div>
-  <div class="full card"><div class="card-title">Evolucao Lucro Bruto por Mes <span class="tag">2026</span></div><canvas id="cFatLB" height="120"></canvas></div>
+  <div class="full card"><div class="card-title">Evolucao Lucro Bruto por Mes <span class="tag" id="fat-tag-ano2">2026</span></div><canvas id="cFatLB" height="120"></canvas></div>
 </div>
 </div>
 
@@ -3169,6 +3174,7 @@ const lopMeses={"No Tracking/Retry": [2130249.099741022, 1241372.3479558954, 121
 const lojasNomes=["PRESGERA", "GARAHERB", "STEEL POWER", "MEMORY-ON", "MAHGRYN", "MEMYTS", "ARIALIEF", "SHAPE-ON", "LAELLIUM", "ALPHACUR"],lojasAcum=[31707805.633709997, 23185047.377942998, 21058078.321319003, 6954863.706289999, 6313859.2088, 5870631.917325001, 5568903.950274, 4250889.234971, 3644899.9592979997, 3061117.510926];
 const rg26fat=[37169312.22347, 27320300.182724997, 42172109.700439, 14218115.401863, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],rg26lb=[7757051.319963862, 4364288.445614108, 3647988.978613485, 924113.4485982028, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],rg26ll=[6309586.733391288, 3322024.018809686, 2762098.6897381544, 76405.86395052921, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],rg26cf=[1338727.9012999998, 981086.7653999999, 834753.5601, 834753.5601, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0];
 const rg25fat=[5199438.037225001, 7455988.1905000005, 14312523.771540001, 14781231.73683, 16936026.4379, 16942415.660170004, 41458017.66036, 44026452.946430005, 21236274.656524997, 40481049.5794, 52220025.33398499, 40462873.294505015],rg25lb=[952953.752496493, 1165682.472705276, 2916734.7544946037, 2558550.178358113, 1897670.643005148, 2720188.2986821104, 6385322.922298064, 6886208.910913245, 3338561.851637707, 5058964.656298745, 7303830.864674824, 8008958.893004013],rg25ll=[381539.6455886871, 511871.5374415547, 2090537.0512798387, 1583527.4802965994, 1308085.1827516772, 2131965.577093256, 4996221.809888348, 5610688.379702779, 2297459.452234614, 3444697.414256156, 5806553.158140745, 6402617.259894085],rg25cf=[461031.41000000003, 518787.41, 488346.0, 678660.2899999999, 369774.16, 273137.42, 649475.3300000002, 477876.04000000004, 654389.55, 1028276.4099999999, 651259.16, 678646.58];
+const rg25fi=[3703710.0533637246, 4223160.1457539275, 10219721.318757635, 7625291.790709919, 8569035.827158522, 8387220.732166026, 25681712.316019777, 23141522.32026211, 3982531.8275770633, 5102548.071255433, 2841384.9347547144, 2726387.1010675505],rg25fa=[1495727.9838612755, 3232828.044746073, 4092802.452782366, 7155939.946120081, 8366990.610741479, 8555194.928003976, 15776305.344340226, 20884930.626167893, 17253742.828947935, 35378501.50814457, 49378640.39923028, 37736486.193437465],rg26fi=[1856919.5034633703, 1388895.561966395, 1622655.997649347, 959222.722539156, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],rg26fa=[35312392.72000663, 25931404.620758604, 40549453.70278965, 13258892.679323843, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0];
 
 // ── Filtro Mensal ──
 let activeFilters=new Set(['all']);
@@ -3475,6 +3481,36 @@ function filterAno(btn){
     const el=document.getElementById('mes-'+aba);
     if(el)el.style.display='block';
   }
+}
+
+// ── Switch Faturamento Ano ──
+function switchFatAno(ano,btn){
+  document.querySelectorAll('#page-faturamento .filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  const is26=ano==='2026';
+  const labs=is26?meses6:meses12;
+  const fatD=is26?fat:rg25fat;
+  const lbD=is26?lb:rg25lb;
+  const fiD=is26?intMes:rg25fi;
+  const faD=is26?afilMes:rg25fa;
+  // Update KPIs
+  const sumA=arr=>arr.reduce((a,b)=>a+b,0);
+  document.getElementById('fat-kpi-total').textContent=fmt(sumA(fatD));
+  document.getElementById('fat-kpi-int').textContent=fmt(sumA(fiD));
+  document.getElementById('fat-kpi-afil').textContent=fmt(sumA(faD));
+  document.querySelectorAll('#fat-tag-ano,#fat-tag-ano2').forEach(t=>t.textContent=ano);
+  // Destroy and rebuild charts
+  ['cFatTotal','cFatIntAfil','cFatSplit','cFatLB'].forEach(id=>{
+    const el=document.getElementById(id);
+    if(el&&el._chart){el._chart.destroy();el._chart=null;}
+  });
+  mkBar('cFatTotal',labs,[{label:'Faturamento',data:fatD,backgroundColor:green+'88'}]);
+  mkBar('cFatIntAfil',labs,[
+    {label:'Interno',data:fiD,backgroundColor:blue+'99'},
+    {label:'Afiliados',data:faD,backgroundColor:green+'88'},
+  ]);
+  mkDonut('cFatSplit',['Interno','Afiliados'],[sumA(fiD),sumA(faD)],[blue,green]);
+  mkBar('cFatLB',labs,[{label:'Lucro Bruto',data:lbD,backgroundColor:blue+'88'}]);
 }
 
 // ── Init ──
