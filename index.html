@@ -162,7 +162,7 @@ canvas{width:100%!important}
     <div class="nav-section">Mensal</div>
     <a onclick="navTo('mensal',this)"><span class="nav-icon">&#128197;</span> Resultados Mensais</a>
   </nav>
-  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 14/04/2026 09:06</div>
+  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 14/04/2026 10:32</div>
 </aside>
 
 <!-- MAIN -->
@@ -174,7 +174,7 @@ canvas{width:100%!important}
   </div>
   <div class="topbar-right">
     <div class="badge green">&#9679; Dados Atualizados</div>
-    <div class="badge">&#128197; 14/04/2026 09:06</div>
+    <div class="badge">&#128197; 14/04/2026 10:32</div>
   </div>
 </div>
 
@@ -3246,13 +3246,17 @@ function mkBar(id,labels,datasets,money,horizontal){
     data:{labels,datasets:datasets.map(d=>({...d,borderRadius:6}))},
     options:{responsive:true,
       indexAxis:horizontal?'y':'x',
+      interaction:{mode:'nearest',axis:horizontal?'y':'x',intersect:false},
       plugins:{legend:{position:'top'},
-        tooltip:{mode:'index',intersect:false,
-          callbacks:{label:function(c){
-            const v=c.dataset.data[c.dataIndex];
-            if(v==null)return '';
-            return ' '+c.dataset.label+': '+(money?fmt(v):v.toFixed(2).replace('.',',')+'%');
-          }}
+        tooltip:{mode:'nearest',intersect:false,
+          callbacks:{
+            title:function(items){if(items.length)return items[0].label;return '';},
+            label:function(c){
+              const v=c.dataset.data[c.dataIndex];
+              if(v==null)return '';
+              return ' '+c.dataset.label+': '+(money?fmt(v):v.toFixed(2).replace('.',',')+'%');
+            }
+          }
         }
       },
       scales:{
