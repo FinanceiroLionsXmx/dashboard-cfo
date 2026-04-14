@@ -162,7 +162,7 @@ canvas{width:100%!important}
     <div class="nav-section">Mensal</div>
     <a onclick="navTo('mensal',this)"><span class="nav-icon">&#128197;</span> Resultados Mensais</a>
   </nav>
-  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 14/04/2026 10:56</div>
+  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 14/04/2026 11:36</div>
 </aside>
 
 <!-- MAIN -->
@@ -174,7 +174,7 @@ canvas{width:100%!important}
   </div>
   <div class="topbar-right">
     <div class="badge green">&#9679; Dados Atualizados</div>
-    <div class="badge">&#128197; 14/04/2026 10:56</div>
+    <div class="badge">&#128197; 14/04/2026 11:36</div>
   </div>
 </div>
 
@@ -277,10 +277,6 @@ canvas{width:100%!important}
   <div class="g2">
     <div class="card"><div class="card-title">Margem Bruta por Operacao <span class="tag">%</span></div><canvas id="cOpsMgBar" height="220"></canvas></div>
     <div class="card"><div class="card-title">Faturamento - Ranking <span class="tag">Horizontal</span></div><canvas id="cOpsBar2" height="220"></canvas></div>
-  </div>
-  <div class="g2">
-    <div class="card"><div class="card-title">Faturamento Mensal por Operacao <span class="tag">% Participacao</span></div><canvas id="cOpsEvolPct" height="220"></canvas></div>
-    <div class="card"><div class="card-title">Lucro Bruto Mensal por Operacao <span class="tag">% Participacao</span></div><canvas id="cOpsEvolLucPct" height="220"></canvas></div>
   </div>
   <div class="g2">
     <div class="card"><div class="card-title">Faturamento Mensal por Operacao <span class="tag">Empilhado</span></div><canvas id="cOpsEvolFat" height="220"></canvas></div>
@@ -3350,36 +3346,6 @@ function buildCharts(page){
     mkBar('cOpsLBBar',opsLbl,[{label:'Lucro Bruto',data:opsLB,backgroundColor:opsColors}],true,true);
     mkBar('cOpsMgBar',opsLbl,[{label:'Margem %',data:opsMg,backgroundColor:opsColors}],false,true);
     mkBar('cOpsBar2',opsLbl,[{label:'Faturamento',data:opsVal,backgroundColor:opsColors}],true,true);
-    // Evolucao % participacao - Faturamento
-    const fatPct=function(){
-      const ds=opsLbl.map((l,i)=>{const d=opsMeses[l]||[];return {label:l,data:d,backgroundColor:opsColors[i]}});
-      const el=document.getElementById('cOpsEvolPct');
-      if(!el||el._chart)return;
-      el._chart=new Chart(el,{type:'bar',data:{labels:meses6,datasets:ds},
-        options:{responsive:true,scales:{x:{stacked:true,grid:{display:false}},y:{stacked:true,ticks:{callback:v=>fmt(v)}}},
-          plugins:{legend:{position:'top'},tooltip:{mode:'index',callbacks:{label:c=>{
-            const tot=c.chart.data.datasets.reduce((s,d)=>s+(d.data[c.dataIndex]||0),0);
-            const pct=tot?(c.parsed.y/tot*100).toFixed(1):'0';
-            return ' '+c.dataset.label+': '+fmt(c.parsed.y)+' ('+pct+'%)';
-          }}}}
-        }
-      });
-    };fatPct();
-    // Evolucao % participacao - Lucro
-    const lucPct=function(){
-      const ds=opsLbl.map((l,i)=>{const d=lopMeses[l]||[];return {label:l,data:d,backgroundColor:opsColors[i]}});
-      const el=document.getElementById('cOpsEvolLucPct');
-      if(!el||el._chart)return;
-      el._chart=new Chart(el,{type:'bar',data:{labels:meses6,datasets:ds},
-        options:{responsive:true,scales:{x:{stacked:true,grid:{display:false}},y:{stacked:true,ticks:{callback:v=>fmt(v)}}},
-          plugins:{legend:{position:'top'},tooltip:{mode:'index',callbacks:{label:c=>{
-            const tot=c.chart.data.datasets.reduce((s,d)=>s+(d.data[c.dataIndex]||0),0);
-            const pct=tot?(c.parsed.y/tot*100).toFixed(1):'0';
-            return ' '+c.dataset.label+': '+fmt(c.parsed.y)+' ('+pct+'%)';
-          }}}}
-        }
-      });
-    };lucPct();
     // Evolucao empilhada - Faturamento
     (function(){
       const ds=opsLbl.map((l,i)=>{return {label:l,data:opsMeses[l]||[],backgroundColor:opsColors[i],borderRadius:4}});
