@@ -162,7 +162,7 @@ canvas{width:100%!important}
     <div class="nav-section">Mensal</div>
     <a onclick="navTo('mensal',this)"><span class="nav-icon">&#128197;</span> Resultados Mensais</a>
   </nav>
-  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 13/04/2026 21:50</div>
+  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 14/04/2026 08:56</div>
 </aside>
 
 <!-- MAIN -->
@@ -174,7 +174,7 @@ canvas{width:100%!important}
   </div>
   <div class="topbar-right">
     <div class="badge green">&#9679; Dados Atualizados</div>
-    <div class="badge">&#128197; 13/04/2026 21:50</div>
+    <div class="badge">&#128197; 14/04/2026 08:56</div>
   </div>
 </div>
 
@@ -207,13 +207,13 @@ canvas{width:100%!important}
       <div class="card-title">Resumo Financeiro</div>
       <div class="fin-item"><div style="display:flex;align-items:center"><div class="fin-dot" style="background:var(--green)"></div><div><div class="fin-label">Faturamento Total</div><div class="fin-value" id="fv-fat">R$ 120,88M</div></div></div></div>
       <div class="fin-item"><div style="display:flex;align-items:center"><div class="fin-dot" style="background:var(--blue)"></div><div><div class="fin-label">Lucro Bruto</div><div class="fin-value" id="fv-lb">R$ 16,69M</div></div></div><span class="pill green" id="fv-mgb">15,16%</span></div>
-      <div class="fin-item"><div style="display:flex;align-items:center"><div class="fin-dot" style="background:var(--red)"></div><div><div class="fin-label">(-) Custo Fixo</div><div class="fin-value" id="fv-cf">R$ 3,99M</div></div></div></div>
+      <div class="fin-item"><div style="display:flex;align-items:center"><div class="fin-dot" style="background:var(--red)"></div><div><div class="fin-label">(-) Custos e Despesas</div><div class="fin-value" id="fv-cf">R$ 3,99M</div></div></div></div>
       <div class="fin-item"><div style="display:flex;align-items:center"><div class="fin-dot" style="background:var(--yellow)"></div><div><div class="fin-label">Lucro Operacional</div><div class="fin-value" id="fv-lo">R$ 12,70M</div></div></div></div>
       <div class="fin-item"><div style="display:flex;align-items:center"><div class="fin-dot" style="background:var(--cyan)"></div><div><div class="fin-label">Lucro Liquido</div><div class="fin-value" id="fv-ll" style="color:var(--green)">R$ 12,39M</div></div></div><span class="pill green" id="fv-mgl">11,89%</span></div>
     </div>
   </div>
   <div class="g3">
-    <div class="card"><div class="card-title">Por Operacao <span class="tag">Acumulado</span></div><canvas id="cOverOps" height="200"></canvas></div>
+    <div class="card"><div class="card-title">Faturamento por Operacao <span class="tag">Acumulado</span></div><canvas id="cOverOps" height="200"></canvas></div>
     <div class="card"><div class="card-title">Margens por Mes <span class="tag">%</span></div><canvas id="cOverMg" height="200"></canvas></div>
     <div class="card"><div class="card-title">Top 5 Lojas</div>
       <table><thead><tr><th>#</th><th>Loja</th><th class="num">Acumulado</th><th class="num">%</th></tr></thead><tbody>
@@ -231,7 +231,7 @@ canvas{width:100%!important}
     <div class="card-title">DRE Consolidado 2026 - Realizado vs Previsto <span class="tag">Mensal</span></div>
     <div class="table-wrap"><table>
       <thead><tr><th class="rg-label">Indicador</th><th class="real">JAN<br><small>REAL</small></th><th class="real">FEV<br><small>REAL</small></th><th class="prev">MAR<br><small>PREV</small></th><th class="prev">ABR<br><small>PREV</small></th><th class="prev">MAI<br><small>PREV</small></th><th class="prev">JUN<br><small>PREV</small></th><th class="prev">JUL<br><small>PREV</small></th><th class="prev">AGO<br><small>PREV</small></th><th class="prev">SET<br><small>PREV</small></th><th class="prev">OUT<br><small>PREV</small></th><th class="prev">NOV<br><small>PREV</small></th><th class="prev">DEZ<br><small>PREV</small></th><th>TOTAL</th></tr></thead>
-      <tbody><tr class="rg-row"><td class="rg-label">Faturamento Total</td><td class="num ">R$ 37,17M</td><td class="num ">R$ 27,32M</td><td class="num ">R$ 42,17M</td><td class="num ">R$ 14,22M</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num total-col">R$ 120,88M</td></tr><tr class="rg-row"><td class="rg-label">Lucro Bruto Total</td><td class="num ">R$ 7,76M</td><td class="num ">R$ 4,36M</td><td class="num ">R$ 3,65M</td><td class="num ">R$ 924,1K</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num total-col">R$ 16,69M</td></tr><tr class="rg-row sep"><td class="rg-label">Custo Fixo Total</td><td class="num ">R$ 1,34M</td><td class="num ">R$ 981,1K</td><td class="num ">R$ 834,8K</td><td class="num ">R$ 834,8K</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num total-col">R$ 3,99M</td></tr><tr class="rg-row"><td class="rg-label">Lucro Operacional Total</td><td class="num ">R$ 6,42M</td><td class="num ">R$ 3,38M</td><td class="num ">R$ 2,81M</td><td class="num ">R$ 89,4K</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num total-col">R$ 12,70M</td></tr><tr class="rg-row sep"><td class="rg-label">Lucro Liquido Total</td><td class="num ">R$ 6,31M</td><td class="num ">R$ 3,32M</td><td class="num ">R$ 2,76M</td><td class="num ">R$ 76,4K</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num total-col">R$ 12,47M</td></tr><tr class="rg-row"><td class="rg-label">Carga Tributaria</td><td class="num">10,85%</td><td class="num">10,53%</td><td class="num">10,00%</td><td class="num">–</td><td class="num">–</td><td class="num">–</td><td class="num">–</td><td class="num">–</td><td class="num">–</td><td class="num">–</td><td class="num">–</td><td class="num">–</td><td class="num total-col">10,46%</td></tr></tbody>
+      <tbody><tr class="rg-row"><td class="rg-label">Faturamento Total</td><td class="num ">R$ 37,17M</td><td class="num ">R$ 27,32M</td><td class="num ">R$ 42,17M</td><td class="num ">R$ 14,22M</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num total-col">R$ 120,88M</td></tr><tr class="rg-row"><td class="rg-label">Lucro Bruto Total</td><td class="num ">R$ 7,76M</td><td class="num ">R$ 4,36M</td><td class="num ">R$ 3,65M</td><td class="num ">R$ 924,1K</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num total-col">R$ 16,69M</td></tr><tr class="rg-row sep"><td class="rg-label">Custos e Despesas Totais</td><td class="num ">R$ 1,34M</td><td class="num ">R$ 981,1K</td><td class="num ">R$ 834,8K</td><td class="num ">R$ 834,8K</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num total-col">R$ 3,99M</td></tr><tr class="rg-row"><td class="rg-label">Lucro Operacional Total</td><td class="num ">R$ 6,42M</td><td class="num ">R$ 3,38M</td><td class="num ">R$ 2,81M</td><td class="num ">R$ 89,4K</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num total-col">R$ 12,70M</td></tr><tr class="rg-row sep"><td class="rg-label">Lucro Liquido Total</td><td class="num ">R$ 6,31M</td><td class="num ">R$ 3,32M</td><td class="num ">R$ 2,76M</td><td class="num ">R$ 76,4K</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num ">–</td><td class="num total-col">R$ 12,47M</td></tr><tr class="rg-row"><td class="rg-label">Carga Tributaria</td><td class="num">10,85%</td><td class="num">10,53%</td><td class="num">10,00%</td><td class="num">–</td><td class="num">–</td><td class="num">–</td><td class="num">–</td><td class="num">–</td><td class="num">–</td><td class="num">–</td><td class="num">–</td><td class="num">–</td><td class="num total-col">10,46%</td></tr></tbody>
     </table></div>
   </div>
   <div class="section-divider"></div>
@@ -239,7 +239,7 @@ canvas{width:100%!important}
     <div class="card-title">DRE Consolidado 2025 - Realizado <span class="tag">Anual Completo</span></div>
     <div class="table-wrap"><table>
       <thead><tr><th class="rg-label">Indicador</th><th class="real">JAN<br><small>REAL</small></th><th class="real">FEV<br><small>REAL</small></th><th class="real">MAR<br><small>REAL</small></th><th class="real">ABR<br><small>REAL</small></th><th class="real">MAI<br><small>REAL</small></th><th class="real">JUN<br><small>REAL</small></th><th class="real">JUL<br><small>REAL</small></th><th class="real">AGO<br><small>REAL</small></th><th class="real">SET<br><small>REAL</small></th><th class="real">OUT<br><small>REAL</small></th><th class="real">NOV<br><small>REAL</small></th><th class="real">DEZ<br><small>REAL</small></th><th>TOTAL</th></tr></thead>
-      <tbody><tr class="rg-row"><td class="rg-label">Faturamento Total</td><td class="num ">R$ 5,20M</td><td class="num ">R$ 7,46M</td><td class="num ">R$ 14,31M</td><td class="num ">R$ 14,78M</td><td class="num ">R$ 16,94M</td><td class="num ">R$ 16,94M</td><td class="num ">R$ 41,46M</td><td class="num ">R$ 44,03M</td><td class="num ">R$ 21,24M</td><td class="num ">R$ 40,48M</td><td class="num ">R$ 52,22M</td><td class="num ">R$ 40,46M</td><td class="num total-col">R$ 315,51M</td></tr><tr class="rg-row"><td class="rg-label">Lucro Bruto Total</td><td class="num ">R$ 953,0K</td><td class="num ">R$ 1,17M</td><td class="num ">R$ 2,92M</td><td class="num ">R$ 2,56M</td><td class="num ">R$ 1,90M</td><td class="num ">R$ 2,72M</td><td class="num ">R$ 6,39M</td><td class="num ">R$ 6,89M</td><td class="num ">R$ 3,34M</td><td class="num ">R$ 5,06M</td><td class="num ">R$ 7,30M</td><td class="num ">R$ 8,01M</td><td class="num total-col">R$ 49,19M</td></tr><tr class="rg-row sep"><td class="rg-label">Custo Fixo Total</td><td class="num ">R$ 461,0K</td><td class="num ">R$ 518,8K</td><td class="num ">R$ 488,3K</td><td class="num ">R$ 678,7K</td><td class="num ">R$ 369,8K</td><td class="num ">R$ 273,1K</td><td class="num ">R$ 649,5K</td><td class="num ">R$ 477,9K</td><td class="num ">R$ 654,4K</td><td class="num ">R$ 1,03M</td><td class="num ">R$ 651,3K</td><td class="num ">R$ 678,6K</td><td class="num total-col">R$ 6,93M</td></tr><tr class="rg-row"><td class="rg-label">Lucro Operacional Total</td><td class="num ">R$ 491,9K</td><td class="num ">R$ 646,9K</td><td class="num ">R$ 2,43M</td><td class="num ">R$ 1,88M</td><td class="num ">R$ 1,53M</td><td class="num ">R$ 2,45M</td><td class="num ">R$ 5,74M</td><td class="num ">R$ 6,41M</td><td class="num ">R$ 2,68M</td><td class="num ">R$ 4,03M</td><td class="num ">R$ 6,65M</td><td class="num ">R$ 7,33M</td><td class="num total-col">R$ 42,26M</td></tr><tr class="rg-row sep"><td class="rg-label">Lucro Liquido Total</td><td class="num ">R$ 381,5K</td><td class="num ">R$ 511,9K</td><td class="num ">R$ 2,09M</td><td class="num ">R$ 1,58M</td><td class="num ">R$ 1,31M</td><td class="num ">R$ 2,13M</td><td class="num ">R$ 5,00M</td><td class="num ">R$ 5,61M</td><td class="num ">R$ 2,30M</td><td class="num ">R$ 3,44M</td><td class="num ">R$ 5,81M</td><td class="num ">R$ 6,40M</td><td class="num total-col">R$ 36,57M</td></tr><tr class="rg-row"><td class="rg-label">Carga Tributaria</td><td class="num">10,78%</td><td class="num">10,74%</td><td class="num">–</td><td class="num">10,82%</td><td class="num">10,83%</td><td class="num">10,83%</td><td class="num">10,85%</td><td class="num">10,42%</td><td class="num">12,65%</td><td class="num">10,81%</td><td class="num">10,80%</td><td class="num">10,87%</td><td class="num total-col">10,94%</td></tr></tbody>
+      <tbody><tr class="rg-row"><td class="rg-label">Faturamento Total</td><td class="num ">R$ 5,20M</td><td class="num ">R$ 7,46M</td><td class="num ">R$ 14,31M</td><td class="num ">R$ 14,78M</td><td class="num ">R$ 16,94M</td><td class="num ">R$ 16,94M</td><td class="num ">R$ 41,46M</td><td class="num ">R$ 44,03M</td><td class="num ">R$ 21,24M</td><td class="num ">R$ 40,48M</td><td class="num ">R$ 52,22M</td><td class="num ">R$ 40,46M</td><td class="num total-col">R$ 315,51M</td></tr><tr class="rg-row"><td class="rg-label">Lucro Bruto Total</td><td class="num ">R$ 953,0K</td><td class="num ">R$ 1,17M</td><td class="num ">R$ 2,92M</td><td class="num ">R$ 2,56M</td><td class="num ">R$ 1,90M</td><td class="num ">R$ 2,72M</td><td class="num ">R$ 6,39M</td><td class="num ">R$ 6,89M</td><td class="num ">R$ 3,34M</td><td class="num ">R$ 5,06M</td><td class="num ">R$ 7,30M</td><td class="num ">R$ 8,01M</td><td class="num total-col">R$ 49,19M</td></tr><tr class="rg-row sep"><td class="rg-label">Custos e Despesas Totais</td><td class="num ">R$ 461,0K</td><td class="num ">R$ 518,8K</td><td class="num ">R$ 488,3K</td><td class="num ">R$ 678,7K</td><td class="num ">R$ 369,8K</td><td class="num ">R$ 273,1K</td><td class="num ">R$ 649,5K</td><td class="num ">R$ 477,9K</td><td class="num ">R$ 654,4K</td><td class="num ">R$ 1,03M</td><td class="num ">R$ 651,3K</td><td class="num ">R$ 678,6K</td><td class="num total-col">R$ 6,93M</td></tr><tr class="rg-row"><td class="rg-label">Lucro Operacional Total</td><td class="num ">R$ 491,9K</td><td class="num ">R$ 646,9K</td><td class="num ">R$ 2,43M</td><td class="num ">R$ 1,88M</td><td class="num ">R$ 1,53M</td><td class="num ">R$ 2,45M</td><td class="num ">R$ 5,74M</td><td class="num ">R$ 6,41M</td><td class="num ">R$ 2,68M</td><td class="num ">R$ 4,03M</td><td class="num ">R$ 6,65M</td><td class="num ">R$ 7,33M</td><td class="num total-col">R$ 42,26M</td></tr><tr class="rg-row sep"><td class="rg-label">Lucro Liquido Total</td><td class="num ">R$ 381,5K</td><td class="num ">R$ 511,9K</td><td class="num ">R$ 2,09M</td><td class="num ">R$ 1,58M</td><td class="num ">R$ 1,31M</td><td class="num ">R$ 2,13M</td><td class="num ">R$ 5,00M</td><td class="num ">R$ 5,61M</td><td class="num ">R$ 2,30M</td><td class="num ">R$ 3,44M</td><td class="num ">R$ 5,81M</td><td class="num ">R$ 6,40M</td><td class="num total-col">R$ 36,57M</td></tr><tr class="rg-row"><td class="rg-label">Carga Tributaria</td><td class="num">10,78%</td><td class="num">10,74%</td><td class="num">–</td><td class="num">10,82%</td><td class="num">10,83%</td><td class="num">10,83%</td><td class="num">10,85%</td><td class="num">10,42%</td><td class="num">12,65%</td><td class="num">10,81%</td><td class="num">10,80%</td><td class="num">10,87%</td><td class="num total-col">10,94%</td></tr></tbody>
     </table></div>
   </div>
 </div>
@@ -266,20 +266,24 @@ canvas{width:100%!important}
 <div id="page-operacoes" class="page">
 <div class="content">
   <div class="g2">
-    <div class="card"><div class="card-title">Distribuicao por Operacao <span class="tag">Faturamento</span></div><canvas id="cOpsDonut" height="250"></canvas><div id="opsLegend3" style="margin-top:12px;display:flex;flex-direction:column;gap:6px;font-size:12px"></div></div>
-    <div class="card"><div class="card-title">Faturamento por Operacao</div><canvas id="cOpsBar2" height="250"></canvas></div>
+    <div class="card"><div class="card-title">Faturamento por Operacao <span class="tag">Acumulado</span></div><canvas id="cOpsDonut" height="250"></canvas><div id="opsLegend3" style="margin-top:12px;display:flex;flex-direction:column;gap:6px;font-size:12px"></div></div>
+    <div class="card"><div class="card-title">Lucro Bruto por Operacao <span class="tag">Acumulado</span></div><canvas id="cOpsLBBar" height="250"></canvas></div>
   </div>
   <div class="g2">
-    <div class="card"><div class="card-title">Lucro Bruto por Operacao <span class="tag">Acumulado</span></div><canvas id="cOpsLBBar" height="220"></canvas></div>
-    <div class="card"><div class="card-title">Margem LB por Operacao <span class="tag">%</span></div><canvas id="cOpsMgBar" height="220"></canvas></div>
+    <div class="card"><div class="card-title">Margem Bruta por Operacao <span class="tag">%</span></div><canvas id="cOpsMgBar" height="220"></canvas></div>
+    <div class="card"><div class="card-title">Faturamento - Ranking <span class="tag">Horizontal</span></div><canvas id="cOpsBar2" height="220"></canvas></div>
   </div>
-  <div class="full card">
-    <div class="card-title">Evolucao Mensal por Operacao <span class="tag">2026</span></div>
-    <canvas id="cOpsEvol" height="200"></canvas>
+  <div class="g2">
+    <div class="card"><div class="card-title">Faturamento Mensal por Operacao <span class="tag">% Participacao</span></div><canvas id="cOpsEvolPct" height="220"></canvas></div>
+    <div class="card"><div class="card-title">Lucro Bruto Mensal por Operacao <span class="tag">% Participacao</span></div><canvas id="cOpsEvolLucPct" height="220"></canvas></div>
+  </div>
+  <div class="g2">
+    <div class="card"><div class="card-title">Faturamento Mensal por Operacao <span class="tag">Valores</span></div><canvas id="cOpsEvolFat" height="220"></canvas></div>
+    <div class="card"><div class="card-title">Lucro Bruto Mensal por Operacao <span class="tag">Valores</span></div><canvas id="cOpsEvolLuc" height="220"></canvas></div>
   </div>
   <div class="full card">
     <div class="card-title">Detalhamento por Operacao</div>
-    <table><thead><tr><th>Operacao</th><th class="num">Fat. Acumulado</th><th class="num">% do Total</th><th class="num">Lucro Bruto</th><th class="num">Margem LB</th></tr></thead>
+    <table><thead><tr><th>Operacao</th><th class="num">Fat. Acumulado</th><th class="num">% do Total</th><th class="num">Lucro Bruto</th><th class="num">Margem Bruta</th></tr></thead>
     <tbody><tr>
           <td class="loja-nome">Front End</td>
           <td class="num">R$ 100,86M</td>
@@ -553,7 +557,7 @@ canvas{width:100%!important}
   </div>
   <div class="g2">
     <div class="card"><div class="card-title">Lucro Bruto - 2025 vs 2026</div><canvas id="cCmpLb" height="220"></canvas></div>
-    <div class="card"><div class="card-title">Custo Fixo - 2025 vs 2026</div><canvas id="cCmpCf" height="220"></canvas></div>
+    <div class="card"><div class="card-title">Custos e Despesas - 2025 vs 2026</div><canvas id="cCmpCf" height="220"></canvas></div>
   </div>
 </div>
 </div>
@@ -621,7 +625,7 @@ canvas{width:100%!important}
           <div class="g4" style="margin-bottom:20px">
             <div class="kpi accent"><div class="k-label">Faturamento Total</div><div class="k-value" style="font-size:20px">R$ 37,17M</div></div>
             <div class="kpi"><div class="k-label">Lucro Bruto</div><div class="k-value" style="font-size:20px">R$ 7,76M</div><div class="k-delta up">20,87% margem</div></div>
-            <div class="kpi"><div class="k-label">Custo Fixo</div><div class="k-value neg" style="font-size:20px">R$ 1,34M</div></div>
+            <div class="kpi"><div class="k-label">Custos e Despesas</div><div class="k-value neg" style="font-size:20px">R$ 1,34M</div></div>
             <div class="kpi accent"><div class="k-label">Lucro Operacional</div><div class="k-value" style="font-size:20px">R$ 6,42M</div><div class="k-delta up">17,27% margem op.</div></div>
           </div>
 
@@ -637,7 +641,7 @@ canvas{width:100%!important}
               <th>Produto</th><th class="num">Trafego</th><th class="num">Fat. Total</th>
               <th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th>
               <th class="num">L.B. Total</th><th class="num">L.B. Interno</th><th class="num">L.B. Afiliados</th>
-              <th class="num">Margem</th>
+              <th class="num">Margem Bruta</th>
             </tr></thead><tbody><tr>
               <td class="loja-nome">GARAHERB</td>
               <td class="num">R$ 812,1K</td>
@@ -655,7 +659,7 @@ canvas{width:100%!important}
               <td class="num">R$ 63,6K</td>
               <td class="num">R$ 7,03M</td>
               <td class="num">R$ 1,42M</td>
-              <td class="num">R$ -44,3K</td>
+              <td class="num neg">R$ -44,3K</td>
               <td class="num">R$ 1,47M</td>
               <td class="num pos">20,07%</td>
             </tr><tr>
@@ -675,7 +679,7 @@ canvas{width:100%!important}
               <td class="num">R$ 27,4K</td>
               <td class="num">R$ 3,22M</td>
               <td class="num">R$ 273,0K</td>
-              <td class="num">R$ -19,3K</td>
+              <td class="num neg">R$ -19,3K</td>
               <td class="num">R$ 292,3K</td>
               <td class="num warn-text">8,41%</td>
             </tr><tr>
@@ -735,7 +739,7 @@ canvas{width:100%!important}
               <td class="num">R$ 33,8K</td>
               <td class="num">R$ 366,3K</td>
               <td class="num">R$ 71,5K</td>
-              <td class="num">R$ -15,9K</td>
+              <td class="num neg">R$ -15,9K</td>
               <td class="num">R$ 87,4K</td>
               <td class="num pos">17,87%</td>
             </tr><tr>
@@ -745,7 +749,7 @@ canvas{width:100%!important}
               <td class="num">R$ 16,3K</td>
               <td class="num">R$ 84,9K</td>
               <td class="num">R$ 36,1K</td>
-              <td class="num">R$ -6,2K</td>
+              <td class="num neg">R$ -6,2K</td>
               <td class="num">R$ 42,3K</td>
               <td class="num pos">35,65%</td>
             </tr><tr>
@@ -759,14 +763,14 @@ canvas{width:100%!important}
               <td class="num">R$ 3,4K</td>
               <td class="num pos">15,64%</td>
             </tr><tr>
-              <td class="loja-nome">ALITORYN</td>
+              <td class="loja-nome">ALITORYN <span style="color:var(--red);font-size:10px">&#9888; Prejuizo</span></td>
               <td class="num">R$ 0</td>
               <td class="num">R$ 47,0K</td>
               <td class="num">R$ 23,5K</td>
               <td class="num">R$ 23,5K</td>
               <td class="num neg">R$ -3,3K</td>
-              <td class="num">R$ -1,7K</td>
-              <td class="num">R$ -1,7K</td>
+              <td class="num neg">R$ -1,7K</td>
+              <td class="num neg">R$ -1,7K</td>
               <td class="num neg">-7,05%</td>
             </tr><tr>
               <td class="loja-nome">KYMEZOL</td>
@@ -819,8 +823,8 @@ canvas{width:100%!important}
             </div>
           <div class="card" style="margin-bottom:20px">
               <div class="card-title">Demonstrativo Consolidado - JAN/26 <span class="tag">Por Operacao - Interno/Afiliado</span></div>
-              <div style="overflow-x:auto"><table><thead><tr><th>Operacao</th><th class="num">Fat. Total</th><th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th><th class="num">Lucro Total</th><th class="num">Lucro Interno</th><th class="num">Lucro Afiliados</th><th class="num">Margem</th></tr></thead>
-              <tbody><tr style=""><td style="">Sem Backend</td><td class="num" style="">R$ 28,57M</td><td class="num" style="">R$ 1,14M</td><td class="num" style="">R$ 27,43M</td><td class="num" style="">R$ 2,31M</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 0</td><td class="num" style="">8,09%</td></tr><tr style=""><td style="">Wellness Box</td><td class="num" style="">R$ 1,45M</td><td class="num" style="">R$ 354,4K</td><td class="num" style="">R$ 1,10M</td><td class="num" style="">R$ 824,3K</td><td class="num" style="">R$ 201,3K</td><td class="num" style="">R$ 623,0K</td><td class="num" style="">56,80%</td></tr><tr style=""><td style="">Call Center</td><td class="num" style="">R$ 3,04M</td><td class="num" style="">R$ 142,9K</td><td class="num" style="">R$ 2,90M</td><td class="num" style="">R$ 1,63M</td><td class="num" style="">R$ 79,4K</td><td class="num" style="">R$ 1,55M</td><td class="num" style="">53,49%</td></tr><tr style=""><td style="">SalesBound</td><td class="num" style="">R$ 1,16M</td><td class="num" style="">R$ 49,7K</td><td class="num" style="">R$ 1,11M</td><td class="num" style="">R$ 819,7K</td><td class="num" style="">R$ 35,2K</td><td class="num" style="">R$ 784,5K</td><td class="num" style="">70,83%</td></tr><tr style=""><td style="">SMS Nutra</td><td class="num" style="">R$ 129,1K</td><td class="num" style="">R$ 129,1K</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 44,4K</td><td class="num" style="">R$ 44,4K</td><td class="num" style="">R$ 0</td><td class="num" style="">34,41%</td></tr><tr style=""><td style="">No Tracking</td><td class="num" style="">R$ 2,82M</td><td class="num" style="">R$ 172,4K</td><td class="num" style="">R$ 2,65M</td><td class="num" style="">R$ 2,13M</td><td class="num" style="">R$ 112,6K</td><td class="num" style="">R$ 2,02M</td><td class="num" style="">75,54%</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Total com Backend</td><td class="num" style="font-weight:700;">R$ 37,17M</td><td class="num" style="font-weight:700;">R$ 1,86M</td><td class="num" style="font-weight:700;">R$ 35,31M</td><td class="num" style="font-weight:700;">R$ 7,76M</td><td class="num" style="font-weight:700;">R$ 289,8K</td><td class="num" style="font-weight:700;">R$ 7,47M</td><td class="num" style="font-weight:700;">20,87%</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">CUSTOS</td></tr><tr style=""><td style="">Custo Interno</td><td class="num neg" style="" colspan="7">R$ 46,5K</td></tr><tr style=""><td style="">Custo Afiliados</td><td class="num neg" style="" colspan="7">R$ 1,29M</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Custo Total</td><td class="num neg" style="font-weight:700;" colspan="7">R$ 1,34M</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">LUCRO OPERACIONAL</td></tr><tr style=""><td style="">L.O. Interno</td><td class="num" style="" colspan="7">R$ 243,3K</td></tr><tr style=""><td style="">L.O. Afiliados</td><td class="num" style="" colspan="7">R$ 6,18M</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">L.O. Total</td><td class="num" style="font-weight:700;" colspan="7">R$ 6,42M</td></tr></tbody></table></div>
+              <div style="overflow-x:auto"><table><thead><tr><th>Operacao</th><th class="num">Fat. Total</th><th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th><th class="num">Lucro Total</th><th class="num">Lucro Interno</th><th class="num">Lucro Afiliados</th><th class="num">Margem Bruta</th></tr></thead>
+              <tbody><tr style=""><td style="">Sem Backend <span style="color:var(--red);font-size:11px" title="Prejuizo">&#9888;</span></td><td class="num" style="">R$ 28,57M</td><td class="num" style="">R$ 1,14M</td><td class="num" style="">R$ 27,43M</td><td class="num" style="">R$ 2,31M</td><td class="num neg" style="">R$ -138,8K</td><td class="num" style="">R$ 2,45M</td><td class="num" style="">8,09%</td></tr><tr style=""><td style="">Wellness Box</td><td class="num" style="">R$ 1,45M</td><td class="num" style="">R$ 354,4K</td><td class="num" style="">R$ 1,10M</td><td class="num" style="">R$ 824,3K</td><td class="num" style="">R$ 201,3K</td><td class="num" style="">R$ 623,0K</td><td class="num" style="">56,80%</td></tr><tr style=""><td style="">Call Center</td><td class="num" style="">R$ 3,04M</td><td class="num" style="">R$ 142,9K</td><td class="num" style="">R$ 2,90M</td><td class="num" style="">R$ 1,63M</td><td class="num" style="">R$ 79,4K</td><td class="num" style="">R$ 1,55M</td><td class="num" style="">53,49%</td></tr><tr style=""><td style="">SalesBound</td><td class="num" style="">R$ 1,16M</td><td class="num" style="">R$ 49,7K</td><td class="num" style="">R$ 1,11M</td><td class="num" style="">R$ 819,7K</td><td class="num" style="">R$ 35,2K</td><td class="num" style="">R$ 784,5K</td><td class="num" style="">70,83%</td></tr><tr style=""><td style="">SMS Nutra</td><td class="num" style="">R$ 129,1K</td><td class="num" style="">R$ 129,1K</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 44,4K</td><td class="num" style="">R$ 44,4K</td><td class="num" style="">R$ 0</td><td class="num" style="">34,41%</td></tr><tr style=""><td style="">No Tracking</td><td class="num" style="">R$ 2,82M</td><td class="num" style="">R$ 172,4K</td><td class="num" style="">R$ 2,65M</td><td class="num" style="">R$ 2,13M</td><td class="num" style="">R$ 112,6K</td><td class="num" style="">R$ 2,02M</td><td class="num" style="">75,54%</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Total com Backend</td><td class="num" style="font-weight:700;">R$ 37,17M</td><td class="num" style="font-weight:700;">R$ 1,86M</td><td class="num" style="font-weight:700;">R$ 35,31M</td><td class="num" style="font-weight:700;">R$ 7,76M</td><td class="num" style="font-weight:700;">R$ 289,8K</td><td class="num" style="font-weight:700;">R$ 7,47M</td><td class="num" style="font-weight:700;">20,87%</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">CUSTOS</td></tr><tr style=""><td style="">Custo Interno</td><td class="num neg" style="" colspan="7">R$ 46,5K</td></tr><tr style=""><td style="">Custo Afiliados</td><td class="num neg" style="" colspan="7">R$ 1,29M</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Custo Total</td><td class="num neg" style="font-weight:700;" colspan="7">R$ 1,34M</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">LUCRO OPERACIONAL</td></tr><tr style=""><td style="">L.O. Interno</td><td class="num" style="" colspan="7">R$ 243,3K</td></tr><tr style=""><td style="">L.O. Afiliados</td><td class="num" style="" colspan="7">R$ 6,18M</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">L.O. Total</td><td class="num" style="font-weight:700;" colspan="7">R$ 6,42M</td></tr></tbody></table></div>
             </div>
 
           <script>
@@ -852,7 +856,7 @@ canvas{width:100%!important}
           <div class="g4" style="margin-bottom:20px">
             <div class="kpi accent"><div class="k-label">Faturamento Total</div><div class="k-value" style="font-size:20px">R$ 27,32M</div></div>
             <div class="kpi"><div class="k-label">Lucro Bruto</div><div class="k-value" style="font-size:20px">R$ 4,36M</div><div class="k-delta up">15,97% margem</div></div>
-            <div class="kpi"><div class="k-label">Custo Fixo</div><div class="k-value neg" style="font-size:20px">R$ 981,1K</div></div>
+            <div class="kpi"><div class="k-label">Custos e Despesas</div><div class="k-value neg" style="font-size:20px">R$ 981,1K</div></div>
             <div class="kpi accent"><div class="k-label">Lucro Operacional</div><div class="k-value" style="font-size:20px">R$ 3,38M</div><div class="k-delta up">12,38% margem op.</div></div>
           </div>
 
@@ -868,7 +872,7 @@ canvas{width:100%!important}
               <th>Produto</th><th class="num">Trafego</th><th class="num">Fat. Total</th>
               <th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th>
               <th class="num">L.B. Total</th><th class="num">L.B. Interno</th><th class="num">L.B. Afiliados</th>
-              <th class="num">Margem</th>
+              <th class="num">Margem Bruta</th>
             </tr></thead><tbody><tr>
               <td class="loja-nome">PRESGERA</td>
               <td class="num">R$ 237,0K</td>
@@ -896,7 +900,7 @@ canvas{width:100%!important}
               <td class="num">R$ 3,8K</td>
               <td class="num">R$ 3,04M</td>
               <td class="num">R$ 272,4K</td>
-              <td class="num">R$ -10,1K</td>
+              <td class="num neg">R$ -10,1K</td>
               <td class="num">R$ 282,6K</td>
               <td class="num warn-text">8,95%</td>
             </tr><tr>
@@ -946,7 +950,7 @@ canvas{width:100%!important}
               <td class="num">R$ 26,8K</td>
               <td class="num">R$ 637,8K</td>
               <td class="num">R$ 83,6K</td>
-              <td class="num">R$ -12,7K</td>
+              <td class="num neg">R$ -12,7K</td>
               <td class="num">R$ 96,3K</td>
               <td class="num warn-text">12,58%</td>
             </tr><tr>
@@ -1090,8 +1094,8 @@ canvas{width:100%!important}
             </div>
           <div class="card" style="margin-bottom:20px">
               <div class="card-title">Demonstrativo Consolidado - FEV/26 <span class="tag">Por Operacao - Interno/Afiliado</span></div>
-              <div style="overflow-x:auto"><table><thead><tr><th>Operacao</th><th class="num">Fat. Total</th><th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th><th class="num">Lucro Total</th><th class="num">Lucro Interno</th><th class="num">Lucro Afiliados</th><th class="num">Margem</th></tr></thead>
-              <tbody><tr style=""><td style="">Sem Backend</td><td class="num" style="">R$ 21,91M</td><td class="num" style="">R$ 952,5K</td><td class="num" style="">R$ 20,96M</td><td class="num" style="">R$ 1,08M</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 0</td><td class="num" style="">4,91%</td></tr><tr style=""><td style="">Wellness Box</td><td class="num" style="">R$ 851,3K</td><td class="num" style="">R$ 205,3K</td><td class="num" style="">R$ 646,0K</td><td class="num" style="">R$ 483,5K</td><td class="num" style="">R$ 116,6K</td><td class="num" style="">R$ 366,9K</td><td class="num" style="">56,80%</td></tr><tr style=""><td style="">Call Center</td><td class="num" style="">R$ 2,35M</td><td class="num" style="">R$ 104,7K</td><td class="num" style="">R$ 2,24M</td><td class="num" style="">R$ 1,33M</td><td class="num" style="">R$ 59,3K</td><td class="num" style="">R$ 1,27M</td><td class="num" style="">56,51%</td></tr><tr style=""><td style="">SalesBound</td><td class="num" style="">R$ 293,7K</td><td class="num" style="">R$ 5,8K</td><td class="num" style="">R$ 287,9K</td><td class="num" style="">R$ 204,0K</td><td class="num" style="">R$ 4,2K</td><td class="num" style="">R$ 199,7K</td><td class="num" style="">69,45%</td></tr><tr style=""><td style="">SMS Nutra</td><td class="num" style="">R$ 183,5K</td><td class="num" style="">R$ 183,5K</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 33,7K</td><td class="num" style="">R$ 33,7K</td><td class="num" style="">R$ 0</td><td class="num" style="">18,36%</td></tr><tr style=""><td style="">No Tracking</td><td class="num" style="">R$ 1,74M</td><td class="num" style="">R$ 120,7K</td><td class="num" style="">R$ 1,62M</td><td class="num" style="">R$ 1,24M</td><td class="num" style="">R$ 81,0K</td><td class="num" style="">R$ 1,16M</td><td class="num" style="">71,47%</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Total com Backend</td><td class="num" style="font-weight:700;">R$ 27,32M</td><td class="num" style="font-weight:700;">R$ 1,39M</td><td class="num" style="font-weight:700;">R$ 25,93M</td><td class="num" style="font-weight:700;">R$ 4,36M</td><td class="num" style="font-weight:700;">R$ 236,4K</td><td class="num" style="font-weight:700;">R$ 4,13M</td><td class="num" style="font-weight:700;">15,97%</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">CUSTOS</td></tr><tr style=""><td style="">Custo Interno</td><td class="num neg" style="" colspan="7">R$ 55,9K</td></tr><tr style=""><td style="">Custo Afiliados</td><td class="num neg" style="" colspan="7">R$ 925,2K</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Custo Total</td><td class="num neg" style="font-weight:700;" colspan="7">R$ 981,1K</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">LUCRO OPERACIONAL</td></tr><tr style=""><td style="">L.O. Interno</td><td class="num" style="" colspan="7">R$ 180,5K</td></tr><tr style=""><td style="">L.O. Afiliados</td><td class="num" style="" colspan="7">R$ 3,20M</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">L.O. Total</td><td class="num" style="font-weight:700;" colspan="7">R$ 3,38M</td></tr></tbody></table></div>
+              <div style="overflow-x:auto"><table><thead><tr><th>Operacao</th><th class="num">Fat. Total</th><th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th><th class="num">Lucro Total</th><th class="num">Lucro Interno</th><th class="num">Lucro Afiliados</th><th class="num">Margem Bruta</th></tr></thead>
+              <tbody><tr style=""><td style="">Sem Backend <span style="color:var(--red);font-size:11px" title="Prejuizo">&#9888;</span></td><td class="num" style="">R$ 21,91M</td><td class="num" style="">R$ 952,5K</td><td class="num" style="">R$ 20,96M</td><td class="num" style="">R$ 1,08M</td><td class="num neg" style="">R$ -24,8K</td><td class="num" style="">R$ 1,10M</td><td class="num" style="">4,91%</td></tr><tr style=""><td style="">Wellness Box</td><td class="num" style="">R$ 851,3K</td><td class="num" style="">R$ 205,3K</td><td class="num" style="">R$ 646,0K</td><td class="num" style="">R$ 483,5K</td><td class="num" style="">R$ 116,6K</td><td class="num" style="">R$ 366,9K</td><td class="num" style="">56,80%</td></tr><tr style=""><td style="">Call Center</td><td class="num" style="">R$ 2,35M</td><td class="num" style="">R$ 104,7K</td><td class="num" style="">R$ 2,24M</td><td class="num" style="">R$ 1,33M</td><td class="num" style="">R$ 59,3K</td><td class="num" style="">R$ 1,27M</td><td class="num" style="">56,51%</td></tr><tr style=""><td style="">SalesBound</td><td class="num" style="">R$ 293,7K</td><td class="num" style="">R$ 5,8K</td><td class="num" style="">R$ 287,9K</td><td class="num" style="">R$ 204,0K</td><td class="num" style="">R$ 4,2K</td><td class="num" style="">R$ 199,7K</td><td class="num" style="">69,45%</td></tr><tr style=""><td style="">SMS Nutra</td><td class="num" style="">R$ 183,5K</td><td class="num" style="">R$ 183,5K</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 33,7K</td><td class="num" style="">R$ 33,7K</td><td class="num" style="">R$ 0</td><td class="num" style="">18,36%</td></tr><tr style=""><td style="">No Tracking</td><td class="num" style="">R$ 1,74M</td><td class="num" style="">R$ 120,7K</td><td class="num" style="">R$ 1,62M</td><td class="num" style="">R$ 1,24M</td><td class="num" style="">R$ 81,0K</td><td class="num" style="">R$ 1,16M</td><td class="num" style="">71,47%</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Total com Backend</td><td class="num" style="font-weight:700;">R$ 27,32M</td><td class="num" style="font-weight:700;">R$ 1,39M</td><td class="num" style="font-weight:700;">R$ 25,93M</td><td class="num" style="font-weight:700;">R$ 4,36M</td><td class="num" style="font-weight:700;">R$ 236,4K</td><td class="num" style="font-weight:700;">R$ 4,13M</td><td class="num" style="font-weight:700;">15,97%</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">CUSTOS</td></tr><tr style=""><td style="">Custo Interno</td><td class="num neg" style="" colspan="7">R$ 55,9K</td></tr><tr style=""><td style="">Custo Afiliados</td><td class="num neg" style="" colspan="7">R$ 925,2K</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Custo Total</td><td class="num neg" style="font-weight:700;" colspan="7">R$ 981,1K</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">LUCRO OPERACIONAL</td></tr><tr style=""><td style="">L.O. Interno</td><td class="num" style="" colspan="7">R$ 180,5K</td></tr><tr style=""><td style="">L.O. Afiliados</td><td class="num" style="" colspan="7">R$ 3,20M</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">L.O. Total</td><td class="num" style="font-weight:700;" colspan="7">R$ 3,38M</td></tr></tbody></table></div>
             </div>
 
           <script>
@@ -1123,7 +1127,7 @@ canvas{width:100%!important}
           <div class="g4" style="margin-bottom:20px">
             <div class="kpi accent"><div class="k-label">Faturamento Total</div><div class="k-value" style="font-size:20px">R$ 42,17M</div></div>
             <div class="kpi"><div class="k-label">Lucro Bruto</div><div class="k-value" style="font-size:20px">R$ 3,65M</div><div class="k-delta warn">8,65% margem</div></div>
-            <div class="kpi"><div class="k-label">Custo Fixo</div><div class="k-value neg" style="font-size:20px">R$ 834,8K</div></div>
+            <div class="kpi"><div class="k-label">Custos e Despesas</div><div class="k-value neg" style="font-size:20px">R$ 834,8K</div></div>
             <div class="kpi accent"><div class="k-label">Lucro Operacional</div><div class="k-value" style="font-size:20px">R$ 2,81M</div><div class="k-delta up">6,67% margem op.</div></div>
           </div>
 
@@ -1139,7 +1143,7 @@ canvas{width:100%!important}
               <th>Produto</th><th class="num">Trafego</th><th class="num">Fat. Total</th>
               <th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th>
               <th class="num">L.B. Total</th><th class="num">L.B. Interno</th><th class="num">L.B. Afiliados</th>
-              <th class="num">Margem</th>
+              <th class="num">Margem Bruta</th>
             </tr></thead><tbody><tr>
               <td class="loja-nome">PRESGERA</td>
               <td class="num">R$ 130,7K</td>
@@ -1167,7 +1171,7 @@ canvas{width:100%!important}
               <td class="num">R$ 65,0K</td>
               <td class="num">R$ 3,16M</td>
               <td class="num">R$ 254,4K</td>
-              <td class="num">R$ -13,2K</td>
+              <td class="num neg">R$ -13,2K</td>
               <td class="num">R$ 267,6K</td>
               <td class="num warn-text">7,88%</td>
             </tr><tr>
@@ -1261,14 +1265,14 @@ canvas{width:100%!important}
               <td class="num">R$ 79,8K</td>
               <td class="num pos">33,25%</td>
             </tr><tr>
-              <td class="loja-nome">NAD DERMAL</td>
+              <td class="loja-nome">NAD DERMAL <span style="color:var(--red);font-size:10px">&#9888; Prejuizo</span></td>
               <td class="num">R$ 0</td>
               <td class="num">R$ 309,1K</td>
               <td class="num">R$ 4,1K</td>
               <td class="num">R$ 305,0K</td>
               <td class="num neg">R$ -22,9K</td>
               <td class="num">R$ 2,8K</td>
-              <td class="num">R$ -25,7K</td>
+              <td class="num neg">R$ -25,7K</td>
               <td class="num neg">-7,42%</td>
             </tr><tr>
               <td class="loja-nome">VISUAL EASE</td>
@@ -1291,13 +1295,13 @@ canvas{width:100%!important}
               <td class="num">R$ 73,2K</td>
               <td class="num pos">38,77%</td>
             </tr><tr>
-              <td class="loja-nome">NERVE EASE</td>
+              <td class="loja-nome">NERVE EASE <span style="color:var(--red);font-size:10px">&#9888; Prejuizo</span></td>
               <td class="num">R$ 10,2K</td>
               <td class="num">R$ 75,7K</td>
               <td class="num">R$ 0</td>
               <td class="num">R$ 75,7K</td>
               <td class="num neg">R$ -3,0K</td>
-              <td class="num">R$ -10,2K</td>
+              <td class="num neg">R$ -10,2K</td>
               <td class="num">R$ 7,2K</td>
               <td class="num neg">-3,94%</td>
             </tr><tr>
@@ -1321,13 +1325,13 @@ canvas{width:100%!important}
               <td class="num">R$ 13,1K</td>
               <td class="num pos">56,80%</td>
             </tr><tr>
-              <td class="loja-nome">TENURIMA</td>
+              <td class="loja-nome">TENURIMA <span style="color:var(--red);font-size:10px">&#9888; Prejuizo</span></td>
               <td class="num">R$ 17,3K</td>
               <td class="num">R$ 21,8K</td>
               <td class="num">R$ 4,1K</td>
               <td class="num">R$ 17,8K</td>
               <td class="num neg">R$ -11,6K</td>
-              <td class="num">R$ -14,9K</td>
+              <td class="num neg">R$ -14,9K</td>
               <td class="num">R$ 3,4K</td>
               <td class="num neg">-52,88%</td>
             </tr><tr>
@@ -1391,8 +1395,8 @@ canvas{width:100%!important}
             </div>
           <div class="card" style="margin-bottom:20px">
               <div class="card-title">Demonstrativo Consolidado - MAR/26 <span class="tag">Por Operacao - Interno/Afiliado</span></div>
-              <div style="overflow-x:auto"><table><thead><tr><th>Operacao</th><th class="num">Fat. Total</th><th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th><th class="num">Lucro Total</th><th class="num">Lucro Interno</th><th class="num">Lucro Afiliados</th><th class="num">Margem</th></tr></thead>
-              <tbody><tr style=""><td style="">Sem Backend</td><td class="num" style="">R$ 37,65M</td><td class="num" style="">R$ 1,20M</td><td class="num" style="">R$ 36,46M</td><td class="num" style="">R$ 775,6K</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 0</td><td class="num" style="">2,06%</td></tr><tr style=""><td style="">Wellness Box</td><td class="num" style="">R$ 708,8K</td><td class="num" style="">R$ 210,0K</td><td class="num" style="">R$ 498,8K</td><td class="num" style="">R$ 402,6K</td><td class="num" style="">R$ 119,3K</td><td class="num" style="">R$ 283,3K</td><td class="num" style="">56,80%</td></tr><tr style=""><td style="">Call Center</td><td class="num" style="">R$ 2,05M</td><td class="num" style="">R$ 58,4K</td><td class="num" style="">R$ 1,99M</td><td class="num" style="">R$ 1,24M</td><td class="num" style="">R$ 35,8K</td><td class="num" style="">R$ 1,20M</td><td class="num" style="">60,39%</td></tr><tr style=""><td style="">SalesBound</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 0</td><td class="num" style="">0,00%</td></tr><tr style=""><td style="">SMS Nutra</td><td class="num" style="">R$ 25,4K</td><td class="num" style="">R$ 25,4K</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 12,5K</td><td class="num" style="">R$ 12,5K</td><td class="num" style="">R$ 0</td><td class="num" style="">49,28%</td></tr><tr style=""><td style="">No Tracking</td><td class="num" style="">R$ 1,73M</td><td class="num" style="">R$ 156,9K</td><td class="num" style="">R$ 1,57M</td><td class="num" style="">R$ 1,22M</td><td class="num" style="">R$ 105,1K</td><td class="num" style="">R$ 1,11M</td><td class="num" style="">70,35%</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Total com Backend</td><td class="num" style="font-weight:700;">R$ 42,17M</td><td class="num" style="font-weight:700;">R$ 1,62M</td><td class="num" style="font-weight:700;">R$ 40,55M</td><td class="num" style="font-weight:700;">R$ 3,65M</td><td class="num" style="font-weight:700;">R$ 199,3K</td><td class="num" style="font-weight:700;">R$ 3,45M</td><td class="num" style="font-weight:700;">8,65%</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">CUSTOS</td></tr><tr style=""><td style="">Custo Interno</td><td class="num neg" style="" colspan="7">R$ 20,5K</td></tr><tr style=""><td style="">Custo Afiliados</td><td class="num neg" style="" colspan="7">R$ 814,3K</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Custo Total</td><td class="num neg" style="font-weight:700;" colspan="7">R$ 834,8K</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">LUCRO OPERACIONAL</td></tr><tr style=""><td style="">L.O. Interno</td><td class="num" style="" colspan="7">R$ 178,8K</td></tr><tr style=""><td style="">L.O. Afiliados</td><td class="num" style="" colspan="7">R$ 2,63M</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">L.O. Total</td><td class="num" style="font-weight:700;" colspan="7">R$ 2,81M</td></tr></tbody></table></div>
+              <div style="overflow-x:auto"><table><thead><tr><th>Operacao</th><th class="num">Fat. Total</th><th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th><th class="num">Lucro Total</th><th class="num">Lucro Interno</th><th class="num">Lucro Afiliados</th><th class="num">Margem Bruta</th></tr></thead>
+              <tbody><tr style=""><td style="">Sem Backend <span style="color:var(--red);font-size:11px" title="Prejuizo">&#9888;</span></td><td class="num" style="">R$ 37,65M</td><td class="num" style="">R$ 1,20M</td><td class="num" style="">R$ 36,46M</td><td class="num" style="">R$ 775,6K</td><td class="num neg" style="">R$ -60,9K</td><td class="num" style="">R$ 836,6K</td><td class="num" style="">2,06%</td></tr><tr style=""><td style="">Wellness Box</td><td class="num" style="">R$ 708,8K</td><td class="num" style="">R$ 210,0K</td><td class="num" style="">R$ 498,8K</td><td class="num" style="">R$ 402,6K</td><td class="num" style="">R$ 119,3K</td><td class="num" style="">R$ 283,3K</td><td class="num" style="">56,80%</td></tr><tr style=""><td style="">Call Center</td><td class="num" style="">R$ 2,05M</td><td class="num" style="">R$ 58,4K</td><td class="num" style="">R$ 1,99M</td><td class="num" style="">R$ 1,24M</td><td class="num" style="">R$ 35,8K</td><td class="num" style="">R$ 1,20M</td><td class="num" style="">60,39%</td></tr><tr style=""><td style="">SalesBound</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 0</td><td class="num" style="">0,00%</td></tr><tr style=""><td style="">SMS Nutra</td><td class="num" style="">R$ 25,4K</td><td class="num" style="">R$ 25,4K</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 12,5K</td><td class="num" style="">R$ 12,5K</td><td class="num" style="">R$ 0</td><td class="num" style="">49,28%</td></tr><tr style=""><td style="">No Tracking</td><td class="num" style="">R$ 1,73M</td><td class="num" style="">R$ 156,9K</td><td class="num" style="">R$ 1,57M</td><td class="num" style="">R$ 1,22M</td><td class="num" style="">R$ 105,1K</td><td class="num" style="">R$ 1,11M</td><td class="num" style="">70,35%</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Total com Backend</td><td class="num" style="font-weight:700;">R$ 42,17M</td><td class="num" style="font-weight:700;">R$ 1,62M</td><td class="num" style="font-weight:700;">R$ 40,55M</td><td class="num" style="font-weight:700;">R$ 3,65M</td><td class="num" style="font-weight:700;">R$ 199,3K</td><td class="num" style="font-weight:700;">R$ 3,45M</td><td class="num" style="font-weight:700;">8,65%</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">CUSTOS</td></tr><tr style=""><td style="">Custo Interno</td><td class="num neg" style="" colspan="7">R$ 20,5K</td></tr><tr style=""><td style="">Custo Afiliados</td><td class="num neg" style="" colspan="7">R$ 814,3K</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Custo Total</td><td class="num neg" style="font-weight:700;" colspan="7">R$ 834,8K</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">LUCRO OPERACIONAL</td></tr><tr style=""><td style="">L.O. Interno</td><td class="num" style="" colspan="7">R$ 178,8K</td></tr><tr style=""><td style="">L.O. Afiliados</td><td class="num" style="" colspan="7">R$ 2,63M</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">L.O. Total</td><td class="num" style="font-weight:700;" colspan="7">R$ 2,81M</td></tr></tbody></table></div>
             </div>
 
           <script>
@@ -1424,7 +1428,7 @@ canvas{width:100%!important}
           <div class="g4" style="margin-bottom:20px">
             <div class="kpi accent"><div class="k-label">Faturamento Total</div><div class="k-value" style="font-size:20px">R$ 14,22M</div></div>
             <div class="kpi"><div class="k-label">Lucro Bruto</div><div class="k-value" style="font-size:20px">R$ 924,1K</div><div class="k-delta warn">6,50% margem</div></div>
-            <div class="kpi"><div class="k-label">Custo Fixo</div><div class="k-value neg" style="font-size:20px">R$ 834,8K</div></div>
+            <div class="kpi"><div class="k-label">Custos e Despesas</div><div class="k-value neg" style="font-size:20px">R$ 834,8K</div></div>
             <div class="kpi accent"><div class="k-label">Lucro Operacional</div><div class="k-value" style="font-size:20px">R$ 89,4K</div><div class="k-delta down">0,63% margem op.</div></div>
           </div>
 
@@ -1440,7 +1444,7 @@ canvas{width:100%!important}
               <th>Produto</th><th class="num">Trafego</th><th class="num">Fat. Total</th>
               <th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th>
               <th class="num">L.B. Total</th><th class="num">L.B. Interno</th><th class="num">L.B. Afiliados</th>
-              <th class="num">Margem</th>
+              <th class="num">Margem Bruta</th>
             </tr></thead><tbody><tr>
               <td class="loja-nome">STEEL POWER</td>
               <td class="num">R$ 42,7K</td>
@@ -1448,7 +1452,7 @@ canvas{width:100%!important}
               <td class="num">R$ 56,3K</td>
               <td class="num">R$ 5,12M</td>
               <td class="num">R$ 178,8K</td>
-              <td class="num">R$ -10,1K</td>
+              <td class="num neg">R$ -10,1K</td>
               <td class="num">R$ 188,9K</td>
               <td class="num neg">3,45%</td>
             </tr><tr>
@@ -1512,14 +1516,14 @@ canvas{width:100%!important}
               <td class="num">R$ 49,8K</td>
               <td class="num pos">15,00%</td>
             </tr><tr>
-              <td class="loja-nome">NAD DERMAL</td>
+              <td class="loja-nome">NAD DERMAL <span style="color:var(--red);font-size:10px">&#9888; Prejuizo</span></td>
               <td class="num">R$ 0</td>
               <td class="num">R$ 265,6K</td>
               <td class="num">R$ 0</td>
               <td class="num">R$ 265,6K</td>
               <td class="num neg">R$ -39,5K</td>
               <td class="num">R$ 0</td>
-              <td class="num">R$ -39,5K</td>
+              <td class="num neg">R$ -39,5K</td>
               <td class="num neg">-14,87%</td>
             </tr><tr>
               <td class="loja-nome">VISUAL EASE</td>
@@ -1568,7 +1572,7 @@ canvas{width:100%!important}
               <td class="num">R$ 3,9K</td>
               <td class="num">R$ 122,1K</td>
               <td class="num">R$ 9,8K</td>
-              <td class="num">R$ -2,6K</td>
+              <td class="num neg">R$ -2,6K</td>
               <td class="num">R$ 12,4K</td>
               <td class="num warn-text">7,78%</td>
             </tr><tr>
@@ -1672,8 +1676,8 @@ canvas{width:100%!important}
             </div>
           <div class="card" style="margin-bottom:20px">
               <div class="card-title">Demonstrativo Consolidado - ABR/26 <span class="tag">Por Operacao - Interno/Afiliado</span></div>
-              <div style="overflow-x:auto"><table><thead><tr><th>Operacao</th><th class="num">Fat. Total</th><th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th><th class="num">Lucro Total</th><th class="num">Lucro Interno</th><th class="num">Lucro Afiliados</th><th class="num">Margem</th></tr></thead>
-              <tbody><tr style=""><td style="">Sem Backend</td><td class="num" style="">R$ 12,72M</td><td class="num" style="">R$ 766,9K</td><td class="num" style="">R$ 11,96M</td><td class="num neg" style="">R$ -10,1K</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 0</td><td class="num" style="">-0,08%</td></tr><tr style=""><td style="">Wellness Box</td><td class="num" style="">R$ 142,3K</td><td class="num" style="">R$ 45,5K</td><td class="num" style="">R$ 96,8K</td><td class="num" style="">R$ 80,8K</td><td class="num" style="">R$ 25,9K</td><td class="num" style="">R$ 55,0K</td><td class="num" style="">56,80%</td></tr><tr style=""><td style="">Call Center</td><td class="num" style="">R$ 670,4K</td><td class="num" style="">R$ 47,2K</td><td class="num" style="">R$ 623,2K</td><td class="num" style="">R$ 395,8K</td><td class="num" style="">R$ 22,7K</td><td class="num" style="">R$ 373,1K</td><td class="num" style="">59,03%</td></tr><tr style=""><td style="">SalesBound</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 0</td><td class="num" style="">0,00%</td></tr><tr style=""><td style="">SMS Nutra</td><td class="num" style="">R$ 827</td><td class="num" style="">R$ 827</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 453</td><td class="num" style="">R$ 453</td><td class="num" style="">R$ 0</td><td class="num" style="">54,75%</td></tr><tr style=""><td style="">No Tracking</td><td class="num" style="">R$ 680,2K</td><td class="num" style="">R$ 99,6K</td><td class="num" style="">R$ 580,6K</td><td class="num" style="">R$ 457,1K</td><td class="num" style="">R$ 64,0K</td><td class="num" style="">R$ 393,1K</td><td class="num" style="">67,21%</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Total com Backend</td><td class="num" style="font-weight:700;">R$ 14,22M</td><td class="num" style="font-weight:700;">R$ 959,2K</td><td class="num" style="font-weight:700;">R$ 13,26M</td><td class="num" style="font-weight:700;">R$ 924,1K</td><td class="num" style="font-weight:700;">R$ 38,5K</td><td class="num" style="font-weight:700;">R$ 885,6K</td><td class="num" style="font-weight:700;">6,50%</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">CUSTOS</td></tr><tr style=""><td style="">Custo Interno</td><td class="num neg" style="" colspan="7">R$ 20,5K</td></tr><tr style=""><td style="">Custo Afiliados</td><td class="num neg" style="" colspan="7">R$ 814,3K</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Custo Total</td><td class="num neg" style="font-weight:700;" colspan="7">R$ 834,8K</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">LUCRO OPERACIONAL</td></tr><tr style=""><td style="">L.O. Interno</td><td class="num" style="" colspan="7">R$ 18,0K</td></tr><tr style=""><td style="">L.O. Afiliados</td><td class="num" style="" colspan="7">R$ 71,4K</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">L.O. Total</td><td class="num" style="font-weight:700;" colspan="7">R$ 89,4K</td></tr></tbody></table></div>
+              <div style="overflow-x:auto"><table><thead><tr><th>Operacao</th><th class="num">Fat. Total</th><th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th><th class="num">Lucro Total</th><th class="num">Lucro Interno</th><th class="num">Lucro Afiliados</th><th class="num">Margem Bruta</th></tr></thead>
+              <tbody><tr style=""><td style="">Sem Backend <span style="color:var(--red);font-size:11px" title="Prejuizo">&#9888;</span></td><td class="num" style="">R$ 12,72M</td><td class="num" style="">R$ 766,9K</td><td class="num" style="">R$ 11,96M</td><td class="num neg" style="">R$ -10,1K</td><td class="num neg" style="">R$ -74,1K</td><td class="num" style="">R$ 64,0K</td><td class="num" style="">-0,08%</td></tr><tr style=""><td style="">Wellness Box</td><td class="num" style="">R$ 142,3K</td><td class="num" style="">R$ 45,5K</td><td class="num" style="">R$ 96,8K</td><td class="num" style="">R$ 80,8K</td><td class="num" style="">R$ 25,9K</td><td class="num" style="">R$ 55,0K</td><td class="num" style="">56,80%</td></tr><tr style=""><td style="">Call Center</td><td class="num" style="">R$ 670,4K</td><td class="num" style="">R$ 47,2K</td><td class="num" style="">R$ 623,2K</td><td class="num" style="">R$ 395,8K</td><td class="num" style="">R$ 22,7K</td><td class="num" style="">R$ 373,1K</td><td class="num" style="">59,03%</td></tr><tr style=""><td style="">SalesBound</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 0</td><td class="num" style="">0,00%</td></tr><tr style=""><td style="">SMS Nutra</td><td class="num" style="">R$ 827</td><td class="num" style="">R$ 827</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 453</td><td class="num" style="">R$ 453</td><td class="num" style="">R$ 0</td><td class="num" style="">54,75%</td></tr><tr style=""><td style="">No Tracking</td><td class="num" style="">R$ 680,2K</td><td class="num" style="">R$ 99,6K</td><td class="num" style="">R$ 580,6K</td><td class="num" style="">R$ 457,1K</td><td class="num" style="">R$ 64,0K</td><td class="num" style="">R$ 393,1K</td><td class="num" style="">67,21%</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Total com Backend</td><td class="num" style="font-weight:700;">R$ 14,22M</td><td class="num" style="font-weight:700;">R$ 959,2K</td><td class="num" style="font-weight:700;">R$ 13,26M</td><td class="num" style="font-weight:700;">R$ 924,1K</td><td class="num" style="font-weight:700;">R$ 38,5K</td><td class="num" style="font-weight:700;">R$ 885,6K</td><td class="num" style="font-weight:700;">6,50%</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">CUSTOS</td></tr><tr style=""><td style="">Custo Interno</td><td class="num neg" style="" colspan="7">R$ 20,5K</td></tr><tr style=""><td style="">Custo Afiliados</td><td class="num neg" style="" colspan="7">R$ 814,3K</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Custo Total</td><td class="num neg" style="font-weight:700;" colspan="7">R$ 834,8K</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">LUCRO OPERACIONAL</td></tr><tr style=""><td style="">L.O. Interno</td><td class="num" style="" colspan="7">R$ 18,0K</td></tr><tr style=""><td style="">L.O. Afiliados</td><td class="num" style="" colspan="7">R$ 71,4K</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">L.O. Total</td><td class="num" style="font-weight:700;" colspan="7">R$ 89,4K</td></tr></tbody></table></div>
             </div>
 
           <script>
@@ -1705,7 +1709,7 @@ canvas{width:100%!important}
           <div class="g4" style="margin-bottom:20px">
             <div class="kpi accent"><div class="k-label">Faturamento Total</div><div class="k-value" style="font-size:20px">R$ 5,20M</div></div>
             <div class="kpi"><div class="k-label">Lucro Bruto</div><div class="k-value" style="font-size:20px">R$ 953,0K</div><div class="k-delta up">18,33% margem</div></div>
-            <div class="kpi"><div class="k-label">Custo Fixo</div><div class="k-value neg" style="font-size:20px">R$ 461,0K</div></div>
+            <div class="kpi"><div class="k-label">Custos e Despesas</div><div class="k-value neg" style="font-size:20px">R$ 461,0K</div></div>
             <div class="kpi red-accent"><div class="k-label">Lucro Operacional</div><div class="k-value" style="font-size:20px">R$ 0</div><div class="k-delta down">0,00% margem op.</div></div>
           </div>
 
@@ -1721,7 +1725,7 @@ canvas{width:100%!important}
               <th>Produto</th><th class="num">Trafego</th><th class="num">Fat. Total</th>
               <th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th>
               <th class="num">L.B. Total</th><th class="num">L.B. Interno</th><th class="num">L.B. Afiliados</th>
-              <th class="num">Margem</th>
+              <th class="num">Margem Bruta</th>
             </tr></thead><tbody><tr>
               <td class="loja-nome">ARIALIEF</td>
               <td class="num">R$ 1,24M</td>
@@ -1753,13 +1757,13 @@ canvas{width:100%!important}
               <td class="num">R$ 0</td>
               <td class="num neg">0,00%</td>
             </tr><tr>
-              <td class="loja-nome">CUCUDROPS (ABA LAELLIUM)</td>
+              <td class="loja-nome">CUCUDROPS (ABA LAELLIUM) <span style="color:var(--red);font-size:10px">&#9888; Prejuizo</span></td>
               <td class="num">R$ 17,3K</td>
               <td class="num">R$ 0</td>
               <td class="num">R$ 0</td>
               <td class="num">R$ 0</td>
               <td class="num neg">R$ -17,3K</td>
-              <td class="num">R$ -17,3K</td>
+              <td class="num neg">R$ -17,3K</td>
               <td class="num">R$ 0</td>
               <td class="num neg">0,00%</td>
             </tr><tr class="total-row">
@@ -1783,8 +1787,8 @@ canvas{width:100%!important}
             </div>
           <div class="card" style="margin-bottom:20px">
               <div class="card-title">Demonstrativo Consolidado - JAN/25 <span class="tag">Por Operacao - Interno/Afiliado</span></div>
-              <div style="overflow-x:auto"><table><thead><tr><th>Operacao</th><th class="num">Fat. Total</th><th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th><th class="num">Lucro Total</th><th class="num">Lucro Interno</th><th class="num">Lucro Afiliados</th><th class="num">Margem</th></tr></thead>
-              <tbody><tr style=""><td style="">Sem Backend</td><td class="num" style="">R$ 4,25M</td><td class="num" style="">R$ 3,00M</td><td class="num" style="">R$ 1,25M</td><td class="num" style="">R$ 411,6K</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 0</td><td class="num" style="">9,68%</td></tr><tr style=""><td style="">Wellness Box</td><td class="num" style="">R$ 421,2K</td><td class="num" style="">R$ 310,5K</td><td class="num" style="">R$ 110,8K</td><td class="num" style="">R$ 239,3K</td><td class="num" style="">R$ 176,4K</td><td class="num" style="">R$ 62,9K</td><td class="num" style="">56,80%</td></tr><tr style=""><td style="">Call Center</td><td class="num" style="">R$ 192,6K</td><td class="num" style="">R$ 133,3K</td><td class="num" style="">R$ 59,4K</td><td class="num" style="">R$ 92,9K</td><td class="num" style="">R$ 63,7K</td><td class="num" style="">R$ 29,2K</td><td class="num" style="">48,24%</td></tr><tr style=""><td style="">SalesBound</td><td class="num" style="">R$ 49,1K</td><td class="num" style="">R$ 42,4K</td><td class="num" style="">R$ 6,7K</td><td class="num" style="">R$ 12,7K</td><td class="num" style="">R$ 8,5K</td><td class="num" style="">R$ 4,2K</td><td class="num" style="">25,88%</td></tr><tr style=""><td style="">No Tracking</td><td class="num" style="">R$ 285,5K</td><td class="num" style="">R$ 215,1K</td><td class="num" style="">R$ 70,4K</td><td class="num" style="">R$ 196,4K</td><td class="num" style="">R$ 148,0K</td><td class="num" style="">R$ 48,4K</td><td class="num" style="">68,80%</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Total com Backend</td><td class="num" style="font-weight:700;">R$ 5,20M</td><td class="num" style="font-weight:700;">R$ 3,70M</td><td class="num" style="font-weight:700;">R$ 1,50M</td><td class="num" style="font-weight:700;">R$ 953,0K</td><td class="num" style="font-weight:700;">R$ 216,1K</td><td class="num" style="font-weight:700;">R$ 275,9K</td><td class="num" style="font-weight:700;">18,33%</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">CUSTOS</td></tr><tr style=""><td style="">Custo Interno</td><td class="num neg" style="" colspan="7">R$ 461,0K</td></tr><tr style=""><td style="">Custo Afiliados</td><td class="num neg" style="" colspan="7">R$ 0</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Custo Total</td><td class="num neg" style="font-weight:700;" colspan="7">R$ 461,0K</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">LUCRO OPERACIONAL</td></tr><tr style=""><td style="">L.O. Interno</td><td class="num" style="" colspan="7">R$ 0</td></tr><tr style=""><td style="">L.O. Afiliados</td><td class="num" style="" colspan="7">R$ 0</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">L.O. Total</td><td class="num" style="font-weight:700;" colspan="7">R$ 491,9K</td></tr></tbody></table></div>
+              <div style="overflow-x:auto"><table><thead><tr><th>Operacao</th><th class="num">Fat. Total</th><th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th><th class="num">Lucro Total</th><th class="num">Lucro Interno</th><th class="num">Lucro Afiliados</th><th class="num">Margem Bruta</th></tr></thead>
+              <tbody><tr style=""><td style="">Sem Backend</td><td class="num" style="">R$ 4,25M</td><td class="num" style="">R$ 3,00M</td><td class="num" style="">R$ 1,25M</td><td class="num" style="">R$ 411,6K</td><td class="num" style="">R$ 280,5K</td><td class="num" style="">R$ 131,1K</td><td class="num" style="">9,68%</td></tr><tr style=""><td style="">Wellness Box</td><td class="num" style="">R$ 421,2K</td><td class="num" style="">R$ 310,5K</td><td class="num" style="">R$ 110,8K</td><td class="num" style="">R$ 239,3K</td><td class="num" style="">R$ 176,4K</td><td class="num" style="">R$ 62,9K</td><td class="num" style="">56,80%</td></tr><tr style=""><td style="">Call Center</td><td class="num" style="">R$ 192,6K</td><td class="num" style="">R$ 133,3K</td><td class="num" style="">R$ 59,4K</td><td class="num" style="">R$ 92,9K</td><td class="num" style="">R$ 63,7K</td><td class="num" style="">R$ 29,2K</td><td class="num" style="">48,24%</td></tr><tr style=""><td style="">SalesBound</td><td class="num" style="">R$ 49,1K</td><td class="num" style="">R$ 42,4K</td><td class="num" style="">R$ 6,7K</td><td class="num" style="">R$ 12,7K</td><td class="num" style="">R$ 8,5K</td><td class="num" style="">R$ 4,2K</td><td class="num" style="">25,88%</td></tr><tr style=""><td style="">No Tracking</td><td class="num" style="">R$ 285,5K</td><td class="num" style="">R$ 215,1K</td><td class="num" style="">R$ 70,4K</td><td class="num" style="">R$ 196,4K</td><td class="num" style="">R$ 148,0K</td><td class="num" style="">R$ 48,4K</td><td class="num" style="">68,80%</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Total com Backend</td><td class="num" style="font-weight:700;">R$ 5,20M</td><td class="num" style="font-weight:700;">R$ 3,70M</td><td class="num" style="font-weight:700;">R$ 1,50M</td><td class="num" style="font-weight:700;">R$ 953,0K</td><td class="num" style="font-weight:700;">R$ 216,1K</td><td class="num" style="font-weight:700;">R$ 275,9K</td><td class="num" style="font-weight:700;">18,33%</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">CUSTOS</td></tr><tr style=""><td style="">Custo Interno</td><td class="num neg" style="" colspan="7">R$ 461,0K</td></tr><tr style=""><td style="">Custo Afiliados</td><td class="num neg" style="" colspan="7">R$ 0</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Custo Total</td><td class="num neg" style="font-weight:700;" colspan="7">R$ 461,0K</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">LUCRO OPERACIONAL</td></tr><tr style=""><td style="">L.O. Interno</td><td class="num" style="" colspan="7">R$ 0</td></tr><tr style=""><td style="">L.O. Afiliados</td><td class="num" style="" colspan="7">R$ 0</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">L.O. Total</td><td class="num" style="font-weight:700;" colspan="7">R$ 491,9K</td></tr></tbody></table></div>
             </div>
 
           <script>
@@ -1816,7 +1820,7 @@ canvas{width:100%!important}
           <div class="g4" style="margin-bottom:20px">
             <div class="kpi accent"><div class="k-label">Faturamento Total</div><div class="k-value" style="font-size:20px">R$ 7,46M</div></div>
             <div class="kpi"><div class="k-label">Lucro Bruto</div><div class="k-value" style="font-size:20px">R$ 1,17M</div><div class="k-delta up">15,63% margem</div></div>
-            <div class="kpi"><div class="k-label">Custo Fixo</div><div class="k-value neg" style="font-size:20px">R$ 518,8K</div></div>
+            <div class="kpi"><div class="k-label">Custos e Despesas</div><div class="k-value neg" style="font-size:20px">R$ 518,8K</div></div>
             <div class="kpi red-accent"><div class="k-label">Lucro Operacional</div><div class="k-value" style="font-size:20px">R$ 0</div><div class="k-delta down">0,00% margem op.</div></div>
           </div>
 
@@ -1832,7 +1836,7 @@ canvas{width:100%!important}
               <th>Produto</th><th class="num">Trafego</th><th class="num">Fat. Total</th>
               <th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th>
               <th class="num">L.B. Total</th><th class="num">L.B. Interno</th><th class="num">L.B. Afiliados</th>
-              <th class="num">Margem</th>
+              <th class="num">Margem Bruta</th>
             </tr></thead><tbody><tr>
               <td class="loja-nome">ARIALIEF</td>
               <td class="num">R$ 1,54M</td>
@@ -1884,8 +1888,8 @@ canvas{width:100%!important}
             </div>
           <div class="card" style="margin-bottom:20px">
               <div class="card-title">Demonstrativo Consolidado - FEV/25 <span class="tag">Por Operacao - Interno/Afiliado</span></div>
-              <div style="overflow-x:auto"><table><thead><tr><th>Operacao</th><th class="num">Fat. Total</th><th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th><th class="num">Lucro Total</th><th class="num">Lucro Interno</th><th class="num">Lucro Afiliados</th><th class="num">Margem</th></tr></thead>
-              <tbody><tr style=""><td style="">Sem Backend</td><td class="num" style="">R$ 6,61M</td><td class="num" style="">R$ 3,76M</td><td class="num" style="">R$ 2,85M</td><td class="num" style="">R$ 707,0K</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 0</td><td class="num" style="">10,69%</td></tr><tr style=""><td style="">Wellness Box</td><td class="num" style="">R$ 445,3K</td><td class="num" style="">R$ 228,6K</td><td class="num" style="">R$ 216,7K</td><td class="num" style="">R$ 253,0K</td><td class="num" style="">R$ 129,8K</td><td class="num" style="">R$ 123,1K</td><td class="num" style="">56,80%</td></tr><tr style=""><td style="">Call Center</td><td class="num" style="">R$ 292,9K</td><td class="num" style="">R$ 165,3K</td><td class="num" style="">R$ 127,6K</td><td class="num" style="">R$ 141,4K</td><td class="num" style="">R$ 78,6K</td><td class="num" style="">R$ 62,8K</td><td class="num" style="">48,26%</td></tr><tr style=""><td style="">SalesBound</td><td class="num" style="">R$ 60,1K</td><td class="num" style="">R$ 37,4K</td><td class="num" style="">R$ 22,7K</td><td class="num" style="">R$ 33,2K</td><td class="num" style="">R$ 20,3K</td><td class="num" style="">R$ 12,9K</td><td class="num" style="">55,34%</td></tr><tr style=""><td style="">No Tracking</td><td class="num" style="">R$ 45,3K</td><td class="num" style="">R$ 31,0K</td><td class="num" style="">R$ 14,3K</td><td class="num" style="">R$ 31,1K</td><td class="num" style="">R$ 21,3K</td><td class="num" style="">R$ 9,8K</td><td class="num" style="">68,80%</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Total com Backend</td><td class="num" style="font-weight:700;">R$ 7,46M</td><td class="num" style="font-weight:700;">R$ 4,22M</td><td class="num" style="font-weight:700;">R$ 3,23M</td><td class="num" style="font-weight:700;">R$ 1,17M</td><td class="num" style="font-weight:700;">R$ 168,7K</td><td class="num" style="font-weight:700;">R$ 478,2K</td><td class="num" style="font-weight:700;">15,63%</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">CUSTOS</td></tr><tr style=""><td style="">Custo Interno</td><td class="num neg" style="" colspan="7">R$ 518,8K</td></tr><tr style=""><td style="">Custo Afiliados</td><td class="num neg" style="" colspan="7">R$ 0</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Custo Total</td><td class="num neg" style="font-weight:700;" colspan="7">R$ 518,8K</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">LUCRO OPERACIONAL</td></tr><tr style=""><td style="">L.O. Interno</td><td class="num" style="" colspan="7">R$ 0</td></tr><tr style=""><td style="">L.O. Afiliados</td><td class="num" style="" colspan="7">R$ 0</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">L.O. Total</td><td class="num" style="font-weight:700;" colspan="7">R$ 646,9K</td></tr></tbody></table></div>
+              <div style="overflow-x:auto"><table><thead><tr><th>Operacao</th><th class="num">Fat. Total</th><th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th><th class="num">Lucro Total</th><th class="num">Lucro Interno</th><th class="num">Lucro Afiliados</th><th class="num">Margem Bruta</th></tr></thead>
+              <tbody><tr style=""><td style="">Sem Backend</td><td class="num" style="">R$ 6,61M</td><td class="num" style="">R$ 3,76M</td><td class="num" style="">R$ 2,85M</td><td class="num" style="">R$ 707,0K</td><td class="num" style="">R$ 437,4K</td><td class="num" style="">R$ 269,6K</td><td class="num" style="">10,69%</td></tr><tr style=""><td style="">Wellness Box</td><td class="num" style="">R$ 445,3K</td><td class="num" style="">R$ 228,6K</td><td class="num" style="">R$ 216,7K</td><td class="num" style="">R$ 253,0K</td><td class="num" style="">R$ 129,8K</td><td class="num" style="">R$ 123,1K</td><td class="num" style="">56,80%</td></tr><tr style=""><td style="">Call Center</td><td class="num" style="">R$ 292,9K</td><td class="num" style="">R$ 165,3K</td><td class="num" style="">R$ 127,6K</td><td class="num" style="">R$ 141,4K</td><td class="num" style="">R$ 78,6K</td><td class="num" style="">R$ 62,8K</td><td class="num" style="">48,26%</td></tr><tr style=""><td style="">SalesBound</td><td class="num" style="">R$ 60,1K</td><td class="num" style="">R$ 37,4K</td><td class="num" style="">R$ 22,7K</td><td class="num" style="">R$ 33,2K</td><td class="num" style="">R$ 20,3K</td><td class="num" style="">R$ 12,9K</td><td class="num" style="">55,34%</td></tr><tr style=""><td style="">No Tracking</td><td class="num" style="">R$ 45,3K</td><td class="num" style="">R$ 31,0K</td><td class="num" style="">R$ 14,3K</td><td class="num" style="">R$ 31,1K</td><td class="num" style="">R$ 21,3K</td><td class="num" style="">R$ 9,8K</td><td class="num" style="">68,80%</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Total com Backend</td><td class="num" style="font-weight:700;">R$ 7,46M</td><td class="num" style="font-weight:700;">R$ 4,22M</td><td class="num" style="font-weight:700;">R$ 3,23M</td><td class="num" style="font-weight:700;">R$ 1,17M</td><td class="num" style="font-weight:700;">R$ 168,7K</td><td class="num" style="font-weight:700;">R$ 478,2K</td><td class="num" style="font-weight:700;">15,63%</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">CUSTOS</td></tr><tr style=""><td style="">Custo Interno</td><td class="num neg" style="" colspan="7">R$ 518,8K</td></tr><tr style=""><td style="">Custo Afiliados</td><td class="num neg" style="" colspan="7">R$ 0</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Custo Total</td><td class="num neg" style="font-weight:700;" colspan="7">R$ 518,8K</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">LUCRO OPERACIONAL</td></tr><tr style=""><td style="">L.O. Interno</td><td class="num" style="" colspan="7">R$ 0</td></tr><tr style=""><td style="">L.O. Afiliados</td><td class="num" style="" colspan="7">R$ 0</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">L.O. Total</td><td class="num" style="font-weight:700;" colspan="7">R$ 646,9K</td></tr></tbody></table></div>
             </div>
 
           <script>
@@ -1917,7 +1921,7 @@ canvas{width:100%!important}
           <div class="g4" style="margin-bottom:20px">
             <div class="kpi accent"><div class="k-label">Faturamento Total</div><div class="k-value" style="font-size:20px">R$ 14,31M</div></div>
             <div class="kpi"><div class="k-label">Lucro Bruto</div><div class="k-value" style="font-size:20px">R$ 2,92M</div><div class="k-delta up">20,38% margem</div></div>
-            <div class="kpi"><div class="k-label">Custo Fixo</div><div class="k-value neg" style="font-size:20px">R$ 488,3K</div></div>
+            <div class="kpi"><div class="k-label">Custos e Despesas</div><div class="k-value neg" style="font-size:20px">R$ 488,3K</div></div>
             <div class="kpi red-accent"><div class="k-label">Lucro Operacional</div><div class="k-value" style="font-size:20px">R$ 0</div><div class="k-delta down">0,00% margem op.</div></div>
           </div>
 
@@ -1933,7 +1937,7 @@ canvas{width:100%!important}
               <th>Produto</th><th class="num">Trafego</th><th class="num">Fat. Total</th>
               <th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th>
               <th class="num">L.B. Total</th><th class="num">L.B. Interno</th><th class="num">L.B. Afiliados</th>
-              <th class="num">Margem</th>
+              <th class="num">Margem Bruta</th>
             </tr></thead><tbody><tr>
               <td class="loja-nome">ARIALIEF</td>
               <td class="num">R$ 4,52M</td>
@@ -1965,23 +1969,23 @@ canvas{width:100%!important}
               <td class="num">R$ 0</td>
               <td class="num neg">2,50%</td>
             </tr><tr>
-              <td class="loja-nome">FEILAIRA</td>
+              <td class="loja-nome">FEILAIRA <span style="color:var(--red);font-size:10px">&#9888; Prejuizo</span></td>
               <td class="num">R$ 17,6K</td>
               <td class="num">R$ 1,0K</td>
               <td class="num">R$ 1,0K</td>
               <td class="num">R$ 0</td>
               <td class="num neg">R$ -17,6K</td>
-              <td class="num">R$ -17,6K</td>
+              <td class="num neg">R$ -17,6K</td>
               <td class="num">R$ 0</td>
               <td class="num neg">-1690,83%</td>
             </tr><tr>
-              <td class="loja-nome">LAELLIUM - WEIGHT LOSS</td>
+              <td class="loja-nome">LAELLIUM - WEIGHT LOSS <span style="color:var(--red);font-size:10px">&#9888; Prejuizo</span></td>
               <td class="num">R$ 31,4K</td>
               <td class="num">R$ 0</td>
               <td class="num">R$ 0</td>
               <td class="num">R$ 0</td>
               <td class="num neg">R$ -13,8K</td>
-              <td class="num">R$ -13,8K</td>
+              <td class="num neg">R$ -13,8K</td>
               <td class="num">R$ 0</td>
               <td class="num neg">0,00%</td>
             </tr><tr class="total-row">
@@ -2005,8 +2009,8 @@ canvas{width:100%!important}
             </div>
           <div class="card" style="margin-bottom:20px">
               <div class="card-title">Demonstrativo Consolidado - MAR/25 <span class="tag">Por Operacao - Interno/Afiliado</span></div>
-              <div style="overflow-x:auto"><table><thead><tr><th>Operacao</th><th class="num">Fat. Total</th><th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th><th class="num">Lucro Total</th><th class="num">Lucro Interno</th><th class="num">Lucro Afiliados</th><th class="num">Margem</th></tr></thead>
-              <tbody><tr style=""><td style="">Sem Backend</td><td class="num" style="">R$ 12,58M</td><td class="num" style="">R$ 9,01M</td><td class="num" style="">R$ 3,57M</td><td class="num" style="">R$ 1,94M</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 0</td><td class="num" style="">15,41%</td></tr><tr style=""><td style="">Wellness Box</td><td class="num" style="">R$ 609,9K</td><td class="num" style="">R$ 379,0K</td><td class="num" style="">R$ 230,8K</td><td class="num" style="">R$ 346,4K</td><td class="num" style="">R$ 215,3K</td><td class="num" style="">R$ 131,1K</td><td class="num" style="">56,80%</td></tr><tr style=""><td style="">Call Center</td><td class="num" style="">R$ 727,5K</td><td class="num" style="">R$ 519,2K</td><td class="num" style="">R$ 208,3K</td><td class="num" style="">R$ 358,0K</td><td class="num" style="">R$ 255,5K</td><td class="num" style="">R$ 102,5K</td><td class="num" style="">49,21%</td></tr><tr style=""><td style="">SalesBound</td><td class="num" style="">R$ 101,2K</td><td class="num" style="">R$ 76,8K</td><td class="num" style="">R$ 24,4K</td><td class="num" style="">R$ 72,9K</td><td class="num" style="">R$ 55,3K</td><td class="num" style="">R$ 17,6K</td><td class="num" style="">72,02%</td></tr><tr style=""><td style="">No Tracking</td><td class="num" style="">R$ 291,8K</td><td class="num" style="">R$ 236,6K</td><td class="num" style="">R$ 55,2K</td><td class="num" style="">R$ 200,9K</td><td class="num" style="">R$ 162,9K</td><td class="num" style="">R$ 38,0K</td><td class="num" style="">68,85%</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Total com Backend</td><td class="num" style="font-weight:700;">R$ 14,31M</td><td class="num" style="font-weight:700;">R$ 10,22M</td><td class="num" style="font-weight:700;">R$ 4,09M</td><td class="num" style="font-weight:700;">R$ 2,92M</td><td class="num" style="font-weight:700;">R$ 1,59M</td><td class="num" style="font-weight:700;">R$ 834,4K</td><td class="num" style="font-weight:700;">20,38%</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">CUSTOS</td></tr><tr style=""><td style="">Custo Interno</td><td class="num neg" style="" colspan="7">R$ 488,3K</td></tr><tr style=""><td style="">Custo Afiliados</td><td class="num neg" style="" colspan="7">R$ 0</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Custo Total</td><td class="num neg" style="font-weight:700;" colspan="7">R$ 488,3K</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">LUCRO OPERACIONAL</td></tr><tr style=""><td style="">L.O. Interno</td><td class="num" style="" colspan="7">R$ 0</td></tr><tr style=""><td style="">L.O. Afiliados</td><td class="num" style="" colspan="7">R$ 0</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">L.O. Total</td><td class="num" style="font-weight:700;" colspan="7">R$ 2,43M</td></tr></tbody></table></div>
+              <div style="overflow-x:auto"><table><thead><tr><th>Operacao</th><th class="num">Fat. Total</th><th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th><th class="num">Lucro Total</th><th class="num">Lucro Interno</th><th class="num">Lucro Afiliados</th><th class="num">Margem Bruta</th></tr></thead>
+              <tbody><tr style=""><td style="">Sem Backend</td><td class="num" style="">R$ 12,58M</td><td class="num" style="">R$ 9,01M</td><td class="num" style="">R$ 3,57M</td><td class="num" style="">R$ 1,94M</td><td class="num" style="">R$ 1,39M</td><td class="num" style="">R$ 545,3K</td><td class="num" style="">15,41%</td></tr><tr style=""><td style="">Wellness Box</td><td class="num" style="">R$ 609,9K</td><td class="num" style="">R$ 379,0K</td><td class="num" style="">R$ 230,8K</td><td class="num" style="">R$ 346,4K</td><td class="num" style="">R$ 215,3K</td><td class="num" style="">R$ 131,1K</td><td class="num" style="">56,80%</td></tr><tr style=""><td style="">Call Center</td><td class="num" style="">R$ 727,5K</td><td class="num" style="">R$ 519,2K</td><td class="num" style="">R$ 208,3K</td><td class="num" style="">R$ 358,0K</td><td class="num" style="">R$ 255,5K</td><td class="num" style="">R$ 102,5K</td><td class="num" style="">49,21%</td></tr><tr style=""><td style="">SalesBound</td><td class="num" style="">R$ 101,2K</td><td class="num" style="">R$ 76,8K</td><td class="num" style="">R$ 24,4K</td><td class="num" style="">R$ 72,9K</td><td class="num" style="">R$ 55,3K</td><td class="num" style="">R$ 17,6K</td><td class="num" style="">72,02%</td></tr><tr style=""><td style="">No Tracking</td><td class="num" style="">R$ 291,8K</td><td class="num" style="">R$ 236,6K</td><td class="num" style="">R$ 55,2K</td><td class="num" style="">R$ 200,9K</td><td class="num" style="">R$ 162,9K</td><td class="num" style="">R$ 38,0K</td><td class="num" style="">68,85%</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Total com Backend</td><td class="num" style="font-weight:700;">R$ 14,31M</td><td class="num" style="font-weight:700;">R$ 10,22M</td><td class="num" style="font-weight:700;">R$ 4,09M</td><td class="num" style="font-weight:700;">R$ 2,92M</td><td class="num" style="font-weight:700;">R$ 1,59M</td><td class="num" style="font-weight:700;">R$ 834,4K</td><td class="num" style="font-weight:700;">20,38%</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">CUSTOS</td></tr><tr style=""><td style="">Custo Interno</td><td class="num neg" style="" colspan="7">R$ 488,3K</td></tr><tr style=""><td style="">Custo Afiliados</td><td class="num neg" style="" colspan="7">R$ 0</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Custo Total</td><td class="num neg" style="font-weight:700;" colspan="7">R$ 488,3K</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">LUCRO OPERACIONAL</td></tr><tr style=""><td style="">L.O. Interno</td><td class="num" style="" colspan="7">R$ 0</td></tr><tr style=""><td style="">L.O. Afiliados</td><td class="num" style="" colspan="7">R$ 0</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">L.O. Total</td><td class="num" style="font-weight:700;" colspan="7">R$ 2,43M</td></tr></tbody></table></div>
             </div>
 
           <script>
@@ -2038,7 +2042,7 @@ canvas{width:100%!important}
           <div class="g4" style="margin-bottom:20px">
             <div class="kpi accent"><div class="k-label">Faturamento Total</div><div class="k-value" style="font-size:20px">R$ 16,94M</div></div>
             <div class="kpi"><div class="k-label">Lucro Bruto</div><div class="k-value" style="font-size:20px">R$ 1,90M</div><div class="k-delta up">11,20% margem</div></div>
-            <div class="kpi"><div class="k-label">Custo Fixo</div><div class="k-value neg" style="font-size:20px">R$ 369,8K</div></div>
+            <div class="kpi"><div class="k-label">Custos e Despesas</div><div class="k-value neg" style="font-size:20px">R$ 369,8K</div></div>
             <div class="kpi red-accent"><div class="k-label">Lucro Operacional</div><div class="k-value" style="font-size:20px">R$ 0</div><div class="k-delta down">0,00% margem op.</div></div>
           </div>
 
@@ -2054,7 +2058,7 @@ canvas{width:100%!important}
               <th>Produto</th><th class="num">Trafego</th><th class="num">Fat. Total</th>
               <th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th>
               <th class="num">L.B. Total</th><th class="num">L.B. Interno</th><th class="num">L.B. Afiliados</th>
-              <th class="num">Margem</th>
+              <th class="num">Margem Bruta</th>
             </tr></thead><tbody><tr>
               <td class="loja-nome">ARIALIEF</td>
               <td class="num">R$ 4,16M</td>
@@ -2096,13 +2100,13 @@ canvas{width:100%!important}
               <td class="num">R$ 60,3K</td>
               <td class="num warn-text">6,32%</td>
             </tr><tr>
-              <td class="loja-nome">LAELLIUM - WEIGHT LOSS</td>
+              <td class="loja-nome">LAELLIUM - WEIGHT LOSS <span style="color:var(--red);font-size:10px">&#9888; Prejuizo</span></td>
               <td class="num">R$ 183,0K</td>
               <td class="num">R$ 315,4K</td>
               <td class="num">R$ 222,7K</td>
               <td class="num">R$ 92,7K</td>
               <td class="num neg">R$ -34,2K</td>
-              <td class="num">R$ -46,7K</td>
+              <td class="num neg">R$ -46,7K</td>
               <td class="num">R$ 12,5K</td>
               <td class="num neg">-10,85%</td>
             </tr><tr>
@@ -2146,8 +2150,8 @@ canvas{width:100%!important}
             </div>
           <div class="card" style="margin-bottom:20px">
               <div class="card-title">Demonstrativo Consolidado - MAI/25 <span class="tag">Por Operacao - Interno/Afiliado</span></div>
-              <div style="overflow-x:auto"><table><thead><tr><th>Operacao</th><th class="num">Fat. Total</th><th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th><th class="num">Lucro Total</th><th class="num">Lucro Interno</th><th class="num">Lucro Afiliados</th><th class="num">Margem</th></tr></thead>
-              <tbody><tr style=""><td style="">Sem Backend</td><td class="num" style="">R$ 14,35M</td><td class="num" style="">R$ 7,54M</td><td class="num" style="">R$ 6,81M</td><td class="num" style="">R$ 805,8K</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 0</td><td class="num" style="">5,61%</td></tr><tr style=""><td style="">Wellness Box</td><td class="num" style="">R$ 706,3K</td><td class="num" style="">R$ 391,0K</td><td class="num" style="">R$ 315,3K</td><td class="num" style="">R$ 401,2K</td><td class="num" style="">R$ 222,1K</td><td class="num" style="">R$ 179,1K</td><td class="num" style="">56,80%</td></tr><tr style=""><td style="">Call Center</td><td class="num" style="">R$ 845,9K</td><td class="num" style="">R$ 418,1K</td><td class="num" style="">R$ 427,7K</td><td class="num" style="">R$ 361,6K</td><td class="num" style="">R$ 178,9K</td><td class="num" style="">R$ 182,6K</td><td class="num" style="">42,74%</td></tr><tr style=""><td style="">SalesBound</td><td class="num" style="">R$ 106,1K</td><td class="num" style="">R$ 47,8K</td><td class="num" style="">R$ 58,3K</td><td class="num" style="">R$ 80,9K</td><td class="num" style="">R$ 36,7K</td><td class="num" style="">R$ 44,2K</td><td class="num" style="">76,23%</td></tr><tr style=""><td style="">No Tracking</td><td class="num" style="">R$ 925,2K</td><td class="num" style="">R$ 167,6K</td><td class="num" style="">R$ 757,6K</td><td class="num" style="">R$ 248,2K</td><td class="num" style="">R$ 88,1K</td><td class="num" style="">R$ 160,2K</td><td class="num" style="">26,83%</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Total com Backend</td><td class="num" style="font-weight:700;">R$ 16,94M</td><td class="num" style="font-weight:700;">R$ 8,57M</td><td class="num" style="font-weight:700;">R$ 8,37M</td><td class="num" style="font-weight:700;">R$ 1,90M</td><td class="num" style="font-weight:700;">R$ 434,6K</td><td class="num" style="font-weight:700;">R$ 1,09M</td><td class="num" style="font-weight:700;">11,20%</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">CUSTOS</td></tr><tr style=""><td style="">Custo Interno</td><td class="num neg" style="" colspan="7">R$ 15,0K</td></tr><tr style=""><td style="">Custo Afiliados</td><td class="num neg" style="" colspan="7">R$ 354,8K</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Custo Total</td><td class="num neg" style="font-weight:700;" colspan="7">R$ 369,8K</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">LUCRO OPERACIONAL</td></tr><tr style=""><td style="">L.O. Interno</td><td class="num" style="" colspan="7">R$ 0</td></tr><tr style=""><td style="">L.O. Afiliados</td><td class="num" style="" colspan="7">R$ 0</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">L.O. Total</td><td class="num" style="font-weight:700;" colspan="7">R$ 1,53M</td></tr></tbody></table></div>
+              <div style="overflow-x:auto"><table><thead><tr><th>Operacao</th><th class="num">Fat. Total</th><th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th><th class="num">Lucro Total</th><th class="num">Lucro Interno</th><th class="num">Lucro Afiliados</th><th class="num">Margem Bruta</th></tr></thead>
+              <tbody><tr style=""><td style="">Sem Backend <span style="color:var(--red);font-size:11px" title="Prejuizo">&#9888;</span></td><td class="num" style="">R$ 14,35M</td><td class="num" style="">R$ 7,54M</td><td class="num" style="">R$ 6,81M</td><td class="num" style="">R$ 805,8K</td><td class="num neg" style="">R$ -76,2K</td><td class="num" style="">R$ 882,1K</td><td class="num" style="">5,61%</td></tr><tr style=""><td style="">Wellness Box</td><td class="num" style="">R$ 706,3K</td><td class="num" style="">R$ 391,0K</td><td class="num" style="">R$ 315,3K</td><td class="num" style="">R$ 401,2K</td><td class="num" style="">R$ 222,1K</td><td class="num" style="">R$ 179,1K</td><td class="num" style="">56,80%</td></tr><tr style=""><td style="">Call Center</td><td class="num" style="">R$ 845,9K</td><td class="num" style="">R$ 418,1K</td><td class="num" style="">R$ 427,7K</td><td class="num" style="">R$ 361,6K</td><td class="num" style="">R$ 178,9K</td><td class="num" style="">R$ 182,6K</td><td class="num" style="">42,74%</td></tr><tr style=""><td style="">SalesBound</td><td class="num" style="">R$ 106,1K</td><td class="num" style="">R$ 47,8K</td><td class="num" style="">R$ 58,3K</td><td class="num" style="">R$ 80,9K</td><td class="num" style="">R$ 36,7K</td><td class="num" style="">R$ 44,2K</td><td class="num" style="">76,23%</td></tr><tr style=""><td style="">No Tracking</td><td class="num" style="">R$ 925,2K</td><td class="num" style="">R$ 167,6K</td><td class="num" style="">R$ 757,6K</td><td class="num" style="">R$ 248,2K</td><td class="num" style="">R$ 88,1K</td><td class="num" style="">R$ 160,2K</td><td class="num" style="">26,83%</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Total com Backend</td><td class="num" style="font-weight:700;">R$ 16,94M</td><td class="num" style="font-weight:700;">R$ 8,57M</td><td class="num" style="font-weight:700;">R$ 8,37M</td><td class="num" style="font-weight:700;">R$ 1,90M</td><td class="num" style="font-weight:700;">R$ 434,6K</td><td class="num" style="font-weight:700;">R$ 1,09M</td><td class="num" style="font-weight:700;">11,20%</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">CUSTOS</td></tr><tr style=""><td style="">Custo Interno</td><td class="num neg" style="" colspan="7">R$ 15,0K</td></tr><tr style=""><td style="">Custo Afiliados</td><td class="num neg" style="" colspan="7">R$ 354,8K</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Custo Total</td><td class="num neg" style="font-weight:700;" colspan="7">R$ 369,8K</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">LUCRO OPERACIONAL</td></tr><tr style=""><td style="">L.O. Interno</td><td class="num" style="" colspan="7">R$ 0</td></tr><tr style=""><td style="">L.O. Afiliados</td><td class="num" style="" colspan="7">R$ 0</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">L.O. Total</td><td class="num" style="font-weight:700;" colspan="7">R$ 1,53M</td></tr></tbody></table></div>
             </div>
 
           <script>
@@ -2179,7 +2183,7 @@ canvas{width:100%!important}
           <div class="g4" style="margin-bottom:20px">
             <div class="kpi accent"><div class="k-label">Faturamento Total</div><div class="k-value" style="font-size:20px">R$ 16,94M</div></div>
             <div class="kpi"><div class="k-label">Lucro Bruto</div><div class="k-value" style="font-size:20px">R$ 2,72M</div><div class="k-delta up">16,06% margem</div></div>
-            <div class="kpi"><div class="k-label">Custo Fixo</div><div class="k-value neg" style="font-size:20px">R$ 273,1K</div></div>
+            <div class="kpi"><div class="k-label">Custos e Despesas</div><div class="k-value neg" style="font-size:20px">R$ 273,1K</div></div>
             <div class="kpi red-accent"><div class="k-label">Lucro Operacional</div><div class="k-value" style="font-size:20px">R$ 0</div><div class="k-delta down">0,00% margem op.</div></div>
           </div>
 
@@ -2195,7 +2199,7 @@ canvas{width:100%!important}
               <th>Produto</th><th class="num">Trafego</th><th class="num">Fat. Total</th>
               <th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th>
               <th class="num">L.B. Total</th><th class="num">L.B. Interno</th><th class="num">L.B. Afiliados</th>
-              <th class="num">Margem</th>
+              <th class="num">Margem Bruta</th>
             </tr></thead><tbody><tr>
               <td class="loja-nome">ARIALIEF</td>
               <td class="num">R$ 1,02M</td>
@@ -2277,8 +2281,8 @@ canvas{width:100%!important}
             </div>
           <div class="card" style="margin-bottom:20px">
               <div class="card-title">Demonstrativo Consolidado - JUN/25 <span class="tag">Por Operacao - Interno/Afiliado</span></div>
-              <div style="overflow-x:auto"><table><thead><tr><th>Operacao</th><th class="num">Fat. Total</th><th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th><th class="num">Lucro Total</th><th class="num">Lucro Interno</th><th class="num">Lucro Afiliados</th><th class="num">Margem</th></tr></thead>
-              <tbody><tr style=""><td style="">Sem Backend</td><td class="num" style="">R$ 14,77M</td><td class="num" style="">R$ 7,21M</td><td class="num" style="">R$ 7,56M</td><td class="num" style="">R$ 1,44M</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 0</td><td class="num" style="">9,72%</td></tr><tr style=""><td style="">Wellness Box</td><td class="num" style="">R$ 690,2K</td><td class="num" style="">R$ 420,4K</td><td class="num" style="">R$ 269,8K</td><td class="num" style="">R$ 392,0K</td><td class="num" style="">R$ 238,8K</td><td class="num" style="">R$ 153,3K</td><td class="num" style="">56,80%</td></tr><tr style=""><td style="">Call Center</td><td class="num" style="">R$ 591,9K</td><td class="num" style="">R$ 202,2K</td><td class="num" style="">R$ 389,6K</td><td class="num" style="">R$ 250,6K</td><td class="num" style="">R$ 85,3K</td><td class="num" style="">R$ 165,3K</td><td class="num" style="">42,34%</td></tr><tr style=""><td style="">SalesBound</td><td class="num" style="">R$ 241,7K</td><td class="num" style="">R$ 118,0K</td><td class="num" style="">R$ 123,7K</td><td class="num" style="">R$ 175,9K</td><td class="num" style="">R$ 85,3K</td><td class="num" style="">R$ 90,6K</td><td class="num" style="">72,78%</td></tr><tr style=""><td style="">No Tracking</td><td class="num" style="">R$ 645,1K</td><td class="num" style="">R$ 432,9K</td><td class="num" style="">R$ 212,3K</td><td class="num" style="">R$ 465,9K</td><td class="num" style="">R$ 311,3K</td><td class="num" style="">R$ 154,5K</td><td class="num" style="">72,21%</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Total com Backend</td><td class="num" style="font-weight:700;">R$ 16,94M</td><td class="num" style="font-weight:700;">R$ 8,39M</td><td class="num" style="font-weight:700;">R$ 8,56M</td><td class="num" style="font-weight:700;">R$ 2,72M</td><td class="num" style="font-weight:700;">R$ 1,55M</td><td class="num" style="font-weight:700;">R$ 901,1K</td><td class="num" style="font-weight:700;">16,06%</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">CUSTOS</td></tr><tr style=""><td style="">Custo Interno</td><td class="num neg" style="" colspan="7">R$ 15,0K</td></tr><tr style=""><td style="">Custo Afiliados</td><td class="num neg" style="" colspan="7">R$ 258,1K</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Custo Total</td><td class="num neg" style="font-weight:700;" colspan="7">R$ 273,1K</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">LUCRO OPERACIONAL</td></tr><tr style=""><td style="">L.O. Interno</td><td class="num" style="" colspan="7">R$ 0</td></tr><tr style=""><td style="">L.O. Afiliados</td><td class="num" style="" colspan="7">R$ 0</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">L.O. Total</td><td class="num" style="font-weight:700;" colspan="7">R$ 2,45M</td></tr></tbody></table></div>
+              <div style="overflow-x:auto"><table><thead><tr><th>Operacao</th><th class="num">Fat. Total</th><th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th><th class="num">Lucro Total</th><th class="num">Lucro Interno</th><th class="num">Lucro Afiliados</th><th class="num">Margem Bruta</th></tr></thead>
+              <tbody><tr style=""><td style="">Sem Backend</td><td class="num" style="">R$ 14,77M</td><td class="num" style="">R$ 7,21M</td><td class="num" style="">R$ 7,56M</td><td class="num" style="">R$ 1,44M</td><td class="num" style="">R$ 840,2K</td><td class="num" style="">R$ 595,6K</td><td class="num" style="">9,72%</td></tr><tr style=""><td style="">Wellness Box</td><td class="num" style="">R$ 690,2K</td><td class="num" style="">R$ 420,4K</td><td class="num" style="">R$ 269,8K</td><td class="num" style="">R$ 392,0K</td><td class="num" style="">R$ 238,8K</td><td class="num" style="">R$ 153,3K</td><td class="num" style="">56,80%</td></tr><tr style=""><td style="">Call Center</td><td class="num" style="">R$ 591,9K</td><td class="num" style="">R$ 202,2K</td><td class="num" style="">R$ 389,6K</td><td class="num" style="">R$ 250,6K</td><td class="num" style="">R$ 85,3K</td><td class="num" style="">R$ 165,3K</td><td class="num" style="">42,34%</td></tr><tr style=""><td style="">SalesBound</td><td class="num" style="">R$ 241,7K</td><td class="num" style="">R$ 118,0K</td><td class="num" style="">R$ 123,7K</td><td class="num" style="">R$ 175,9K</td><td class="num" style="">R$ 85,3K</td><td class="num" style="">R$ 90,6K</td><td class="num" style="">72,78%</td></tr><tr style=""><td style="">No Tracking</td><td class="num" style="">R$ 645,1K</td><td class="num" style="">R$ 432,9K</td><td class="num" style="">R$ 212,3K</td><td class="num" style="">R$ 465,9K</td><td class="num" style="">R$ 311,3K</td><td class="num" style="">R$ 154,5K</td><td class="num" style="">72,21%</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Total com Backend</td><td class="num" style="font-weight:700;">R$ 16,94M</td><td class="num" style="font-weight:700;">R$ 8,39M</td><td class="num" style="font-weight:700;">R$ 8,56M</td><td class="num" style="font-weight:700;">R$ 2,72M</td><td class="num" style="font-weight:700;">R$ 1,55M</td><td class="num" style="font-weight:700;">R$ 901,1K</td><td class="num" style="font-weight:700;">16,06%</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">CUSTOS</td></tr><tr style=""><td style="">Custo Interno</td><td class="num neg" style="" colspan="7">R$ 15,0K</td></tr><tr style=""><td style="">Custo Afiliados</td><td class="num neg" style="" colspan="7">R$ 258,1K</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Custo Total</td><td class="num neg" style="font-weight:700;" colspan="7">R$ 273,1K</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">LUCRO OPERACIONAL</td></tr><tr style=""><td style="">L.O. Interno</td><td class="num" style="" colspan="7">R$ 0</td></tr><tr style=""><td style="">L.O. Afiliados</td><td class="num" style="" colspan="7">R$ 0</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">L.O. Total</td><td class="num" style="font-weight:700;" colspan="7">R$ 2,45M</td></tr></tbody></table></div>
             </div>
 
           <script>
@@ -2310,7 +2314,7 @@ canvas{width:100%!important}
           <div class="g4" style="margin-bottom:20px">
             <div class="kpi accent"><div class="k-label">Faturamento Total</div><div class="k-value" style="font-size:20px">R$ 41,46M</div></div>
             <div class="kpi"><div class="k-label">Lucro Bruto</div><div class="k-value" style="font-size:20px">R$ 6,39M</div><div class="k-delta up">15,40% margem</div></div>
-            <div class="kpi"><div class="k-label">Custo Fixo</div><div class="k-value neg" style="font-size:20px">R$ 649,5K</div></div>
+            <div class="kpi"><div class="k-label">Custos e Despesas</div><div class="k-value neg" style="font-size:20px">R$ 649,5K</div></div>
             <div class="kpi red-accent"><div class="k-label">Lucro Operacional</div><div class="k-value" style="font-size:20px">R$ 0</div><div class="k-delta down">0,00% margem op.</div></div>
           </div>
 
@@ -2326,7 +2330,7 @@ canvas{width:100%!important}
               <th>Produto</th><th class="num">Trafego</th><th class="num">Fat. Total</th>
               <th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th>
               <th class="num">L.B. Total</th><th class="num">L.B. Interno</th><th class="num">L.B. Afiliados</th>
-              <th class="num">Margem</th>
+              <th class="num">Margem Bruta</th>
             </tr></thead><tbody><tr>
               <td class="loja-nome">LAELLIUM - WEIGHT LOSS</td>
               <td class="num">R$ 5,83M</td>
@@ -2438,8 +2442,8 @@ canvas{width:100%!important}
             </div>
           <div class="card" style="margin-bottom:20px">
               <div class="card-title">Demonstrativo Consolidado - JUL/25 <span class="tag">Por Operacao - Interno/Afiliado</span></div>
-              <div style="overflow-x:auto"><table><thead><tr><th>Operacao</th><th class="num">Fat. Total</th><th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th><th class="num">Lucro Total</th><th class="num">Lucro Interno</th><th class="num">Lucro Afiliados</th><th class="num">Margem</th></tr></thead>
-              <tbody><tr style=""><td style="">Sem Backend</td><td class="num" style="">R$ 37,48M</td><td class="num" style="">R$ 23,06M</td><td class="num" style="">R$ 14,42M</td><td class="num" style="">R$ 4,19M</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 0</td><td class="num" style="">11,18%</td></tr><tr style=""><td style="">Wellness Box</td><td class="num" style="">R$ 929,6K</td><td class="num" style="">R$ 610,3K</td><td class="num" style="">R$ 319,3K</td><td class="num" style="">R$ 528,0K</td><td class="num" style="">R$ 346,7K</td><td class="num" style="">R$ 181,3K</td><td class="num" style="">56,80%</td></tr><tr style=""><td style="">Call Center</td><td class="num" style="">R$ 1,57M</td><td class="num" style="">R$ 952,7K</td><td class="num" style="">R$ 612,9K</td><td class="num" style="">R$ 691,4K</td><td class="num" style="">R$ 413,7K</td><td class="num" style="">R$ 277,7K</td><td class="num" style="">44,16%</td></tr><tr style=""><td style="">SalesBound</td><td class="num" style="">R$ 502,6K</td><td class="num" style="">R$ 223,1K</td><td class="num" style="">R$ 279,5K</td><td class="num" style="">R$ 322,2K</td><td class="num" style="">R$ 131,0K</td><td class="num" style="">R$ 191,3K</td><td class="num" style="">64,11%</td></tr><tr style=""><td style="">No Tracking</td><td class="num" style="">R$ 985,0K</td><td class="num" style="">R$ 838,2K</td><td class="num" style="">R$ 146,7K</td><td class="num" style="">R$ 654,0K</td><td class="num" style="">R$ 556,3K</td><td class="num" style="">R$ 97,7K</td><td class="num" style="">66,40%</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Total com Backend</td><td class="num" style="font-weight:700;">R$ 41,46M</td><td class="num" style="font-weight:700;">R$ 25,68M</td><td class="num" style="font-weight:700;">R$ 15,78M</td><td class="num" style="font-weight:700;">R$ 6,39M</td><td class="num" style="font-weight:700;">R$ 5,15M</td><td class="num" style="font-weight:700;">R$ 582,6K</td><td class="num" style="font-weight:700;">15,40%</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">CUSTOS</td></tr><tr style=""><td style="">Custo Interno</td><td class="num neg" style="" colspan="7">R$ 14,5K</td></tr><tr style=""><td style="">Custo Afiliados</td><td class="num neg" style="" colspan="7">R$ 635,0K</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Custo Total</td><td class="num neg" style="font-weight:700;" colspan="7">R$ 649,5K</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">LUCRO OPERACIONAL</td></tr><tr style=""><td style="">L.O. Interno</td><td class="num" style="" colspan="7">R$ 0</td></tr><tr style=""><td style="">L.O. Afiliados</td><td class="num" style="" colspan="7">R$ 0</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">L.O. Total</td><td class="num" style="font-weight:700;" colspan="7">R$ 5,74M</td></tr></tbody></table></div>
+              <div style="overflow-x:auto"><table><thead><tr><th>Operacao</th><th class="num">Fat. Total</th><th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th><th class="num">Lucro Total</th><th class="num">Lucro Interno</th><th class="num">Lucro Afiliados</th><th class="num">Margem Bruta</th></tr></thead>
+              <tbody><tr style=""><td style="">Sem Backend</td><td class="num" style="">R$ 37,48M</td><td class="num" style="">R$ 23,06M</td><td class="num" style="">R$ 14,42M</td><td class="num" style="">R$ 4,19M</td><td class="num" style="">R$ 3,72M</td><td class="num" style="">R$ 469,6K</td><td class="num" style="">11,18%</td></tr><tr style=""><td style="">Wellness Box</td><td class="num" style="">R$ 929,6K</td><td class="num" style="">R$ 610,3K</td><td class="num" style="">R$ 319,3K</td><td class="num" style="">R$ 528,0K</td><td class="num" style="">R$ 346,7K</td><td class="num" style="">R$ 181,3K</td><td class="num" style="">56,80%</td></tr><tr style=""><td style="">Call Center</td><td class="num" style="">R$ 1,57M</td><td class="num" style="">R$ 952,7K</td><td class="num" style="">R$ 612,9K</td><td class="num" style="">R$ 691,4K</td><td class="num" style="">R$ 413,7K</td><td class="num" style="">R$ 277,7K</td><td class="num" style="">44,16%</td></tr><tr style=""><td style="">SalesBound</td><td class="num" style="">R$ 502,6K</td><td class="num" style="">R$ 223,1K</td><td class="num" style="">R$ 279,5K</td><td class="num" style="">R$ 322,2K</td><td class="num" style="">R$ 131,0K</td><td class="num" style="">R$ 191,3K</td><td class="num" style="">64,11%</td></tr><tr style=""><td style="">No Tracking</td><td class="num" style="">R$ 985,0K</td><td class="num" style="">R$ 838,2K</td><td class="num" style="">R$ 146,7K</td><td class="num" style="">R$ 654,0K</td><td class="num" style="">R$ 556,3K</td><td class="num" style="">R$ 97,7K</td><td class="num" style="">66,40%</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Total com Backend</td><td class="num" style="font-weight:700;">R$ 41,46M</td><td class="num" style="font-weight:700;">R$ 25,68M</td><td class="num" style="font-weight:700;">R$ 15,78M</td><td class="num" style="font-weight:700;">R$ 6,39M</td><td class="num" style="font-weight:700;">R$ 5,15M</td><td class="num" style="font-weight:700;">R$ 582,6K</td><td class="num" style="font-weight:700;">15,40%</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">CUSTOS</td></tr><tr style=""><td style="">Custo Interno</td><td class="num neg" style="" colspan="7">R$ 14,5K</td></tr><tr style=""><td style="">Custo Afiliados</td><td class="num neg" style="" colspan="7">R$ 635,0K</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Custo Total</td><td class="num neg" style="font-weight:700;" colspan="7">R$ 649,5K</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">LUCRO OPERACIONAL</td></tr><tr style=""><td style="">L.O. Interno</td><td class="num" style="" colspan="7">R$ 0</td></tr><tr style=""><td style="">L.O. Afiliados</td><td class="num" style="" colspan="7">R$ 0</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">L.O. Total</td><td class="num" style="font-weight:700;" colspan="7">R$ 5,74M</td></tr></tbody></table></div>
             </div>
 
           <script>
@@ -2471,7 +2475,7 @@ canvas{width:100%!important}
           <div class="g4" style="margin-bottom:20px">
             <div class="kpi accent"><div class="k-label">Faturamento Total</div><div class="k-value" style="font-size:20px">R$ 21,24M</div></div>
             <div class="kpi"><div class="k-label">Lucro Bruto</div><div class="k-value" style="font-size:20px">R$ 3,34M</div><div class="k-delta up">15,72% margem</div></div>
-            <div class="kpi"><div class="k-label">Custo Fixo</div><div class="k-value neg" style="font-size:20px">R$ 654,4K</div></div>
+            <div class="kpi"><div class="k-label">Custos e Despesas</div><div class="k-value neg" style="font-size:20px">R$ 654,4K</div></div>
             <div class="kpi red-accent"><div class="k-label">Lucro Operacional</div><div class="k-value" style="font-size:20px">R$ 0</div><div class="k-delta down">0,00% margem op.</div></div>
           </div>
 
@@ -2487,7 +2491,7 @@ canvas{width:100%!important}
               <th>Produto</th><th class="num">Trafego</th><th class="num">Fat. Total</th>
               <th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th>
               <th class="num">L.B. Total</th><th class="num">L.B. Interno</th><th class="num">L.B. Afiliados</th>
-              <th class="num">Margem</th>
+              <th class="num">Margem Bruta</th>
             </tr></thead><tbody><tr>
               <td class="loja-nome">ARIALIEF</td>
               <td class="num">R$ 78,1K</td>
@@ -2535,7 +2539,7 @@ canvas{width:100%!important}
               <td class="num">R$ -0</td>
               <td class="num">R$ 1,24M</td>
               <td class="num">R$ 117,9K</td>
-              <td class="num">R$ -0</td>
+              <td class="num neg">R$ -0</td>
               <td class="num">R$ 117,9K</td>
               <td class="num warn-text">9,53%</td>
             </tr><tr>
@@ -2599,14 +2603,14 @@ canvas{width:100%!important}
               <td class="num">R$ 1,3K</td>
               <td class="num warn-text">10,43%</td>
             </tr><tr>
-              <td class="loja-nome">ZEREVEST</td>
+              <td class="loja-nome">ZEREVEST <span style="color:var(--red);font-size:10px">&#9888; Prejuizo</span></td>
               <td class="num">R$ 0</td>
               <td class="num">R$ 9,9K</td>
               <td class="num">R$ 0</td>
               <td class="num">R$ 9,9K</td>
               <td class="num neg">R$ -748</td>
               <td class="num">R$ 0</td>
-              <td class="num">R$ -748</td>
+              <td class="num neg">R$ -748</td>
               <td class="num neg">-7,58%</td>
             </tr><tr class="total-row">
           <td><strong>TOTAL PRODUTOS</strong></td>
@@ -2629,8 +2633,8 @@ canvas{width:100%!important}
             </div>
           <div class="card" style="margin-bottom:20px">
               <div class="card-title">Demonstrativo Consolidado - SET/25 <span class="tag">Por Operacao - Interno/Afiliado</span></div>
-              <div style="overflow-x:auto"><table><thead><tr><th>Operacao</th><th class="num">Fat. Total</th><th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th><th class="num">Lucro Total</th><th class="num">Lucro Interno</th><th class="num">Lucro Afiliados</th><th class="num">Margem</th></tr></thead>
-              <tbody><tr style=""><td style="">Sem Backend</td><td class="num" style="">R$ 17,21M</td><td class="num" style="">R$ 2,63M</td><td class="num" style="">R$ 14,58M</td><td class="num" style="">R$ 1,02M</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 0</td><td class="num" style="">5,95%</td></tr><tr style=""><td style="">Wellness Box</td><td class="num" style="">R$ 1,43M</td><td class="num" style="">R$ 972,5K</td><td class="num" style="">R$ 462,3K</td><td class="num" style="">R$ 815,0K</td><td class="num" style="">R$ 544,8K</td><td class="num" style="">R$ 270,2K</td><td class="num" style="">56,80%</td></tr><tr style=""><td style="">Call Center</td><td class="num" style="">R$ 1,39M</td><td class="num" style="">R$ 170,3K</td><td class="num" style="">R$ 1,22M</td><td class="num" style="">R$ 651,1K</td><td class="num" style="">R$ 77,8K</td><td class="num" style="">R$ 573,3K</td><td class="num" style="">46,86%</td></tr><tr style=""><td style="">SalesBound</td><td class="num" style="">R$ 751,9K</td><td class="num" style="">R$ 98,1K</td><td class="num" style="">R$ 653,7K</td><td class="num" style="">R$ 533,6K</td><td class="num" style="">R$ 69,6K</td><td class="num" style="">R$ 463,9K</td><td class="num" style="">70,97%</td></tr><tr style=""><td style="">No Tracking</td><td class="num" style="">R$ 452,3K</td><td class="num" style="">R$ 114,4K</td><td class="num" style="">R$ 337,9K</td><td class="num" style="">R$ 314,7K</td><td class="num" style="">R$ 78,5K</td><td class="num" style="">R$ 236,2K</td><td class="num" style="">69,56%</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Total com Backend</td><td class="num" style="font-weight:700;">R$ 21,24M</td><td class="num" style="font-weight:700;">R$ 3,98M</td><td class="num" style="font-weight:700;">R$ 17,25M</td><td class="num" style="font-weight:700;">R$ 3,34M</td><td class="num" style="font-weight:700;">R$ 661,2K</td><td class="num" style="font-weight:700;">R$ 2,02M</td><td class="num" style="font-weight:700;">15,72%</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">CUSTOS</td></tr><tr style=""><td style="">Custo Interno</td><td class="num neg" style="" colspan="7">R$ 73,5K</td></tr><tr style=""><td style="">Custo Afiliados</td><td class="num neg" style="" colspan="7">R$ 580,9K</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Custo Total</td><td class="num neg" style="font-weight:700;" colspan="7">R$ 654,4K</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">LUCRO OPERACIONAL</td></tr><tr style=""><td style="">L.O. Interno</td><td class="num" style="" colspan="7">R$ 0</td></tr><tr style=""><td style="">L.O. Afiliados</td><td class="num" style="" colspan="7">R$ 0</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">L.O. Total</td><td class="num" style="font-weight:700;" colspan="7">R$ 2,68M</td></tr></tbody></table></div>
+              <div style="overflow-x:auto"><table><thead><tr><th>Operacao</th><th class="num">Fat. Total</th><th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th><th class="num">Lucro Total</th><th class="num">Lucro Interno</th><th class="num">Lucro Afiliados</th><th class="num">Margem Bruta</th></tr></thead>
+              <tbody><tr style=""><td style="">Sem Backend <span style="color:var(--red);font-size:11px" title="Prejuizo">&#9888;</span></td><td class="num" style="">R$ 17,21M</td><td class="num" style="">R$ 2,63M</td><td class="num" style="">R$ 14,58M</td><td class="num" style="">R$ 1,02M</td><td class="num neg" style="">R$ -36,0K</td><td class="num" style="">R$ 1,06M</td><td class="num" style="">5,95%</td></tr><tr style=""><td style="">Wellness Box</td><td class="num" style="">R$ 1,43M</td><td class="num" style="">R$ 972,5K</td><td class="num" style="">R$ 462,3K</td><td class="num" style="">R$ 815,0K</td><td class="num" style="">R$ 544,8K</td><td class="num" style="">R$ 270,2K</td><td class="num" style="">56,80%</td></tr><tr style=""><td style="">Call Center</td><td class="num" style="">R$ 1,39M</td><td class="num" style="">R$ 170,3K</td><td class="num" style="">R$ 1,22M</td><td class="num" style="">R$ 651,1K</td><td class="num" style="">R$ 77,8K</td><td class="num" style="">R$ 573,3K</td><td class="num" style="">46,86%</td></tr><tr style=""><td style="">SalesBound</td><td class="num" style="">R$ 751,9K</td><td class="num" style="">R$ 98,1K</td><td class="num" style="">R$ 653,7K</td><td class="num" style="">R$ 533,6K</td><td class="num" style="">R$ 69,6K</td><td class="num" style="">R$ 463,9K</td><td class="num" style="">70,97%</td></tr><tr style=""><td style="">No Tracking</td><td class="num" style="">R$ 452,3K</td><td class="num" style="">R$ 114,4K</td><td class="num" style="">R$ 337,9K</td><td class="num" style="">R$ 314,7K</td><td class="num" style="">R$ 78,5K</td><td class="num" style="">R$ 236,2K</td><td class="num" style="">69,56%</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Total com Backend</td><td class="num" style="font-weight:700;">R$ 21,24M</td><td class="num" style="font-weight:700;">R$ 3,98M</td><td class="num" style="font-weight:700;">R$ 17,25M</td><td class="num" style="font-weight:700;">R$ 3,34M</td><td class="num" style="font-weight:700;">R$ 661,2K</td><td class="num" style="font-weight:700;">R$ 2,02M</td><td class="num" style="font-weight:700;">15,72%</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">CUSTOS</td></tr><tr style=""><td style="">Custo Interno</td><td class="num neg" style="" colspan="7">R$ 73,5K</td></tr><tr style=""><td style="">Custo Afiliados</td><td class="num neg" style="" colspan="7">R$ 580,9K</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Custo Total</td><td class="num neg" style="font-weight:700;" colspan="7">R$ 654,4K</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">LUCRO OPERACIONAL</td></tr><tr style=""><td style="">L.O. Interno</td><td class="num" style="" colspan="7">R$ 0</td></tr><tr style=""><td style="">L.O. Afiliados</td><td class="num" style="" colspan="7">R$ 0</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">L.O. Total</td><td class="num" style="font-weight:700;" colspan="7">R$ 2,68M</td></tr></tbody></table></div>
             </div>
 
           <script>
@@ -2662,7 +2666,7 @@ canvas{width:100%!important}
           <div class="g4" style="margin-bottom:20px">
             <div class="kpi accent"><div class="k-label">Faturamento Total</div><div class="k-value" style="font-size:20px">R$ 52,22M</div></div>
             <div class="kpi"><div class="k-label">Lucro Bruto</div><div class="k-value" style="font-size:20px">R$ 7,30M</div><div class="k-delta up">13,99% margem</div></div>
-            <div class="kpi"><div class="k-label">Custo Fixo</div><div class="k-value neg" style="font-size:20px">R$ 651,3K</div></div>
+            <div class="kpi"><div class="k-label">Custos e Despesas</div><div class="k-value neg" style="font-size:20px">R$ 651,3K</div></div>
             <div class="kpi accent"><div class="k-label">Lucro Operacional</div><div class="k-value" style="font-size:20px">R$ 6,65M</div><div class="k-delta up">12,74% margem op.</div></div>
           </div>
 
@@ -2678,7 +2682,7 @@ canvas{width:100%!important}
               <th>Produto</th><th class="num">Trafego</th><th class="num">Fat. Total</th>
               <th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th>
               <th class="num">L.B. Total</th><th class="num">L.B. Interno</th><th class="num">L.B. Afiliados</th>
-              <th class="num">Margem</th>
+              <th class="num">Margem Bruta</th>
             </tr></thead><tbody><tr>
               <td class="loja-nome">MEMYTS</td>
               <td class="num">R$ 451,5K</td>
@@ -2740,14 +2744,14 @@ canvas{width:100%!important}
               <td class="num">R$ 176,2K</td>
               <td class="num warn-text">12,47%</td>
             </tr><tr>
-              <td class="loja-nome">JERTARIS</td>
+              <td class="loja-nome">JERTARIS <span style="color:var(--red);font-size:10px">&#9888; Prejuizo</span></td>
               <td class="num">R$ 78,6K</td>
               <td class="num">R$ 2,65M</td>
               <td class="num">R$ 119,8K</td>
               <td class="num">R$ 2,53M</td>
               <td class="num neg">R$ -221,5K</td>
               <td class="num">R$ 7,6K</td>
-              <td class="num">R$ -229,1K</td>
+              <td class="num neg">R$ -229,1K</td>
               <td class="num neg">-8,34%</td>
             </tr><tr>
               <td class="loja-nome">ARIALIEF</td>
@@ -2780,14 +2784,14 @@ canvas{width:100%!important}
               <td class="num">R$ 109,8K</td>
               <td class="num pos">24,58%</td>
             </tr><tr>
-              <td class="loja-nome">FEILARIA</td>
+              <td class="loja-nome">FEILARIA <span style="color:var(--red);font-size:10px">&#9888; Prejuizo</span></td>
               <td class="num">R$ 0</td>
               <td class="num">R$ 550,8K</td>
               <td class="num">R$ 7,5K</td>
               <td class="num">R$ 543,4K</td>
               <td class="num neg">R$ -12,9K</td>
               <td class="num">R$ 4,3K</td>
-              <td class="num">R$ -17,2K</td>
+              <td class="num neg">R$ -17,2K</td>
               <td class="num neg">-2,34%</td>
             </tr><tr>
               <td class="loja-nome">KORVIZOL</td>
@@ -2820,14 +2824,14 @@ canvas{width:100%!important}
               <td class="num">R$ 1,6K</td>
               <td class="num warn-text">6,28%</td>
             </tr><tr>
-              <td class="loja-nome">MAHGRYN</td>
+              <td class="loja-nome">MAHGRYN <span style="color:var(--red);font-size:10px">&#9888; Prejuizo</span></td>
               <td class="num">R$ 0</td>
               <td class="num">R$ 7,8K</td>
               <td class="num">R$ 553</td>
               <td class="num">R$ 7,3K</td>
               <td class="num neg">R$ -2,0K</td>
-              <td class="num">R$ -618</td>
-              <td class="num">R$ -1,4K</td>
+              <td class="num neg">R$ -618</td>
+              <td class="num neg">R$ -1,4K</td>
               <td class="num neg">-25,45%</td>
             </tr><tr>
               <td class="loja-nome">ZEREVEST</td>
@@ -2860,8 +2864,8 @@ canvas{width:100%!important}
             </div>
           <div class="card" style="margin-bottom:20px">
               <div class="card-title">Demonstrativo Consolidado - NOV/25 <span class="tag">Por Operacao - Interno/Afiliado</span></div>
-              <div style="overflow-x:auto"><table><thead><tr><th>Operacao</th><th class="num">Fat. Total</th><th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th><th class="num">Lucro Total</th><th class="num">Lucro Interno</th><th class="num">Lucro Afiliados</th><th class="num">Margem</th></tr></thead>
-              <tbody><tr style=""><td style="">Sem Backend</td><td class="num" style="">R$ 42,51M</td><td class="num" style="">R$ 1,63M</td><td class="num" style="">R$ 40,87M</td><td class="num" style="">R$ 1,37M</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 0</td><td class="num" style="">3,22%</td></tr><tr style=""><td style="">Wellness Box</td><td class="num" style="">R$ 1,46M</td><td class="num" style="">R$ 915,2K</td><td class="num" style="">R$ 542,1K</td><td class="num" style="">R$ 827,7K</td><td class="num" style="">R$ 516,8K</td><td class="num" style="">R$ 310,9K</td><td class="num" style="">56,80%</td></tr><tr style=""><td style="">Call Center</td><td class="num" style="">R$ 4,10M</td><td class="num" style="">R$ 126,6K</td><td class="num" style="">R$ 3,97M</td><td class="num" style="">R$ 2,03M</td><td class="num" style="">R$ 63,6K</td><td class="num" style="">R$ 1,96M</td><td class="num" style="">49,44%</td></tr><tr style=""><td style="">SalesBound</td><td class="num" style="">R$ 1,42M</td><td class="num" style="">R$ 42,1K</td><td class="num" style="">R$ 1,37M</td><td class="num" style="">R$ 1,04M</td><td class="num" style="">R$ 31,1K</td><td class="num" style="">R$ 1,01M</td><td class="num" style="">73,41%</td></tr><tr style=""><td style="">No Tracking</td><td class="num" style="">R$ 2,74M</td><td class="num" style="">R$ 124,7K</td><td class="num" style="">R$ 2,62M</td><td class="num" style="">R$ 2,04M</td><td class="num" style="">R$ 90,9K</td><td class="num" style="">R$ 1,95M</td><td class="num" style="">74,38%</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Total com Backend</td><td class="num" style="font-weight:700;">R$ 52,22M</td><td class="num" style="font-weight:700;">R$ 2,84M</td><td class="num" style="font-weight:700;">R$ 49,38M</td><td class="num" style="font-weight:700;">R$ 7,30M</td><td class="num" style="font-weight:700;">R$ 735,8K</td><td class="num" style="font-weight:700;">R$ 5,92M</td><td class="num" style="font-weight:700;">13,99%</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">CUSTOS</td></tr><tr style=""><td style="">Custo Interno</td><td class="num neg" style="" colspan="7">R$ 52,5K</td></tr><tr style=""><td style="">Custo Afiliados</td><td class="num neg" style="" colspan="7">R$ 598,8K</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Custo Total</td><td class="num neg" style="font-weight:700;" colspan="7">R$ 651,3K</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">LUCRO OPERACIONAL</td></tr><tr style=""><td style="">L.O. Interno</td><td class="num" style="" colspan="7">R$ 0</td></tr><tr style=""><td style="">L.O. Afiliados</td><td class="num" style="" colspan="7">R$ 0</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">L.O. Total</td><td class="num" style="font-weight:700;" colspan="7">R$ 6,65M</td></tr></tbody></table></div>
+              <div style="overflow-x:auto"><table><thead><tr><th>Operacao</th><th class="num">Fat. Total</th><th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th><th class="num">Lucro Total</th><th class="num">Lucro Interno</th><th class="num">Lucro Afiliados</th><th class="num">Margem Bruta</th></tr></thead>
+              <tbody><tr style=""><td style="">Sem Backend</td><td class="num" style="">R$ 42,51M</td><td class="num" style="">R$ 1,63M</td><td class="num" style="">R$ 40,87M</td><td class="num" style="">R$ 1,37M</td><td class="num" style="">R$ 85,9K</td><td class="num" style="">R$ 1,28M</td><td class="num" style="">3,22%</td></tr><tr style=""><td style="">Wellness Box</td><td class="num" style="">R$ 1,46M</td><td class="num" style="">R$ 915,2K</td><td class="num" style="">R$ 542,1K</td><td class="num" style="">R$ 827,7K</td><td class="num" style="">R$ 516,8K</td><td class="num" style="">R$ 310,9K</td><td class="num" style="">56,80%</td></tr><tr style=""><td style="">Call Center</td><td class="num" style="">R$ 4,10M</td><td class="num" style="">R$ 126,6K</td><td class="num" style="">R$ 3,97M</td><td class="num" style="">R$ 2,03M</td><td class="num" style="">R$ 63,6K</td><td class="num" style="">R$ 1,96M</td><td class="num" style="">49,44%</td></tr><tr style=""><td style="">SalesBound</td><td class="num" style="">R$ 1,42M</td><td class="num" style="">R$ 42,1K</td><td class="num" style="">R$ 1,37M</td><td class="num" style="">R$ 1,04M</td><td class="num" style="">R$ 31,1K</td><td class="num" style="">R$ 1,01M</td><td class="num" style="">73,41%</td></tr><tr style=""><td style="">No Tracking</td><td class="num" style="">R$ 2,74M</td><td class="num" style="">R$ 124,7K</td><td class="num" style="">R$ 2,62M</td><td class="num" style="">R$ 2,04M</td><td class="num" style="">R$ 90,9K</td><td class="num" style="">R$ 1,95M</td><td class="num" style="">74,38%</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Total com Backend</td><td class="num" style="font-weight:700;">R$ 52,22M</td><td class="num" style="font-weight:700;">R$ 2,84M</td><td class="num" style="font-weight:700;">R$ 49,38M</td><td class="num" style="font-weight:700;">R$ 7,30M</td><td class="num" style="font-weight:700;">R$ 735,8K</td><td class="num" style="font-weight:700;">R$ 5,92M</td><td class="num" style="font-weight:700;">13,99%</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">CUSTOS</td></tr><tr style=""><td style="">Custo Interno</td><td class="num neg" style="" colspan="7">R$ 52,5K</td></tr><tr style=""><td style="">Custo Afiliados</td><td class="num neg" style="" colspan="7">R$ 598,8K</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Custo Total</td><td class="num neg" style="font-weight:700;" colspan="7">R$ 651,3K</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">LUCRO OPERACIONAL</td></tr><tr style=""><td style="">L.O. Interno</td><td class="num" style="" colspan="7">R$ 0</td></tr><tr style=""><td style="">L.O. Afiliados</td><td class="num" style="" colspan="7">R$ 0</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">L.O. Total</td><td class="num" style="font-weight:700;" colspan="7">R$ 6,65M</td></tr></tbody></table></div>
             </div>
 
           <script>
@@ -2893,7 +2897,7 @@ canvas{width:100%!important}
           <div class="g4" style="margin-bottom:20px">
             <div class="kpi accent"><div class="k-label">Faturamento Total</div><div class="k-value" style="font-size:20px">R$ 40,46M</div></div>
             <div class="kpi"><div class="k-label">Lucro Bruto</div><div class="k-value" style="font-size:20px">R$ 8,01M</div><div class="k-delta up">19,79% margem</div></div>
-            <div class="kpi"><div class="k-label">Custo Fixo</div><div class="k-value neg" style="font-size:20px">R$ 678,6K</div></div>
+            <div class="kpi"><div class="k-label">Custos e Despesas</div><div class="k-value neg" style="font-size:20px">R$ 678,6K</div></div>
             <div class="kpi accent"><div class="k-label">Lucro Operacional</div><div class="k-value" style="font-size:20px">R$ 7,33M</div><div class="k-delta up">18,12% margem op.</div></div>
           </div>
 
@@ -2909,7 +2913,7 @@ canvas{width:100%!important}
               <th>Produto</th><th class="num">Trafego</th><th class="num">Fat. Total</th>
               <th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th>
               <th class="num">L.B. Total</th><th class="num">L.B. Interno</th><th class="num">L.B. Afiliados</th>
-              <th class="num">Margem</th>
+              <th class="num">Margem Bruta</th>
             </tr></thead><tbody><tr>
               <td class="loja-nome">GARAHERB</td>
               <td class="num">R$ 623,3K</td>
@@ -2981,14 +2985,14 @@ canvas{width:100%!important}
               <td class="num">R$ 268,5K</td>
               <td class="num pos">16,41%</td>
             </tr><tr>
-              <td class="loja-nome">JERTARIS</td>
+              <td class="loja-nome">JERTARIS <span style="color:var(--red);font-size:10px">&#9888; Prejuizo</span></td>
               <td class="num">R$ 60,4K</td>
               <td class="num">R$ 1,89M</td>
               <td class="num">R$ 73,5K</td>
               <td class="num">R$ 1,81M</td>
               <td class="num neg">R$ -100,1K</td>
-              <td class="num">R$ -5,8K</td>
-              <td class="num">R$ -94,3K</td>
+              <td class="num neg">R$ -5,8K</td>
+              <td class="num neg">R$ -94,3K</td>
               <td class="num neg">-5,29%</td>
             </tr><tr>
               <td class="loja-nome">ALPHACUR</td>
@@ -3021,14 +3025,14 @@ canvas{width:100%!important}
               <td class="num">R$ 18,4K</td>
               <td class="num warn-text">11,47%</td>
             </tr><tr>
-              <td class="loja-nome">MAHGRYN</td>
+              <td class="loja-nome">MAHGRYN <span style="color:var(--red);font-size:10px">&#9888; Prejuizo</span></td>
               <td class="num">R$ 0</td>
               <td class="num">R$ 92,8K</td>
               <td class="num">R$ 694</td>
               <td class="num">R$ 92,1K</td>
               <td class="num neg">R$ -1,7K</td>
               <td class="num">R$ 206</td>
-              <td class="num">R$ -2,0K</td>
+              <td class="num neg">R$ -2,0K</td>
               <td class="num neg">-1,89%</td>
             </tr><tr>
               <td class="loja-nome">SMS - NUTRA SELECT</td>
@@ -3051,14 +3055,14 @@ canvas{width:100%!important}
               <td class="num">R$ 0</td>
               <td class="num neg">0,00%</td>
             </tr><tr>
-              <td class="loja-nome">SCIATILIEF</td>
+              <td class="loja-nome">SCIATILIEF <span style="color:var(--red);font-size:10px">&#9888; Prejuizo</span></td>
               <td class="num">R$ 0</td>
               <td class="num">R$ 35,8K</td>
               <td class="num">R$ 2,9K</td>
               <td class="num">R$ 32,9K</td>
               <td class="num neg">R$ -223</td>
               <td class="num">R$ 557</td>
-              <td class="num">R$ -780</td>
+              <td class="num neg">R$ -780</td>
               <td class="num neg">-0,62%</td>
             </tr><tr>
               <td class="loja-nome">KORVIZOL</td>
@@ -3091,8 +3095,8 @@ canvas{width:100%!important}
             </div>
           <div class="card" style="margin-bottom:20px">
               <div class="card-title">Demonstrativo Consolidado - DEZ/25 <span class="tag">Por Operacao - Interno/Afiliado</span></div>
-              <div style="overflow-x:auto"><table><thead><tr><th>Operacao</th><th class="num">Fat. Total</th><th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th><th class="num">Lucro Total</th><th class="num">Lucro Interno</th><th class="num">Lucro Afiliados</th><th class="num">Margem</th></tr></thead>
-              <tbody><tr style=""><td style="">Sem Backend</td><td class="num" style="">R$ 32,01M</td><td class="num" style="">R$ 1,83M</td><td class="num" style="">R$ 30,18M</td><td class="num" style="">R$ 2,61M</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 0</td><td class="num" style="">8,15%</td></tr><tr style=""><td style="">Wellness Box</td><td class="num" style="">R$ 1,68M</td><td class="num" style="">R$ 448,6K</td><td class="num" style="">R$ 1,23M</td><td class="num" style="">R$ 953,5K</td><td class="num" style="">R$ 254,8K</td><td class="num" style="">R$ 698,7K</td><td class="num" style="">56,80%</td></tr><tr style=""><td style="">Call Center</td><td class="num" style="">R$ 2,76M</td><td class="num" style="">R$ 186,0K</td><td class="num" style="">R$ 2,57M</td><td class="num" style="">R$ 1,45M</td><td class="num" style="">R$ 101,0K</td><td class="num" style="">R$ 1,35M</td><td class="num" style="">52,59%</td></tr><tr style=""><td style="">SalesBound</td><td class="num" style="">R$ 1,20M</td><td class="num" style="">R$ 62,4K</td><td class="num" style="">R$ 1,14M</td><td class="num" style="">R$ 891,4K</td><td class="num" style="">R$ 47,7K</td><td class="num" style="">R$ 843,8K</td><td class="num" style="">74,12%</td></tr><tr style=""><td style="">SMS Nutra</td><td class="num" style="">R$ 86,5K</td><td class="num" style="">R$ 86,5K</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 47,4K</td><td class="num" style="">R$ 47,4K</td><td class="num" style="">R$ 0</td><td class="num" style="">54,75%</td></tr><tr style=""><td style="">No Tracking</td><td class="num" style="">R$ 2,73M</td><td class="num" style="">R$ 203,4K</td><td class="num" style="">R$ 2,52M</td><td class="num" style="">R$ 2,06M</td><td class="num" style="">R$ 152,6K</td><td class="num" style="">R$ 1,90M</td><td class="num" style="">75,43%</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Total com Backend</td><td class="num" style="font-weight:700;">R$ 40,46M</td><td class="num" style="font-weight:700;">R$ 2,73M</td><td class="num" style="font-weight:700;">R$ 37,74M</td><td class="num" style="font-weight:700;">R$ 8,01M</td><td class="num" style="font-weight:700;">R$ 681,7K</td><td class="num" style="font-weight:700;">R$ 6,65M</td><td class="num" style="font-weight:700;">19,79%</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">CUSTOS</td></tr><tr style=""><td style="">Custo Interno</td><td class="num neg" style="" colspan="7">R$ 42,0K</td></tr><tr style=""><td style="">Custo Afiliados</td><td class="num neg" style="" colspan="7">R$ 636,6K</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Custo Total</td><td class="num neg" style="font-weight:700;" colspan="7">R$ 678,6K</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">LUCRO OPERACIONAL</td></tr><tr style=""><td style="">L.O. Interno</td><td class="num" style="" colspan="7">R$ 0</td></tr><tr style=""><td style="">L.O. Afiliados</td><td class="num" style="" colspan="7">R$ 0</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">L.O. Total</td><td class="num" style="font-weight:700;" colspan="7">R$ 7,33M</td></tr></tbody></table></div>
+              <div style="overflow-x:auto"><table><thead><tr><th>Operacao</th><th class="num">Fat. Total</th><th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th><th class="num">Lucro Total</th><th class="num">Lucro Interno</th><th class="num">Lucro Afiliados</th><th class="num">Margem Bruta</th></tr></thead>
+              <tbody><tr style=""><td style="">Sem Backend</td><td class="num" style="">R$ 32,01M</td><td class="num" style="">R$ 1,83M</td><td class="num" style="">R$ 30,18M</td><td class="num" style="">R$ 2,61M</td><td class="num" style="">R$ 167,5K</td><td class="num" style="">R$ 2,44M</td><td class="num" style="">8,15%</td></tr><tr style=""><td style="">Wellness Box</td><td class="num" style="">R$ 1,68M</td><td class="num" style="">R$ 448,6K</td><td class="num" style="">R$ 1,23M</td><td class="num" style="">R$ 953,5K</td><td class="num" style="">R$ 254,8K</td><td class="num" style="">R$ 698,7K</td><td class="num" style="">56,80%</td></tr><tr style=""><td style="">Call Center</td><td class="num" style="">R$ 2,76M</td><td class="num" style="">R$ 186,0K</td><td class="num" style="">R$ 2,57M</td><td class="num" style="">R$ 1,45M</td><td class="num" style="">R$ 101,0K</td><td class="num" style="">R$ 1,35M</td><td class="num" style="">52,59%</td></tr><tr style=""><td style="">SalesBound</td><td class="num" style="">R$ 1,20M</td><td class="num" style="">R$ 62,4K</td><td class="num" style="">R$ 1,14M</td><td class="num" style="">R$ 891,4K</td><td class="num" style="">R$ 47,7K</td><td class="num" style="">R$ 843,8K</td><td class="num" style="">74,12%</td></tr><tr style=""><td style="">SMS Nutra</td><td class="num" style="">R$ 86,5K</td><td class="num" style="">R$ 86,5K</td><td class="num" style="">R$ 0</td><td class="num" style="">R$ 47,4K</td><td class="num" style="">R$ 47,4K</td><td class="num" style="">R$ 0</td><td class="num" style="">54,75%</td></tr><tr style=""><td style="">No Tracking</td><td class="num" style="">R$ 2,73M</td><td class="num" style="">R$ 203,4K</td><td class="num" style="">R$ 2,52M</td><td class="num" style="">R$ 2,06M</td><td class="num" style="">R$ 152,6K</td><td class="num" style="">R$ 1,90M</td><td class="num" style="">75,43%</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Total com Backend</td><td class="num" style="font-weight:700;">R$ 40,46M</td><td class="num" style="font-weight:700;">R$ 2,73M</td><td class="num" style="font-weight:700;">R$ 37,74M</td><td class="num" style="font-weight:700;">R$ 8,01M</td><td class="num" style="font-weight:700;">R$ 681,7K</td><td class="num" style="font-weight:700;">R$ 6,65M</td><td class="num" style="font-weight:700;">19,79%</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">CUSTOS</td></tr><tr style=""><td style="">Custo Interno</td><td class="num neg" style="" colspan="7">R$ 42,0K</td></tr><tr style=""><td style="">Custo Afiliados</td><td class="num neg" style="" colspan="7">R$ 636,6K</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">Custo Total</td><td class="num neg" style="font-weight:700;" colspan="7">R$ 678,6K</td></tr><tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">LUCRO OPERACIONAL</td></tr><tr style=""><td style="">L.O. Interno</td><td class="num" style="" colspan="7">R$ 0</td></tr><tr style=""><td style="">L.O. Afiliados</td><td class="num" style="" colspan="7">R$ 0</td></tr><tr style="background:var(--surface2);"><td style="font-weight:700;">L.O. Total</td><td class="num" style="font-weight:700;" colspan="7">R$ 7,33M</td></tr></tbody></table></div>
             </div>
 
           <script>
@@ -3157,10 +3161,11 @@ const chartOpts=(ylabel,isMoney)=>{return {
 // ── Dados ──
 const fat=[37169312.22347, 27320300.182724997, 42172109.700439, 14218115.401863, 0.0, 0.0],lb=[7757051.319963862, 4364288.445614108, 3647988.978613485, 924113.4485982028, 0.0, 0.0],ll=[6309586.733391288, 3322024.018809686, 2762098.6897381544, 76405.86395052921, 0.0, 0.0],cf=[1338727.9012999998, 981086.7653999999, 834753.5601, 834753.5601, 0.0, 0.0],lo=[6418323.418663862, 3383201.680214108, 2813235.418513485, 89359.88849820278, 0.0, 0.0];
 const intMes=[1856919.5034633703, 1388895.561966395, 1622655.997649347, 959222.722539156, 0.0, 0.0],afilMes=[35312392.72000663, 25931404.620758604, 40549453.70278965, 13258892.679323843, 0.0, 0.0],trafMes=[1021406.9910000004, 687704.9860000001, 792297.130947, 560361.031279, 0.0, 0.0];
-const mgBruta=[20.869504588427088, 15.974525962103842, 8.650240655557031, 6.499549500611848, 0.0, 0.0],mgOp=[17.267802481992412, 12.383471841767511, 6.670843451979828, 0.6284932002063646, 0, 0],mgLiq=[17.267802481992412, 12.383471841767511, 6.670843451979828, 0.6284932002063646, 0.0, 0.0],roas=[1.1137573389685163, 1.3849938777381496, 1.51121438019962, 1.3686149648656714, 0.0, 0.0];
+const mgBruta=[20.869504588427088, 15.974525962103842, 8.650240655557031, 6.499549500611848, 0.0, 0.0],mgOp=[17.267802481992412, 12.383471841767511, 6.670843451979828, 0.6284932002063646, 0, 0],mgLiq=[16.975258233073234, 12.159544355629912, 6.549586229757439, 0.5373839063123496, 0.0, 0.0],roas=[1.1137573389685163, 1.3849938777381496, 1.51121438019962, 1.3686149648656714, 0.0, 0.0];
 const opsLbl=["Front End", "Logicall/HelpGrid", "No Tracking/Retry", "Wellness Box", "SalesBound", "SMS Nutra Select"],opsVal=[100855377.13577302, 8113322.583689001, 6967708.489679992, 3153600.8599999994, 1451095.9693550002, 338732.47000000003],opsLB=[4151654.5295893387, 4589451.904116846, 5046324.856437094, 1791245.2884799996, 1023713.5002549901, 91052.1139113915],opsMg=[4.116443413820484, 56.56686094724578, 72.42445437996298, 56.8, 70.54760828189896, 26.880243842992524];
 const opsColors=[green,blue,yellow,purple,red,cyan];
 const opsMeses={"Front End": [28568915.005140003, 21907719.0258, 37654379.12737801, 12724363.977455, 0.0, 0.0], "Logicall/HelpGrid": [3042666.196700001, 2347326.3847999997, 2052928.205855, 670401.7963340001, 0.0, 0.0], "No Tracking/Retry": [2820079.7454, 1736797.419, 1730638.177205992, 680193.148074, 0.0, 0.0], "Wellness Box": [1451229.65, 851252.4199999999, 708788.8299999998, 142329.96000000002, 0.0, 0.0], "SalesBound": [1157365.65623, 293730.313125, 0.0, 0.0, 0.0, 0.0], "SMS Nutra Select": [129055.97, 183474.62000000002, 25375.36, 826.52, 0.0, 0.0]};
+const lopMeses={"No Tracking/Retry": [2130249.099741022, 1241372.3479558954, 1217572.530513714, 457130.8782264621, 0.0, 0.0], "Front End": [2310799.6799199553, 1075283.1215574464, 775648.8769427168, -10077.148830779392, 0.0, 0.0], "Logicall/HelpGrid": [1627568.5043597699, 1326448.7076538622, 1239670.909880694, 395763.7822225199, 0.0, 0.0], "Wellness Box": [824298.4411999999, 483511.3745599999, 402592.05543999997, 80843.41728, 0.0, 0.0], "SalesBound": [819729.3292437401, 203984.17101124997, 0.0, 0.0, 0.0, 0.0], "SMS Nutra Select": [44406.26549937709, 33688.72287565396, 12504.605836360442, 452.5197, 0.0, 0.0]};
 const lojasNomes=["PRESGERA", "GARAHERB", "STEEL POWER", "MEMORY-ON", "MAHGRYN", "MEMYTS", "ARIALIEF", "SHAPE-ON", "LAELLIUM", "ALPHACUR"],lojasAcum=[31707805.633709997, 23185047.377942998, 21058078.321319003, 6954863.706289999, 6313859.2088, 5870631.917325001, 5568903.950274, 4250889.234971, 3644899.9592979997, 3061117.510926];
 const rg26fat=[37169312.22347, 27320300.182724997, 42172109.700439, 14218115.401863, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],rg26lb=[7757051.319963862, 4364288.445614108, 3647988.978613485, 924113.4485982028, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],rg26ll=[6309586.733391288, 3322024.018809686, 2762098.6897381544, 76405.86395052921, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],rg26cf=[1338727.9012999998, 981086.7653999999, 834753.5601, 834753.5601, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0];
 const rg25fat=[5199438.037225001, 7455988.1905000005, 14312523.771540001, 14781231.73683, 16936026.4379, 16942415.660170004, 41458017.66036, 44026452.946430005, 21236274.656524997, 40481049.5794, 52220025.33398499, 40462873.294505015],rg25lb=[952953.752496493, 1165682.472705276, 2916734.7544946037, 2558550.178358113, 1897670.643005148, 2720188.2986821104, 6385322.922298064, 6886208.910913245, 3338561.851637707, 5058964.656298745, 7303830.864674824, 8008958.893004013],rg25ll=[381539.6455886871, 511871.5374415547, 2090537.0512798387, 1583527.4802965994, 1308085.1827516772, 2131965.577093256, 4996221.809888348, 5610688.379702779, 2297459.452234614, 3444697.414256156, 5806553.158140745, 6402617.259894085],rg25cf=[461031.41000000003, 518787.41, 488346.0, 678660.2899999999, 369774.16, 273137.42, 649475.3300000002, 477876.04000000004, 654389.55, 1028276.4099999999, 651259.16, 678646.58];
@@ -3271,8 +3276,8 @@ function buildCharts(page){
     mkDonut('cOverOps',opsLbl,opsVal,opsColors);
     mkLine('cOverMg',meses6,[
       {label:'Margem Bruta',data:mgBruta,borderColor:green,backgroundColor:green+'22',fill:true},
-      {label:'Margem Operacional',data:mgOp,borderColor:blue},
-      {label:'Margem Liquida',data:mgLiq,borderColor:yellow},
+      {label:'Margem Operacional',data:mgOp,borderColor:blue,borderDash:[5,5]},
+      {label:'Margem Liquida',data:mgLiq,borderColor:yellow,borderWidth:3,pointRadius:7,pointBackgroundColor:yellow},
     ],false);
   }
   if(page==='faturamento'){
@@ -3295,12 +3300,45 @@ function buildCharts(page){
         <span style="font-weight:600">${fmt(opsVal[i])}</span>
         <span class="pill blue">${(opsVal[i]/tot*100).toFixed(1)}%</span>
       </div>`})}
-    mkBar('cOpsBar2',opsLbl,[{label:'Faturamento',data:opsVal,backgroundColor:opsColors}],true,true);
     mkBar('cOpsLBBar',opsLbl,[{label:'Lucro Bruto',data:opsLB,backgroundColor:opsColors}],true,true);
     mkBar('cOpsMgBar',opsLbl,[{label:'Margem %',data:opsMg,backgroundColor:opsColors}],false,true);
-    // Evolucao mensal por operacao
-    const evolDS=opsLbl.map((l,i)=>({label:l,data:opsMeses[l]||[],borderColor:opsColors[i],backgroundColor:opsColors[i]+'22',fill:false}));
-    mkLine('cOpsEvol',meses6,evolDS,true);
+    mkBar('cOpsBar2',opsLbl,[{label:'Faturamento',data:opsVal,backgroundColor:opsColors}],true,true);
+    // Evolucao % participacao - Faturamento
+    const fatPct=function(){
+      const ds=opsLbl.map((l,i)=>{const d=opsMeses[l]||[];return {label:l,data:d,backgroundColor:opsColors[i]}});
+      const el=document.getElementById('cOpsEvolPct');
+      if(!el||el._chart)return;
+      el._chart=new Chart(el,{type:'bar',data:{labels:meses6,datasets:ds},
+        options:{responsive:true,scales:{x:{stacked:true,grid:{display:false}},y:{stacked:true,ticks:{callback:v=>fmt(v)}}},
+          plugins:{legend:{position:'top'},tooltip:{mode:'index',callbacks:{label:c=>{
+            const tot=c.chart.data.datasets.reduce((s,d)=>s+(d.data[c.dataIndex]||0),0);
+            const pct=tot?(c.parsed.y/tot*100).toFixed(1):'0';
+            return ' '+c.dataset.label+': '+fmt(c.parsed.y)+' ('+pct+'%)';
+          }}}}
+        }
+      });
+    };fatPct();
+    // Evolucao % participacao - Lucro
+    const lucPct=function(){
+      const ds=opsLbl.map((l,i)=>{const d=lopMeses[l]||[];return {label:l,data:d,backgroundColor:opsColors[i]}});
+      const el=document.getElementById('cOpsEvolLucPct');
+      if(!el||el._chart)return;
+      el._chart=new Chart(el,{type:'bar',data:{labels:meses6,datasets:ds},
+        options:{responsive:true,scales:{x:{stacked:true,grid:{display:false}},y:{stacked:true,ticks:{callback:v=>fmt(v)}}},
+          plugins:{legend:{position:'top'},tooltip:{mode:'index',callbacks:{label:c=>{
+            const tot=c.chart.data.datasets.reduce((s,d)=>s+(d.data[c.dataIndex]||0),0);
+            const pct=tot?(c.parsed.y/tot*100).toFixed(1):'0';
+            return ' '+c.dataset.label+': '+fmt(c.parsed.y)+' ('+pct+'%)';
+          }}}}
+        }
+      });
+    };lucPct();
+    // Evolucao valores - Faturamento (linhas)
+    const evolFat=opsLbl.map((l,i)=>({label:l,data:opsMeses[l]||[],borderColor:opsColors[i],backgroundColor:opsColors[i]+'22',fill:false}));
+    mkLine('cOpsEvolFat',meses6,evolFat,true);
+    // Evolucao valores - Lucro (linhas)
+    const evolLuc=opsLbl.map((l,i)=>({label:l,data:lopMeses[l]||[],borderColor:opsColors[i],backgroundColor:opsColors[i]+'22',fill:false}));
+    mkLine('cOpsEvolLuc',meses6,evolLuc,true);
   }
   if(page==='lojas'){
     mkBar('cLojasBar',lojasNomes,[{label:'Acumulado',data:lojasAcum,backgroundColor:green+'88'}],true,true);
@@ -3308,8 +3346,8 @@ function buildCharts(page){
   if(page==='margens'){
     mkLine('cMgEvol',meses6,[
       {label:'Margem Bruta',data:mgBruta,borderColor:green,backgroundColor:green+'22',fill:true},
-      {label:'Margem Operacional',data:mgOp,borderColor:blue},
-      {label:'Margem Liquida',data:mgLiq,borderColor:yellow},
+      {label:'Margem Operacional',data:mgOp,borderColor:blue,borderDash:[5,5]},
+      {label:'Margem Liquida',data:mgLiq,borderColor:yellow,borderWidth:3,pointRadius:7,pointBackgroundColor:yellow},
     ],false);
     mkLine('cRoas',meses6,[{label:'ROAS',data:roas,borderColor:purple,backgroundColor:purple+'22',fill:true}],false);
     const el=document.getElementById('cRoas');
