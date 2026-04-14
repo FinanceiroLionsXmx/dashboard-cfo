@@ -162,7 +162,7 @@ canvas{width:100%!important}
     <div class="nav-section">Mensal</div>
     <a onclick="navTo('mensal',this)"><span class="nav-icon">&#128197;</span> Resultados Mensais</a>
   </nav>
-  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 14/04/2026 10:47</div>
+  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 14/04/2026 10:56</div>
 </aside>
 
 <!-- MAIN -->
@@ -174,7 +174,7 @@ canvas{width:100%!important}
   </div>
   <div class="topbar-right">
     <div class="badge green">&#9679; Dados Atualizados</div>
-    <div class="badge">&#128197; 14/04/2026 10:47</div>
+    <div class="badge">&#128197; 14/04/2026 10:56</div>
   </div>
 </div>
 
@@ -285,6 +285,10 @@ canvas{width:100%!important}
   <div class="g2">
     <div class="card"><div class="card-title">Faturamento Mensal por Operacao <span class="tag">Empilhado</span></div><canvas id="cOpsEvolFat" height="220"></canvas></div>
     <div class="card"><div class="card-title">Lucro Bruto Mensal por Operacao <span class="tag">Empilhado</span></div><canvas id="cOpsEvolLuc" height="220"></canvas></div>
+  </div>
+  <div class="g2">
+    <div class="card"><div class="card-title">Variacao Mensal - Faturamento <span class="tag">Tendencia</span></div><canvas id="cOpsVarFat" height="220"></canvas></div>
+    <div class="card"><div class="card-title">Variacao Mensal - Lucro Bruto <span class="tag">Tendencia</span></div><canvas id="cOpsVarLuc" height="220"></canvas></div>
   </div>
   <div class="full card">
     <div class="card-title">Detalhamento por Operacao</div>
@@ -3418,6 +3422,11 @@ function buildCharts(page){
         }
       });
     })();
+    // Variacao mensal - linhas de tendencia
+    const varFat=opsLbl.map((l,i)=>({label:l,data:opsMeses[l]||[],borderColor:opsColors[i],backgroundColor:opsColors[i]+'22',fill:false}));
+    mkLine('cOpsVarFat',meses6,varFat,true);
+    const varLuc=opsLbl.map((l,i)=>({label:l,data:lopMeses[l]||[],borderColor:opsColors[i],backgroundColor:opsColors[i]+'22',fill:false}));
+    mkLine('cOpsVarLuc',meses6,varLuc,true);
   }
   if(page==='lojas'){
     mkBar('cLojasBar',lojasNomes,[{label:'Acumulado',data:lojasAcum,backgroundColor:green+'88'}],true,true);
