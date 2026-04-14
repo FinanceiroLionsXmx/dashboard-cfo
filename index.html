@@ -162,7 +162,7 @@ canvas{width:100%!important}
     <div class="nav-section">Mensal</div>
     <a onclick="navTo('mensal',this)"><span class="nav-icon">&#128197;</span> Resultados Mensais</a>
   </nav>
-  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 14/04/2026 09:00</div>
+  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 14/04/2026 09:06</div>
 </aside>
 
 <!-- MAIN -->
@@ -174,7 +174,7 @@ canvas{width:100%!important}
   </div>
   <div class="topbar-right">
     <div class="badge green">&#9679; Dados Atualizados</div>
-    <div class="badge">&#128197; 14/04/2026 09:00</div>
+    <div class="badge">&#128197; 14/04/2026 09:06</div>
   </div>
 </div>
 
@@ -3242,24 +3242,47 @@ function mkBar(id,labels,datasets,money,horizontal){
   const el=document.getElementById(id);
   if(!el||el._chart)return;
   const valFmt=money?fmt:v=>v.toFixed(1).replace('.',',')+'%';
-  const tipFmt=money?(c=>{const v=horizontal?c.parsed.x:c.parsed.y;return ' '+fmt(v)}):(c=>{const v=horizontal?c.parsed.x:c.parsed.y;return ' '+v.toFixed(2).replace('.',',')+'%'});
-  const opts={responsive:true,
-    indexAxis:horizontal?'y':'x',
-    plugins:{legend:{position:'top'},tooltip:{callbacks:{label:tipFmt}}},
-    scales:{
-      x:horizontal?{ticks:{callback:v=>valFmt(v)},grid:{color:'#2d315044'}}:{grid:{display:false}},
-      y:horizontal?{grid:{display:false}}:{grid:{color:'#2d315044'},ticks:{callback:v=>valFmt(v)}}
+  el._chart=new Chart(el,{type:'bar',
+    data:{labels,datasets:datasets.map(d=>({...d,borderRadius:6}))},
+    options:{responsive:true,
+      indexAxis:horizontal?'y':'x',
+      plugins:{legend:{position:'top'},
+        tooltip:{mode:'index',intersect:false,
+          callbacks:{label:function(c){
+            const v=c.dataset.data[c.dataIndex];
+            if(v==null)return '';
+            return ' '+c.dataset.label+': '+(money?fmt(v):v.toFixed(2).replace('.',',')+'%');
+          }}
+        }
+      },
+      scales:{
+        x:horizontal?{ticks:{callback:v=>valFmt(v)},grid:{color:'#2d315044'}}:{grid:{display:false}},
+        y:horizontal?{grid:{display:false}}:{grid:{color:'#2d315044'},ticks:{callback:v=>valFmt(v)}}
+      }
     }
-  };
-  el._chart=new Chart(el,{type:'bar',data:{labels,datasets:datasets.map(d=>({...d,borderRadius:6}))},options:opts});
+  });
 }
 function mkLine(id,labels,datasets,money){
   money=money!==false;
   const el=document.getElementById(id);
   if(!el||el._chart)return;
   el._chart=new Chart(el,{type:'line',
-    data:{labels,datasets:datasets.map(d=>({...d,tension:.4,pointRadius:5,fill:d.fill??false}))},
-    options:chartOpts('',money)
+    data:{labels,datasets:datasets.map(d=>({...d,tension:.4,pointRadius:d.pointRadius||5,fill:d.fill??false}))},
+    options:{responsive:true,
+      plugins:{legend:{position:'top'},
+        tooltip:{mode:'index',intersect:false,
+          callbacks:{label:function(c){
+            const v=c.dataset.data[c.dataIndex];
+            if(v==null)return '';
+            return ' '+c.dataset.label+': '+(money?fmt(v):v.toFixed(2).replace('.',',')+'%');
+          }}
+        }
+      },
+      scales:{
+        x:{grid:{display:false}},
+        y:{grid:{color:'#2d315044'},ticks:{callback:v=>money?fmt(v):v.toFixed(0)+'%'}}
+      }
+    }
   });
 }
 function mkDonut(id,labels,data,colors){
