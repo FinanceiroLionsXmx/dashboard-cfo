@@ -162,7 +162,7 @@ canvas{width:100%!important}
     <div class="nav-section">Mensal</div>
     <a onclick="navTo('mensal',this)"><span class="nav-icon">&#128197;</span> Resultados Mensais</a>
   </nav>
-  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 14/04/2026 08:56</div>
+  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 14/04/2026 09:00</div>
 </aside>
 
 <!-- MAIN -->
@@ -174,7 +174,7 @@ canvas{width:100%!important}
   </div>
   <div class="topbar-right">
     <div class="badge green">&#9679; Dados Atualizados</div>
-    <div class="badge">&#128197; 14/04/2026 08:56</div>
+    <div class="badge">&#128197; 14/04/2026 09:00</div>
   </div>
 </div>
 
@@ -3241,10 +3241,17 @@ function mkBar(id,labels,datasets,money,horizontal){
   money=money!==false;horizontal=horizontal===true;
   const el=document.getElementById(id);
   if(!el||el._chart)return;
-  el._chart=new Chart(el,{type:'bar',
-    data:{labels,datasets:datasets.map(d=>({...d,borderRadius:6}))},
-    options:{...chartOpts('',money),indexAxis:horizontal?'y':'x',...(horizontal?{scales:{x:{ticks:{callback:v=>fmt(v)}},y:{grid:{display:false}}}}:{})}
-  });
+  const valFmt=money?fmt:v=>v.toFixed(1).replace('.',',')+'%';
+  const tipFmt=money?(c=>{const v=horizontal?c.parsed.x:c.parsed.y;return ' '+fmt(v)}):(c=>{const v=horizontal?c.parsed.x:c.parsed.y;return ' '+v.toFixed(2).replace('.',',')+'%'});
+  const opts={responsive:true,
+    indexAxis:horizontal?'y':'x',
+    plugins:{legend:{position:'top'},tooltip:{callbacks:{label:tipFmt}}},
+    scales:{
+      x:horizontal?{ticks:{callback:v=>valFmt(v)},grid:{color:'#2d315044'}}:{grid:{display:false}},
+      y:horizontal?{grid:{display:false}}:{grid:{color:'#2d315044'},ticks:{callback:v=>valFmt(v)}}
+    }
+  };
+  el._chart=new Chart(el,{type:'bar',data:{labels,datasets:datasets.map(d=>({...d,borderRadius:6}))},options:opts});
 }
 function mkLine(id,labels,datasets,money){
   money=money!==false;
