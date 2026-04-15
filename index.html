@@ -170,7 +170,7 @@ canvas{width:100%!important}
     <a onclick="navTo('fcanalise',this)"><span class="nav-icon">&#128202;</span> FC - Analise de Caixa</a>
     <a onclick="navTo('fccompara',this)"><span class="nav-icon">&#128260;</span> FC - Comparativo</a>
   </nav>
-  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 15/04/2026 20:38</div>
+  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 15/04/2026 20:42</div>
 </aside>
 
 <!-- MAIN -->
@@ -182,7 +182,7 @@ canvas{width:100%!important}
   </div>
   <div class="topbar-right">
     <div class="badge green">&#9679; Dados Atualizados</div>
-    <div class="badge">&#128197; 15/04/2026 20:38</div>
+    <div class="badge">&#128197; 15/04/2026 20:42</div>
   </div>
 </div>
 
@@ -3675,20 +3675,34 @@ function buildFcGeral(){
 function buildFcReceitas(){
   const recByPlat={};fcMeses.forEach(m=>{Object.keys(fcD[m].receitas).forEach(k=>{if(!recByPlat[k])recByPlat[k]=[]})});
   Object.keys(recByPlat).forEach(k=>{fcMeses.forEach(m=>{recByPlat[k].push(fcD[m].receitas[k]?fcD[m].receitas[k].total:0)})});
-  const platKeys=Object.keys(recByPlat).filter(k=>!k.includes('Estorno')&&recByPlat[k].some(v=>v>0));
-  // Empilhado
+  const platKeys=Object.keys(recByPlat).filter(k=>k!=='Estornos'&&recByPlat[k].some(v=>v>0));
+  // Ordenar por acumulado
+  const recAcum2={};platKeys.forEach(k=>{recAcum2[k]=recByPlat[k].reduce((a,b)=>a+b,0)});
+  platKeys.sort((a,b)=>recAcum2[b]-recAcum2[a]);
+  // Empilhado - ordenar datasets por acumulado
   (function(){
     const ds=platKeys.map((k,i)=>({label:k,data:recByPlat[k],backgroundColor:fcC[i%fcC.length],borderRadius:4}));
     const el=document.getElementById('cFcRecEvol');if(!el||el._chart)return;
     el._chart=new Chart(el,{type:'bar',data:{labels:fcMeses,datasets:ds},options:{responsive:true,scales:{x:{stacked:true,grid:{display:false}},y:{stacked:true,ticks:{callback:v=>fmt(v)}}},interaction:{mode:'index',intersect:false},plugins:{legend:{position:'top'},tooltip:{mode:'index',intersect:false,callbacks:{
-      itemSort:function(a,b){return b.raw-a.raw},
+      itemSort:function(a,b){return (b.dataset.data[b.dataIndex]||0)-(a.dataset.data[a.dataIndex]||0)},
       label:function(c){const v=c.dataset.data[c.dataIndex];if(!v)return '';return ' '+c.dataset.label+': '+fmt(v)}
     }}}}});
   })();
-  // Ranking
-  const recAcum2={};platKeys.forEach(k=>{recAcum2[k]=recByPlat[k].reduce((a,b)=>a+b,0)});
-  const rk=platKeys.sort((a,b)=>recAcum2[b]-recAcum2[a]);
-  mkBar('cFcRecRank',rk,[{label:'Acumulado',data:rk.map(k=>recAcum2[k]),backgroundColor:fcC}],true,true);
+  // Ranking - TODAS as plataformas
+  const rk=platKeys.slice();
+  const el2=document.getElementById('cFcRecRank');
+  if(el2&&!el2._chart){
+    el2._chart=new Chart(el2,{type:'bar',
+      data:{labels:rk,datasets:[{label:'Acumulado',data:rk.map(k=>recAcum2[k]),backgroundColor:fcC,borderRadius:6}]},
+      options:{responsive:true,indexAxis:'y',
+        interaction:{mode:'nearest',axis:'y',intersect:false},
+        plugins:{legend:{display:false},tooltip:{mode:'nearest',intersect:false,callbacks:{
+          label:function(c){return ' '+c.label+': '+fmt(c.dataset.data[c.dataIndex])}
+        }}},
+        scales:{x:{ticks:{callback:v=>fmt(v)},grid:{color:'#2d315044'}},y:{grid:{display:false}}}
+      }
+    });
+  }
   // Tabela com variacao horizontal
   buildFcRecTable();
 }
