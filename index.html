@@ -170,7 +170,7 @@ canvas{width:100%!important}
     <a onclick="navTo('fcanalise',this)"><span class="nav-icon">&#128202;</span> FC - Analise de Caixa</a>
     <a onclick="navTo('fccompara',this)"><span class="nav-icon">&#128260;</span> FC - Comparativo</a>
   </nav>
-  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 14/04/2026 22:26</div>
+  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 14/04/2026 22:28</div>
 </aside>
 
 <!-- MAIN -->
@@ -182,7 +182,7 @@ canvas{width:100%!important}
   </div>
   <div class="topbar-right">
     <div class="badge green">&#9679; Dados Atualizados</div>
-    <div class="badge">&#128197; 14/04/2026 22:26</div>
+    <div class="badge">&#128197; 14/04/2026 22:28</div>
   </div>
 </div>
 
@@ -3611,22 +3611,22 @@ function buildFcReceitas(){
 }
 
 function buildFcAnalise(){
-    mkLine('cFcSaldoComp',fcMeses,[
-      {label:'Saldo Competencia',data:fcSaldoCp,borderColor:green,backgroundColor:green+'22',fill:true},
-      {label:'Saldo Caixa',data:fcSaldoCx,borderColor:blue,borderDash:[5,5]},
-    ]);
-    mkLine('cFcRDLine',fcMeses,[
-      {label:'Receitas',data:fcRec,borderColor:green,backgroundColor:green+'22',fill:true},
-      {label:'Despesas Comp.',data:fcDespCp.map(v=>Math.abs(v)),borderColor:red,backgroundColor:red+'22',fill:true},
-      {label:'Despesas Caixa',data:fcDespCx.map(v=>Math.abs(v)),borderColor:yellow,borderDash:[5,5]},
-    ]);
-    const acumCp=fcSaldoCp.reduce((acc,v)=>{acc.push((acc.length?acc[acc.length-1]:0)+v);return acc},[]);
-    const acumCx=fcSaldoCx.reduce((acc,v)=>{acc.push((acc.length?acc[acc.length-1]:0)+v);return acc},[]);
-    mkLine('cFcSaldoAcum',fcMeses,[
-      {label:'Acum. Competencia',data:acumCp,borderColor:green,backgroundColor:green+'22',fill:true},
-      {label:'Acum. Caixa',data:acumCx,borderColor:blue,borderDash:[5,5]},
-    ]);
-  }
+  mkLine('cFcSaldoComp',fcMeses,[
+    {label:'Saldo Competencia',data:fcSaldoCp,borderColor:green,backgroundColor:green+'22',fill:true},
+    {label:'Saldo Caixa',data:fcSaldoCx,borderColor:blue,borderDash:[5,5]},
+  ]);
+  mkLine('cFcRDLine',fcMeses,[
+    {label:'Receitas',data:fcRec,borderColor:green,backgroundColor:green+'22',fill:true},
+    {label:'Despesas Comp.',data:fcDespCp.map(v=>Math.abs(v)),borderColor:red,backgroundColor:red+'22',fill:true},
+    {label:'Despesas Caixa',data:fcDespCx.map(v=>Math.abs(v)),borderColor:yellow,borderDash:[5,5]},
+  ]);
+  const acumCp=fcSaldoCp.reduce((acc,v)=>{acc.push((acc.length?acc[acc.length-1]:0)+v);return acc},[]);
+  const acumCx=fcSaldoCx.reduce((acc,v)=>{acc.push((acc.length?acc[acc.length-1]:0)+v);return acc},[]);
+  mkLine('cFcSaldoAcum',fcMeses,[
+    {label:'Acum. Competencia',data:acumCp,borderColor:green,backgroundColor:green+'22',fill:true},
+    {label:'Acum. Caixa',data:acumCx,borderColor:blue,borderDash:[5,5]},
+  ]);
+}
 
 // ── FC Helper Functions ──
 function toggleSubs(row){
