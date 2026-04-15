@@ -170,7 +170,7 @@ canvas{width:100%!important}
     <a onclick="navTo('fcanalise',this)"><span class="nav-icon">&#128202;</span> FC - Analise de Caixa</a>
     <a onclick="navTo('fccompara',this)"><span class="nav-icon">&#128260;</span> FC - Comparativo</a>
   </nav>
-  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 14/04/2026 22:28</div>
+  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 14/04/2026 22:42</div>
 </aside>
 
 <!-- MAIN -->
@@ -182,7 +182,7 @@ canvas{width:100%!important}
   </div>
   <div class="topbar-right">
     <div class="badge green">&#9679; Dados Atualizados</div>
-    <div class="badge">&#128197; 14/04/2026 22:28</div>
+    <div class="badge">&#128197; 14/04/2026 22:42</div>
   </div>
 </div>
 
@@ -3542,477 +3542,11 @@ function buildCharts(page){
   if(page==='fcanalise'){ buildFcAnalise(); }
 }
 
-// ── FC Global Data ──
-const fcD={"JAN/26": {"receitas": {"Cartpanda": {"total": 6481229.083000001, "subs": {"CARTPANDA": 6481229.083000001}}, "BuyGoods": {"total": 701475.9584, "subs": {"BUYGOODS": 701475.9584}}, "Digistore": {"total": 18039.0457, "subs": {"DIGISTORE": 18039.0457}}, "ClickBank": {"total": 7490.5555, "subs": {"CLICKBANK": 7490.5555}}, "SalesBound": {"total": 718864.16, "subs": {"SALES BOUND": 718864.16}}, "Logicall": {"total": 1008461.6980000002, "subs": {"LOGICALL": 1008461.6980000002}}, "Science Natural": {"total": 27244.2662, "subs": {"RECEBIMENTO - SCIENCE NATURAL - EMAIL": 27244.2662}}, "Tauk": {"total": 5281.1132, "subs": {"RESOLUTIONS - TALK": 5281.1132}}, "Cashback Payoneer": {"total": 10496.2443, "subs": {"PAYONNER - CASHBACK": 10496.2443}}, "Estornos": {"total": 13913.831300000002, "subs": {"ESTORNO DE COMPRAS TESTES": 12773.2175, "ESTORNO DE COMPRA DE BRINDES": 1140.6138}}, "Rend. Financeiros": {"total": 19403.89, "subs": {"REND. FINANCEIROS CONTA SIMPLES/ITA\u00da": 19403.89}}}, "despesas_caixa": {"Trafego": {"total": -1039146.1014000006, "subs": {"TRAFEGO GOOGLE - CART\u00d5ES": -1001973.4957000007, "TRAFEGO FACEBOOK - CART\u00d5ES": -35262.36069999998, "TRAFEGO TABOOLA - CART\u00d5ES": -278.245, "TRAFEGO TABOOLA - AGENCIA": -1632.0}}, "Fornecedor": {"total": -4273900.0, "subs": {"FORNECEDORES - SHIPOFFERS": -4273900.0}}, "Ferramentas/Licencas": {"total": -134513.83959999995, "subs": {"FERRAMENTAS/LICEN\u00c7AS": -134513.83959999995}}, "Impostos": {"total": -2712345.22, "subs": {"PAGAMENTOS IMPOSTOS 4 TRIMESTRE 2025": -2712345.22}}, "Equipe - Salarios": {"total": -250515.02, "subs": {"EQUIPE - SALARIO 12/2025": -250515.02}}, "Equipe - Desligamento": {"total": -10700.0, "subs": {"EQUIPE - DESLIGAMENTOS": -10700.0}}, "Equipe - Diversos": {"total": -2000.0, "subs": {"EQUIPE - PREMIO BINGO - TALKS": -2000.0}}, "Equipe - Bonus": {"total": -571678.13, "subs": {"EQUIPE - BONUS 4 TRIMESTRE DE 2025": -571678.13}}, "Equipe - Ferias": {"total": -11666.66, "subs": {"EQUIPE - F\u00c9RIAS": -11666.66}}, "Equipe - Dias Extras": {"total": -36713.16, "subs": {"EQUIPE - DIAS EXTRAS TRABALHADOS": -36713.16}}, "Despesas Administrativas": {"total": -15243.77, "subs": {"DESPESAS ADMINSTRATIVAS": -15243.77}}, "Viagens": {"total": -61530.215899999996, "subs": {"PASSAGENS AEREAS/ONIBUS": -55293.242, "LOCOMO\u00c7\u00c3O": -846.6487999999999, "HOSPEDAGEM": -351.5292, "ALIMENTA\u00c7\u00c3O": -5038.7959}}, "Marketing": {"total": -44793.0901, "subs": {"COMPRAS TESTES": -43656.2757, "GASTOS COM ESPIONAGEM": -1136.8144000000002}}, "Cursos/Mentorias": {"total": -40934.0506, "subs": {"MENTORIAS/CURSOS": -40934.0506}}, "Saldo para Lojas": {"total": -366688.0, "subs": {"ESTORNO DE SALDO PARA A CARTPANDA": -366688.0}}, "Outras Despesas": {"total": -188039.07599999994, "subs": {"DESPESAS COM CONFRATERNIZA\u00c7AO - TALKS": -93453.66999999997, "GASTOS COM BRINDES - PRESTADORES DE SERVI\u00c7OS": -4136.3162, "DESPESAS DIVERSAS (VIAGENS/BRINDES) - S\u00d3CIOS": -42118.6398, "REEMBOLSOS DIVERSOS - PRESTADORES DE SERVI\u00c7O": -35791.45, "DESPESAS COM TRANSPORTE EXECUTIVO - MAURICIO": -11000.0, "COMPRA DE COMPUTARORES": -1539.0}}, "Freelancers": {"total": -6528.0, "subs": {"FREELANCER - ARTHUR ALENCAR": -6528.0}}, "Comissoes por Indicacao": {"total": -16220.5, "subs": {"COMISS\u00c3O INDICA\u00c7\u00c3O AFILIADOS - HENRIQUE": -645.6, "COMISS\u00c3O INDICA\u00c7\u00c3O AFILIADOS - EVAIR": -1912.6000000000001, "COMISS\u00c3O INDICA\u00c7\u00c3O AFILIADOS - HLA": -13662.3}}, "Despesas com Afiliados": {"total": -27521.2144, "subs": {"GASTOS COM BRINDES E INCENTIVOS AFILIADOS": -521.2144, "AFILIADOS - BUGET": -27000.0}}, "Despesas Financeiras": {"total": -189.545, "subs": {"DESPESAS FINANCEIRAS": -189.545}}}, "despesas_comp": {"Trafego": {"total": -1039146.1014000006, "subs": {"TRAFEGO GOOGLE - CART\u00d5ES": -1001973.4957000007, "TRAFEGO FACEBOOK - CART\u00d5ES": -35262.36069999998, "TRAFEGO TABOOLA - CART\u00d5ES": -278.245, "TRAFEGO TABOOLA - AGENCIA": -1632.0}}, "Fornecedor": {"total": -4273900.0, "subs": {"FORNECEDORES - SHIPOFFERS": -4273900.0}}, "Ferramentas/Licencas": {"total": -136366.85959999994, "subs": {"FERRAMENTAS/LICEN\u00c7AS": -136366.85959999994}}, "Impostos": {"total": -22881.690000000002, "subs": {"PROVIS\u00c3O DE IMPOSTOS 01/2026": -22881.690000000002}}, "Equipe - Salarios": {"total": -254048.32, "subs": {"EQUIPE - SALARIO 01/2026": -254048.32}}, "Equipe - Desligamento": {"total": -10700.0, "subs": {"EQUIPE - DESLIGAMENTOS": -10700.0}}, "Equipe - Diversos": {"total": -2000.0, "subs": {"EQUIPE - PREMIO BINGO - TALKS": -2000.0}}, "Equipe - Bonus": {"total": -571678.13, "subs": {"EQUIPE - BONUS 4 TRIMESTRE DE 2025": -571678.13}}, "Equipe - Ferias": {"total": -11666.66, "subs": {"EQUIPE - F\u00c9RIAS": -11666.66}}, "Despesas Administrativas": {"total": -15280.400000000001, "subs": {"DESPESAS ADMINSTRATIVAS": -15280.400000000001}}, "Viagens": {"total": -33380.9359, "subs": {"PASSAGENS AEREAS/ONIBUS": -25505.962, "LOCOMO\u00c7\u00c3O": -846.6488, "HOSPEDAGEM": -1989.5292, "ALIMENTA\u00c7\u00c3O": -5038.7959}}, "Marketing": {"total": -44793.0901, "subs": {"COMPRAS TESTES": -43656.2757, "GASTOS COM ESPIONAGEM": -1136.8144000000002}}, "Cursos/Mentorias": {"total": -40885.4706, "subs": {"MENTORIAS/CURSOS": -40885.4706}}, "Saldo para Lojas": {"total": -366688.0, "subs": {"ESTORNO DE SALDO PARA A CARTPANDA": -366688.0}}, "Outras Despesas": {"total": -196422.076, "subs": {"DESPESAS COM CONFRATERNIZA\u00c7AO - TALKS": -103375.67, "GASTOS COM BRINDES - PRESTADORES DE SERVI\u00c7OS": -4136.3162, "DESPESAS DIVERSAS (VIAGENS/BRINDES) - SOCIOS": -42118.6398, "REEMBOLSOS DIVERSOS - PRESTADORES DE SERVI\u00c7O": -35791.45, "DESPESAS COM TRANSPORTE EXECUTIVO - MAURICIO": -11000.0}}, "Freelancers": {"total": -6528.0, "subs": {"FREELANCER - ARTHUR ALENCAR": -6528.0}}, "Comissoes por Indicacao": {"total": -16220.5, "subs": {"COMISS\u00c3O INDICA\u00c7\u00c3O AFILIADOS - HENRIQUE": -645.6, "COMISS\u00c3O INDICA\u00c7\u00c3O AFILIADOS - EVAIR": -1912.6000000000001, "COMISS\u00c3O INDICA\u00c7\u00c3O AFILIADOS - HLA": -13662.3}}, "Despesas com Afiliados": {"total": -27521.2144, "subs": {"GASTOS COM BRINDES E INCENTIVOS AFILIADOS": -521.2144, "AFILIADOS - BUGET": -27000.0}}, "Despesas Financeiras": {"total": -189.515, "subs": {"DESPESAS FINANCEIRAS": -189.515}}}, "rec_total": 9011899.845600002, "desp_cx_total": -9810865.593, "desp_cp_total": -7070296.963}, "FEV/26": {"receitas": {"Cartpanda": {"total": 5201267.157099999, "subs": {"CARTPANDA": 5201267.157099999}}, "BuyGoods": {"total": 360274.8844, "subs": {"BUYGOODS": 360274.8844}}, "Digistore": {"total": 21202.2357, "subs": {"DIGISTORE": 21202.2357}}, "ClickBank": {"total": 28020.3891, "subs": {"CLICKBANK": 28020.3891}}, "SalesBound": {"total": 1049899.4467000002, "subs": {"SALES BOUND": 1049899.4467000002}}, "Logicall": {"total": 1662046.7278, "subs": {"LOGICALL": 1662046.7278}}, "Science Natural": {"total": 34827.572, "subs": {"RECEBIMENTO - SCIENCE NATURAL - EMAIL": 34827.572}}, "Tauk": {"total": 22787.5211, "subs": {"RESOLUTIONS - TALK": 22787.5211}}, "HELP GRID": {"total": 617.0912000000001, "subs": {"HELP GRID": 617.0912000000001}}, "Cashback Payoneer": {"total": 9048.3046, "subs": {"PAYONNER - CASHBACK": 9048.3046}}, "Estornos": {"total": 54044.850900000005, "subs": {"ESTORNO DE COMPRAS TESTES": 41270.60160000001, "ESTORNO DE FERRAMENTAS": 12774.2493}}, "Trafego": {"total": 4130.62, "subs": {"ESTORNO DE TRAFEGO GOOGLE": 4130.62}}, "Rend. Financeiros": {"total": 926.88, "subs": {"REND. FINANCEIROS CONTA SIMPLES/ITA\u00da": 926.88}}}, "despesas_caixa": {"Trafego": {"total": -687750.9684000001, "subs": {"TRAFEGO GOOGLE - CART\u00d5ES": -452559.8519000001, "TRAFEGO FACEBOOK - CART\u00d5ES": -233613.11650000003, "TRAFEGO TABOOLA - AGENCIA": -1578.0}}, "Fornecedor": {"total": -3081652.1178, "subs": {"FORNECEDORES - SHIPOFFERS": -3081652.1178}}, "Ferramentas/Licencas": {"total": -202018.6501000002, "subs": {"FERRAMENTAS/LICEN\u00c7AS": -202018.6501000002}}, "Equipe - Salarios": {"total": -254048.31999999998, "subs": {"EQUIPE - SALARIO 01/2026": -254048.31999999998}}, "Equipe - Desligamento": {"total": -2666.67, "subs": {"EQUIPE - DESLIGAMENTOS": -2666.67}}, "Equipe - Ferias": {"total": -7000.0, "subs": {"EQUIPE - F\u00c9RIAS": -7000.0}}, "Equipe - Dias Extras": {"total": -12830.0, "subs": {"EQUIPE - DIAS EXTRAS TRABALHADOS": -12830.0}}, "Despesas Administrativas": {"total": -17618.95, "subs": {"DESPESAS ADMINSTRATIVAS": -17618.95}}, "Viagens": {"total": -75928.02590000001, "subs": {"PASSAGENS AEREAS/ONIBUS": -59498.1782, "LOCOMO\u00c7\u00c3O": -1153.7748, "HOSPEDAGEM": -5630.9712, "ALIMENTA\u00c7\u00c3O": -9645.1017}}, "Marketing": {"total": -44952.3507, "subs": {"COMPRAS TESTES": -30611.830700000006, "GASTOS COM ESPIONAGEM": -13514.92, "CUSTOS COM PERFIL PARA ANUNCIO": -825.6}}, "Cursos/Mentorias": {"total": -52739.3342, "subs": {"MENTORIAS/CURSOS": -52739.3342}}, "Cartpanda": {"total": -44620.32030000001, "subs": {"GASTOS COM EVENTOS DE AFILIADOS DUBAI - CARTPANDA": -44620.32030000001}}, "Outras Despesas": {"total": -15435.663499999999, "subs": {"DESPESAS COM CONFRATERNIZA\u00c7AO - TALKS": -9922.0, "REEMBOLSOS DIVERSOS - PRESTADORES DE SERVI\u00c7O": -977.1700000000001, "COMISS\u00c3O - AGENCIA DE TRAFEGO FACEBOOK": -805.2024999999999, "COMPRA DE COMPUTARORES": -1539.0, "CLIENTE CARTPANDA - REEMBOLSO MANUAL": -2192.291}}, "Freelancers": {"total": -16664.0, "subs": {"FREELANCER - ARTHUR ALENCAR": -16664.0}}, "Comissoes por Indicacao": {"total": -47860.450000000004, "subs": {"COMISS\u00c3O INDICA\u00c7\u00c3O AFILIADOS - HENRIQUE": -779.55, "COMISS\u00c3O INDICA\u00c7\u00c3O AFILIADOS - RALPH": -7456.6, "COMISS\u00c3O INDICA\u00c7\u00c3O AFILIADOS - HLA": -39624.3}}, "Despesas com Afiliados": {"total": -23626.4156, "subs": {"CUSTOS COM CAPTA\u00c7\u00c3O DE AFILIADOS": -6890.4156, "AFILIADO - COMPENSA\u00c7\u00c3O DE VENDAS SEM CPA": -16736.0}}, "CUSTOS COM EMPRESA DE SMS MARKETING": {"total": -26497.450800000002, "subs": {"CUSTOS COM EMPRESA DE SMS MARKETING": -26497.450800000002}}, "ClickBank": {"total": -52182.71920000001, "subs": {"CLICKBANK - SALDO PARA CONFIGURAR VENDAS C/ CPA": -52182.71920000001}}, "Despesas Financeiras": {"total": -622.972, "subs": {"DESPESAS FINANCEIRAS": -622.972}}}, "despesas_comp": {"Trafego": {"total": -687750.9684000001, "subs": {"TRAFEGO GOOGLE - CART\u00d5ES": -452559.8519000001, "TRAFEGO FACEBOOK - CART\u00d5ES": -233613.11650000003, "TRAFEGO TABOOLA - AGENCIA": -1578.0}}, "Fornecedor": {"total": -3081652.1178, "subs": {"FORNECEDORES - SHIPOFFERS": -3081652.1178}}, "Ferramentas/Licencas": {"total": -201811.5001000002, "subs": {"FERRAMENTAS/LICEN\u00c7AS": -201811.5001000002}}, "Impostos": {"total": -186994.46999999997, "subs": {"PROVIS\u00c3O DE IMPOSTOS 02/2026": -186994.46999999997}}, "Equipe - Salarios": {"total": -271281.67, "subs": {"EQUIPE - SALARIO 02/2026": -271281.67}}, "Equipe - Desligamento": {"total": -2666.67, "subs": {"EQUIPE - DESLIGAMENTOS": -2666.67}}, "Equipe - Ferias": {"total": -7000.0, "subs": {"EQUIPE - F\u00c9RIAS": -7000.0}}, "Equipe - Dias Extras": {"total": -13563.33, "subs": {"EQUIPE - DIAS EXTRAS TRABALHADOS": -13563.33}}, "Equipe - Diversos": {"total": -20382.31, "subs": {"EQUIPE - BONUS GOOGLE": -20382.31}}, "Despesas Administrativas": {"total": -17618.949999999997, "subs": {"DESPESAS ADMINSTRATIVAS": -17618.949999999997}}, "Viagens": {"total": -73493.0659, "subs": {"PASSAGENS AEREAS/ONIBUS": -58701.2182, "LOCOMO\u00c7\u00c3O": -1153.7748, "HOSPEDAGEM": -3992.9712000000004, "ALIMENTA\u00c7\u00c3O": -9645.1017}}, "Marketing": {"total": -44952.3507, "subs": {"COMPRAS TESTES": -30611.830700000006, "GASTOS COM ESPIONAGEM": -13514.92, "CUSTOS COM PERFIL PARA ANUNCIO": -825.6}}, "Cursos/Mentorias": {"total": -126333.33419999995, "subs": {"MENTORIAS/CURSOS": -126333.33419999995}}, "Cartpanda": {"total": -44620.32030000001, "subs": {"GASTOS COM EVENTOS DE AFILIADOS DUBAI - CARTPANDA": -44620.32030000001}}, "Freelancers": {"total": -16664.0, "subs": {"FREELANCER - ARTHUR ALENCAR": -16664.0}}, "Comissoes por Indicacao": {"total": -47860.450000000004, "subs": {"COMISS\u00c3O INDICA\u00c7\u00c3O AFILIADOS - HENRIQUE": -779.55, "COMISS\u00c3O INDICA\u00c7\u00c3O AFILIADOS - RALPH": -7456.6, "COMISS\u00c3O INDICA\u00c7\u00c3O AFILIADOS - HLA": -39624.3}}, "Despesas com Afiliados": {"total": -23626.4156, "subs": {"CUSTOS COM CAPTA\u00c7\u00c3O DE AFILIADOS": -6890.4156, "AFILIADO - COMPENSA\u00c7\u00c3O DE VENDAS SEM CPA": -16736.0}}, "CUSTOS COM EMPRESA DE SMS MARKETING": {"total": -26497.450800000002, "subs": {"CUSTOS COM EMPRESA DE SMS MARKETING": -26497.450800000002}}, "Outras Despesas": {"total": -3974.6635, "subs": {"REEMBOLSOS DIVERSOS - PRESTADORES DE SERVI\u00c7O": -977.1700000000001, "COMISS\u00c3O - AGENCIA DE TRAFEGO FACEBOOK": -805.2024999999999, "CLIENTE CARTPANDA - REEMBOLSO MANUAL": -2192.291}}, "ClickBank": {"total": -52182.71920000001, "subs": {"CLICKBANK - SALDO PARA CONFIGURAR VENDAS C/ CPA": -52182.71920000001}}, "Despesas Financeiras": {"total": -641.152, "subs": {"DESPESAS FINANCEIRAS": -641.152}}}, "rec_total": 8449093.680599997, "desp_cx_total": -4666715.378499998, "desp_cp_total": -4951567.908499997}, "MAR/26": {"receitas": {"Cartpanda": {"total": 4383890.289099999, "subs": {"CARTPANDA": 4383890.289099999}}, "BuyGoods": {"total": 133169.2378, "subs": {"BUYGOODS": 133169.2378}}, "Digistore": {"total": 13160.6609, "subs": {"DIGISTORE": 13160.6609}}, "ClickBank": {"total": 1576956.4659999998, "subs": {"CLICKBANK": 1576956.4659999998}}, "SalesBound": {"total": 784684.594, "subs": {"SALES BOUND": 784684.594}}, "Logicall": {"total": 936041.4892999999, "subs": {"LOGICALL": 936041.4892999999}}, "Science Natural": {"total": 50221.7795, "subs": {"RECEBIMENTO - SCIENCE NATURAL - EMAIL": 50221.7795}}, "Tauk": {"total": 10845.654799999998, "subs": {"RESOLUTIONS - TALK": 10845.654799999998}}, "Committed Coaches": {"total": 176001.54880000002, "subs": {"COMMITTED COACHES": 176001.54880000002}}, "Cashback Payoneer": {"total": 6741.522000000001, "subs": {"PAYONNER - CASHBACK": 6741.522000000001}}, "Estornos": {"total": 3428.8039999999996, "subs": {"ESTORNO DE COMPRAS TESTES": 3428.8039999999996}}, "Viagens": {"total": 36056.804299999996, "subs": {"ESTORNO DE PASSAGENS AEREAS": 36056.804299999996}}, "Trafego": {"total": 4.5847999999999995, "subs": {"ESTORNO DE TRAFEGO GOOGLE": 4.5847999999999995}}, "Rend. Financeiros": {"total": 378.26, "subs": {"REND. FINANCEIROS CONTA SIMPLES/ITA\u00da": 378.26}}}, "despesas_caixa": {"Trafego": {"total": -838251.0144999999, "subs": {"TRAFEGO GOOGLE - CART\u00d5ES": -626314.3987999998, "TRAFEGO FACEBOOK - CART\u00d5ES": -149042.73010000004, "TRAFEGO FACEBOOK - AGENCIA": -61333.88560000001, "TRAFEGO TABOOLA - AGENCIA": -1560.0}}, "Fornecedor": {"total": -2592942.9929, "subs": {"FORNECEDORES - SHIPOFFERS": -2592942.9929}}, "Ferramentas/Licencas": {"total": -238931.40929999982, "subs": {"FERRAMENTAS/LICEN\u00c7AS": -238931.40929999982}}, "Equipe - Salarios": {"total": -271281.67, "subs": {"EQUIPE - SALARIO 02/2026": -271281.67}}, "Equipe - Desligamento": {"total": -2757.34, "subs": {"EQUIPE - DESLIGAMENTOS": -2757.34}}, "Equipe - Diversos": {"total": -600.0, "subs": {"EQUIPE - ADIANTAMENTOS": -600.0}}, "Equipe - Dias Extras": {"total": -733.33, "subs": {"EQUIPE - DIAS EXTRAS TRABALHADOS": -733.33}}, "Equipe - Bonus": {"total": -20382.309999999998, "subs": {"EQUIPE - BONUS TIME GOOGLE": -20382.309999999998}}, "Despesas Administrativas": {"total": -53270.44000000001, "subs": {"DESPESAS ADMINSTRATIVAS": -53270.44000000001}}, "Viagens": {"total": -87567.44400000002, "subs": {"PASSAGENS AEREAS/ONIBUS": -50341.886900000005, "LOCOMO\u00c7\u00c3O": -6744.4845000000005, "HOSPEDAGEM": -12411.6901, "ALIMENTA\u00c7\u00c3O": -18069.3825}}, "Marketing": {"total": -36008.10830000001, "subs": {"COMPRAS TESTES": -18694.388300000002, "GASTOS COM ESPIONAGEM": -16273.720000000001, "CUSTOS COM PERFIL PARA ANUNCIO": -1040.0}}, "Cursos/Mentorias": {"total": -105783.51359999999, "subs": {"MENTORIAS/CURSOS": -105783.51359999999}}, "Freelancers": {"total": -15770.000000000004, "subs": {"FREELANCER - ARTHUR ALENCAR": -15770.000000000004}}, "Comissoes por Indicacao": {"total": -37798.95, "subs": {"COMISS\u00c3O INDICA\u00c7\u00c3O AFILIADOS - HENRIQUE": -79.35000000000001, "COMISS\u00c3O INDICA\u00c7\u00c3O AFILIADOS - RALPH": -26626.6, "COMISS\u00c3O INDICA\u00c7\u00c3O AFILIADOS - HLA": -11093.0}}, "Despesas com Afiliados": {"total": -87660.6556, "subs": {"AFILIADO - COMPENSA\u00c7\u00c3O DE VENDAS SEM CPA": -15550.655600000002, "GASTOS COM BRINDES E INCENTIVOS PARA AFILIADOS": -25000.0, "AFILIADO BUGET": -47110.0}}, "CUSTOS COM EMPRESA DE SMS MARKETING": {"total": -53197.94720000001, "subs": {"CUSTOS COM EMPRESA DE SMS MARKETING": -53197.94720000001}}, "Outras Despesas": {"total": -408844.1745, "subs": {"REEMBOLSOS DIVERSOS - PRESTADORES DE SERVI\u00c7O": -593.28, "COMISS\u00c3O - AGENCIA DE TRAFEGO FACEBOOK": -9105.548, "DESPESAS COM REFORMA DE ESPA\u00c7O": -399145.34650000004}}, "BRINDES PRESTADORES DE SERVI\u00c7OS": {"total": -15954.0, "subs": {"BRINDES PRESTADORES DE SERVI\u00c7OS": -15954.0}}, "Cartpanda": {"total": -28930.0, "subs": {"ESTORNO DE SALDO PARA LOJA - CARTPANDA": -28930.0}}, "SRD - COMPENSA\u00c7\u00c3O DE CUSTOS COM ESPIONAGEM": {"total": -35134.44, "subs": {"SRD - COMPENSA\u00c7\u00c3O DE CUSTOS COM ESPIONAGEM": -35134.44}}, "OUTRAS DESPESAS": {"total": -36564.49100000001, "subs": {"OUTRAS DESPESAS": -36564.49100000001}}, "Despesas Financeiras": {"total": -305.58849999999995, "subs": {"DESPESAS FINANCEIRAS": -305.58849999999995}}}, "despesas_comp": {"Trafego": {"total": -838251.0144999999, "subs": {"TRAFEGO GOOGLE - CART\u00d5ES": -626314.3987999998, "TRAFEGO FACEBOOK - CART\u00d5ES": -149042.73010000004, "TRAFEGO FACEBOOK - AGENCIA": -61333.88560000001, "TRAFEGO TABOOLA - AGENCIA": -1560.0}}, "Fornecedor": {"total": -2592942.9929, "subs": {"FORNECEDORES - SHIPOFFERS": -2592942.9929}}, "Ferramentas/Licencas": {"total": -241658.0792999998, "subs": {"FERRAMENTAS/LICEN\u00c7AS": -241658.0792999998}}, "Impostos": {"total": -22667.989999999998, "subs": {"PROVIS\u00c3O DE IMPOSTOS 03/2026": -22667.989999999998}}, "Equipe - Salarios": {"total": -310264.98, "subs": {"EQUIPE - SALARIO 03/2026": -310264.98}}, "Equipe - Desligamento": {"total": -2757.34, "subs": {"EQUIPE - DESLIGAMENTOS": -2757.34}}, "Equipe - Diversos": {"total": -600.0, "subs": {"EQUIPE - ADIANTAMENTOS": -600.0}}, "Equipe - Dias Extras": {"total": -1733.3400000000001, "subs": {"EQUIPE - DIAS EXTRAS TRABALHADOS": -1733.3400000000001}}, "Equipe - Bonus": {"total": -30000.0, "subs": {"EQUIPE - BONUS TIME GOOGLE": -30000.0}}, "Despesas Administrativas": {"total": -52963.19, "subs": {"DESPESAS ADMINSTRATIVAS": -52963.19}}, "Viagens": {"total": -106393.734, "subs": {"PASSAGENS AEREAS/ONIBUS": -58735.07690000001, "LOCOMO\u00c7\u00c3O": -6744.4845000000005, "HOSPEDAGEM": -22844.7901, "ALIMENTA\u00c7\u00c3O": -18069.3825}}, "Marketing": {"total": -36008.10830000001, "subs": {"COMPRAS TESTES": -18694.388300000002, "GASTOS COM ESPIONAGEM": -16273.720000000001, "CUSTOS COM PERFIL PARA ANUNCIO": -1040.0}}, "Cursos/Mentorias": {"total": -94203.93359999999, "subs": {"MENTORIAS/CURSOS": -94203.93359999999}}, "Freelancers": {"total": -15770.000000000004, "subs": {"FREELANCER - ARTHUR ALENCAR": -15770.000000000004}}, "Comissoes por Indicacao": {"total": -37798.95, "subs": {"COMISS\u00c3O INDICA\u00c7\u00c3O AFILIADOS - HENRIQUE": -79.35000000000001, "COMISS\u00c3O INDICA\u00c7\u00c3O AFILIADOS - RALPH": -26626.6, "COMISS\u00c3O INDICA\u00c7\u00c3O AFILIADOS - HLA": -11093.0}}, "Despesas com Afiliados": {"total": -87660.6556, "subs": {"AFILIADO - COMPENSA\u00c7\u00c3O DE VENDAS SEM CPA": -15550.655600000002, "GASTOS COM BRINDES E INCENTIVOS PARA AFILIADOS": -25000.0, "AFILIADO BUGET": -47110.0}}, "CUSTOS COM EMPRESA DE SMS MARKETING": {"total": -53197.94720000001, "subs": {"CUSTOS COM EMPRESA DE SMS MARKETING": -53197.94720000001}}, "Outras Despesas": {"total": -408844.1745, "subs": {"REEMBOLSOS DIVERSOS - PRESTADORES DE SERVI\u00c7O": -593.28, "COMISS\u00c3O - AGENCIA DE TRAFEGO FACEBOOK": -9105.548, "DESPESAS COM REFORMA DE ESPA\u00c7O": -399145.34650000004}}, "BRINDES PRESTADORES DE SERVI\u00c7OS": {"total": -15954.0, "subs": {"BRINDES PRESTADORES DE SERVI\u00c7OS": -15954.0}}, "Cartpanda": {"total": -28930.0, "subs": {"ESTORNO DE SALDO PARA LOJA - CARTPANDA": -28930.0}}, "SRD - COMPENSA\u00c7\u00c3O DE CUSTOS COM ESPIONAGEM": {"total": -35134.44, "subs": {"SRD - COMPENSA\u00c7\u00c3O DE CUSTOS COM ESPIONAGEM": -35134.44}}, "OUTRAS DESPESAS": {"total": -36564.49100000001, "subs": {"OUTRAS DESPESAS": -36564.49100000001}}, "Despesas Financeiras": {"total": -444.8285000000001, "subs": {"DESPESAS FINANCEIRAS": -444.8285000000001}}}, "rec_total": 8111581.695299997, "desp_cx_total": -4968669.819399999, "desp_cp_total": -5050744.1894000005}};
-const fcMeses=["JAN/26", "FEV/26", "MAR/26"];
-const fcRec=[9011899.845600002, 8449093.680599997, 8111581.695299997];
-const fcDespCx=[-9810865.593, -4666715.378499998, -4968669.819399999];
-const fcDespCp=[-7070296.963, -4951567.908499997, -5050744.1894000005];
-const fcSaldoCx=[-798965.7473999988, 3782378.302099999, 3142911.8758999975];
-const fcSaldoCp=[1941602.882600001, 3497525.7720999997, 3060837.5058999965];
-const fcC=[green,blue,yellow,purple,red,cyan,green+'88',blue+'88',yellow+'88',purple+'88',red+'88',cyan+'88'];
-let fcVisao='comp';
+// ── FC charts in separate script block ──
 
-function getFcDesp(){return fcVisao==='comp'?fcDespCp:fcDespCx}
-function getFcSaldo(){return fcVisao==='comp'?fcSaldoCp:fcSaldoCx}
-function getFcDespKey(){return fcVisao==='comp'?'despesas_comp':'despesas_caixa'}
-function getFcDespTotal(m){return fcVisao==='comp'?fcD[m].desp_cp_total:fcD[m].desp_cx_total}
+// (FC functions moved to separate script block)
 
-function switchFcVisao(v,btn){
-  fcVisao=v;
-  document.querySelectorAll('#page-fcgeral [data-fc-visao]').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
-  const totD=fcMeses.reduce((s,m)=>s+getFcDespTotal(m),0);
-  const totS=fcRec.reduce((a,b)=>a+b,0)+totD;
-  document.getElementById('fc-kpi-desp').textContent=fmt(totD);
-  document.getElementById('fc-kpi-saldo').textContent=fmt(totS);
-  ['cFcBarRD','cFcSaldo','cFcDespDonut','cFcTopDesp'].forEach(id=>{const el=document.getElementById(id);if(el&&el._chart){el._chart.destroy();el._chart=null}});
-  buildFcGeral();
-}
-
-function buildFcGeral(){
-    mkBar('cFcBarRD',fcMeses,[
-      {label:'Receitas',data:fcRec,backgroundColor:green+'88'},
-      {label:'Despesas',data:getFcDesp().map(v=>Math.abs(v)),backgroundColor:red+'88'},
-    ]);
-    mkBar('cFcSaldo',fcMeses,[
-      {label:'Saldo',data:getFcSaldo(),backgroundColor:getFcSaldo().map(v=>v>=0?green+'88':red+'88')},
-    ]);
-    // Donut receitas
-    const recAcum={};fcMeses.forEach(m=>{Object.keys(fcD[m].receitas).forEach(k=>{recAcum[k]=(recAcum[k]||0)+fcD[m].receitas[k].total})});
-    const rL=Object.keys(recAcum).filter(k=>recAcum[k]>0).sort((a,b)=>recAcum[b]-recAcum[a]);
-    mkDonut('cFcRecDonut',rL,rL.map(k=>recAcum[k]),fcC);
-    // Donut despesas
-    const dk=getFcDespKey();
-    const despAcum={};fcMeses.forEach(m=>{Object.keys(fcD[m][dk]||{}).forEach(k=>{despAcum[k]=(despAcum[k]||0)+Math.abs(fcD[m][dk][k].total)})});
-    const dL=Object.keys(despAcum).sort((a,b)=>despAcum[b]-despAcum[a]);
-    mkDonut('cFcDespDonut',dL,dL.map(k=>despAcum[k]),fcC);
-    // Top despesas
-    const top10=dL.slice(0,10);
-    mkBar('cFcTopDesp',top10,[{label:'Valor',data:top10.map(k=>despAcum[k]),backgroundColor:fcC}],true,true);
-  }
-
-function buildFcReceitas(){
-    // Empilhado receitas
-    const recByPlat={};fcMeses.forEach(m=>{Object.keys(fcD[m].receitas).forEach(k=>{if(!recByPlat[k])recByPlat[k]=[];})});
-    Object.keys(recByPlat).forEach(k=>{fcMeses.forEach(m=>{recByPlat[k].push(fcD[m].receitas[k]?fcD[m].receitas[k].total:0)})});
-    const platKeys=Object.keys(recByPlat).filter(k=>!k.includes('Estorno')&&recByPlat[k].some(v=>v>0));
-    (function(){
-      const ds=platKeys.map((k,i)=>({label:k,data:recByPlat[k],backgroundColor:fcC[i%fcC.length],borderRadius:4}));
-      const el=document.getElementById('cFcRecEvol');if(!el||el._chart)return;
-      el._chart=new Chart(el,{type:'bar',data:{labels:fcMeses,datasets:ds},options:{responsive:true,scales:{x:{stacked:true,grid:{display:false}},y:{stacked:true,ticks:{callback:v=>fmt(v)}}},interaction:{mode:'index',intersect:false},plugins:{legend:{position:'top'},tooltip:{mode:'index',intersect:false,callbacks:{label:function(c){const v=c.dataset.data[c.dataIndex];if(!v)return '';return ' '+c.dataset.label+': '+fmt(v)}}}}}})});
-    })();
-    // Ranking
-    const recAcum2={};platKeys.forEach(k=>{recAcum2[k]=recByPlat[k].reduce((a,b)=>a+b,0)});
-    const rk=platKeys.sort((a,b)=>recAcum2[b]-recAcum2[a]);
-    mkBar('cFcRecRank',rk,[{label:'Acumulado',data:rk.map(k=>recAcum2[k]),backgroundColor:fcC}],true,true);
-    // Tabela receitas
-    buildFcRecTable();
-}
-
-function buildFcAnalise(){
-  mkLine('cFcSaldoComp',fcMeses,[
-    {label:'Saldo Competencia',data:fcSaldoCp,borderColor:green,backgroundColor:green+'22',fill:true},
-    {label:'Saldo Caixa',data:fcSaldoCx,borderColor:blue,borderDash:[5,5]},
-  ]);
-  mkLine('cFcRDLine',fcMeses,[
-    {label:'Receitas',data:fcRec,borderColor:green,backgroundColor:green+'22',fill:true},
-    {label:'Despesas Comp.',data:fcDespCp.map(v=>Math.abs(v)),borderColor:red,backgroundColor:red+'22',fill:true},
-    {label:'Despesas Caixa',data:fcDespCx.map(v=>Math.abs(v)),borderColor:yellow,borderDash:[5,5]},
-  ]);
-  const acumCp=fcSaldoCp.reduce((acc,v)=>{acc.push((acc.length?acc[acc.length-1]:0)+v);return acc},[]);
-  const acumCx=fcSaldoCx.reduce((acc,v)=>{acc.push((acc.length?acc[acc.length-1]:0)+v);return acc},[]);
-  mkLine('cFcSaldoAcum',fcMeses,[
-    {label:'Acum. Competencia',data:acumCp,borderColor:green,backgroundColor:green+'22',fill:true},
-    {label:'Acum. Caixa',data:acumCx,borderColor:blue,borderDash:[5,5]},
-  ]);
-}
-
-// ── FC Helper Functions ──
-function toggleSubs(row){
-  const arrow=row.querySelector('.expand-arrow');
-  let next=row.nextElementSibling;
-  const show=next&&next.style.display==='none';
-  while(next&&next.classList.contains('sub-row')){
-    next.style.display=show?'table-row':'none';
-    next=next.nextElementSibling;
-  }
-  if(arrow)arrow.innerHTML=show?'&#9660;':'&#9654;';
-}
-
-function buildFcRecTable(){
-  const box=document.getElementById('fcRecTable');if(!box)return;
-  const allCats=new Set();fcMeses.forEach(m=>Object.keys(fcD[m].receitas).forEach(k=>allCats.add(k)));
-  const cats=[...allCats].sort((a,b)=>{const ta=fcMeses.reduce((s,m)=>s+(fcD[m].receitas[a]||{}).total||0,0);const tb=fcMeses.reduce((s,m)=>s+(fcD[m].receitas[b]||{}).total||0,0);return tb-ta});
-  let h='<table><thead><tr><th>Receita</th>';fcMeses.forEach(m=>h+='<th class="num">'+m+'</th>');h+='<th class="num">TOTAL</th></tr></thead><tbody>';
-  const totMes=fcMeses.map(()=>0);
-  cats.forEach(cat=>{
-    const vals=fcMeses.map((m,i)=>{const v=(fcD[m].receitas[cat]||{}).total||0;totMes[i]+=v;return v});
-    const total=vals.reduce((a,b)=>a+b,0);
-    h+='<tr><td class="loja-nome">'+cat+'</td>';vals.forEach(v=>h+='<td class="num">'+fmt(v)+'</td>');
-    h+='<td class="num total-col"><strong>'+fmt(total)+'</strong></td></tr>';
-  });
-  h+='<tr class="total-row"><td><strong>TOTAL</strong></td>';totMes.forEach(v=>h+='<td class="num"><strong>'+fmt(v)+'</strong></td>');
-  h+='<td class="num total-col"><strong>'+fmt(totMes.reduce((a,b)=>a+b,0))+'</strong></td></tr></tbody></table>';
-  box.innerHTML=h;
-}
-
-let fcDespVisao='comp';
-function switchFcVisao2(v,btn){
-  fcDespVisao=v;
-  document.querySelectorAll('#page-fcdespesas [data-fc-visao2]').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
-  ['cFcDespEvol','cFcDespRank'].forEach(id=>{const el=document.getElementById(id);if(el&&el._chart){el._chart.destroy();el._chart=null}});
-  buildFcDespPage();
-}
-
-function buildFcDespPage(){
-  const dk=fcDespVisao==='comp'?'despesas_comp':'despesas_caixa';
-  const totKey=fcDespVisao==='comp'?'desp_cp_total':'desp_cx_total';
-  // KPIs
-  const kbox=document.getElementById('fc-desp-kpis');
-  const totD=fcMeses.reduce((s,m)=>s+fcD[m][totKey],0);
-  const avg=totD/fcMeses.length;
-  kbox.innerHTML='<div class="kpi red-accent"><div class="k-label">Total Despesas ('+(fcDespVisao==='comp'?'Competencia':'Caixa')+')</div><div class="k-value neg" style="font-size:20px">'+fmt(totD)+'</div></div>'+
-    '<div class="kpi"><div class="k-label">Media Mensal</div><div class="k-value neg" style="font-size:20px">'+fmt(avg)+'</div></div>'+
-    '<div class="kpi"><div class="k-label">Visao</div><div class="k-value" style="font-size:18px">'+(fcDespVisao==='comp'?'Competencia':'Caixa')+'</div></div>';
-
-  // Agregar categorias
-  const catTotals={};const catByMes={};const catSubs={};
-  fcMeses.forEach(m=>{
-    const desp=fcD[m][dk]||{};
-    Object.keys(desp).forEach(k=>{
-      catTotals[k]=(catTotals[k]||0)+desp[k].total;
-      if(!catByMes[k])catByMes[k]=[];
-      catByMes[k].push(desp[k].total);
-      if(!catSubs[k])catSubs[k]={};
-      Object.keys(desp[k].subs||{}).forEach(s=>{catSubs[k][s]=(catSubs[k][s]||0)+desp[k].subs[s]});
-    });
-  });
-  // Pad arrays
-  Object.keys(catByMes).forEach(k=>{while(catByMes[k].length<fcMeses.length)catByMes[k].push(0)});
-
-  const sortedCats=Object.keys(catTotals).sort((a,b)=>catTotals[a]-catTotals[b]);
-
-  // Empilhado chart
-  (function(){
-    const ds=sortedCats.map((k,i)=>({label:k,data:(catByMes[k]||[]).map(v=>Math.abs(v)),backgroundColor:fcC[i%fcC.length],borderRadius:4}));
-    const el=document.getElementById('cFcDespEvol');if(!el)return;
-    el._chart=new Chart(el,{type:'bar',data:{labels:fcMeses,datasets:ds},options:{responsive:true,scales:{x:{stacked:true,grid:{display:false}},y:{stacked:true,ticks:{callback:v=>fmt(v)}}},interaction:{mode:'index',intersect:false},plugins:{legend:{position:'top'},tooltip:{mode:'index',intersect:false,callbacks:{label:function(c){const v=c.dataset.data[c.dataIndex];if(!v)return '';return ' '+c.dataset.label+': '+fmt(v)}}}}}})});
-  })();
-  // Ranking
-  const top10=sortedCats.slice(0,10);
-  mkBar('cFcDespRank',top10,[{label:'Valor',data:top10.map(k=>Math.abs(catTotals[k])),backgroundColor:fcC}],true,true);
-
-  // Tabela despesas expandivel
-  const tbox=document.getElementById('fcDespTable');
-  let h='<table><thead><tr><th>Despesa (clique para expandir)</th>';fcMeses.forEach(m=>h+='<th class="num">'+m+'</th>');h+='<th class="num">TOTAL</th></tr></thead><tbody>';
-  const totMes=fcMeses.map(()=>0);
-  sortedCats.forEach(cat=>{
-    const vals=fcMeses.map((m,i)=>{const d=fcD[m][dk]||{};const v=(d[cat]||{}).total||0;totMes[i]+=v;return v});
-    const total=catTotals[cat];
-    const subs=Object.keys(catSubs[cat]||{}).filter(s=>catSubs[cat][s]!==0);
-    const hasSubs=subs.length>1;
-    const expand=hasSubs?' style="cursor:pointer" onclick="toggleSubs(this)"':'';
-    const arrow=hasSubs?' <span class="expand-arrow">&#9654;</span>':'';
-    h+='<tr'+expand+'><td class="loja-nome">'+cat+arrow+'</td>';vals.forEach(v=>h+='<td class="num neg">'+fmt(v)+'</td>');
-    h+='<td class="num neg total-col"><strong>'+fmt(total)+'</strong></td></tr>';
-    if(hasSubs){
-      subs.sort((a,b)=>catSubs[cat][a]-catSubs[cat][b]).forEach(sub=>{
-        const sv=catSubs[cat][sub];
-        h+='<tr class="sub-row" style="display:none"><td style="padding-left:32px;font-size:11px;color:var(--muted)">'+sub+'</td>';
-        fcMeses.forEach(m=>{const d=fcD[m][dk]||{};const v=((d[cat]||{}).subs||{})[sub]||0;h+='<td class="num neg" style="font-size:11px">'+fmt(v)+'</td>'});
-        h+='<td class="num neg" style="font-size:11px">'+fmt(sv)+'</td></tr>';
-      });
-    }
-  });
-  h+='<tr class="total-row"><td><strong>TOTAL DESPESAS</strong></td>';totMes.forEach(v=>h+='<td class="num neg"><strong>'+fmt(v)+'</strong></td>');
-  h+='<td class="num neg total-col"><strong>'+fmt(totMes.reduce((a,b)=>a+b,0))+'</strong></td></tr>';
-  // Saldo
-  const recTotMes=fcMeses.map(m=>fcD[m].rec_total);
-  h+='<tr style="background:var(--surface3)"><td><strong>SALDO</strong></td>';
-  fcMeses.forEach((m,i)=>{const s=recTotMes[i]+totMes[i];h+='<td class="num '+(s>0?'pos':'neg')+'"><strong>'+fmt(s)+'</strong></td>'});
-  const saldoG=recTotMes.reduce((a,b)=>a+b,0)+totMes.reduce((a,b)=>a+b,0);
-  h+='<td class="num '+(saldoG>0?'pos':'neg')+' total-col"><strong>'+fmt(saldoG)+'</strong></td></tr>';
-  h+='</tbody></table>';
-  tbox.innerHTML=h;
-
-  // Variacao
-  const vbox=document.getElementById('fcDespVarTable');
-  if(fcMeses.length>=2){
-    let vh='<table><thead><tr><th>Categoria</th>';
-    fcMeses.forEach((m,i)=>{vh+='<th class="num">'+m+'</th>';if(i>0)vh+='<th class="num">Var %</th>'});
-    vh+='</tr></thead><tbody>';
-    sortedCats.forEach(cat=>{
-      if(!catTotals[cat])return;
-      const vals=catByMes[cat]||[];
-      vh+='<tr><td class="loja-nome">'+cat+'</td>';
-      vals.forEach((v,i)=>{
-        vh+='<td class="num neg">'+fmt(v)+'</td>';
-        if(i>0){const prev=vals[i-1];const pct=prev?((v-prev)/Math.abs(prev)*100):0;const cls=pct<0?'pos':pct>0?'neg':'';vh+='<td class="num '+cls+'">'+pct.toFixed(1)+'%</td>'}
-      });
-      vh+='</tr>';
-    });
-    vh+='</tbody></table>';
-    vbox.innerHTML=vh;
-  }
-}
-
-// ── Meses (multi-select) ──
-let selectedMeses=new Set();
-function showMes(aba,btn){
-  // Toggle selection
-  if(selectedMeses.has(aba)){
-    selectedMeses.delete(aba);
-    btn.classList.remove('active');
-  }else{
-    selectedMeses.add(aba);
-    btn.classList.add('active');
-  }
-  // Se nenhum selecionado, selecionar este
-  if(selectedMeses.size===0){
-    selectedMeses.add(aba);
-    btn.classList.add('active');
-  }
-  renderConsolidado();
-}
-
-function renderConsolidado(){
-  const sel=Array.from(selectedMeses);
-  // Esconder todos os conteudos individuais
-  document.querySelectorAll('.mes-content').forEach(m=>m.style.display='none');
-  const box=document.getElementById('mesConsolidado');
-
-  // Se 1 mes, mostrar conteudo original
-  if(sel.length===1){
-    box.innerHTML='';
-    const el=document.getElementById('mes-'+sel[0]);
-    if(el)el.style.display='block';
-    return;
-  }
-
-  // Multi-select: consolidar dados
-  const prods={};
-  let totais={trafego:0,fat_interno:0,fat_afiliados:0,fat_total:0,lb_interno:0,lb_afiliados:0,lb_total:0,cf_interno:0,cf_afiliados:0,cf_total:0,lo_interno:0,lo_afiliados:0,lo_total:0,impostos:0,ll_interno:0,ll_afiliados:0,ll_total:0};
-  const demoFat={},demoLuc={},demoCusto={interno:0,afiliados:0,total:0},demoLo={interno:0,afiliados:0,total:0};
-
-  sel.forEach(aba=>{
-    const md=mesesData[aba];
-    if(!md)return;
-    // Produtos
-    (md.produtos||[]).forEach(p=>{
-      if(!prods[p.nome])prods[p.nome]={nome:p.nome,trafego:0,fat_total:0,fat_interno:0,fat_afiliados:0,lb_total:0,lb_interno:0,lb_afiliados:0};
-      const pp=prods[p.nome];
-      pp.trafego+=p.trafego||0;pp.fat_total+=p.fat_total||0;pp.fat_interno+=p.fat_interno||0;
-      pp.fat_afiliados+=p.fat_afiliados||0;pp.lb_total+=p.lb_total||0;pp.lb_interno+=p.lb_interno||0;pp.lb_afiliados+=p.lb_afiliados||0;
-    });
-    // Totais
-    const t=md.totais||{};
-    Object.keys(totais).forEach(k=>{totais[k]+=(t[k]||0)});
-    // Demo
-    const d=md.demo||{};
-    ['fat_ops','lucro_ops'].forEach(sec=>{
-      const ops=d[sec]||{};
-      const target=sec==='fat_ops'?demoFat:demoLuc;
-      Object.keys(ops).forEach(op=>{
-        if(!target[op])target[op]={interno:0,afiliados:0,total:0};
-        const o=ops[op]||{};
-        target[op].interno+=(o.interno||0);target[op].afiliados+=(o.afiliados||0);target[op].total+=(o.total||0);
-      });
-    });
-    const dc=d.custo||{};
-    demoCusto.interno+=(dc.interno||0);demoCusto.afiliados+=(dc.afiliados||0);demoCusto.total+=(dc.total||0);
-    const dl=d.lo||{};
-    demoLo.interno+=(dl.interno||0);demoLo.afiliados+=(dl.afiliados||0);demoLo.total+=(dl.total||0);
-  });
-
-  const periodo=sel.map(a=>a.replace(/(\d{2})$/,'/$1')).join(' + ');
-  const prodArr=Object.values(prods).sort((a,b)=>b.fat_total-a.fat_total);
-
-  // Render KPIs
-  let h='<div class="g4" style="margin-bottom:20px">';
-  h+='<div class="kpi accent"><div class="k-label">Faturamento Total</div><div class="k-value" style="font-size:20px">'+fmt(totais.fat_total)+'</div></div>';
-  const mgB=totais.fat_total?(totais.lb_total/totais.fat_total*100):0;
-  h+='<div class="kpi"><div class="k-label">Lucro Bruto</div><div class="k-value" style="font-size:20px">'+fmt(totais.lb_total)+'</div><div class="k-delta '+(mgB>10?'up':'warn')+'">'+mgB.toFixed(2).replace('.',',')+'% margem</div></div>';
-  h+='<div class="kpi"><div class="k-label">Custos e Despesas</div><div class="k-value neg" style="font-size:20px">'+fmt(totais.cf_total)+'</div></div>';
-  const mgO=totais.fat_total?(totais.lo_total/totais.fat_total*100):0;
-  h+='<div class="kpi '+(totais.lo_total>0?'accent':'red-accent')+'"><div class="k-label">Lucro Operacional</div><div class="k-value" style="font-size:20px">'+fmt(totais.lo_total)+'</div><div class="k-delta '+(mgO>5?'up':'down')+'">'+mgO.toFixed(2).replace('.',',')+'% margem op.</div></div>';
-  h+='</div>';
-
-  // Tabela produtos
-  h+='<div class="card" style="margin-bottom:20px"><div class="card-title">Consolidado: '+periodo+'</div><div style="overflow-x:auto"><table><thead><tr>';
-  h+='<th>Produto</th><th class="num">Trafego</th><th class="num">Fat. Total</th><th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th>';
-  h+='<th class="num">L.B. Total</th><th class="num">L.B. Interno</th><th class="num">L.B. Afiliados</th><th class="num">Margem Bruta</th>';
-  h+='</tr></thead><tbody>';
-  prodArr.forEach(p=>{
-    if(p.fat_total===0&&p.lb_total===0)return;
-    const mg=p.fat_total?(p.lb_total/p.fat_total*100):0;
-    const neg=p.lb_total<0?' neg':'';
-    const negI=p.lb_interno<0?' neg':'';
-    const negA=p.lb_afiliados<0?' neg':'';
-    const alert=p.lb_total<0?' <span style="color:var(--red);font-size:10px">&#9888; Prejuizo</span>':'';
-    h+='<tr><td class="loja-nome">'+p.nome+alert+'</td>';
-    h+='<td class="num">'+fmt(p.trafego)+'</td>';
-    h+='<td class="num">'+fmt(p.fat_total)+'</td>';
-    h+='<td class="num">'+fmt(p.fat_interno)+'</td>';
-    h+='<td class="num">'+fmt(p.fat_afiliados)+'</td>';
-    h+='<td class="num'+neg+'">'+fmt(p.lb_total)+'</td>';
-    h+='<td class="num'+negI+'">'+fmt(p.lb_interno)+'</td>';
-    h+='<td class="num'+negA+'">'+fmt(p.lb_afiliados)+'</td>';
-    h+='<td class="num '+(mg>15?'pos':mg>5?'warn-text':'neg')+'">'+mg.toFixed(2).replace('.',',')+'%</td></tr>';
-  });
-  // Total row
-  const st=prodArr.reduce((s,p)=>({t:s.t+p.trafego,f:s.f+p.fat_total,fi:s.fi+p.fat_interno,fa:s.fa+p.fat_afiliados,l:s.l+p.lb_total,li:s.li+p.lb_interno,la:s.la+p.lb_afiliados}),{t:0,f:0,fi:0,fa:0,l:0,li:0,la:0});
-  const mgt=st.f?(st.l/st.f*100):0;
-  h+='<tr class="total-row"><td><strong>TOTAL</strong></td>';
-  h+='<td class="num"><strong>'+fmt(st.t)+'</strong></td><td class="num"><strong>'+fmt(st.f)+'</strong></td>';
-  h+='<td class="num"><strong>'+fmt(st.fi)+'</strong></td><td class="num"><strong>'+fmt(st.fa)+'</strong></td>';
-  h+='<td class="num"><strong>'+fmt(st.l)+'</strong></td><td class="num"><strong>'+fmt(st.li)+'</strong></td>';
-  h+='<td class="num"><strong>'+fmt(st.la)+'</strong></td><td class="num"><strong>'+mgt.toFixed(2).replace('.',',')+'%</strong></td></tr>';
-  h+='</tbody></table></div></div>';
-
-  // Totalizadores
-  if(Object.keys(totais).length){
-    h+='<div class="card" style="margin-bottom:20px"><div class="card-title">Totalizadores - '+periodo+'</div><table><thead><tr><th>Indicador</th><th class="num">Valor</th></tr></thead><tbody>';
-    const tItems=[['TRAFEGO XMX LIONS',totais.trafego],['FATURAMENTO - INTERNO',totais.fat_interno],['FATURAMENTO - AFILIADOS',totais.fat_afiliados],['FATURAMENTO TOTAL',totais.fat_total],
-      ['LUCRO BRUTO - INTERNO',totais.lb_interno],['LUCRO BRUTO - AFILIADOS',totais.lb_afiliados],['LUCRO BRUTO TOTAL',totais.lb_total],
-      ['CUSTOS E DESPESAS - INTERNO',totais.cf_interno],['CUSTOS E DESPESAS - AFILIADOS',totais.cf_afiliados],['CUSTOS E DESPESAS TOTAL',totais.cf_total],
-      ['LUCRO OPERACIONAL - INTERNO',totais.lo_interno],['LUCRO OPERACIONAL - AFILIADOS',totais.lo_afiliados],['LUCRO OPERACIONAL TOTAL',totais.lo_total],
-      ['IMPOSTOS AJUSTADOS',totais.impostos],
-      ['LUCRO LIQUIDO - INTERNO',totais.ll_interno],['LUCRO LIQUIDO - AFILIADOS',totais.ll_afiliados],['LUCRO LIQUIDO TOTAL',totais.ll_total]];
-    tItems.forEach(([lbl,val])=>{
-      const isT=lbl.includes('TOTAL')&&!lbl.includes('INTERNO')&&!lbl.includes('AFILIADO');
-      const neg=val<0?' neg':'';
-      const bold=isT?'font-weight:700;':'';
-      const bg=isT?'background:var(--surface2);':'';
-      h+='<tr style="'+bg+'"><td style="'+bold+'">'+lbl+'</td><td class="num'+neg+'" style="'+bold+'">'+fmt(val)+'</td></tr>';
-    });
-    h+='</tbody></table></div>';
-  }
-
-  // Demonstrativo
-  const opOrder=['Sem Backend','Wellness Box','Call Center','SalesBound','SMS Nutra','No Tracking','Total com Backend'];
-  if(Object.keys(demoFat).length){
-    h+='<div class="card" style="margin-bottom:20px"><div class="card-title">Demonstrativo Consolidado - '+periodo+'</div><div style="overflow-x:auto"><table><thead><tr>';
-    h+='<th>Operacao</th><th class="num">Fat. Total</th><th class="num">Fat. Interno</th><th class="num">Fat. Afiliados</th>';
-    h+='<th class="num">Lucro Total</th><th class="num">Lucro Interno</th><th class="num">Lucro Afiliados</th><th class="num">Margem Bruta</th></tr></thead><tbody>';
-    opOrder.forEach(op=>{
-      const fo=demoFat[op];const lo=demoLuc[op];
-      if(!fo&&!lo)return;
-      const ft=fo?fo.total:0,fi=fo?fo.interno:0,fa=fo?fo.afiliados:0;
-      const lt=lo?lo.total:0,li=lo?lo.interno:0,la=lo?lo.afiliados:0;
-      const mgv=ft?(lt/ft*100):0;
-      const isT=op==='Total com Backend';
-      const bold=isT?'font-weight:700;':'';const bg=isT?'background:var(--surface2);':'';
-      const negL=lt<0?' neg':'';const negLi=li<0?' neg':'';const negLa=la<0?' neg':'';
-      const alert=(lt<0||li<0)&&!isT?' <span style="color:var(--red);font-size:11px">&#9888;</span>':'';
-      h+='<tr style="'+bg+'"><td style="'+bold+'">'+op+alert+'</td><td class="num" style="'+bold+'">'+fmt(ft)+'</td><td class="num" style="'+bold+'">'+fmt(fi)+'</td><td class="num" style="'+bold+'">'+fmt(fa)+'</td>';
-      h+='<td class="num'+negL+'" style="'+bold+'">'+fmt(lt)+'</td><td class="num'+negLi+'" style="'+bold+'">'+fmt(li)+'</td><td class="num'+negLa+'" style="'+bold+'">'+fmt(la)+'</td>';
-      h+='<td class="num" style="'+bold+'">'+mgv.toFixed(2).replace('.',',')+'%</td></tr>';
-    });
-    // Custos
-    h+='<tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">CUSTOS</td></tr>';
-    [['Custo Interno',demoCusto.interno],['Custo Afiliados',demoCusto.afiliados],['Custo Total',demoCusto.total]].forEach(([l,v])=>{
-      const isT=l.includes('Total');
-      h+='<tr style="'+(isT?'background:var(--surface2);':'')+'"><td style="'+(isT?'font-weight:700;':'')+'">'+l+'</td><td class="num neg" style="'+(isT?'font-weight:700;':'')+'" colspan="7">'+fmt(v)+'</td></tr>';
-    });
-    // L.O.
-    h+='<tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">LUCRO OPERACIONAL</td></tr>';
-    [['L.O. Interno',demoLo.interno],['L.O. Afiliados',demoLo.afiliados],['L.O. Total',demoLo.total]].forEach(([l,v])=>{
-      const isT=l.includes('Total');const neg=v<0?' neg':'';
-      h+='<tr style="'+(isT?'background:var(--surface2);':'')+'"><td style="'+(isT?'font-weight:700;':'')+'">'+l+'</td><td class="num'+neg+'" style="'+(isT?'font-weight:700;':'')+'" colspan="7">'+fmt(v)+'</td></tr>';
-    });
-    // Impostos e Lucro Liquido
-    if(totais.impostos||totais.ll_total){
-      h+='<tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">IMPOSTOS</td></tr>';
-      h+='<tr style="background:var(--surface2);"><td style="font-weight:700;">Impostos Ajustados</td><td class="num neg" style="font-weight:700;" colspan="7">'+fmt(totais.impostos)+'</td></tr>';
-      h+='<tr class="sep"><td colspan="8" style="font-weight:600;padding-top:12px">LUCRO LIQUIDO</td></tr>';
-      [['L.L. Interno',totais.ll_interno],['L.L. Afiliados',totais.ll_afiliados],['L.L. Total',totais.ll_total]].forEach(([l,v])=>{
-        const isT=l.includes('Total');const neg=v<0?' neg':'';
-        h+='<tr style="'+(isT?'background:var(--surface2);':'')+'"><td style="'+(isT?'font-weight:700;':'')+'">'+l+'</td><td class="num'+neg+'" style="'+(isT?'font-weight:700;':'')+'" colspan="7">'+fmt(v)+'</td></tr>';
-      });
-    }
-    h+='</tbody></table></div></div>';
-  }
-
-  box.innerHTML=h;
-}
-
-// ── Filtro por Ano ──
-function filterAno(btn){
-  const ano=btn.dataset.anoFilter;
-  document.querySelectorAll('[data-ano-filter]').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
-  const tabs=document.querySelectorAll('.mes-tab');
-  // Limpar selecao
-  selectedMeses.clear();
-  document.querySelectorAll('.mes-content').forEach(m=>m.style.display='none');
-  document.getElementById('mesConsolidado').innerHTML='';
-  tabs.forEach(t=>t.classList.remove('active'));
-  let first=null;
-  tabs.forEach(t=>{
-    const tabAno=t.dataset.ano;
-    if(ano==='todos'||tabAno===ano){
-      t.style.display='';
-      if(!first)first=t;
-    }else{
-      t.style.display='none';
-    }
-  });
-  if(first){
-    first.classList.add('active');
-    selectedMeses.add(first.dataset.aba);
-    const el=document.getElementById('mes-'+first.dataset.aba);
-    if(el)el.style.display='block';
-  }
-}
-
-// ── FC Comparativo ──
-function renderFcCompara(){
-  const m1=document.getElementById('fcComp1').value;
-  const m2=document.getElementById('fcComp2').value;
-  const visao=document.getElementById('fcCompVisao').value;
-  const d1=fcD[m1],d2=fcD[m2];
-  if(!d1||!d2)return;
-  const box=document.getElementById('fcCompaContent');
-  const dk=visao==='comp'?'despesas_comp':'despesas_caixa';
-  const r1=d1.receitas,r2=d2.receitas,dp1=d1[dk]||{},dp2=d2[dk]||{};
-  const totR1=Object.values(r1).reduce((s,v)=>s+v.total,0);
-  const totR2=Object.values(r2).reduce((s,v)=>s+v.total,0);
-  const totD1=Object.values(dp1).reduce((s,v)=>s+v.total,0);
-  const totD2=Object.values(dp2).reduce((s,v)=>s+v.total,0);
-  const varR=totR1?(totR2-totR1)/totR1*100:0;
-  const varD=totD1?(totD2-totD1)/Math.abs(totD1)*100:0;
-  let h='<div class="g4" style="margin-bottom:20px">';
-  h+='<div class="kpi"><div class="k-label">Receitas '+m1+'</div><div class="k-value" style="font-size:18px">'+fmt(totR1)+'</div></div>';
-  h+='<div class="kpi"><div class="k-label">Receitas '+m2+'</div><div class="k-value" style="font-size:18px">'+fmt(totR2)+'</div></div>';
-  h+='<div class="kpi"><div class="k-label">Despesas '+m1+'</div><div class="k-value neg" style="font-size:18px">'+fmt(totD1)+'</div></div>';
-  h+='<div class="kpi"><div class="k-label">Despesas '+m2+'</div><div class="k-value neg" style="font-size:18px">'+fmt(totD2)+'</div></div>';
-  h+='</div>';
-  // Tabela comparativa receitas
-  const allRec=new Set([...Object.keys(r1),...Object.keys(r2)]);
-  h+='<div class="card" style="margin-bottom:20px"><div class="card-title">Receitas - '+m1+' vs '+m2+'</div><table><thead><tr><th>Plataforma</th><th class="num">'+m1+'</th><th class="num">'+m2+'</th><th class="num">Variacao</th><th class="num">Var %</th></tr></thead><tbody>';
-  allRec.forEach(k=>{
-    const v1=(r1[k]||{}).total||0,v2=(r2[k]||{}).total||0;
-    const diff=v2-v1;const pct=v1?(diff/v1*100):0;
-    const cls=diff>0?'pos':diff<0?'neg':'';
-    h+='<tr><td class="loja-nome">'+k+'</td><td class="num">'+fmt(v1)+'</td><td class="num">'+fmt(v2)+'</td><td class="num '+cls+'">'+fmt(diff)+'</td><td class="num '+cls+'">'+pct.toFixed(1)+'%</td></tr>';
-  });
-  h+='<tr class="total-row"><td><strong>TOTAL</strong></td><td class="num"><strong>'+fmt(totR1)+'</strong></td><td class="num"><strong>'+fmt(totR2)+'</strong></td><td class="num '+(varR>0?'pos':'neg')+'"><strong>'+fmt(totR2-totR1)+'</strong></td><td class="num '+(varR>0?'pos':'neg')+'"><strong>'+varR.toFixed(1)+'%</strong></td></tr>';
-  h+='</tbody></table></div>';
-  // Tabela comparativa despesas
-  const allDesp=new Set([...Object.keys(dp1),...Object.keys(dp2)]);
-  h+='<div class="card"><div class="card-title">Despesas - '+m1+' vs '+m2+'</div><table><thead><tr><th>Categoria</th><th class="num">'+m1+'</th><th class="num">'+m2+'</th><th class="num">Variacao</th><th class="num">Var %</th></tr></thead><tbody>';
-  allDesp.forEach(k=>{
-    const v1=(dp1[k]||{}).total||0,v2=(dp2[k]||{}).total||0;
-    const diff=v2-v1;const pct=v1?(diff/Math.abs(v1)*100):0;
-    const cls=diff<0?'pos':diff>0?'neg':'';
-    h+='<tr><td class="loja-nome">'+k+'</td><td class="num neg">'+fmt(v1)+'</td><td class="num neg">'+fmt(v2)+'</td><td class="num '+cls+'">'+fmt(diff)+'</td><td class="num '+cls+'">'+pct.toFixed(1)+'%</td></tr>';
-  });
-  h+='<tr class="total-row"><td><strong>TOTAL</strong></td><td class="num neg"><strong>'+fmt(totD1)+'</strong></td><td class="num neg"><strong>'+fmt(totD2)+'</strong></td><td class="num '+(varD<0?'pos':'neg')+'"><strong>'+fmt(totD2-totD1)+'</strong></td><td class="num '+(varD<0?'pos':'neg')+'"><strong>'+varD.toFixed(1)+'%</strong></td></tr>';
-  h+='</tbody></table></div>';
-  box.innerHTML=h;
-}
+// ── FC functions in separate script ──
 
 // ── Switch Faturamento Ano ──
 function switchFatAno(ano,btn){
@@ -4046,5 +3580,246 @@ function switchFatAno(ano,btn){
 
 // ── Init ──
 buildCharts('overview');
-</script></body>
+</script>
+<script>
+
+const fcD={"JAN/26": {"receitas": {"Cartpanda": {"total": 6481229.083000001, "subs": {"CARTPANDA": 6481229.083000001}}, "BuyGoods": {"total": 701475.9584, "subs": {"BUYGOODS": 701475.9584}}, "Digistore": {"total": 18039.0457, "subs": {"DIGISTORE": 18039.0457}}, "ClickBank": {"total": 7490.5555, "subs": {"CLICKBANK": 7490.5555}}, "SalesBound": {"total": 718864.16, "subs": {"SALES BOUND": 718864.16}}, "Logicall": {"total": 1008461.6980000002, "subs": {"LOGICALL": 1008461.6980000002}}, "Science Natural": {"total": 27244.2662, "subs": {"RECEBIMENTO - SCIENCE NATURAL - EMAIL": 27244.2662}}, "Tauk": {"total": 5281.1132, "subs": {"RESOLUTIONS - TALK": 5281.1132}}, "Cashback Payoneer": {"total": 10496.2443, "subs": {"PAYONNER - CASHBACK": 10496.2443}}, "Estornos": {"total": 13913.831300000002, "subs": {"ESTORNO DE COMPRAS TESTES": 12773.2175, "ESTORNO DE COMPRA DE BRINDES": 1140.6138}}, "Rend. Financeiros": {"total": 19403.89, "subs": {"REND. FINANCEIROS CONTA SIMPLES/ITA\u00da": 19403.89}}}, "despesas_caixa": {"Trafego": {"total": -1039146.1014000006, "subs": {"TRAFEGO GOOGLE - CART\u00d5ES": -1001973.4957000007, "TRAFEGO FACEBOOK - CART\u00d5ES": -35262.36069999998, "TRAFEGO TABOOLA - CART\u00d5ES": -278.245, "TRAFEGO TABOOLA - AGENCIA": -1632.0}}, "Fornecedor": {"total": -4273900.0, "subs": {"FORNECEDORES - SHIPOFFERS": -4273900.0}}, "Ferramentas/Licencas": {"total": -134513.83959999995, "subs": {"FERRAMENTAS/LICEN\u00c7AS": -134513.83959999995}}, "Impostos": {"total": -2712345.22, "subs": {"PAGAMENTOS IMPOSTOS 4 TRIMESTRE 2025": -2712345.22}}, "Equipe - Salarios": {"total": -250515.02, "subs": {"EQUIPE - SALARIO 12/2025": -250515.02}}, "Equipe - Desligamento": {"total": -10700.0, "subs": {"EQUIPE - DESLIGAMENTOS": -10700.0}}, "Equipe - Diversos": {"total": -2000.0, "subs": {"EQUIPE - PREMIO BINGO - TALKS": -2000.0}}, "Equipe - Bonus": {"total": -571678.13, "subs": {"EQUIPE - BONUS 4 TRIMESTRE DE 2025": -571678.13}}, "Equipe - Ferias": {"total": -11666.66, "subs": {"EQUIPE - F\u00c9RIAS": -11666.66}}, "Equipe - Dias Extras": {"total": -36713.16, "subs": {"EQUIPE - DIAS EXTRAS TRABALHADOS": -36713.16}}, "Despesas Administrativas": {"total": -15243.77, "subs": {"DESPESAS ADMINSTRATIVAS": -15243.77}}, "Viagens": {"total": -61530.215899999996, "subs": {"PASSAGENS AEREAS/ONIBUS": -55293.242, "LOCOMO\u00c7\u00c3O": -846.6487999999999, "HOSPEDAGEM": -351.5292, "ALIMENTA\u00c7\u00c3O": -5038.7959}}, "Marketing": {"total": -44793.0901, "subs": {"COMPRAS TESTES": -43656.2757, "GASTOS COM ESPIONAGEM": -1136.8144000000002}}, "Cursos/Mentorias": {"total": -40934.0506, "subs": {"MENTORIAS/CURSOS": -40934.0506}}, "Saldo para Lojas": {"total": -366688.0, "subs": {"ESTORNO DE SALDO PARA A CARTPANDA": -366688.0}}, "Outras Despesas": {"total": -188039.07599999994, "subs": {"DESPESAS COM CONFRATERNIZA\u00c7AO - TALKS": -93453.66999999997, "GASTOS COM BRINDES - PRESTADORES DE SERVI\u00c7OS": -4136.3162, "DESPESAS DIVERSAS (VIAGENS/BRINDES) - S\u00d3CIOS": -42118.6398, "REEMBOLSOS DIVERSOS - PRESTADORES DE SERVI\u00c7O": -35791.45, "DESPESAS COM TRANSPORTE EXECUTIVO - MAURICIO": -11000.0, "COMPRA DE COMPUTARORES": -1539.0}}, "Freelancers": {"total": -6528.0, "subs": {"FREELANCER - ARTHUR ALENCAR": -6528.0}}, "Comissoes por Indicacao": {"total": -16220.5, "subs": {"COMISS\u00c3O INDICA\u00c7\u00c3O AFILIADOS - HENRIQUE": -645.6, "COMISS\u00c3O INDICA\u00c7\u00c3O AFILIADOS - EVAIR": -1912.6000000000001, "COMISS\u00c3O INDICA\u00c7\u00c3O AFILIADOS - HLA": -13662.3}}, "Despesas com Afiliados": {"total": -27521.2144, "subs": {"GASTOS COM BRINDES E INCENTIVOS AFILIADOS": -521.2144, "AFILIADOS - BUGET": -27000.0}}, "Despesas Financeiras": {"total": -189.545, "subs": {"DESPESAS FINANCEIRAS": -189.545}}}, "despesas_comp": {"Trafego": {"total": -1039146.1014000006, "subs": {"TRAFEGO GOOGLE - CART\u00d5ES": -1001973.4957000007, "TRAFEGO FACEBOOK - CART\u00d5ES": -35262.36069999998, "TRAFEGO TABOOLA - CART\u00d5ES": -278.245, "TRAFEGO TABOOLA - AGENCIA": -1632.0}}, "Fornecedor": {"total": -4273900.0, "subs": {"FORNECEDORES - SHIPOFFERS": -4273900.0}}, "Ferramentas/Licencas": {"total": -136366.85959999994, "subs": {"FERRAMENTAS/LICEN\u00c7AS": -136366.85959999994}}, "Impostos": {"total": -22881.690000000002, "subs": {"PROVIS\u00c3O DE IMPOSTOS 01/2026": -22881.690000000002}}, "Equipe - Salarios": {"total": -254048.32, "subs": {"EQUIPE - SALARIO 01/2026": -254048.32}}, "Equipe - Desligamento": {"total": -10700.0, "subs": {"EQUIPE - DESLIGAMENTOS": -10700.0}}, "Equipe - Diversos": {"total": -2000.0, "subs": {"EQUIPE - PREMIO BINGO - TALKS": -2000.0}}, "Equipe - Bonus": {"total": -571678.13, "subs": {"EQUIPE - BONUS 4 TRIMESTRE DE 2025": -571678.13}}, "Equipe - Ferias": {"total": -11666.66, "subs": {"EQUIPE - F\u00c9RIAS": -11666.66}}, "Despesas Administrativas": {"total": -15280.400000000001, "subs": {"DESPESAS ADMINSTRATIVAS": -15280.400000000001}}, "Viagens": {"total": -33380.9359, "subs": {"PASSAGENS AEREAS/ONIBUS": -25505.962, "LOCOMO\u00c7\u00c3O": -846.6488, "HOSPEDAGEM": -1989.5292, "ALIMENTA\u00c7\u00c3O": -5038.7959}}, "Marketing": {"total": -44793.0901, "subs": {"COMPRAS TESTES": -43656.2757, "GASTOS COM ESPIONAGEM": -1136.8144000000002}}, "Cursos/Mentorias": {"total": -40885.4706, "subs": {"MENTORIAS/CURSOS": -40885.4706}}, "Saldo para Lojas": {"total": -366688.0, "subs": {"ESTORNO DE SALDO PARA A CARTPANDA": -366688.0}}, "Outras Despesas": {"total": -196422.076, "subs": {"DESPESAS COM CONFRATERNIZA\u00c7AO - TALKS": -103375.67, "GASTOS COM BRINDES - PRESTADORES DE SERVI\u00c7OS": -4136.3162, "DESPESAS DIVERSAS (VIAGENS/BRINDES) - SOCIOS": -42118.6398, "REEMBOLSOS DIVERSOS - PRESTADORES DE SERVI\u00c7O": -35791.45, "DESPESAS COM TRANSPORTE EXECUTIVO - MAURICIO": -11000.0}}, "Freelancers": {"total": -6528.0, "subs": {"FREELANCER - ARTHUR ALENCAR": -6528.0}}, "Comissoes por Indicacao": {"total": -16220.5, "subs": {"COMISS\u00c3O INDICA\u00c7\u00c3O AFILIADOS - HENRIQUE": -645.6, "COMISS\u00c3O INDICA\u00c7\u00c3O AFILIADOS - EVAIR": -1912.6000000000001, "COMISS\u00c3O INDICA\u00c7\u00c3O AFILIADOS - HLA": -13662.3}}, "Despesas com Afiliados": {"total": -27521.2144, "subs": {"GASTOS COM BRINDES E INCENTIVOS AFILIADOS": -521.2144, "AFILIADOS - BUGET": -27000.0}}, "Despesas Financeiras": {"total": -189.515, "subs": {"DESPESAS FINANCEIRAS": -189.515}}}, "rec_total": 9011899.845600002, "desp_cx_total": -9810865.593, "desp_cp_total": -7070296.963}, "FEV/26": {"receitas": {"Cartpanda": {"total": 5201267.157099999, "subs": {"CARTPANDA": 5201267.157099999}}, "BuyGoods": {"total": 360274.8844, "subs": {"BUYGOODS": 360274.8844}}, "Digistore": {"total": 21202.2357, "subs": {"DIGISTORE": 21202.2357}}, "ClickBank": {"total": 28020.3891, "subs": {"CLICKBANK": 28020.3891}}, "SalesBound": {"total": 1049899.4467000002, "subs": {"SALES BOUND": 1049899.4467000002}}, "Logicall": {"total": 1662046.7278, "subs": {"LOGICALL": 1662046.7278}}, "Science Natural": {"total": 34827.572, "subs": {"RECEBIMENTO - SCIENCE NATURAL - EMAIL": 34827.572}}, "Tauk": {"total": 22787.5211, "subs": {"RESOLUTIONS - TALK": 22787.5211}}, "HELP GRID": {"total": 617.0912000000001, "subs": {"HELP GRID": 617.0912000000001}}, "Cashback Payoneer": {"total": 9048.3046, "subs": {"PAYONNER - CASHBACK": 9048.3046}}, "Estornos": {"total": 54044.850900000005, "subs": {"ESTORNO DE COMPRAS TESTES": 41270.60160000001, "ESTORNO DE FERRAMENTAS": 12774.2493}}, "Trafego": {"total": 4130.62, "subs": {"ESTORNO DE TRAFEGO GOOGLE": 4130.62}}, "Rend. Financeiros": {"total": 926.88, "subs": {"REND. FINANCEIROS CONTA SIMPLES/ITA\u00da": 926.88}}}, "despesas_caixa": {"Trafego": {"total": -687750.9684000001, "subs": {"TRAFEGO GOOGLE - CART\u00d5ES": -452559.8519000001, "TRAFEGO FACEBOOK - CART\u00d5ES": -233613.11650000003, "TRAFEGO TABOOLA - AGENCIA": -1578.0}}, "Fornecedor": {"total": -3081652.1178, "subs": {"FORNECEDORES - SHIPOFFERS": -3081652.1178}}, "Ferramentas/Licencas": {"total": -202018.6501000002, "subs": {"FERRAMENTAS/LICEN\u00c7AS": -202018.6501000002}}, "Equipe - Salarios": {"total": -254048.31999999998, "subs": {"EQUIPE - SALARIO 01/2026": -254048.31999999998}}, "Equipe - Desligamento": {"total": -2666.67, "subs": {"EQUIPE - DESLIGAMENTOS": -2666.67}}, "Equipe - Ferias": {"total": -7000.0, "subs": {"EQUIPE - F\u00c9RIAS": -7000.0}}, "Equipe - Dias Extras": {"total": -12830.0, "subs": {"EQUIPE - DIAS EXTRAS TRABALHADOS": -12830.0}}, "Despesas Administrativas": {"total": -17618.95, "subs": {"DESPESAS ADMINSTRATIVAS": -17618.95}}, "Viagens": {"total": -75928.02590000001, "subs": {"PASSAGENS AEREAS/ONIBUS": -59498.1782, "LOCOMO\u00c7\u00c3O": -1153.7748, "HOSPEDAGEM": -5630.9712, "ALIMENTA\u00c7\u00c3O": -9645.1017}}, "Marketing": {"total": -44952.3507, "subs": {"COMPRAS TESTES": -30611.830700000006, "GASTOS COM ESPIONAGEM": -13514.92, "CUSTOS COM PERFIL PARA ANUNCIO": -825.6}}, "Cursos/Mentorias": {"total": -52739.3342, "subs": {"MENTORIAS/CURSOS": -52739.3342}}, "Cartpanda": {"total": -44620.32030000001, "subs": {"GASTOS COM EVENTOS DE AFILIADOS DUBAI - CARTPANDA": -44620.32030000001}}, "Outras Despesas": {"total": -15435.663499999999, "subs": {"DESPESAS COM CONFRATERNIZA\u00c7AO - TALKS": -9922.0, "REEMBOLSOS DIVERSOS - PRESTADORES DE SERVI\u00c7O": -977.1700000000001, "COMISS\u00c3O - AGENCIA DE TRAFEGO FACEBOOK": -805.2024999999999, "COMPRA DE COMPUTARORES": -1539.0, "CLIENTE CARTPANDA - REEMBOLSO MANUAL": -2192.291}}, "Freelancers": {"total": -16664.0, "subs": {"FREELANCER - ARTHUR ALENCAR": -16664.0}}, "Comissoes por Indicacao": {"total": -47860.450000000004, "subs": {"COMISS\u00c3O INDICA\u00c7\u00c3O AFILIADOS - HENRIQUE": -779.55, "COMISS\u00c3O INDICA\u00c7\u00c3O AFILIADOS - RALPH": -7456.6, "COMISS\u00c3O INDICA\u00c7\u00c3O AFILIADOS - HLA": -39624.3}}, "Despesas com Afiliados": {"total": -23626.4156, "subs": {"CUSTOS COM CAPTA\u00c7\u00c3O DE AFILIADOS": -6890.4156, "AFILIADO - COMPENSA\u00c7\u00c3O DE VENDAS SEM CPA": -16736.0}}, "CUSTOS COM EMPRESA DE SMS MARKETING": {"total": -26497.450800000002, "subs": {"CUSTOS COM EMPRESA DE SMS MARKETING": -26497.450800000002}}, "ClickBank": {"total": -52182.71920000001, "subs": {"CLICKBANK - SALDO PARA CONFIGURAR VENDAS C/ CPA": -52182.71920000001}}, "Despesas Financeiras": {"total": -622.972, "subs": {"DESPESAS FINANCEIRAS": -622.972}}}, "despesas_comp": {"Trafego": {"total": -687750.9684000001, "subs": {"TRAFEGO GOOGLE - CART\u00d5ES": -452559.8519000001, "TRAFEGO FACEBOOK - CART\u00d5ES": -233613.11650000003, "TRAFEGO TABOOLA - AGENCIA": -1578.0}}, "Fornecedor": {"total": -3081652.1178, "subs": {"FORNECEDORES - SHIPOFFERS": -3081652.1178}}, "Ferramentas/Licencas": {"total": -201811.5001000002, "subs": {"FERRAMENTAS/LICEN\u00c7AS": -201811.5001000002}}, "Impostos": {"total": -186994.46999999997, "subs": {"PROVIS\u00c3O DE IMPOSTOS 02/2026": -186994.46999999997}}, "Equipe - Salarios": {"total": -271281.67, "subs": {"EQUIPE - SALARIO 02/2026": -271281.67}}, "Equipe - Desligamento": {"total": -2666.67, "subs": {"EQUIPE - DESLIGAMENTOS": -2666.67}}, "Equipe - Ferias": {"total": -7000.0, "subs": {"EQUIPE - F\u00c9RIAS": -7000.0}}, "Equipe - Dias Extras": {"total": -13563.33, "subs": {"EQUIPE - DIAS EXTRAS TRABALHADOS": -13563.33}}, "Equipe - Diversos": {"total": -20382.31, "subs": {"EQUIPE - BONUS GOOGLE": -20382.31}}, "Despesas Administrativas": {"total": -17618.949999999997, "subs": {"DESPESAS ADMINSTRATIVAS": -17618.949999999997}}, "Viagens": {"total": -73493.0659, "subs": {"PASSAGENS AEREAS/ONIBUS": -58701.2182, "LOCOMO\u00c7\u00c3O": -1153.7748, "HOSPEDAGEM": -3992.9712000000004, "ALIMENTA\u00c7\u00c3O": -9645.1017}}, "Marketing": {"total": -44952.3507, "subs": {"COMPRAS TESTES": -30611.830700000006, "GASTOS COM ESPIONAGEM": -13514.92, "CUSTOS COM PERFIL PARA ANUNCIO": -825.6}}, "Cursos/Mentorias": {"total": -126333.33419999995, "subs": {"MENTORIAS/CURSOS": -126333.33419999995}}, "Cartpanda": {"total": -44620.32030000001, "subs": {"GASTOS COM EVENTOS DE AFILIADOS DUBAI - CARTPANDA": -44620.32030000001}}, "Freelancers": {"total": -16664.0, "subs": {"FREELANCER - ARTHUR ALENCAR": -16664.0}}, "Comissoes por Indicacao": {"total": -47860.450000000004, "subs": {"COMISS\u00c3O INDICA\u00c7\u00c3O AFILIADOS - HENRIQUE": -779.55, "COMISS\u00c3O INDICA\u00c7\u00c3O AFILIADOS - RALPH": -7456.6, "COMISS\u00c3O INDICA\u00c7\u00c3O AFILIADOS - HLA": -39624.3}}, "Despesas com Afiliados": {"total": -23626.4156, "subs": {"CUSTOS COM CAPTA\u00c7\u00c3O DE AFILIADOS": -6890.4156, "AFILIADO - COMPENSA\u00c7\u00c3O DE VENDAS SEM CPA": -16736.0}}, "CUSTOS COM EMPRESA DE SMS MARKETING": {"total": -26497.450800000002, "subs": {"CUSTOS COM EMPRESA DE SMS MARKETING": -26497.450800000002}}, "Outras Despesas": {"total": -3974.6635, "subs": {"REEMBOLSOS DIVERSOS - PRESTADORES DE SERVI\u00c7O": -977.1700000000001, "COMISS\u00c3O - AGENCIA DE TRAFEGO FACEBOOK": -805.2024999999999, "CLIENTE CARTPANDA - REEMBOLSO MANUAL": -2192.291}}, "ClickBank": {"total": -52182.71920000001, "subs": {"CLICKBANK - SALDO PARA CONFIGURAR VENDAS C/ CPA": -52182.71920000001}}, "Despesas Financeiras": {"total": -641.152, "subs": {"DESPESAS FINANCEIRAS": -641.152}}}, "rec_total": 8449093.680599997, "desp_cx_total": -4666715.378499998, "desp_cp_total": -4951567.908499997}, "MAR/26": {"receitas": {"Cartpanda": {"total": 4383890.289099999, "subs": {"CARTPANDA": 4383890.289099999}}, "BuyGoods": {"total": 133169.2378, "subs": {"BUYGOODS": 133169.2378}}, "Digistore": {"total": 13160.6609, "subs": {"DIGISTORE": 13160.6609}}, "ClickBank": {"total": 1576956.4659999998, "subs": {"CLICKBANK": 1576956.4659999998}}, "SalesBound": {"total": 784684.594, "subs": {"SALES BOUND": 784684.594}}, "Logicall": {"total": 936041.4892999999, "subs": {"LOGICALL": 936041.4892999999}}, "Science Natural": {"total": 50221.7795, "subs": {"RECEBIMENTO - SCIENCE NATURAL - EMAIL": 50221.7795}}, "Tauk": {"total": 10845.654799999998, "subs": {"RESOLUTIONS - TALK": 10845.654799999998}}, "Committed Coaches": {"total": 176001.54880000002, "subs": {"COMMITTED COACHES": 176001.54880000002}}, "Cashback Payoneer": {"total": 6741.522000000001, "subs": {"PAYONNER - CASHBACK": 6741.522000000001}}, "Estornos": {"total": 3428.8039999999996, "subs": {"ESTORNO DE COMPRAS TESTES": 3428.8039999999996}}, "Viagens": {"total": 36056.804299999996, "subs": {"ESTORNO DE PASSAGENS AEREAS": 36056.804299999996}}, "Trafego": {"total": 4.5847999999999995, "subs": {"ESTORNO DE TRAFEGO GOOGLE": 4.5847999999999995}}, "Rend. Financeiros": {"total": 378.26, "subs": {"REND. FINANCEIROS CONTA SIMPLES/ITA\u00da": 378.26}}}, "despesas_caixa": {"Trafego": {"total": -838251.0144999999, "subs": {"TRAFEGO GOOGLE - CART\u00d5ES": -626314.3987999998, "TRAFEGO FACEBOOK - CART\u00d5ES": -149042.73010000004, "TRAFEGO FACEBOOK - AGENCIA": -61333.88560000001, "TRAFEGO TABOOLA - AGENCIA": -1560.0}}, "Fornecedor": {"total": -2592942.9929, "subs": {"FORNECEDORES - SHIPOFFERS": -2592942.9929}}, "Ferramentas/Licencas": {"total": -238931.40929999982, "subs": {"FERRAMENTAS/LICEN\u00c7AS": -238931.40929999982}}, "Equipe - Salarios": {"total": -271281.67, "subs": {"EQUIPE - SALARIO 02/2026": -271281.67}}, "Equipe - Desligamento": {"total": -2757.34, "subs": {"EQUIPE - DESLIGAMENTOS": -2757.34}}, "Equipe - Diversos": {"total": -600.0, "subs": {"EQUIPE - ADIANTAMENTOS": -600.0}}, "Equipe - Dias Extras": {"total": -733.33, "subs": {"EQUIPE - DIAS EXTRAS TRABALHADOS": -733.33}}, "Equipe - Bonus": {"total": -20382.309999999998, "subs": {"EQUIPE - BONUS TIME GOOGLE": -20382.309999999998}}, "Despesas Administrativas": {"total": -53270.44000000001, "subs": {"DESPESAS ADMINSTRATIVAS": -53270.44000000001}}, "Viagens": {"total": -87567.44400000002, "subs": {"PASSAGENS AEREAS/ONIBUS": -50341.886900000005, "LOCOMO\u00c7\u00c3O": -6744.4845000000005, "HOSPEDAGEM": -12411.6901, "ALIMENTA\u00c7\u00c3O": -18069.3825}}, "Marketing": {"total": -36008.10830000001, "subs": {"COMPRAS TESTES": -18694.388300000002, "GASTOS COM ESPIONAGEM": -16273.720000000001, "CUSTOS COM PERFIL PARA ANUNCIO": -1040.0}}, "Cursos/Mentorias": {"total": -105783.51359999999, "subs": {"MENTORIAS/CURSOS": -105783.51359999999}}, "Freelancers": {"total": -15770.000000000004, "subs": {"FREELANCER - ARTHUR ALENCAR": -15770.000000000004}}, "Comissoes por Indicacao": {"total": -37798.95, "subs": {"COMISS\u00c3O INDICA\u00c7\u00c3O AFILIADOS - HENRIQUE": -79.35000000000001, "COMISS\u00c3O INDICA\u00c7\u00c3O AFILIADOS - RALPH": -26626.6, "COMISS\u00c3O INDICA\u00c7\u00c3O AFILIADOS - HLA": -11093.0}}, "Despesas com Afiliados": {"total": -87660.6556, "subs": {"AFILIADO - COMPENSA\u00c7\u00c3O DE VENDAS SEM CPA": -15550.655600000002, "GASTOS COM BRINDES E INCENTIVOS PARA AFILIADOS": -25000.0, "AFILIADO BUGET": -47110.0}}, "CUSTOS COM EMPRESA DE SMS MARKETING": {"total": -53197.94720000001, "subs": {"CUSTOS COM EMPRESA DE SMS MARKETING": -53197.94720000001}}, "Outras Despesas": {"total": -408844.1745, "subs": {"REEMBOLSOS DIVERSOS - PRESTADORES DE SERVI\u00c7O": -593.28, "COMISS\u00c3O - AGENCIA DE TRAFEGO FACEBOOK": -9105.548, "DESPESAS COM REFORMA DE ESPA\u00c7O": -399145.34650000004}}, "BRINDES PRESTADORES DE SERVI\u00c7OS": {"total": -15954.0, "subs": {"BRINDES PRESTADORES DE SERVI\u00c7OS": -15954.0}}, "Cartpanda": {"total": -28930.0, "subs": {"ESTORNO DE SALDO PARA LOJA - CARTPANDA": -28930.0}}, "SRD - COMPENSA\u00c7\u00c3O DE CUSTOS COM ESPIONAGEM": {"total": -35134.44, "subs": {"SRD - COMPENSA\u00c7\u00c3O DE CUSTOS COM ESPIONAGEM": -35134.44}}, "OUTRAS DESPESAS": {"total": -36564.49100000001, "subs": {"OUTRAS DESPESAS": -36564.49100000001}}, "Despesas Financeiras": {"total": -305.58849999999995, "subs": {"DESPESAS FINANCEIRAS": -305.58849999999995}}}, "despesas_comp": {"Trafego": {"total": -838251.0144999999, "subs": {"TRAFEGO GOOGLE - CART\u00d5ES": -626314.3987999998, "TRAFEGO FACEBOOK - CART\u00d5ES": -149042.73010000004, "TRAFEGO FACEBOOK - AGENCIA": -61333.88560000001, "TRAFEGO TABOOLA - AGENCIA": -1560.0}}, "Fornecedor": {"total": -2592942.9929, "subs": {"FORNECEDORES - SHIPOFFERS": -2592942.9929}}, "Ferramentas/Licencas": {"total": -241658.0792999998, "subs": {"FERRAMENTAS/LICEN\u00c7AS": -241658.0792999998}}, "Impostos": {"total": -22667.989999999998, "subs": {"PROVIS\u00c3O DE IMPOSTOS 03/2026": -22667.989999999998}}, "Equipe - Salarios": {"total": -310264.98, "subs": {"EQUIPE - SALARIO 03/2026": -310264.98}}, "Equipe - Desligamento": {"total": -2757.34, "subs": {"EQUIPE - DESLIGAMENTOS": -2757.34}}, "Equipe - Diversos": {"total": -600.0, "subs": {"EQUIPE - ADIANTAMENTOS": -600.0}}, "Equipe - Dias Extras": {"total": -1733.3400000000001, "subs": {"EQUIPE - DIAS EXTRAS TRABALHADOS": -1733.3400000000001}}, "Equipe - Bonus": {"total": -30000.0, "subs": {"EQUIPE - BONUS TIME GOOGLE": -30000.0}}, "Despesas Administrativas": {"total": -52963.19, "subs": {"DESPESAS ADMINSTRATIVAS": -52963.19}}, "Viagens": {"total": -106393.734, "subs": {"PASSAGENS AEREAS/ONIBUS": -58735.07690000001, "LOCOMO\u00c7\u00c3O": -6744.4845000000005, "HOSPEDAGEM": -22844.7901, "ALIMENTA\u00c7\u00c3O": -18069.3825}}, "Marketing": {"total": -36008.10830000001, "subs": {"COMPRAS TESTES": -18694.388300000002, "GASTOS COM ESPIONAGEM": -16273.720000000001, "CUSTOS COM PERFIL PARA ANUNCIO": -1040.0}}, "Cursos/Mentorias": {"total": -94203.93359999999, "subs": {"MENTORIAS/CURSOS": -94203.93359999999}}, "Freelancers": {"total": -15770.000000000004, "subs": {"FREELANCER - ARTHUR ALENCAR": -15770.000000000004}}, "Comissoes por Indicacao": {"total": -37798.95, "subs": {"COMISS\u00c3O INDICA\u00c7\u00c3O AFILIADOS - HENRIQUE": -79.35000000000001, "COMISS\u00c3O INDICA\u00c7\u00c3O AFILIADOS - RALPH": -26626.6, "COMISS\u00c3O INDICA\u00c7\u00c3O AFILIADOS - HLA": -11093.0}}, "Despesas com Afiliados": {"total": -87660.6556, "subs": {"AFILIADO - COMPENSA\u00c7\u00c3O DE VENDAS SEM CPA": -15550.655600000002, "GASTOS COM BRINDES E INCENTIVOS PARA AFILIADOS": -25000.0, "AFILIADO BUGET": -47110.0}}, "CUSTOS COM EMPRESA DE SMS MARKETING": {"total": -53197.94720000001, "subs": {"CUSTOS COM EMPRESA DE SMS MARKETING": -53197.94720000001}}, "Outras Despesas": {"total": -408844.1745, "subs": {"REEMBOLSOS DIVERSOS - PRESTADORES DE SERVI\u00c7O": -593.28, "COMISS\u00c3O - AGENCIA DE TRAFEGO FACEBOOK": -9105.548, "DESPESAS COM REFORMA DE ESPA\u00c7O": -399145.34650000004}}, "BRINDES PRESTADORES DE SERVI\u00c7OS": {"total": -15954.0, "subs": {"BRINDES PRESTADORES DE SERVI\u00c7OS": -15954.0}}, "Cartpanda": {"total": -28930.0, "subs": {"ESTORNO DE SALDO PARA LOJA - CARTPANDA": -28930.0}}, "SRD - COMPENSA\u00c7\u00c3O DE CUSTOS COM ESPIONAGEM": {"total": -35134.44, "subs": {"SRD - COMPENSA\u00c7\u00c3O DE CUSTOS COM ESPIONAGEM": -35134.44}}, "OUTRAS DESPESAS": {"total": -36564.49100000001, "subs": {"OUTRAS DESPESAS": -36564.49100000001}}, "Despesas Financeiras": {"total": -444.8285000000001, "subs": {"DESPESAS FINANCEIRAS": -444.8285000000001}}}, "rec_total": 8111581.695299997, "desp_cx_total": -4968669.819399999, "desp_cp_total": -5050744.1894000005}};
+const fcMeses=["JAN/26", "FEV/26", "MAR/26"];
+const fcRec=[9011899.845600002, 8449093.680599997, 8111581.695299997];
+const fcDespCx=[-9810865.593, -4666715.378499998, -4968669.819399999];
+const fcDespCp=[-7070296.963, -4951567.908499997, -5050744.1894000005];
+const fcSaldoCx=[-798965.7473999988, 3782378.302099999, 3142911.8758999975];
+const fcSaldoCp=[1941602.882600001, 3497525.7720999997, 3060837.5058999965];
+const fcC=[green,blue,yellow,purple,red,cyan,green+'88',blue+'88',yellow+'88',purple+'88',red+'88',cyan+'88'];
+let fcVisao='comp';
+
+function getFcDesp(){return fcVisao==='comp'?fcDespCp:fcDespCx}
+function getFcSaldo(){return fcVisao==='comp'?fcSaldoCp:fcSaldoCx}
+function getFcDespKey(){return fcVisao==='comp'?'despesas_comp':'despesas_caixa'}
+function getFcDespTotal(m){return fcVisao==='comp'?fcD[m].desp_cp_total:fcD[m].desp_cx_total}
+
+function switchFcVisao(v,btn){
+  fcVisao=v;
+  document.querySelectorAll('#page-fcgeral [data-fc-visao]').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  const totD=fcMeses.reduce((s,m)=>s+getFcDespTotal(m),0);
+  const totS=fcRec.reduce((a,b)=>a+b,0)+totD;
+  document.getElementById('fc-kpi-desp').textContent=fmt(totD);
+  document.getElementById('fc-kpi-saldo').textContent=fmt(totS);
+  ['cFcBarRD','cFcSaldo','cFcDespDonut','cFcTopDesp'].forEach(id=>{const el=document.getElementById(id);if(el&&el._chart){el._chart.destroy();el._chart=null}});
+  buildFcGeral();
+}
+
+function buildFcGeral(){
+  mkBar('cFcBarRD',fcMeses,[
+    {label:'Receitas',data:fcRec,backgroundColor:green+'88'},
+    {label:'Despesas',data:getFcDesp().map(v=>Math.abs(v)),backgroundColor:red+'88'},
+  ]);
+  mkBar('cFcSaldo',fcMeses,[
+    {label:'Saldo',data:getFcSaldo(),backgroundColor:getFcSaldo().map(v=>v>=0?green+'88':red+'88')},
+  ]);
+  const recAcum={};fcMeses.forEach(m=>{Object.keys(fcD[m].receitas).forEach(k=>{recAcum[k]=(recAcum[k]||0)+fcD[m].receitas[k].total})});
+  const rL=Object.keys(recAcum).filter(k=>recAcum[k]>0).sort((a,b)=>recAcum[b]-recAcum[a]);
+  mkDonut('cFcRecDonut',rL,rL.map(k=>recAcum[k]),fcC);
+  const dk=getFcDespKey();
+  const despAcum={};fcMeses.forEach(m=>{Object.keys(fcD[m][dk]||{}).forEach(k=>{despAcum[k]=(despAcum[k]||0)+Math.abs(fcD[m][dk][k].total)})});
+  const dL=Object.keys(despAcum).sort((a,b)=>despAcum[b]-despAcum[a]);
+  mkDonut('cFcDespDonut',dL,dL.map(k=>despAcum[k]),fcC);
+  const top10=dL.slice(0,10);
+  mkBar('cFcTopDesp',top10,[{label:'Valor',data:top10.map(k=>despAcum[k]),backgroundColor:fcC}],true,true);
+}
+
+function buildFcReceitas(){
+  const recByPlat={};fcMeses.forEach(m=>{Object.keys(fcD[m].receitas).forEach(k=>{if(!recByPlat[k])recByPlat[k]=[]})});
+  Object.keys(recByPlat).forEach(k=>{fcMeses.forEach(m=>{recByPlat[k].push(fcD[m].receitas[k]?fcD[m].receitas[k].total:0)})});
+  const platKeys=Object.keys(recByPlat).filter(k=>!k.includes('Estorno')&&recByPlat[k].some(v=>v>0));
+  (function(){
+    const ds=platKeys.map((k,i)=>({label:k,data:recByPlat[k],backgroundColor:fcC[i%fcC.length],borderRadius:4}));
+    const el=document.getElementById('cFcRecEvol');if(!el||el._chart)return;
+    el._chart=new Chart(el,{type:'bar',data:{labels:fcMeses,datasets:ds},options:{responsive:true,scales:{x:{stacked:true,grid:{display:false}},y:{stacked:true,ticks:{callback:v=>fmt(v)}}},interaction:{mode:'index',intersect:false},plugins:{legend:{position:'top'},tooltip:{mode:'index',intersect:false,callbacks:{label:function(c){const v=c.dataset.data[c.dataIndex];if(!v)return '';return ' '+c.dataset.label+': '+fmt(v)}}}}}});
+  })();
+  const recAcum2={};platKeys.forEach(k=>{recAcum2[k]=recByPlat[k].reduce((a,b)=>a+b,0)});
+  const rk=platKeys.sort((a,b)=>recAcum2[b]-recAcum2[a]);
+  mkBar('cFcRecRank',rk,[{label:'Acumulado',data:rk.map(k=>recAcum2[k]),backgroundColor:fcC}],true,true);
+  buildFcRecTable();
+}
+
+function buildFcAnalise(){
+  mkLine('cFcSaldoComp',fcMeses,[
+    {label:'Saldo Competencia',data:fcSaldoCp,borderColor:green,backgroundColor:green+'22',fill:true},
+    {label:'Saldo Caixa',data:fcSaldoCx,borderColor:blue,borderDash:[5,5]},
+  ]);
+  mkLine('cFcRDLine',fcMeses,[
+    {label:'Receitas',data:fcRec,borderColor:green,backgroundColor:green+'22',fill:true},
+    {label:'Despesas Comp.',data:fcDespCp.map(v=>Math.abs(v)),borderColor:red,backgroundColor:red+'22',fill:true},
+    {label:'Despesas Caixa',data:fcDespCx.map(v=>Math.abs(v)),borderColor:yellow,borderDash:[5,5]},
+  ]);
+  const acumCp=fcSaldoCp.reduce((acc,v)=>{acc.push((acc.length?acc[acc.length-1]:0)+v);return acc},[]);
+  const acumCx=fcSaldoCx.reduce((acc,v)=>{acc.push((acc.length?acc[acc.length-1]:0)+v);return acc},[]);
+  mkLine('cFcSaldoAcum',fcMeses,[
+    {label:'Acum. Competencia',data:acumCp,borderColor:green,backgroundColor:green+'22',fill:true},
+    {label:'Acum. Caixa',data:acumCx,borderColor:blue,borderDash:[5,5]},
+  ]);
+}
+
+function toggleSubs(row){
+  const arrow=row.querySelector('.expand-arrow');
+  let next=row.nextElementSibling;
+  const show=next&&next.style.display==='none';
+  while(next&&next.classList.contains('sub-row')){
+    next.style.display=show?'table-row':'none';
+    next=next.nextElementSibling;
+  }
+  if(arrow)arrow.innerHTML=show?'&#9660;':'&#9654;';
+}
+
+function buildFcRecTable(){
+  const box=document.getElementById('fcRecTable');if(!box)return;
+  const allCats=new Set();fcMeses.forEach(m=>Object.keys(fcD[m].receitas).forEach(k=>allCats.add(k)));
+  const cats=[...allCats].sort((a,b)=>{const ta=fcMeses.reduce((s,m)=>s+((fcD[m].receitas[a]||{}).total||0),0);const tb=fcMeses.reduce((s,m)=>s+((fcD[m].receitas[b]||{}).total||0),0);return tb-ta});
+  let h='<table><thead><tr><th>Receita</th>';fcMeses.forEach(m=>h+='<th class="num">'+m+'</th>');h+='<th class="num">TOTAL</th></tr></thead><tbody>';
+  const totMes=fcMeses.map(()=>0);
+  cats.forEach(cat=>{
+    const vals=fcMeses.map((m,i)=>{const v=(fcD[m].receitas[cat]||{}).total||0;totMes[i]+=v;return v});
+    const total=vals.reduce((a,b)=>a+b,0);
+    h+='<tr><td class="loja-nome">'+cat+'</td>';vals.forEach(v=>h+='<td class="num">'+fmt(v)+'</td>');
+    h+='<td class="num total-col"><strong>'+fmt(total)+'</strong></td></tr>';
+  });
+  h+='<tr class="total-row"><td><strong>TOTAL</strong></td>';totMes.forEach(v=>h+='<td class="num"><strong>'+fmt(v)+'</strong></td>');
+  h+='<td class="num total-col"><strong>'+fmt(totMes.reduce((a,b)=>a+b,0))+'</strong></td></tr></tbody></table>';
+  box.innerHTML=h;
+}
+
+let fcDespVisao='comp';
+function switchFcVisao2(v,btn){
+  fcDespVisao=v;
+  document.querySelectorAll('#page-fcdespesas [data-fc-visao2]').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  ['cFcDespEvol','cFcDespRank'].forEach(id=>{const el=document.getElementById(id);if(el&&el._chart){el._chart.destroy();el._chart=null}});
+  buildFcDespPage();
+}
+
+function buildFcDespPage(){
+  const dk=fcDespVisao==='comp'?'despesas_comp':'despesas_caixa';
+  const totKey=fcDespVisao==='comp'?'desp_cp_total':'desp_cx_total';
+  const kbox=document.getElementById('fc-desp-kpis');
+  const totD=fcMeses.reduce((s,m)=>s+fcD[m][totKey],0);
+  const avg=totD/fcMeses.length;
+  kbox.innerHTML='<div class="kpi red-accent"><div class="k-label">Total Despesas ('+(fcDespVisao==='comp'?'Competencia':'Caixa')+')</div><div class="k-value neg" style="font-size:20px">'+fmt(totD)+'</div></div><div class="kpi"><div class="k-label">Media Mensal</div><div class="k-value neg" style="font-size:20px">'+fmt(avg)+'</div></div><div class="kpi"><div class="k-label">Visao</div><div class="k-value" style="font-size:18px">'+(fcDespVisao==='comp'?'Competencia':'Caixa')+'</div></div>';
+  const catTotals={};const catByMes={};const catSubs={};
+  fcMeses.forEach(m=>{
+    const desp=fcD[m][dk]||{};
+    Object.keys(desp).forEach(k=>{
+      catTotals[k]=(catTotals[k]||0)+desp[k].total;
+      if(!catByMes[k])catByMes[k]=[];
+      catByMes[k].push(desp[k].total);
+      if(!catSubs[k])catSubs[k]={};
+      Object.keys(desp[k].subs||{}).forEach(s=>{catSubs[k][s]=(catSubs[k][s]||0)+desp[k].subs[s]});
+    });
+  });
+  Object.keys(catByMes).forEach(k=>{while(catByMes[k].length<fcMeses.length)catByMes[k].push(0)});
+  const sortedCats=Object.keys(catTotals).sort((a,b)=>catTotals[a]-catTotals[b]);
+  (function(){
+    const ds=sortedCats.map((k,i)=>({label:k,data:(catByMes[k]||[]).map(v=>Math.abs(v)),backgroundColor:fcC[i%fcC.length],borderRadius:4}));
+    const el=document.getElementById('cFcDespEvol');if(!el)return;
+    el._chart=new Chart(el,{type:'bar',data:{labels:fcMeses,datasets:ds},options:{responsive:true,scales:{x:{stacked:true,grid:{display:false}},y:{stacked:true,ticks:{callback:v=>fmt(v)}}},interaction:{mode:'index',intersect:false},plugins:{legend:{position:'top'},tooltip:{mode:'index',intersect:false,callbacks:{label:function(c){const v=c.dataset.data[c.dataIndex];if(!v)return '';return ' '+c.dataset.label+': '+fmt(v)}}}}}});
+  })();
+  const top10=sortedCats.slice(0,10);
+  mkBar('cFcDespRank',top10,[{label:'Valor',data:top10.map(k=>Math.abs(catTotals[k])),backgroundColor:fcC}],true,true);
+  const tbox=document.getElementById('fcDespTable');
+  let h='<table><thead><tr><th>Despesa (clique para expandir)</th>';fcMeses.forEach(m=>h+='<th class="num">'+m+'</th>');h+='<th class="num">TOTAL</th></tr></thead><tbody>';
+  const totMes=fcMeses.map(()=>0);
+  sortedCats.forEach(cat=>{
+    const vals=fcMeses.map((m,i)=>{const d=fcD[m][dk]||{};const v=(d[cat]||{}).total||0;totMes[i]+=v;return v});
+    const total=catTotals[cat];
+    const subs=Object.keys(catSubs[cat]||{}).filter(s=>catSubs[cat][s]!==0);
+    const hasSubs=subs.length>1;
+    const expand=hasSubs?' style="cursor:pointer" onclick="toggleSubs(this)"':'';
+    const arrow=hasSubs?' <span class="expand-arrow">&#9654;</span>':'';
+    h+='<tr'+expand+'><td class="loja-nome">'+cat+arrow+'</td>';vals.forEach(v=>h+='<td class="num neg">'+fmt(v)+'</td>');
+    h+='<td class="num neg total-col"><strong>'+fmt(total)+'</strong></td></tr>';
+    if(hasSubs){
+      subs.sort((a,b)=>catSubs[cat][a]-catSubs[cat][b]).forEach(sub=>{
+        const sv=catSubs[cat][sub];
+        h+='<tr class="sub-row" style="display:none"><td style="padding-left:32px;font-size:11px;color:var(--muted)">'+sub+'</td>';
+        fcMeses.forEach(m=>{const d=fcD[m][dk]||{};const v=((d[cat]||{}).subs||{})[sub]||0;h+='<td class="num neg" style="font-size:11px">'+fmt(v)+'</td>'});
+        h+='<td class="num neg" style="font-size:11px">'+fmt(sv)+'</td></tr>';
+      });
+    }
+  });
+  h+='<tr class="total-row"><td><strong>TOTAL DESPESAS</strong></td>';totMes.forEach(v=>h+='<td class="num neg"><strong>'+fmt(v)+'</strong></td>');
+  h+='<td class="num neg total-col"><strong>'+fmt(totMes.reduce((a,b)=>a+b,0))+'</strong></td></tr>';
+  const recTotMes=fcMeses.map(m=>fcD[m].rec_total);
+  h+='<tr style="background:var(--surface3)"><td><strong>SALDO</strong></td>';
+  fcMeses.forEach((m,i)=>{const s=recTotMes[i]+totMes[i];h+='<td class="num '+(s>0?'pos':'neg')+'"><strong>'+fmt(s)+'</strong></td>'});
+  const saldoG=recTotMes.reduce((a,b)=>a+b,0)+totMes.reduce((a,b)=>a+b,0);
+  h+='<td class="num '+(saldoG>0?'pos':'neg')+' total-col"><strong>'+fmt(saldoG)+'</strong></td></tr>';
+  h+='</tbody></table>';
+  tbox.innerHTML=h;
+  const vbox=document.getElementById('fcDespVarTable');
+  if(fcMeses.length>=2){
+    let vh='<table><thead><tr><th>Categoria</th>';
+    fcMeses.forEach((m,i)=>{vh+='<th class="num">'+m+'</th>';if(i>0)vh+='<th class="num">Var %</th>'});
+    vh+='</tr></thead><tbody>';
+    sortedCats.forEach(cat=>{
+      if(!catTotals[cat])return;
+      const vals=catByMes[cat]||[];
+      vh+='<tr><td class="loja-nome">'+cat+'</td>';
+      vals.forEach((v,i)=>{
+        vh+='<td class="num neg">'+fmt(v)+'</td>';
+        if(i>0){const prev=vals[i-1];const pct=prev?((v-prev)/Math.abs(prev)*100):0;const cls=pct<0?'pos':pct>0?'neg':'';vh+='<td class="num '+cls+'">'+pct.toFixed(1)+'%</td>'}
+      });
+      vh+='</tr>';
+    });
+    vh+='</tbody></table>';
+    vbox.innerHTML=vh;
+  }
+}
+
+function renderFcCompara(){
+  const m1=document.getElementById('fcComp1').value;
+  const m2=document.getElementById('fcComp2').value;
+  const visao=document.getElementById('fcCompVisao').value;
+  const d1=fcD[m1],d2=fcD[m2];
+  if(!d1||!d2)return;
+  const box=document.getElementById('fcCompaContent');
+  const dk=visao==='comp'?'despesas_comp':'despesas_caixa';
+  const r1=d1.receitas,r2=d2.receitas,dp1=d1[dk]||{},dp2=d2[dk]||{};
+  const totR1=Object.values(r1).reduce((s,v)=>s+v.total,0);
+  const totR2=Object.values(r2).reduce((s,v)=>s+v.total,0);
+  const totD1=Object.values(dp1).reduce((s,v)=>s+v.total,0);
+  const totD2=Object.values(dp2).reduce((s,v)=>s+v.total,0);
+  const varR=totR1?(totR2-totR1)/totR1*100:0;
+  const varD=totD1?(totD2-totD1)/Math.abs(totD1)*100:0;
+  let h='<div class="g4" style="margin-bottom:20px">';
+  h+='<div class="kpi"><div class="k-label">Receitas '+m1+'</div><div class="k-value" style="font-size:18px">'+fmt(totR1)+'</div></div>';
+  h+='<div class="kpi"><div class="k-label">Receitas '+m2+'</div><div class="k-value" style="font-size:18px">'+fmt(totR2)+'</div></div>';
+  h+='<div class="kpi"><div class="k-label">Despesas '+m1+'</div><div class="k-value neg" style="font-size:18px">'+fmt(totD1)+'</div></div>';
+  h+='<div class="kpi"><div class="k-label">Despesas '+m2+'</div><div class="k-value neg" style="font-size:18px">'+fmt(totD2)+'</div></div>';
+  h+='</div>';
+  const allRec=new Set([...Object.keys(r1),...Object.keys(r2)]);
+  h+='<div class="card" style="margin-bottom:20px"><div class="card-title">Receitas - '+m1+' vs '+m2+'</div><table><thead><tr><th>Plataforma</th><th class="num">'+m1+'</th><th class="num">'+m2+'</th><th class="num">Variacao</th><th class="num">Var %</th></tr></thead><tbody>';
+  allRec.forEach(k=>{
+    const v1=(r1[k]||{}).total||0,v2=(r2[k]||{}).total||0;
+    const diff=v2-v1;const pct=v1?(diff/v1*100):0;
+    const cls=diff>0?'pos':diff<0?'neg':'';
+    h+='<tr><td class="loja-nome">'+k+'</td><td class="num">'+fmt(v1)+'</td><td class="num">'+fmt(v2)+'</td><td class="num '+cls+'">'+fmt(diff)+'</td><td class="num '+cls+'">'+pct.toFixed(1)+'%</td></tr>';
+  });
+  h+='<tr class="total-row"><td><strong>TOTAL</strong></td><td class="num"><strong>'+fmt(totR1)+'</strong></td><td class="num"><strong>'+fmt(totR2)+'</strong></td><td class="num '+(varR>0?'pos':'neg')+'"><strong>'+fmt(totR2-totR1)+'</strong></td><td class="num '+(varR>0?'pos':'neg')+'"><strong>'+varR.toFixed(1)+'%</strong></td></tr>';
+  h+='</tbody></table></div>';
+  const allDesp=new Set([...Object.keys(dp1),...Object.keys(dp2)]);
+  h+='<div class="card"><div class="card-title">Despesas - '+m1+' vs '+m2+'</div><table><thead><tr><th>Categoria</th><th class="num">'+m1+'</th><th class="num">'+m2+'</th><th class="num">Variacao</th><th class="num">Var %</th></tr></thead><tbody>';
+  allDesp.forEach(k=>{
+    const v1=(dp1[k]||{}).total||0,v2=(dp2[k]||{}).total||0;
+    const diff=v2-v1;const pct=v1?(diff/Math.abs(v1)*100):0;
+    const cls=diff<0?'pos':diff>0?'neg':'';
+    h+='<tr><td class="loja-nome">'+k+'</td><td class="num neg">'+fmt(v1)+'</td><td class="num neg">'+fmt(v2)+'</td><td class="num '+cls+'">'+fmt(diff)+'</td><td class="num '+cls+'">'+pct.toFixed(1)+'%</td></tr>';
+  });
+  h+='<tr class="total-row"><td><strong>TOTAL</strong></td><td class="num neg"><strong>'+fmt(totD1)+'</strong></td><td class="num neg"><strong>'+fmt(totD2)+'</strong></td><td class="num '+(varD<0?'pos':'neg')+'"><strong>'+fmt(totD2-totD1)+'</strong></td><td class="num '+(varD<0?'pos':'neg')+'"><strong>'+varD.toFixed(1)+'%</strong></td></tr>';
+  h+='</tbody></table></div>';
+  box.innerHTML=h;
+}
+
+</script>
+</body>
 </html>
