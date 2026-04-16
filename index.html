@@ -170,7 +170,7 @@ canvas{width:100%!important}
     <a onclick="navTo('fcanalise',this)"><span class="nav-icon">&#128202;</span> FC - Analise de Caixa</a>
     <a onclick="navTo('fccompara',this)"><span class="nav-icon">&#128260;</span> FC - Comparativo</a>
   </nav>
-  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 16/04/2026 11:41</div>
+  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 16/04/2026 14:29</div>
 </aside>
 
 <!-- MAIN -->
@@ -182,7 +182,7 @@ canvas{width:100%!important}
   </div>
   <div class="topbar-right">
     <div class="badge green">&#9679; Dados Atualizados</div>
-    <div class="badge">&#128197; 16/04/2026 11:41</div>
+    <div class="badge">&#128197; 16/04/2026 14:29</div>
   </div>
 </div>
 
@@ -291,8 +291,12 @@ canvas{width:100%!important}
     <div class="card"><div class="card-title">Lucro Bruto Mensal por Operacao <span class="tag">Empilhado</span></div><canvas id="cOpsEvolLuc" height="220"></canvas></div>
   </div>
   <div class="g2">
-    <div class="card"><div class="card-title">Variacao Mensal - Faturamento <span class="tag">Tendencia</span></div><canvas id="cOpsVarFat" height="220"></canvas></div>
-    <div class="card"><div class="card-title">Variacao Mensal - Lucro Bruto <span class="tag">Tendencia</span></div><canvas id="cOpsVarLuc" height="220"></canvas></div>
+    <div class="card"><div class="card-title">Variacao Mensal - Faturamento <span class="tag">Todas Operacoes</span></div><canvas id="cOpsVarFat" height="220"></canvas></div>
+    <div class="card"><div class="card-title">Variacao Mensal - Faturamento <span class="tag">Sem Front End</span></div><canvas id="cOpsVarFatSF" height="220"></canvas></div>
+  </div>
+  <div class="g2">
+    <div class="card"><div class="card-title">Variacao Mensal - Lucro Bruto <span class="tag">Todas Operacoes</span></div><canvas id="cOpsVarLuc" height="220"></canvas></div>
+    <div class="card"><div class="card-title">Variacao Mensal - Lucro Bruto <span class="tag">Sem Front End</span></div><canvas id="cOpsVarLucSF" height="220"></canvas></div>
   </div>
   <div class="full card" style="margin-bottom:20px">
     <div class="card-title">Faturamento por Operacao - Mensal <span class="tag">Variacao %</span></div>
@@ -314,199 +318,151 @@ canvas{width:100%!important}
   <div class="full card">
     <div class="card-title">Detalhamento Completo por Loja</div>
     <div class="table-wrap"><table>
-      <thead><tr><th>#</th><th>Loja</th><th class="num">Acumulado</th><th class="num">% Total</th><th>Share</th><th class="num">JAN</th><th class="num">FEV</th><th class="num">MAR</th></tr></thead>
+      <thead><tr><th>#</th><th>Loja</th><th class="num">Acumulado</th><th class="num">% Total</th><th>Share</th><th class="num">JAN</th><th class="num">FEV</th><th class="num">MAR</th><th class="num">ABR</th></tr></thead>
       <tbody><tr>
           <td>&#129351;</td><td class="loja-nome">PRESGERA</td>
           <td class="num">R$ 33,61M</td>
           <td class="num">26,38%</td>
           <td><div class="bar-wrap"><div class="bar-fill" style="width:26%"></div></div></td>
-          <td class="num">R$ 7,09M</td>
-          <td class="num">R$ 7,65M</td>
-          <td class="num">R$ 14,96M</td>
+          <td class="num">R$ 7,09M</td><td class="num">R$ 7,65M</td><td class="num">R$ 14,96M</td><td class="num">R$ 3,91M</td>
         </tr><tr>
           <td>&#129352;</td><td class="loja-nome">GARAHERB</td>
           <td class="num">R$ 23,49M</td>
           <td class="num">18,44%</td>
           <td><div class="bar-wrap"><div class="bar-fill" style="width:18%"></div></div></td>
-          <td class="num">R$ 13,60M</td>
-          <td class="num">R$ 6,92M</td>
-          <td class="num">R$ 2,33M</td>
+          <td class="num">R$ 13,60M</td><td class="num">R$ 6,92M</td><td class="num">R$ 2,33M</td><td class="num">R$ 638,9K</td>
         </tr><tr>
           <td>&#129353;</td><td class="loja-nome">STEEL POWER</td>
           <td class="num">R$ 23,09M</td>
           <td class="num">18,12%</td>
           <td><div class="bar-wrap"><div class="bar-fill" style="width:18%"></div></div></td>
-          <td class="num">–</td>
-          <td class="num">R$ 2,49M</td>
-          <td class="num">R$ 13,39M</td>
+          <td class="num">–</td><td class="num">R$ 2,49M</td><td class="num">R$ 13,39M</td><td class="num">R$ 7,21M</td>
         </tr><tr>
           <td>#4</td><td class="loja-nome">MEMORY-ON</td>
           <td class="num">R$ 8,61M</td>
           <td class="num">6,76%</td>
           <td><div class="bar-wrap"><div class="bar-fill" style="width:6%"></div></div></td>
-          <td class="num">–</td>
-          <td class="num">R$ 619,2K</td>
-          <td class="num">R$ 3,23M</td>
+          <td class="num">–</td><td class="num">R$ 619,2K</td><td class="num">R$ 3,23M</td><td class="num">R$ 4,76M</td>
         </tr><tr>
           <td>#5</td><td class="loja-nome">MAHGRYN</td>
           <td class="num">R$ 6,31M</td>
           <td class="num">4,96%</td>
           <td><div class="bar-wrap"><div class="bar-fill" style="width:4%"></div></div></td>
-          <td class="num">R$ 3,25M</td>
-          <td class="num">R$ 3,04M</td>
-          <td class="num">R$ 23,0K</td>
+          <td class="num">R$ 3,25M</td><td class="num">R$ 3,04M</td><td class="num">R$ 23,0K</td><td class="num">–</td>
         </tr><tr>
           <td>#6</td><td class="loja-nome">MEMYTS</td>
           <td class="num">R$ 5,89M</td>
           <td class="num">4,62%</td>
           <td><div class="bar-wrap"><div class="bar-fill" style="width:4%"></div></div></td>
-          <td class="num">R$ 4,23M</td>
-          <td class="num">R$ 1,39M</td>
-          <td class="num">R$ 229,7K</td>
+          <td class="num">R$ 4,23M</td><td class="num">R$ 1,39M</td><td class="num">R$ 229,7K</td><td class="num">R$ 44,9K</td>
         </tr><tr>
           <td>#7</td><td class="loja-nome">ARIALIEF</td>
           <td class="num">R$ 5,78M</td>
           <td class="num">4,54%</td>
           <td><div class="bar-wrap"><div class="bar-fill" style="width:4%"></div></div></td>
-          <td class="num">R$ 2,43M</td>
-          <td class="num">R$ 1,53M</td>
-          <td class="num">R$ 1,25M</td>
+          <td class="num">R$ 2,43M</td><td class="num">R$ 1,53M</td><td class="num">R$ 1,25M</td><td class="num">R$ 567,3K</td>
         </tr><tr>
           <td>#8</td><td class="loja-nome">SHAPE-ON</td>
           <td class="num">R$ 4,70M</td>
           <td class="num">3,69%</td>
           <td><div class="bar-wrap"><div class="bar-fill" style="width:3%"></div></div></td>
-          <td class="num">–</td>
-          <td class="num">R$ 524,5K</td>
-          <td class="num">R$ 2,88M</td>
+          <td class="num">–</td><td class="num">R$ 524,5K</td><td class="num">R$ 2,88M</td><td class="num">R$ 1,30M</td>
         </tr><tr>
           <td>#9</td><td class="loja-nome">LAELLIUM</td>
           <td class="num">R$ 3,66M</td>
           <td class="num">2,87%</td>
           <td><div class="bar-wrap"><div class="bar-fill" style="width:2%"></div></div></td>
-          <td class="num">R$ 2,83M</td>
-          <td class="num">R$ 446,0K</td>
-          <td class="num">R$ 317,6K</td>
+          <td class="num">R$ 2,83M</td><td class="num">R$ 446,0K</td><td class="num">R$ 317,6K</td><td class="num">R$ 65,2K</td>
         </tr><tr>
           <td>#10</td><td class="loja-nome">ALPHACUR</td>
           <td class="num">R$ 3,07M</td>
           <td class="num">2,41%</td>
           <td><div class="bar-wrap"><div class="bar-fill" style="width:2%"></div></div></td>
-          <td class="num">R$ 1,33M</td>
-          <td class="num">R$ 937,0K</td>
-          <td class="num">R$ 660,6K</td>
+          <td class="num">R$ 1,33M</td><td class="num">R$ 937,0K</td><td class="num">R$ 660,6K</td><td class="num">R$ 143,2K</td>
         </tr><tr>
           <td>#11</td><td class="loja-nome">GLUCO OFF</td>
           <td class="num">R$ 2,20M</td>
           <td class="num">1,73%</td>
           <td><div class="bar-wrap"><div class="bar-fill" style="width:1%"></div></div></td>
-          <td class="num">–</td>
-          <td class="num">–</td>
-          <td class="num">R$ 422,3K</td>
+          <td class="num">–</td><td class="num">–</td><td class="num">R$ 422,3K</td><td class="num">R$ 1,78M</td>
         </tr><tr>
           <td>#12</td><td class="loja-nome">KARYLIEF</td>
           <td class="num">R$ 1,92M</td>
           <td class="num">1,51%</td>
           <td><div class="bar-wrap"><div class="bar-fill" style="width:1%"></div></div></td>
-          <td class="num">R$ 400,1K</td>
-          <td class="num">R$ 664,7K</td>
-          <td class="num">R$ 622,0K</td>
+          <td class="num">R$ 400,1K</td><td class="num">R$ 664,7K</td><td class="num">R$ 622,0K</td><td class="num">R$ 235,8K</td>
         </tr><tr>
           <td>#13</td><td class="loja-nome">BLINZADOR</td>
           <td class="num">R$ 1,66M</td>
           <td class="num">1,31%</td>
           <td><div class="bar-wrap"><div class="bar-fill" style="width:1%"></div></div></td>
-          <td class="num">R$ 456,9K</td>
-          <td class="num">R$ 267,6K</td>
-          <td class="num">R$ 640,0K</td>
+          <td class="num">R$ 456,9K</td><td class="num">R$ 267,6K</td><td class="num">R$ 640,0K</td><td class="num">R$ 300,3K</td>
         </tr><tr>
           <td>#14</td><td class="loja-nome">NAD DERMAL</td>
           <td class="num">R$ 866,1K</td>
           <td class="num">0,68%</td>
           <td><div class="bar-wrap"><div class="bar-fill" style="width:0%"></div></div></td>
-          <td class="num">–</td>
-          <td class="num">–</td>
-          <td class="num">R$ 309,1K</td>
+          <td class="num">–</td><td class="num">–</td><td class="num">R$ 309,1K</td><td class="num">R$ 557,0K</td>
         </tr><tr>
           <td>#15</td><td class="loja-nome">FEILARIA</td>
           <td class="num">R$ 790,4K</td>
           <td class="num">0,62%</td>
           <td><div class="bar-wrap"><div class="bar-fill" style="width:0%"></div></div></td>
-          <td class="num">R$ 60,1K</td>
-          <td class="num">R$ 102,9K</td>
-          <td class="num">R$ 435,8K</td>
+          <td class="num">R$ 60,1K</td><td class="num">R$ 102,9K</td><td class="num">R$ 435,8K</td><td class="num">R$ 191,5K</td>
         </tr><tr>
           <td>#16</td><td class="loja-nome">VISUAL EASE</td>
           <td class="num">R$ 519,3K</td>
           <td class="num">0,41%</td>
           <td><div class="bar-wrap"><div class="bar-fill" style="width:0%"></div></div></td>
-          <td class="num">–</td>
-          <td class="num">R$ 60,0K</td>
-          <td class="num">R$ 248,4K</td>
+          <td class="num">–</td><td class="num">R$ 60,0K</td><td class="num">R$ 248,4K</td><td class="num">R$ 210,8K</td>
         </tr><tr>
           <td>#17</td><td class="loja-nome">SMS - NUTRA SELECT</td>
           <td class="num">R$ 338,7K</td>
           <td class="num">0,27%</td>
           <td><div class="bar-wrap"><div class="bar-fill" style="width:0%"></div></div></td>
-          <td class="num">R$ 129,1K</td>
-          <td class="num">R$ 183,5K</td>
-          <td class="num">R$ 25,4K</td>
+          <td class="num">R$ 129,1K</td><td class="num">R$ 183,5K</td><td class="num">R$ 25,4K</td><td class="num">R$ 827</td>
         </tr><tr>
           <td>#18</td><td class="loja-nome">NERVE EASE</td>
           <td class="num">R$ 336,0K</td>
           <td class="num">0,26%</td>
           <td><div class="bar-wrap"><div class="bar-fill" style="width:0%"></div></div></td>
-          <td class="num">–</td>
-          <td class="num">–</td>
-          <td class="num">R$ 75,7K</td>
+          <td class="num">–</td><td class="num">–</td><td class="num">R$ 75,7K</td><td class="num">R$ 260,4K</td>
         </tr><tr>
           <td>#19</td><td class="loja-nome">JERTARIS</td>
           <td class="num">R$ 296,6K</td>
           <td class="num">0,23%</td>
           <td><div class="bar-wrap"><div class="bar-fill" style="width:0%"></div></div></td>
-          <td class="num">R$ 101,2K</td>
-          <td class="num">R$ 135,8K</td>
-          <td class="num">R$ 44,7K</td>
+          <td class="num">R$ 101,2K</td><td class="num">R$ 135,8K</td><td class="num">R$ 44,7K</td><td class="num">R$ 14,9K</td>
         </tr><tr>
           <td>#20</td><td class="loja-nome">ALITORYN</td>
           <td class="num">R$ 78,0K</td>
           <td class="num">0,06%</td>
           <td><div class="bar-wrap"><div class="bar-fill" style="width:0%"></div></div></td>
-          <td class="num">R$ 47,0K</td>
-          <td class="num">R$ 25,3K</td>
-          <td class="num">R$ 3,6K</td>
+          <td class="num">R$ 47,0K</td><td class="num">R$ 25,3K</td><td class="num">R$ 3,6K</td><td class="num">R$ 2,1K</td>
         </tr><tr>
           <td>#21</td><td class="loja-nome">KYMEZOL</td>
           <td class="num">R$ 66,2K</td>
           <td class="num">0,05%</td>
           <td><div class="bar-wrap"><div class="bar-fill" style="width:0%"></div></div></td>
-          <td class="num">R$ 22,2K</td>
-          <td class="num">R$ 19,1K</td>
-          <td class="num">R$ 18,7K</td>
+          <td class="num">R$ 22,2K</td><td class="num">R$ 19,1K</td><td class="num">R$ 18,7K</td><td class="num">R$ 6,3K</td>
         </tr><tr>
           <td>#22</td><td class="loja-nome">SCIATILIEF</td>
           <td class="num">R$ 56,0K</td>
           <td class="num">0,04%</td>
           <td><div class="bar-wrap"><div class="bar-fill" style="width:0%"></div></div></td>
-          <td class="num">R$ 20,0K</td>
-          <td class="num">R$ 20,4K</td>
-          <td class="num">R$ 11,5K</td>
+          <td class="num">R$ 20,0K</td><td class="num">R$ 20,4K</td><td class="num">R$ 11,5K</td><td class="num">R$ 4,1K</td>
         </tr><tr>
           <td>#23</td><td class="loja-nome">KORVIZOL</td>
           <td class="num">R$ 34,3K</td>
           <td class="num">0,03%</td>
           <td><div class="bar-wrap"><div class="bar-fill" style="width:0%"></div></div></td>
-          <td class="num">R$ 9,0K</td>
-          <td class="num">R$ 7,6K</td>
-          <td class="num">R$ 14,6K</td>
+          <td class="num">R$ 9,0K</td><td class="num">R$ 7,6K</td><td class="num">R$ 14,6K</td><td class="num">R$ 3,2K</td>
         </tr><tr>
           <td>#24</td><td class="loja-nome">TENURIMA</td>
           <td class="num">R$ 23,2K</td>
           <td class="num">0,02%</td>
           <td><div class="bar-wrap"><div class="bar-fill" style="width:0%"></div></div></td>
-          <td class="num">–</td>
-          <td class="num">–</td>
-          <td class="num">R$ 21,8K</td>
+          <td class="num">–</td><td class="num">–</td><td class="num">R$ 21,8K</td><td class="num">R$ 1,4K</td>
         </tr></tbody>
     </table></div>
   </div>
@@ -3472,11 +3428,17 @@ function buildCharts(page){
         }
       });
     })();
-    // Variacao mensal - linhas de tendencia
+    // Variacao mensal - linhas de tendencia (todas)
     const varFat=opsLbl.map((l,i)=>({label:l,data:opsMeses[l]||[],borderColor:opsColors[i],backgroundColor:opsColors[i]+'22',fill:false}));
     mkLine('cOpsVarFat',meses6,varFat,true);
     const varLuc=opsLbl.map((l,i)=>({label:l,data:lopMeses[l]||[],borderColor:opsColors[i],backgroundColor:opsColors[i]+'22',fill:false}));
     mkLine('cOpsVarLuc',meses6,varLuc,true);
+    // Sem Front End (para ver variacao das demais operacoes)
+    const sfIdx=opsLbl.filter(l=>l!=='Front End');
+    const varFatSF=sfIdx.map((l)=>{const i=opsLbl.indexOf(l);return {label:l,data:opsMeses[l]||[],borderColor:opsColors[i],backgroundColor:opsColors[i]+'22',fill:false}});
+    mkLine('cOpsVarFatSF',meses6,varFatSF,true);
+    const varLucSF=sfIdx.map((l)=>{const i=opsLbl.indexOf(l);return {label:l,data:lopMeses[l]||[],borderColor:opsColors[i],backgroundColor:opsColors[i]+'22',fill:false}});
+    mkLine('cOpsVarLucSF',meses6,varLucSF,true);
   }
   if(page==='lojas'){
     mkBar('cLojasBar',lojasNomes,[{label:'Acumulado',data:lojasAcum,backgroundColor:green+'88'}],true,true);
@@ -4009,14 +3971,18 @@ function renderFcCompara(){
     const worst=recChanges[recChanges.length-1];
     if(worst.diff<0) h+='<div class="kpi-item"><span class="ki-label">Maior queda receita</span><span class="ki-value" style="color:var(--red)">'+worst.name+' ('+fmt(worst.diff)+')</span></div>';
   }
+  // Despesas sao negativas: mais negativo = maior despesa
+  // Aumento de despesa: v2 mais negativo que v1 (diff < 0)
+  // Reducao de despesa: v2 menos negativo que v1 (diff > 0)
   const despChanges=[];const allDespKeys=new Set([...Object.keys(dp1),...Object.keys(dp2)]);
-  allDespKeys.forEach(k=>{const v1=(dp1[k]||{}).total||0,v2=(dp2[k]||{}).total||0;if(v1||v2)despChanges.push({name:k,v1,v2,diff:v2-v1,pct:v1?((v2-v1)/Math.abs(v1)*100):999})});
-  despChanges.sort((a,b)=>a.diff-b.diff);
+  allDespKeys.forEach(k=>{const v1=(dp1[k]||{}).total||0,v2=(dp2[k]||{}).total||0;if(v1||v2)despChanges.push({name:k,v1,v2,diff:v2-v1,absDiff:Math.abs(v2)-Math.abs(v1)})});
+  // absDiff > 0 = gastou mais; absDiff < 0 = gastou menos
+  despChanges.sort((a,b)=>b.absDiff-a.absDiff);
   if(despChanges.length>0){
-    const bigInc=despChanges[despChanges.length-1];
-    if(bigInc.diff>0) h+='<div class="kpi-item"><span class="ki-label">Maior aumento despesa</span><span class="ki-value" style="color:var(--red)">'+bigInc.name+' (+'+fmt(Math.abs(bigInc.diff))+')</span></div>';
-    const bigDec=despChanges[0];
-    if(bigDec.diff<0) h+='<div class="kpi-item"><span class="ki-label">Maior reducao despesa</span><span class="ki-value" style="color:var(--green)">'+bigDec.name+' ('+fmt(bigDec.diff)+')</span></div>';
+    const bigInc=despChanges[0];
+    if(bigInc.absDiff>0) h+='<div class="kpi-item"><span class="ki-label">Maior aumento de despesa</span><span class="ki-value" style="color:var(--red)">'+bigInc.name+' (+'+fmt(bigInc.absDiff)+')</span></div>';
+    const bigDec=despChanges[despChanges.length-1];
+    if(bigDec.absDiff<0) h+='<div class="kpi-item"><span class="ki-label">Maior reducao de despesa</span><span class="ki-value" style="color:var(--green)">'+bigDec.name+' (-'+fmt(Math.abs(bigDec.absDiff))+')</span></div>';
   }
   h+='</div></div>';
 
