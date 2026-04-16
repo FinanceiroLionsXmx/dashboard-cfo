@@ -170,7 +170,7 @@ canvas{width:100%!important}
     <a onclick="navTo('fcanalise',this)"><span class="nav-icon">&#128202;</span> FC - Analise de Caixa</a>
     <a onclick="navTo('fccompara',this)"><span class="nav-icon">&#128260;</span> FC - Comparativo</a>
   </nav>
-  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 16/04/2026 14:29</div>
+  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 16/04/2026 14:39</div>
 </aside>
 
 <!-- MAIN -->
@@ -182,7 +182,7 @@ canvas{width:100%!important}
   </div>
   <div class="topbar-right">
     <div class="badge green">&#9679; Dados Atualizados</div>
-    <div class="badge">&#128197; 16/04/2026 14:29</div>
+    <div class="badge">&#128197; 16/04/2026 14:39</div>
   </div>
 </div>
 
@@ -503,11 +503,22 @@ canvas{width:100%!important}
 <!-- ══ KPIs ══ -->
 <div id="page-kpis" class="page">
 <div class="content">
-  <div class="g4">
-    <div class="kpi accent"><div class="k-label">Faturamento Acumulado</div><div class="k-value">R$ 128,87M</div></div>
-    <div class="kpi"><div class="k-label">Lucro Liquido Acumulado</div><div class="k-value">R$ 11,61M</div></div>
-    <div class="kpi"><div class="k-label">Ponto de Equilibrio Medio</div><div class="k-value">R$ 10,44M</div></div>
-    <div class="kpi"><div class="k-label">Cobertura do PE</div><div class="k-value">4,17x</div><div class="k-delta up">Solido</div></div>
+  <div class="filter-bar" style="margin-bottom:16px">
+    <label>Filtro Mensal:</label>
+    <button class="filter-btn active" data-kpi-mes="all" onclick="filterKpiMes(this)">Todos</button>
+    <button class="filter-btn" data-kpi-mes="0" onclick="filterKpiMes(this)">JAN</button>
+    <button class="filter-btn" data-kpi-mes="1" onclick="filterKpiMes(this)">FEV</button>
+    <button class="filter-btn" data-kpi-mes="2" onclick="filterKpiMes(this)">MAR</button>
+    <button class="filter-btn" data-kpi-mes="3" onclick="filterKpiMes(this)">ABR</button>
+    <button class="filter-btn" data-kpi-mes="4" onclick="filterKpiMes(this)">MAI</button>
+    <button class="filter-btn" data-kpi-mes="5" onclick="filterKpiMes(this)">JUN</button>
+    <span style="margin-left:8px;color:var(--muted);font-size:11px">Selecione um ou mais meses</span>
+  </div>
+  <div class="g4" id="kpiCardsArea">
+    <div class="kpi accent"><div class="k-label">Faturamento</div><div class="k-value" id="kpi-fat">R$ 128,87M</div></div>
+    <div class="kpi"><div class="k-label">Lucro Liquido</div><div class="k-value" id="kpi-ll">R$ 11,61M</div></div>
+    <div class="kpi"><div class="k-label">Ponto de Equilibrio</div><div class="k-value" id="kpi-pe">R$ 10,44M</div></div>
+    <div class="kpi"><div class="k-label">Cobertura do PE</div><div class="k-value" id="kpi-cob">4,17x</div></div>
   </div>
   <div class="g12">
     <div class="card"><div class="card-title">Painel de KPIs - Status</div><div class="kpi-list"><div class="kpi-item">
@@ -3639,6 +3650,40 @@ function switchFatAno(ano,btn){
   ]);
   mkDonut('cFatSplit',['Interno','Afiliados'],[sumA(fiD),sumA(faD)],[blue,green]);
   mkBar('cFatLB',labs,[{label:'Lucro Bruto',data:lbD,backgroundColor:blue+'88'}]);
+}
+
+// ── KPI Filtro Mensal ──
+const kpiFat=fat,kpiLl=ll,kpiLb=lb,kpiCf=cf;
+const kpiPE=[6414756.496147848, 6134708.645657586, 18756189.273852315, 0.0, 0.0, 0.0];
+const kpiCobPE=[5.794344999033198, 4.453398158046755, 2.248436987103261, 0.0, 0.0, 0.0];
+let kpiSelectedMeses=new Set(['all']);
+function filterKpiMes(btn){
+  const mes=btn.dataset.kpiMes;
+  if(mes==='all'){
+    kpiSelectedMeses=new Set(['all']);
+    document.querySelectorAll('[data-kpi-mes]').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+  }else{
+    kpiSelectedMeses.delete('all');
+    document.querySelector('[data-kpi-mes="all"]').classList.remove('active');
+    if(kpiSelectedMeses.has(mes)){kpiSelectedMeses.delete(mes);btn.classList.remove('active');}
+    else{kpiSelectedMeses.add(mes);btn.classList.add('active');}
+    if(kpiSelectedMeses.size===0){kpiSelectedMeses.add('all');document.querySelector('[data-kpi-mes="all"]').classList.add('active');}
+  }
+  updateKpiCards();
+}
+function updateKpiCards(){
+  const isAll=kpiSelectedMeses.has('all');
+  const indices=isAll?[0,1,2,3,4,5]:Array.from(kpiSelectedMeses).map(Number);
+  const sumArr=(arr)=>indices.reduce((s,i)=>s+(arr[i]||0),0);
+  const avgArr=(arr)=>{const vals=indices.filter(i=>arr[i]).map(i=>arr[i]);return vals.length?vals.reduce((a,b)=>a+b,0)/vals.length:0};
+  const fatV=sumArr(kpiFat),llV=sumArr(kpiLl);
+  const peV=avgArr(kpiPE);
+  const cobV=avgArr(kpiCobPE);
+  document.getElementById('kpi-fat').textContent=fmt(fatV);
+  document.getElementById('kpi-ll').textContent=fmt(llV);
+  document.getElementById('kpi-pe').textContent=fmt(peV);
+  document.getElementById('kpi-cob').textContent=cobV.toFixed(2).replace('.',',')+'x';
 }
 
 // ── Init ──
