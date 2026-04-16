@@ -88,6 +88,7 @@ table{width:100%;border-collapse:collapse;font-size:12px}
 thead th{text-align:left;padding:10px 12px;color:var(--muted);font-weight:600;font-size:10px;text-transform:uppercase;letter-spacing:.8px;border-bottom:2px solid var(--border);white-space:nowrap}
 thead th.num{text-align:right}
 tbody td{padding:9px 12px;border-bottom:1px solid var(--border);white-space:nowrap}
+tbody tr:nth-child(even) td{background:rgba(28,31,46,0.4)}
 tbody tr:hover td{background:var(--surface2)}
 tbody tr:last-child td{border-bottom:none}
 .num{text-align:right;font-variant-numeric:tabular-nums}
@@ -206,7 +207,7 @@ if(sessionStorage.getItem('xmx_auth')==='1')document.getElementById('loginOverla
     <a onclick="navTo('fcanalise',this)"><span class="nav-icon">&#128202;</span> FC - Analise de Caixa</a>
     <a onclick="navTo('fccompara',this)"><span class="nav-icon">&#128260;</span> FC - Comparativo</a>
   </nav>
-  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 16/04/2026 16:09</div>
+  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 16/04/2026 16:25</div>
 </aside>
 
 <!-- MAIN -->
@@ -218,7 +219,7 @@ if(sessionStorage.getItem('xmx_auth')==='1')document.getElementById('loginOverla
   </div>
   <div class="topbar-right">
     <div class="badge green">&#9679; Dados Atualizados</div>
-    <div class="badge">&#128197; 16/04/2026 16:09</div>
+    <div class="badge">&#128197; 16/04/2026 16:25</div>
   </div>
 </div>
 
@@ -569,29 +570,23 @@ if(sessionStorage.getItem('xmx_auth')==='1')document.getElementById('loginOverla
   <div class="g12">
     <div class="card"><div class="card-title">Painel de KPIs - Status</div><div class="kpi-list"><div class="kpi-item">
       <span class="ki-label">Margem Bruta Media</span>
-      <div style="display:flex;align-items:center;gap:8px">
-        <span class="ki-value" id="kps-mgb">12,94%</span><span class="pill yellow">Atencao</span>
-      </div></div><div class="kpi-item">
+      <span class="ki-value" id="kps-mgb">12,94%</span>
+    </div><div class="kpi-item">
       <span class="ki-label">Margem Liquida Media</span>
-      <div style="display:flex;align-items:center;gap:8px">
-        <span class="ki-value" id="kps-mgl">11,29%</span><span class="pill green">Saudavel</span>
-      </div></div><div class="kpi-item">
+      <span class="ki-value" id="kps-mgl">11,29%</span>
+    </div><div class="kpi-item">
       <span class="ki-label">Dep. Afiliados</span>
-      <div style="display:flex;align-items:center;gap:8px">
-        <span class="ki-value" id="kps-dep">95,19%</span><span class="pill red">Critico</span>
-      </div></div><div class="kpi-item">
+      <span class="ki-value" id="kps-dep">95,19%</span>
+    </div><div class="kpi-item">
       <span class="ki-label">Custo Fixo / Fat.</span>
-      <div style="display:flex;align-items:center;gap:8px">
-        <span class="ki-value" id="kps-cff">4,33%</span><span class="pill green">Leve</span>
-      </div></div><div class="kpi-item">
+      <span class="ki-value" id="kps-cff">4,33%</span>
+    </div><div class="kpi-item">
       <span class="ki-label">ROAS Interno</span>
-      <div style="display:flex;align-items:center;gap:8px">
-        <span class="ki-value" id="kps-roas">1,33x</span><span class="pill blue">Aceitavel</span>
-      </div></div><div class="kpi-item">
+      <span class="ki-value" id="kps-roas">1,33x</span>
+    </div><div class="kpi-item">
       <span class="ki-label">Ponto de Equilibrio</span>
-      <div style="display:flex;align-items:center;gap:8px">
-        <span class="ki-value" id="kps-pe">R$ 10,42M</span><span class="pill blue">Mensal</span>
-      </div></div></div></div>
+      <span class="ki-value" id="kps-pe">R$ 10,42M</span>
+    </div></div></div>
     <div class="card"><div class="card-title">Eficiencia Operacional por Mes</div><canvas id="cKpiEfic" height="300"></canvas></div>
   </div>
 </div>
