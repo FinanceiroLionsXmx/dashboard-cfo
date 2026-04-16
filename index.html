@@ -168,7 +168,7 @@ canvas{width:100%!important}
 function checkLogin(){
   const p=document.getElementById('loginPass').value;
   const h=Array.from(new TextEncoder().encode(p)).reduce((a,b)=>((a<<5)-a)+b,0).toString(36);
-  if(h==='-7gl8kk'){
+  if(h==='45p8ydgbtjejpgfbq2cc'){
     document.getElementById('loginOverlay').style.display='none';
     sessionStorage.setItem('xmx_auth','1');
   }else{
@@ -206,7 +206,7 @@ if(sessionStorage.getItem('xmx_auth')==='1')document.getElementById('loginOverla
     <a onclick="navTo('fcanalise',this)"><span class="nav-icon">&#128202;</span> FC - Analise de Caixa</a>
     <a onclick="navTo('fccompara',this)"><span class="nav-icon">&#128260;</span> FC - Comparativo</a>
   </nav>
-  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 16/04/2026 16:03</div>
+  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 16/04/2026 16:05</div>
 </aside>
 
 <!-- MAIN -->
@@ -218,7 +218,7 @@ if(sessionStorage.getItem('xmx_auth')==='1')document.getElementById('loginOverla
   </div>
   <div class="topbar-right">
     <div class="badge green">&#9679; Dados Atualizados</div>
-    <div class="badge">&#128197; 16/04/2026 16:03</div>
+    <div class="badge">&#128197; 16/04/2026 16:05</div>
   </div>
 </div>
 
