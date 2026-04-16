@@ -139,9 +139,45 @@ canvas{width:100%!important}
 .sub-row td{border-bottom-color:#1c1f2e!important}
 
 @media(max-width:1200px){.g4{grid-template-columns:repeat(2,1fr)}.g21,.g12{grid-template-columns:1fr}}
+.login-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:var(--bg);z-index:9999;display:flex;align-items:center;justify-content:center}
+.login-box{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:40px;width:360px;text-align:center}
+.login-box h2{color:var(--green);margin-bottom:8px;font-size:20px}
+.login-box p{color:var(--muted);font-size:12px;margin-bottom:24px}
+.login-box input{width:100%;padding:12px 16px;background:var(--surface2);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:14px;font-family:inherit;margin-bottom:16px;outline:none}
+.login-box input:focus{border-color:var(--green)}
+.login-box button{width:100%;padding:12px;background:var(--green);color:#0b0d14;border:none;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit}
+.login-box button:hover{background:var(--green2)}
+.login-error{color:var(--red);font-size:12px;margin-top:8px;display:none}
 </style>
 </head>
 <body>
+
+<!-- LOGIN -->
+<div class="login-overlay" id="loginOverlay">
+  <div class="login-box">
+    <div style="font-size:40px;margin-bottom:16px">&#129409;</div>
+    <h2>XMX Lions</h2>
+    <p>Dashboard CFO - Acesso Restrito</p>
+    <input type="password" id="loginPass" placeholder="Digite a senha" onkeypress="if(event.key==='Enter')checkLogin()"/>
+    <button onclick="checkLogin()">Acessar</button>
+    <div class="login-error" id="loginError">Senha incorreta</div>
+  </div>
+</div>
+
+<script>
+function checkLogin(){
+  const p=document.getElementById('loginPass').value;
+  const h=Array.from(new TextEncoder().encode(p)).reduce((a,b)=>((a<<5)-a)+b,0).toString(36);
+  if(h==='-7gl8kk'){
+    document.getElementById('loginOverlay').style.display='none';
+    sessionStorage.setItem('xmx_auth','1');
+  }else{
+    document.getElementById('loginError').style.display='block';
+    document.getElementById('loginPass').value='';
+  }
+}
+if(sessionStorage.getItem('xmx_auth')==='1')document.getElementById('loginOverlay').style.display='none';
+</script>
 
 <!-- SIDEBAR -->
 <aside>
@@ -170,7 +206,7 @@ canvas{width:100%!important}
     <a onclick="navTo('fcanalise',this)"><span class="nav-icon">&#128202;</span> FC - Analise de Caixa</a>
     <a onclick="navTo('fccompara',this)"><span class="nav-icon">&#128260;</span> FC - Comparativo</a>
   </nav>
-  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 16/04/2026 15:37</div>
+  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 16/04/2026 16:03</div>
 </aside>
 
 <!-- MAIN -->
@@ -182,7 +218,7 @@ canvas{width:100%!important}
   </div>
   <div class="topbar-right">
     <div class="badge green">&#9679; Dados Atualizados</div>
-    <div class="badge">&#128197; 16/04/2026 15:37</div>
+    <div class="badge">&#128197; 16/04/2026 16:03</div>
   </div>
 </div>
 
@@ -214,7 +250,7 @@ canvas{width:100%!important}
     <div class="card">
       <div class="card-title">Resumo Financeiro</div>
       <div class="fin-item"><div style="display:flex;align-items:center"><div class="fin-dot" style="background:var(--green)"></div><div><div class="fin-label">Faturamento Total</div><div class="fin-value" id="fv-fat">R$ 128,89M</div></div></div></div>
-      <div class="fin-item"><div style="display:flex;align-items:center"><div class="fin-dot" style="background:var(--blue)"></div><div><div class="fin-label">Lucro Bruto</div><div class="fin-value" id="fv-lb">R$ 17,17M</div></div></div><span class="pill green" id="fv-mgb">15,17%</span></div>
+      <div class="fin-item"><div style="display:flex;align-items:center"><div class="fin-dot" style="background:var(--blue)"></div><div><div class="fin-label">Lucro Bruto</div><div class="fin-value" id="fv-lb">R$ 17,17M</div></div></div><span class="pill green" id="fv-mgb">12,94%</span></div>
       <div class="fin-item"><div style="display:flex;align-items:center"><div class="fin-dot" style="background:var(--red)"></div><div><div class="fin-label">(-) Custos e Despesas</div><div class="fin-value" id="fv-cf">R$ 5,58M</div></div></div></div>
       <div class="fin-item"><div style="display:flex;align-items:center"><div class="fin-dot" style="background:var(--yellow)"></div><div><div class="fin-label">Lucro Operacional</div><div class="fin-value" id="fv-lo">R$ 11,58M</div></div></div></div>
       <div class="fin-item"><div style="display:flex;align-items:center"><div class="fin-dot" style="background:var(--cyan)"></div><div><div class="fin-label">Lucro Liquido</div><div class="fin-value" id="fv-ll" style="color:var(--green)">R$ 11,62M</div></div></div><span class="pill green" id="fv-mgl">11,29%</span></div>
@@ -483,10 +519,10 @@ canvas{width:100%!important}
     <button class="filter-btn" data-mg-mes="5" onclick="filterMgMes(this)">JUN</button>
   </div>
   <div class="g4">
-    <div class="kpi accent"><div class="k-label">Margem Bruta</div><div class="k-value" id="mg-kpi-bruta">15,17%</div></div>
+    <div class="kpi accent"><div class="k-label">Margem Bruta</div><div class="k-value" id="mg-kpi-bruta">12,94%</div></div>
     <div class="kpi"><div class="k-label">Margem Operacional</div><div class="k-value" id="mg-kpi-op">8,33%</div></div>
     <div class="kpi"><div class="k-label">Margem Liquida</div><div class="k-value" id="mg-kpi-liq">11,29%</div></div>
-    <div class="kpi"><div class="k-label">ROAS Interno</div><div class="k-value" id="mg-kpi-roas">1,34x</div></div>
+    <div class="kpi"><div class="k-label">ROAS Interno</div><div class="k-value" id="mg-kpi-roas">1,33x</div></div>
   </div>
   <div class="full card"><div class="card-title">Evolucao das Margens por Mes (%) <span class="tag">2026</span></div><canvas id="cMgEvol" height="150"></canvas></div>
   <div class="g2">
@@ -534,7 +570,7 @@ canvas{width:100%!important}
     <div class="card"><div class="card-title">Painel de KPIs - Status</div><div class="kpi-list"><div class="kpi-item">
       <span class="ki-label">Margem Bruta Media</span>
       <div style="display:flex;align-items:center;gap:8px">
-        <span class="ki-value" id="kps-mgb">15,17%</span><span class="pill yellow">Atencao</span>
+        <span class="ki-value" id="kps-mgb">12,94%</span><span class="pill yellow">Atencao</span>
       </div></div><div class="kpi-item">
       <span class="ki-label">Margem Liquida Media</span>
       <div style="display:flex;align-items:center;gap:8px">
@@ -550,7 +586,7 @@ canvas{width:100%!important}
       </div></div><div class="kpi-item">
       <span class="ki-label">ROAS Interno</span>
       <div style="display:flex;align-items:center;gap:8px">
-        <span class="ki-value" id="kps-roas">1,34x</span><span class="pill blue">Aceitavel</span>
+        <span class="ki-value" id="kps-roas">1,33x</span><span class="pill blue">Aceitavel</span>
       </div></div><div class="kpi-item">
       <span class="ki-label">Ponto de Equilibrio</span>
       <div style="display:flex;align-items:center;gap:8px">
