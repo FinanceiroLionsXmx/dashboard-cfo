@@ -208,7 +208,7 @@ if(sessionStorage.getItem('xmx_auth')==='1')document.getElementById('loginOverla
     <a onclick="navTo('fcanalise',this)"><span class="nav-icon">&#128202;</span> FC - Analise de Caixa</a>
     <a onclick="navTo('fccompara',this)"><span class="nav-icon">&#128260;</span> FC - Comparativo</a>
   </nav>
-  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 22/04/2026 14:21</div>
+  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 22/04/2026 14:26</div>
 </aside>
 
 <!-- MAIN -->
@@ -220,7 +220,7 @@ if(sessionStorage.getItem('xmx_auth')==='1')document.getElementById('loginOverla
   </div>
   <div class="topbar-right">
     <div class="badge green">&#9679; Dados Atualizados</div>
-    <div class="badge">&#128197; 22/04/2026 14:21</div>
+    <div class="badge">&#128197; 22/04/2026 14:26</div>
   </div>
 </div>
 
@@ -229,6 +229,10 @@ if(sessionStorage.getItem('xmx_auth')==='1')document.getElementById('loginOverla
 <div class="content">
   
   <div class="filter-bar" id="filterBar">
+    <label>Ano:</label>
+    <button class="filter-btn active" data-ov-ano="2026" onclick="switchOverviewAno(this)">2026</button>
+    <button class="filter-btn" data-ov-ano="2025" onclick="switchOverviewAno(this)">2025</button>
+    <span style="margin:0 12px;color:var(--border)">|</span>
     <label>Filtro Mensal:</label>
     <button class="filter-btn active" data-mes="all" onclick="toggleFilter(this)">Todos</button>
     <button class="filter-btn" data-mes="0" onclick="toggleFilter(this)">JAN</button>
@@ -237,6 +241,12 @@ if(sessionStorage.getItem('xmx_auth')==='1')document.getElementById('loginOverla
     <button class="filter-btn" data-mes="3" onclick="toggleFilter(this)">ABR</button>
     <button class="filter-btn" data-mes="4" onclick="toggleFilter(this)">MAI</button>
     <button class="filter-btn" data-mes="5" onclick="toggleFilter(this)">JUN</button>
+    <button class="filter-btn" data-mes="6" onclick="toggleFilter(this)" style="display:none">JUL</button>
+    <button class="filter-btn" data-mes="7" onclick="toggleFilter(this)" style="display:none">AGO</button>
+    <button class="filter-btn" data-mes="8" onclick="toggleFilter(this)" style="display:none">SET</button>
+    <button class="filter-btn" data-mes="9" onclick="toggleFilter(this)" style="display:none">OUT</button>
+    <button class="filter-btn" data-mes="10" onclick="toggleFilter(this)" style="display:none">NOV</button>
+    <button class="filter-btn" data-mes="11" onclick="toggleFilter(this)" style="display:none">DEZ</button>
   </div>
   <div class="g4" id="kpiCards">
     <div class="kpi accent"><div class="k-icon">&#128176;</div><div class="k-label">Faturamento Acumulado</div><div class="k-value" id="kv-fat">R$ 0</div><div class="k-bar"><div class="k-bar-fill" style="width:75%"></div></div></div>
@@ -3668,6 +3678,33 @@ const rg26fat=[37169312.22347, 27676165.22441, 42784506.211498, 32443672.5663840
 const rg25fat=[5199438.037225001, 7455988.1905000005, 14312523.771540001, 14781231.73683, 16936026.4379, 16942415.660170004, 41458017.66036, 44026452.946430005, 21236274.656524997, 40481049.5794, 52220025.33398499, 40462873.294505015],rg25lb=[952953.752496493, 1165682.472705276, 2916734.7544946037, 2558677.461928892, 1932571.035644533, 2736835.105515914, 6401281.074992899, 6902034.156611154, 3352289.034967401, 5072273.42922687, 7320831.6648601685, 8020272.76365339],rg25ll=[381850.23348071, 512251.4581470633, 2091487.6771592323, 1584473.9477295615, 1339572.8533255775, 2147576.140998801, 5012417.80881928, 5626930.072619631, 2310689.168472316, 3458117.764963925, 5823970.73353638, 6415234.597845117],rg25cf=[461031.41000000003, 518787.41, 488346.0, 678660.2899999999, 369774.16, 273137.42, 649475.3300000002, 477876.04000000004, 654389.55, 1028276.4099999999, 651259.16, 678646.58];
 const rg25fi=[3703710.0533637246, 4223160.1457539275, 10219721.318757635, 7625291.790709919, 8569035.827158522, 8387220.732166026, 25681712.316019777, 23141522.32026211, 3982531.8275770633, 5102548.071255433, 2841384.9347547144, 2726387.1010675505],rg25fa=[1495727.9838612755, 3232828.044746073, 4092802.452782366, 7155939.946120081, 8366990.610741479, 8555194.928003976, 15776305.344340226, 20884930.626167893, 17253742.828947935, 35378501.50814457, 49378640.39923028, 37736486.193437465],rg26fi=[1856919.5034633703, 1405227.4553060443, 1645490.466092013, 1426987.7814440608, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],rg26fa=[35312392.72000663, 26270937.769103955, 41139015.74540599, 31016684.78493994, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0];
 
+// ── Overview: Filtro Ano + Mensal ──
+let ovAno='2026';
+// Retorna datasets do ano selecionado
+function getOvDatasets(){
+  if(ovAno==='2025'){
+    return {fat:rg25fat,lb:rg25lb,ll:rg25ll,cf:rg25cf,lo:rg25fat.map((f,i)=>((rg25lb[i]||0)-(rg25cf[i]||0))),labels:meses12,maxIdx:12};
+  }
+  return {fat:fat,lb:lb,ll:ll,cf:cf,lo:lo,labels:meses6,maxIdx:6};
+}
+
+function switchOverviewAno(btn){
+  ovAno=btn.dataset.ovAno;
+  document.querySelectorAll('[data-ov-ano]').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  // Mostrar meses extras se 2025
+  const extras=[6,7,8,9,10,11];
+  extras.forEach(i=>{
+    const b=document.querySelector('[data-mes="'+i+'"]');
+    if(b)b.style.display=ovAno==='2025'?'':'none';
+  });
+  // Reset filter para todos
+  activeFilters=new Set(['all']);
+  document.querySelectorAll('#filterBar [data-mes]').forEach(b=>b.classList.remove('active'));
+  document.querySelector('#filterBar [data-mes="all"]').classList.add('active');
+  applyFilter();
+}
+
 // ── Filtro Mensal ──
 let activeFilters=new Set(['all']);
 function toggleFilter(btn){
@@ -3687,11 +3724,13 @@ function toggleFilter(btn){
 }
 
 function applyFilter(){
+  const ds=getOvDatasets();
   const isAll=activeFilters.has('all');
-  const indices=isAll?[0,1,2,3,4,5]:Array.from(activeFilters).map(Number);
-  // Recalculate KPIs
+  const allIdx=Array.from({length:ds.maxIdx},(_,i)=>i);
+  const indices=isAll?allIdx:Array.from(activeFilters).map(Number).filter(i=>i<ds.maxIdx);
   const sumArr=(arr)=>indices.reduce((s,i)=>s+(arr[i]||0),0);
-  const fatF=sumArr(fat),lbF=sumArr(lb),llF=sumArr(ll),cfF=sumArr(cf),loF=sumArr(lo);
+  const fatF=sumArr(ds.fat),lbF=sumArr(ds.lb),llF=sumArr(ds.ll),cfF=sumArr(ds.cf);
+  const loF=lbF-cfF; // Lucro operacional = LB - Custos e Despesas
   const mgF=fatF?((lbF/fatF)*100):0;
   const mlF=fatF?((llF/fatF)*100):0;
   // Update KPI cards
@@ -3708,14 +3747,15 @@ function applyFilter(){
   document.getElementById('fv-mgl').textContent=mlF.toFixed(2).replace('.',',')+'%';
   // Rebuild overview chart
   const cO=document.getElementById('cOverFat');
-  if(cO&&cO._chart){
-    const fD=indices.map(i=>fat[i]||0),lD=indices.map(i=>lb[i]||0),llD=indices.map(i=>ll[i]||0);
-    const labs=indices.map(i=>meses6[i]);
-    cO._chart.data.labels=labs;
-    cO._chart.data.datasets[0].data=fD;
-    cO._chart.data.datasets[1].data=lD;
-    cO._chart.data.datasets[2].data=llD;
-    cO._chart.update();
+  if(cO){
+    if(cO._chart){cO._chart.destroy();cO._chart=null};
+    const fD=indices.map(i=>ds.fat[i]||0),lD=indices.map(i=>ds.lb[i]||0),llD=indices.map(i=>ds.ll[i]||0);
+    const labs=indices.map(i=>ds.labels[i]);
+    mkBar('cOverFat',labs,[
+      {label:'Faturamento',data:fD,backgroundColor:green+'77'},
+      {label:'Lucro Bruto',data:lD,backgroundColor:blue+'88'},
+      {label:'Lucro Liquido',data:llD,type:'line',borderColor:yellow,backgroundColor:yellow+'22',fill:true},
+    ]);
   }
 }
 
