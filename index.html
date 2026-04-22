@@ -7,6 +7,12 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--surface3);border-radius:5px;border:2px solid var(--bg)}
+::-webkit-scrollbar-thumb:hover{background:var(--border)}
+::-webkit-scrollbar-corner{background:var(--bg)}
+*{scrollbar-color:var(--surface3) var(--bg);scrollbar-width:thin}
 :root{
   --bg:#0b0d14;--surface:#13151f;--surface2:#1c1f2e;--surface3:#242840;
   --border:#2d3150;--green:#00d68f;--green2:#00b37e;--red:#ff4d6a;
@@ -208,7 +214,7 @@ if(sessionStorage.getItem('xmx_auth')==='1')document.getElementById('loginOverla
     <a onclick="navTo('fcanalise',this)"><span class="nav-icon">&#128202;</span> FC - Analise de Caixa</a>
     <a onclick="navTo('fccompara',this)"><span class="nav-icon">&#128260;</span> FC - Comparativo</a>
   </nav>
-  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 22/04/2026 14:26</div>
+  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 22/04/2026 14:49</div>
 </aside>
 
 <!-- MAIN -->
@@ -220,7 +226,7 @@ if(sessionStorage.getItem('xmx_auth')==='1')document.getElementById('loginOverla
   </div>
   <div class="topbar-right">
     <div class="badge green">&#9679; Dados Atualizados</div>
-    <div class="badge">&#128197; 22/04/2026 14:26</div>
+    <div class="badge">&#128197; 22/04/2026 14:49</div>
   </div>
 </div>
 
@@ -358,8 +364,17 @@ if(sessionStorage.getItem('xmx_auth')==='1')document.getElementById('loginOverla
   </div>
   <!-- Fat x Lucro Comparativo simplificado -->
   <div class="full card" style="margin-bottom:20px">
-    <div class="card-title">Faturamento vs Lucro Bruto por Operacao <span class="tag">Acumulado</span></div>
+    <div class="card-title">Faturamento vs Lucro Bruto por Operacao <span class="tag" id="opsFatLucTag">Acumulado</span></div>
     <canvas id="cOpsFatLuc" height="130"></canvas>
+  </div>
+  <!-- Variacao entre meses selecionados (aparece apenas com 2+ meses) -->
+  <div class="full card" id="cardOpsVarMeses" style="margin-bottom:20px;display:none">
+    <div class="card-title">Variacao entre Meses Selecionados <span class="tag" id="opsVarMesesTag">Fat + Lucro Bruto</span></div>
+    <div class="g2">
+      <div><div style="color:var(--muted);font-size:12px;margin-bottom:8px;text-transform:uppercase;letter-spacing:1px">Faturamento por Mes</div><canvas id="cOpsVarMesesFat" height="180"></canvas></div>
+      <div><div style="color:var(--muted);font-size:12px;margin-bottom:8px;text-transform:uppercase;letter-spacing:1px">Lucro Bruto por Mes</div><canvas id="cOpsVarMesesLB" height="180"></canvas></div>
+    </div>
+    <div id="opsDeltaList" style="margin-top:16px;display:flex;flex-direction:column;gap:6px"></div>
   </div>
   <div class="full card" style="margin-bottom:20px">
     <div class="card-title">Alertas de Variacao <span class="tag">Mes a Mes (variacoes &gt; 20%)</span></div>
@@ -548,17 +563,17 @@ if(sessionStorage.getItem('xmx_auth')==='1')document.getElementById('loginOverla
           <td class="num">3,60%</td>
           <td></td>
           <td class="num">R$ 2,54M</td><td class="num">R$ 1,43M</td><td class="num">R$ 1,31M</td><td class="num">–</td>
-        </tr><tr style="background:var(--surface2);border-top:2px solid var(--border)">
-          <td></td><td class="loja-nome" style="color:var(--yellow)"><em>SMS - NUTRA SELECT</em> <span style="font-size:10px;color:var(--muted)">(backend)</span></td>
+        </tr><tr style="background:var(--surface3);border-top:2px solid var(--green)">
+          <td></td><td><strong>TOTAL GERAL (c/ SalesBound)</strong></td>
+          <td class="num"><strong>R$ 146,30M</strong></td>
+          <td></td><td></td>
+          <td class="num"><strong>R$ 41,26M</strong></td><td class="num"><strong>R$ 28,72M</strong></td><td class="num"><strong>R$ 43,79M</strong></td><td class="num"><strong>R$ 32,54M</strong></td>
+        </tr><tr style="background:var(--surface2);opacity:0.85">
+          <td></td><td class="loja-nome" style="color:var(--muted)"><em>SMS - NUTRA SELECT</em> <span style="font-size:10px;color:var(--muted)">(nao somado)</span></td>
           <td class="num">R$ 342,8K</td>
-          <td class="num">0,25%</td>
+          <td class="num">-</td>
           <td></td>
           <td class="num">R$ 129,1K</td><td class="num">R$ 183,5K</td><td class="num">R$ 25,4K</td><td class="num">R$ 4,9K</td>
-        </tr><tr style="background:var(--surface3);border-top:2px solid var(--green)">
-          <td></td><td><strong>TOTAL GERAL (c/ backend)</strong></td>
-          <td class="num"><strong>R$ 146,65M</strong></td>
-          <td></td><td></td>
-          <td class="num"><strong>R$ 41,39M</strong></td><td class="num"><strong>R$ 28,90M</strong></td><td class="num"><strong>R$ 43,82M</strong></td><td class="num"><strong>R$ 32,54M</strong></td>
         </tr></tbody>
     </table></div>
   </div>
@@ -3776,6 +3791,10 @@ function navTo(page,el){
   if(!window.rendered[page]){window.rendered[page]=true;buildCharts(page);}
 }
 
+function hideLegend(id){
+  const el=document.getElementById(id);
+  if(el&&el._chart){el._chart.options.plugins.legend.display=false;el._chart.update();}
+}
 function mkBar(id,labels,datasets,money,horizontal){
   money=money!==false;horizontal=horizontal===true;
   const el=document.getElementById(id);
@@ -3876,10 +3895,13 @@ function buildCharts(page){
     // Ordenar LB por grandeza (maior primeiro)
     const lbSort=opsLbl.map((l,i)=>({label:l,val:opsLB[i],color:opsColors[i]})).sort((a,b)=>b.val-a.val);
     mkBar('cOpsLBBar',lbSort.map(x=>x.label),[{label:'Lucro Bruto',data:lbSort.map(x=>x.val),backgroundColor:lbSort.map(x=>x.color)}],true,true);
+    hideLegend('cOpsLBBar');
     // Ordenar Margem por grandeza (maior primeiro)
     const mgSort=opsLbl.map((l,i)=>({label:l,val:opsMg[i],color:opsColors[i]})).sort((a,b)=>b.val-a.val);
     mkBar('cOpsMgBar',mgSort.map(x=>x.label),[{label:'Margem %',data:mgSort.map(x=>x.val),backgroundColor:mgSort.map(x=>x.color)}],false,true);
+    hideLegend('cOpsMgBar');
     mkBar('cOpsBar2',opsLbl,[{label:'Faturamento',data:opsVal,backgroundColor:opsColors}],true,true);
+    hideLegend('cOpsBar2');
     // Evolucao empilhada - Faturamento
     (function(){
       const ds=opsLbl.map((l,i)=>{return {label:l,data:opsMeses[l]||[],backgroundColor:opsColors[i],borderRadius:4}});
@@ -3940,11 +3962,11 @@ function buildCharts(page){
       {label:'Lucro Bruto',data:opsLB,backgroundColor:blue+'88'},
     ],true,false);
 
-    // Alertas de variacao mes a mes
+    // Alertas de variacao - resumo executivo (top por impacto)
     (function(){
       const box=document.getElementById('opsAlertas');
       if(!box)return;
-      let html='';
+      const alerts=[];
       opsLbl.forEach(l=>{
         const vals=opsMeses[l]||[];
         const lvals=lopMeses[l]||[];
@@ -3952,22 +3974,43 @@ function buildCharts(page){
           if(!vals[i-1]||!vals[i])continue;
           const varF=((vals[i]-vals[i-1])/Math.abs(vals[i-1])*100);
           if(Math.abs(varF)>=20){
-            const cor=varF>0?'var(--green)':'var(--red)';
-            const icone=varF>0?'&#9650;':'&#9660;';
-            html+='<div style="padding:8px 12px;border-left:3px solid '+cor+';background:var(--surface2);margin-bottom:6px;border-radius:4px;font-size:12px"><div style="color:'+cor+';font-weight:600">'+icone+' '+l+' - Faturamento</div><div style="color:var(--muted);font-size:11px">'+meses6[i-1]+' -> '+meses6[i]+': '+varF.toFixed(1)+'% ('+fmt(vals[i-1])+' -> '+fmt(vals[i])+')</div></div>';
+            const impacto=Math.abs(vals[i]-vals[i-1]);
+            alerts.push({op:l,tipo:'Faturamento',de:vals[i-1],pa:vals[i],pct:varF,mi:i-1,mf:i,impacto});
           }
         }
         for(let i=1;i<lvals.length;i++){
           if(!lvals[i-1]||!lvals[i])continue;
           const varL=((lvals[i]-lvals[i-1])/Math.abs(lvals[i-1])*100);
           if(Math.abs(varL)>=30){
-            const cor=varL>0?'var(--green)':'var(--red)';
-            const icone=varL>0?'&#9650;':'&#9660;';
-            html+='<div style="padding:8px 12px;border-left:3px solid '+cor+';background:var(--surface2);margin-bottom:6px;border-radius:4px;font-size:12px"><div style="color:'+cor+';font-weight:600">'+icone+' '+l+' - Lucro Bruto</div><div style="color:var(--muted);font-size:11px">'+meses6[i-1]+' -> '+meses6[i]+': '+varL.toFixed(1)+'% ('+fmt(lvals[i-1])+' -> '+fmt(lvals[i])+')</div></div>';
+            const impacto=Math.abs(lvals[i]-lvals[i-1]);
+            alerts.push({op:l,tipo:'Lucro Bruto',de:lvals[i-1],pa:lvals[i],pct:varL,mi:i-1,mf:i,impacto});
           }
         }
       });
-      if(!html)html='<div style="color:var(--muted);padding:20px;text-align:center">Nenhuma variacao significativa detectada</div>';
+      // Ordenar por impacto financeiro absoluto (maior primeiro)
+      alerts.sort((a,b)=>b.impacto-a.impacto);
+      const criticos=alerts.filter(a=>a.pct<0).length;
+      const positivos=alerts.filter(a=>a.pct>0).length;
+      const top=alerts.slice(0,6);
+      let html='';
+      if(alerts.length){
+        html+='<div style="display:flex;gap:12px;margin-bottom:12px;flex-wrap:wrap">';
+        html+='<div style="flex:1;min-width:120px;padding:10px;background:var(--surface2);border-radius:6px;border-left:3px solid var(--red)"><div style="color:var(--muted);font-size:10px">QUEDAS CRITICAS</div><div style="color:var(--red);font-size:20px;font-weight:700">'+criticos+'</div></div>';
+        html+='<div style="flex:1;min-width:120px;padding:10px;background:var(--surface2);border-radius:6px;border-left:3px solid var(--green)"><div style="color:var(--muted);font-size:10px">ALTAS RELEVANTES</div><div style="color:var(--green);font-size:20px;font-weight:700">'+positivos+'</div></div>';
+        html+='<div style="flex:1;min-width:120px;padding:10px;background:var(--surface2);border-radius:6px;border-left:3px solid var(--yellow)"><div style="color:var(--muted);font-size:10px">TOTAL DETECTADO</div><div style="color:var(--yellow);font-size:20px;font-weight:700">'+alerts.length+'</div></div>';
+        html+='</div>';
+        html+='<div style="color:var(--muted);font-size:11px;margin-bottom:6px;text-transform:uppercase;letter-spacing:1px">Top '+top.length+' por impacto financeiro</div>';
+        top.forEach(a=>{
+          const cor=a.pct>0?'var(--green)':'var(--red)';
+          const icone=a.pct>0?'&#9650;':'&#9660;';
+          html+='<div style="padding:10px 12px;border-left:3px solid '+cor+';background:var(--surface2);margin-bottom:6px;border-radius:4px;display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:12px">';
+          html+='<div><div style="color:'+cor+';font-weight:600">'+icone+' '+a.op+' - '+a.tipo+'</div><div style="color:var(--muted);font-size:11px">'+meses6[a.mi]+' -> '+meses6[a.mf]+': '+fmt(a.de)+' -> '+fmt(a.pa)+'</div></div>';
+          html+='<div style="text-align:right"><div style="color:'+cor+';font-weight:700;font-size:14px">'+a.pct.toFixed(1)+'%</div><div style="color:var(--muted);font-size:10px">impacto '+fmt(a.impacto)+'</div></div>';
+          html+='</div>';
+        });
+      }else{
+        html='<div style="color:var(--muted);padding:20px;text-align:center">Nenhuma variacao significativa detectada</div>';
+      }
       box.innerHTML=html;
     })();
   }
@@ -4383,14 +4426,58 @@ function rebuildOpsCharts(){
   // LB ordenado
   const lbSort2=opsLbl.map((l,i)=>({label:l,val:filtOpsLB[i],color:opsColors[i]})).sort((a,b)=>b.val-a.val);
   mkBar('cOpsLBBar',lbSort2.map(x=>x.label),[{label:'Lucro Bruto',data:lbSort2.map(x=>x.val),backgroundColor:lbSort2.map(x=>x.color)}],true,true);
+  hideLegend('cOpsLBBar');
   // Margem ordenada
   const mgSort2=opsLbl.map((l,i)=>({label:l,val:filtOpsMg[i],color:opsColors[i]})).sort((a,b)=>b.val-a.val);
   mkBar('cOpsMgBar',mgSort2.map(x=>x.label),[{label:'Margem %',data:mgSort2.map(x=>x.val),backgroundColor:mgSort2.map(x=>x.color)}],false,true);
+  hideLegend('cOpsMgBar');
   mkBar('cOpsBar2',opsLbl,[{label:'Faturamento',data:filtOpsVal,backgroundColor:opsColors}],true,true);
+  hideLegend('cOpsBar2');
   mkBar('cOpsFatLuc',opsLbl,[
     {label:'Faturamento',data:filtOpsVal,backgroundColor:green+'88'},
     {label:'Lucro Bruto',data:filtOpsLB,backgroundColor:blue+'88'},
   ],true,false);
+  // Atualizar tag
+  const ft=document.getElementById('opsFatLucTag');
+  if(ft){const lbl=isAll?'Acumulado':indices.map(i=>meses6[i]).join(' + ');ft.textContent=lbl;}
+  // Mostrar chart de variacao entre meses (apenas se 2+ meses selecionados)
+  const varCard=document.getElementById('cardOpsVarMeses');
+  ['cOpsVarMesesFat','cOpsVarMesesLB'].forEach(id=>{
+    const el=document.getElementById(id);if(el&&el._chart){el._chart.destroy();el._chart=null}
+  });
+  if(!isAll&&indices.length>=2){
+    varCard.style.display='block';
+    const mesesSel=indices.slice().sort((a,b)=>a-b);
+    const labsSel=mesesSel.map(i=>meses6[i]);
+    const colorsSel=[green,blue,yellow,purple,red,cyan];
+    const dsFat=mesesSel.map((mi,idx)=>({label:labsSel[idx],data:opsLbl.map(l=>(opsMeses[l]||[])[mi]||0),backgroundColor:colorsSel[idx%colorsSel.length]+'aa',borderRadius:4}));
+    const dsLB=mesesSel.map((mi,idx)=>({label:labsSel[idx],data:opsLbl.map(l=>(lopMeses[l]||[])[mi]||0),backgroundColor:colorsSel[idx%colorsSel.length]+'aa',borderRadius:4}));
+    mkBar('cOpsVarMesesFat',opsLbl,dsFat,true,false);
+    mkBar('cOpsVarMesesLB',opsLbl,dsLB,true,false);
+    document.getElementById('opsVarMesesTag').textContent=labsSel.join(' -> ');
+    // Lista de deltas entre primeiro e ultimo mes selecionado
+    const mi=mesesSel[0],mf=mesesSel[mesesSel.length-1];
+    const delt=document.getElementById('opsDeltaList');
+    if(delt){
+      let html='<div style="color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px">Delta '+meses6[mi]+' &rarr; '+meses6[mf]+'</div>';
+      opsLbl.forEach((l,i)=>{
+        const f0=(opsMeses[l]||[])[mi]||0,f1=(opsMeses[l]||[])[mf]||0;
+        const b0=(lopMeses[l]||[])[mi]||0,b1=(lopMeses[l]||[])[mf]||0;
+        const vF=f0?((f1-f0)/Math.abs(f0)*100):0;
+        const vL=b0?((b1-b0)/Math.abs(b0)*100):0;
+        const cF=vF>=0?'var(--green)':'var(--red)';
+        const cL=vL>=0?'var(--green)':'var(--red)';
+        html+='<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;padding:8px 12px;background:var(--surface2);border-radius:4px;font-size:12px;align-items:center">';
+        html+='<div style="color:var(--text);font-weight:600">'+l+'</div>';
+        html+='<div><span style="color:var(--muted);font-size:10px">FAT</span> '+fmt(f0)+' &rarr; '+fmt(f1)+' <span style="color:'+cF+';font-weight:700">'+(vF>=0?'+':'')+vF.toFixed(1)+'%</span></div>';
+        html+='<div><span style="color:var(--muted);font-size:10px">LB</span> '+fmt(b0)+' &rarr; '+fmt(b1)+' <span style="color:'+cL+';font-weight:700">'+(vL>=0?'+':'')+vL.toFixed(1)+'%</span></div>';
+        html+='</div>';
+      });
+      delt.innerHTML=html;
+    }
+  }else{
+    varCard.style.display='none';
+  }
 }
 
 // ── Produtos por Plataforma ──
