@@ -214,7 +214,7 @@ if(sessionStorage.getItem('xmx_auth')==='1')document.getElementById('loginOverla
     <a onclick="navTo('fcanalise',this)"><span class="nav-icon">&#128202;</span> FC - Analise de Caixa</a>
     <a onclick="navTo('fccompara',this)"><span class="nav-icon">&#128260;</span> FC - Comparativo</a>
   </nav>
-  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 22/04/2026 16:23</div>
+  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 22/04/2026 16:29</div>
 </aside>
 
 <!-- MAIN -->
@@ -226,7 +226,7 @@ if(sessionStorage.getItem('xmx_auth')==='1')document.getElementById('loginOverla
   </div>
   <div class="topbar-right">
     <div class="badge green">&#9679; Dados Atualizados</div>
-    <div class="badge">&#128197; 22/04/2026 16:23</div>
+    <div class="badge">&#128197; 22/04/2026 16:29</div>
   </div>
 </div>
 
@@ -282,6 +282,13 @@ if(sessionStorage.getItem('xmx_auth')==='1')document.getElementById('loginOverla
       <tr><td>&#129351;</td><td class="loja-nome">PRESGERA</td><td class="num">R$ 35,72M</td><td class="num">25,95%</td></tr><tr><td>&#129352;</td><td class="loja-nome">STEEL POWER</td><td class="num">R$ 26,83M</td><td class="num">19,49%</td></tr><tr><td>&#129353;</td><td class="loja-nome">GARAHERB</td><td class="num">R$ 23,96M</td><td class="num">17,40%</td></tr><tr><td>#4</td><td class="loja-nome">MEMORY-ON</td><td class="num">R$ 9,39M</td><td class="num">6,82%</td></tr><tr><td>#5</td><td class="loja-nome">MAHGRYN</td><td class="num">R$ 6,31M</td><td class="num">4,59%</td></tr>
       </tbody></table>
     </div>
+  </div>
+  <!-- ── Tendencia Preditiva ── -->
+  <div class="full card" style="margin-top:20px">
+    <div class="card-title">Tendencia Preditiva <span class="tag" id="predTag">Regressao Linear - Proximos 3 Meses</span></div>
+    <div id="predKpis" class="g4" style="margin-bottom:16px"></div>
+    <canvas id="cPredicao" height="120"></canvas>
+    <div id="predNota" style="color:var(--muted);font-size:11px;margin-top:10px;padding:8px;background:var(--surface2);border-radius:4px;border-left:3px solid var(--yellow)"></div>
   </div>
 </div>
 </div>
@@ -3650,6 +3657,100 @@ function applyFilter(){
       {label:'Lucro Liquido',data:llD,type:'line',borderColor:yellow,backgroundColor:yellow+'22',fill:true},
     ]);
   }
+  // Atualizar tendencia preditiva com base no filtro ativo
+  renderPrediction(ds,indices);
+}
+
+// ── Tendencia Preditiva (regressao linear simples) ──
+function linearFit(vals){
+  // Retorna {a, b, r2} para y = a + b*x onde x=0..n-1
+  const n=vals.length;
+  if(n<2)return {a:vals[0]||0,b:0,r2:0};
+  let sx=0,sy=0,sxy=0,sxx=0,syy=0;
+  for(let i=0;i<n;i++){sx+=i;sy+=vals[i];sxy+=i*vals[i];sxx+=i*i;syy+=vals[i]*vals[i]};
+  const den=(n*sxx-sx*sx)||1;
+  const b=(n*sxy-sx*sy)/den;
+  const a=(sy-b*sx)/n;
+  const meanY=sy/n;
+  let ssRes=0,ssTot=0;
+  for(let i=0;i<n;i++){const pred=a+b*i;ssRes+=(vals[i]-pred)**2;ssTot+=(vals[i]-meanY)**2};
+  const r2=ssTot?1-ssRes/ssTot:0;
+  return {a,b,r2};
+}
+function projectNext(vals,steps){
+  const f=linearFit(vals);
+  const arr=[];
+  for(let i=0;i<steps;i++){arr.push(Math.max(0,f.a+f.b*(vals.length+i)))};
+  return {forecast:arr,r2:f.r2,trend:f.b};
+}
+function renderPrediction(ds,indices){
+  const box=document.getElementById('cPredicao');
+  if(!box)return;
+  // Base historica: apenas meses filtrados com faturamento > 0
+  const hist=indices.filter(i=>(ds.fat[i]||0)>0);
+  const fatH=hist.map(i=>ds.fat[i]);
+  const lbH=hist.map(i=>ds.lb[i]);
+  const llH=hist.map(i=>ds.ll[i]);
+  const labsH=hist.map(i=>ds.labels[i]);
+  const tagEl=document.getElementById('predTag');
+  const notaEl=document.getElementById('predNota');
+  const kpiBox=document.getElementById('predKpis');
+  if(hist.length<2){
+    if(tagEl)tagEl.textContent='Dados insuficientes (minimo 2 meses)';
+    if(box._chart){box._chart.destroy();box._chart=null};
+    if(kpiBox)kpiBox.innerHTML='<div style="color:var(--muted);padding:20px;text-align:center;grid-column:1/-1">Selecione pelo menos 2 meses para gerar a projecao</div>';
+    if(notaEl)notaEl.textContent='';
+    return;
+  }
+  const steps=3;
+  const pFat=projectNext(fatH,steps);
+  const pLb =projectNext(lbH,steps);
+  const pLl =projectNext(llH,steps);
+  // Rotulos futuros: continuar a partir do ultimo indice historico
+  const mesesAll=(ds.labels||[]).slice();
+  const lastHistIdx=hist[hist.length-1];
+  const futuros=[];
+  for(let i=1;i<=steps;i++){
+    const idx=lastHistIdx+i;
+    futuros.push(idx<mesesAll.length?mesesAll[idx]:'M+'+i);
+  }
+  const labsFull=labsH.concat(futuros);
+  // Series com separacao histor/proj
+  const fatHistFull=fatH.concat(Array(steps).fill(null));
+  const lbHistFull=lbH.concat(Array(steps).fill(null));
+  const llHistFull=llH.concat(Array(steps).fill(null));
+  const fatProjFull=Array(fatH.length-1).fill(null).concat([fatH[fatH.length-1]],pFat.forecast);
+  const lbProjFull =Array(lbH.length-1).fill(null).concat([lbH[lbH.length-1]],pLb.forecast);
+  const llProjFull =Array(llH.length-1).fill(null).concat([llH[llH.length-1]],pLl.forecast);
+  if(box._chart){box._chart.destroy();box._chart=null};
+  box._chart=new Chart(box,{type:'line',data:{labels:labsFull,datasets:[
+    {label:'Faturamento (real)',data:fatHistFull,borderColor:green,backgroundColor:green+'22',fill:false,pointRadius:4},
+    {label:'Faturamento (proj)',data:fatProjFull,borderColor:green,borderDash:[6,4],backgroundColor:'transparent',fill:false,pointRadius:4,pointStyle:'triangle'},
+    {label:'Lucro Bruto (real)',data:lbHistFull,borderColor:blue,backgroundColor:blue+'22',fill:false,pointRadius:4},
+    {label:'Lucro Bruto (proj)',data:lbProjFull,borderColor:blue,borderDash:[6,4],backgroundColor:'transparent',fill:false,pointRadius:4,pointStyle:'triangle'},
+    {label:'Lucro Liquido (real)',data:llHistFull,borderColor:yellow,backgroundColor:yellow+'22',fill:false,pointRadius:4},
+    {label:'Lucro Liquido (proj)',data:llProjFull,borderColor:yellow,borderDash:[6,4],backgroundColor:'transparent',fill:false,pointRadius:4,pointStyle:'triangle'},
+  ]},options:{responsive:true,interaction:{mode:'index',intersect:false},plugins:{legend:{position:'top'},tooltip:{callbacks:{label:c=>' '+c.dataset.label+': '+fmt(c.parsed.y)}}},scales:{x:{grid:{display:false}},y:{grid:{color:'#2d315044'},ticks:{callback:v=>fmt(v)}}}}});
+  // KPIs de projecao
+  const fmtDelta=(hist,proj)=>{const d=proj-hist;const p=hist?d/hist*100:0;return {val:d,pct:p,cor:d>=0?'var(--green)':'var(--red)'}};
+  const ultimo=fatH.length-1;
+  const fKpi=fmtDelta(fatH[ultimo],pFat.forecast[steps-1]);
+  const lKpi=fmtDelta(lbH[ultimo],pLb.forecast[steps-1]);
+  const llKpi=fmtDelta(llH[ultimo],pLl.forecast[steps-1]);
+  const qualidade=(pFat.r2+pLb.r2+pLl.r2)/3;
+  let q='';
+  if(qualidade>0.7)q='<span class="pill green">Alta confianca</span>';
+  else if(qualidade>0.3)q='<span class="pill yellow">Confianca moderada</span>';
+  else q='<span class="pill red" style="background:#ff4d6a20;color:var(--red);border:1px solid #ff4d6a40">Baixa confianca</span>';
+  let h='';
+  h+='<div class="kpi"><div class="k-label">Faturamento (M+'+steps+')</div><div class="k-value" style="font-size:18px">'+fmt(pFat.forecast[steps-1])+'</div><div class="k-delta" style="color:'+fKpi.cor+'">'+(fKpi.pct>=0?'+':'')+fKpi.pct.toFixed(1)+'% vs '+labsH[ultimo]+'</div></div>';
+  h+='<div class="kpi"><div class="k-label">Lucro Bruto (M+'+steps+')</div><div class="k-value" style="font-size:18px">'+fmt(pLb.forecast[steps-1])+'</div><div class="k-delta" style="color:'+lKpi.cor+'">'+(lKpi.pct>=0?'+':'')+lKpi.pct.toFixed(1)+'% vs '+labsH[ultimo]+'</div></div>';
+  h+='<div class="kpi"><div class="k-label">Lucro Liquido (M+'+steps+')</div><div class="k-value" style="font-size:18px">'+fmt(pLl.forecast[steps-1])+'</div><div class="k-delta" style="color:'+llKpi.cor+'">'+(llKpi.pct>=0?'+':'')+llKpi.pct.toFixed(1)+'% vs '+labsH[ultimo]+'</div></div>';
+  h+='<div class="kpi"><div class="k-label">Qualidade do Modelo</div><div class="k-value" style="font-size:18px">'+(qualidade*100).toFixed(0)+'%</div><div class="k-delta">'+q+'</div></div>';
+  if(kpiBox)kpiBox.innerHTML=h;
+  if(tagEl)tagEl.textContent='Regressao Linear - '+hist.length+' meses base, '+steps+' meses projetados';
+  const trend=pFat.trend>0?'ascendente':'descendente';
+  if(notaEl)notaEl.textContent='Modelo: regressao linear simples sobre '+hist.length+' pontos. R² medio = '+qualidade.toFixed(2)+'. Tendencia '+trend+' baseada nos meses selecionados. Projecao sujeita a sazonalidade e eventos nao modelados.';
 }
 
 // ── Navegacao ──
