@@ -214,7 +214,7 @@ if(sessionStorage.getItem('xmx_auth')==='1')document.getElementById('loginOverla
     <a onclick="navTo('fcanalise',this)"><span class="nav-icon">&#128202;</span> FC - Analise de Caixa</a>
     <a onclick="navTo('fccompara',this)"><span class="nav-icon">&#128260;</span> FC - Comparativo</a>
   </nav>
-  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 22/04/2026 16:29</div>
+  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 22/04/2026 17:28</div>
 </aside>
 
 <!-- MAIN -->
@@ -226,7 +226,7 @@ if(sessionStorage.getItem('xmx_auth')==='1')document.getElementById('loginOverla
   </div>
   <div class="topbar-right">
     <div class="badge green">&#9679; Dados Atualizados</div>
-    <div class="badge">&#128197; 22/04/2026 16:29</div>
+    <div class="badge">&#128197; 22/04/2026 17:28</div>
   </div>
 </div>
 
@@ -256,8 +256,8 @@ if(sessionStorage.getItem('xmx_auth')==='1')document.getElementById('loginOverla
   </div>
   <div class="g4" id="kpiCards">
     <div class="kpi accent"><div class="k-icon">&#128176;</div><div class="k-label">Faturamento Acumulado</div><div class="k-value" id="kv-fat">R$ 140,07M</div><div class="k-bar"><div class="k-bar-fill" style="width:75%"></div></div></div>
-    <div class="kpi"><div class="k-icon">&#9989;</div><div class="k-label">Lucro Liquido</div><div class="k-value" id="kv-ll">R$ 12,98M</div><div class="k-bar"><div class="k-bar-fill" style="width:50%;background:var(--blue)"></div></div></div>
-    <div class="kpi"><div class="k-icon">&#128200;</div><div class="k-label">Margem Liquida Media</div><div class="k-value" id="kv-mg">12,54%</div><div class="k-bar"><div class="k-bar-fill" style="width:50%;background:var(--green)"></div></div></div>
+    <div class="kpi"><div class="k-icon">&#9989;</div><div class="k-label">Lucro Liquido</div><div class="k-value" id="kv-ll">R$ 13,34M</div><div class="k-bar"><div class="k-bar-fill" style="width:38%;background:var(--blue)"></div></div></div>
+    <div class="kpi"><div class="k-icon">&#128200;</div><div class="k-label">Margem Liquida Media</div><div class="k-value" id="kv-mg">9,69%</div><div class="k-bar"><div class="k-bar-fill" style="width:38%;background:var(--green)"></div></div></div>
     <div class="kpi"><div class="k-icon">&#127942;</div><div class="k-label">Melhor Mes</div><div class="k-value">JAN</div><div class="k-delta warn">R$ 6,29M Lucro Liq.</div></div>
   </div>
   <div class="g21">
@@ -271,7 +271,7 @@ if(sessionStorage.getItem('xmx_auth')==='1')document.getElementById('loginOverla
       <div class="fin-item"><div style="display:flex;align-items:center"><div class="fin-dot" style="background:var(--blue)"></div><div><div class="fin-label">Lucro Bruto</div><div class="fin-value" id="fv-lb">R$ 19,27M</div></div></div><span class="pill green" id="fv-mgb">13,94%</span></div>
       <div class="fin-item"><div style="display:flex;align-items:center"><div class="fin-dot" style="background:var(--red)"></div><div><div class="fin-label">(-) Custos e Despesas</div><div class="fin-value" id="fv-cf">R$ 5,58M</div></div></div></div>
       <div class="fin-item"><div style="display:flex;align-items:center"><div class="fin-dot" style="background:var(--yellow)"></div><div><div class="fin-label">Lucro Operacional</div><div class="fin-value" id="fv-lo">R$ 13,68M</div></div></div></div>
-      <div class="fin-item"><div style="display:flex;align-items:center"><div class="fin-dot" style="background:var(--cyan)"></div><div><div class="fin-label">Lucro Liquido</div><div class="fin-value" id="fv-ll" style="color:var(--green)">R$ 12,98M</div></div></div><span class="pill green" id="fv-mgl">12,54%</span></div>
+      <div class="fin-item"><div style="display:flex;align-items:center"><div class="fin-dot" style="background:var(--cyan)"></div><div><div class="fin-label">Lucro Liquido</div><div class="fin-value" id="fv-ll" style="color:var(--green)">R$ 13,34M</div></div></div><span class="pill green" id="fv-mgl">9,69%</span></div>
     </div>
   </div>
   <div class="g3">
@@ -598,7 +598,7 @@ if(sessionStorage.getItem('xmx_auth')==='1')document.getElementById('loginOverla
   <div class="g4">
     <div class="kpi accent"><div class="k-label">Margem Bruta</div><div class="k-value" id="mg-kpi-bruta">13,94%</div></div>
     <div class="kpi"><div class="k-label">Margem Operacional</div><div class="k-value" id="mg-kpi-op">9,94%</div></div>
-    <div class="kpi"><div class="k-label">Margem Liquida</div><div class="k-value" id="mg-kpi-liq">12,54%</div></div>
+    <div class="kpi"><div class="k-label">Margem Liquida</div><div class="k-value" id="mg-kpi-liq">9,69%</div></div>
     <div class="kpi"><div class="k-label">ROAS Interno</div><div class="k-value" id="mg-kpi-roas">1,33x</div></div>
   </div>
   <div class="full card"><div class="card-title">Evolucao das Margens por Mes (%) <span class="tag">2026</span></div><canvas id="cMgEvol" height="150"></canvas></div>
@@ -639,7 +639,7 @@ if(sessionStorage.getItem('xmx_auth')==='1')document.getElementById('loginOverla
   </div>
   <div class="g4" id="kpiCardsArea">
     <div class="kpi accent"><div class="k-label">Faturamento</div><div class="k-value" id="kpi-fat">R$ 140,07M</div><div class="k-delta" id="kpi-fat-var"></div></div>
-    <div class="kpi"><div class="k-label">Lucro Liquido</div><div class="k-value" id="kpi-ll">R$ 12,98M</div><div class="k-delta" id="kpi-ll-var"></div></div>
+    <div class="kpi"><div class="k-label">Lucro Liquido</div><div class="k-value" id="kpi-ll">R$ 13,34M</div><div class="k-delta" id="kpi-ll-var"></div></div>
     <div class="kpi"><div class="k-label">Ponto de Equilibrio</div><div class="k-value" id="kpi-pe">R$ 9,24M</div><div class="k-delta" id="kpi-pe-var"></div></div>
     <div class="kpi"><div class="k-label">Cobertura do PE</div><div class="k-value" id="kpi-cob">4,54x</div><div class="k-delta" id="kpi-cob-var"></div></div>
   </div>
@@ -654,7 +654,7 @@ if(sessionStorage.getItem('xmx_auth')==='1')document.getElementById('loginOverla
       <span class="ki-value" id="kps-mgb">13,94%</span>
     </div><div class="kpi-item">
       <span class="ki-label">Margem Liquida Media</span>
-      <span class="ki-value" id="kps-mgl">12,54%</span>
+      <span class="ki-value" id="kps-mgl">9,69%</span>
     </div><div class="kpi-item">
       <span class="ki-label">Dep. Afiliados</span>
       <span class="ki-value" id="kps-dep">95,48%</span>
