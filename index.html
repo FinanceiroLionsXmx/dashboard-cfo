@@ -207,7 +207,7 @@ if(sessionStorage.getItem('xmx_auth')==='1')document.getElementById('loginOverla
     <a onclick="navTo('fcanalise',this)"><span class="nav-icon">&#128202;</span> FC - Analise de Caixa</a>
     <a onclick="navTo('fccompara',this)"><span class="nav-icon">&#128260;</span> FC - Comparativo</a>
   </nav>
-  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 22/04/2026 13:51</div>
+  <div class="sidebar-footer"><span class="update-dot"></span>Atualizado: 22/04/2026 13:54</div>
 </aside>
 
 <!-- MAIN -->
@@ -219,7 +219,7 @@ if(sessionStorage.getItem('xmx_auth')==='1')document.getElementById('loginOverla
   </div>
   <div class="topbar-right">
     <div class="badge green">&#9679; Dados Atualizados</div>
-    <div class="badge">&#128197; 22/04/2026 13:51</div>
+    <div class="badge">&#128197; 22/04/2026 13:54</div>
   </div>
 </div>
 
@@ -334,6 +334,21 @@ if(sessionStorage.getItem('xmx_auth')==='1')document.getElementById('loginOverla
   <div class="g2">
     <div class="card"><div class="card-title">Variacao Mensal - Lucro Bruto <span class="tag">Todas Operacoes</span></div><canvas id="cOpsVarLuc" height="220"></canvas></div>
     <div class="card"><div class="card-title">Variacao Mensal - Lucro Bruto (Sem Front End) <span class="tag">Demais Operacoes</span></div><canvas id="cOpsVarLucSF" height="220"></canvas></div>
+  </div>
+  <!-- NOVAS VISOES -->
+  <div class="full card" style="margin-bottom:20px">
+    <div class="card-title">Faturamento vs Lucro por Operacao - Mensal <span class="tag">Comparativo</span></div>
+    <canvas id="cOpsFatLuc" height="140"></canvas>
+  </div>
+  <div class="g2">
+    <div class="card">
+      <div class="card-title">Rentabilidade Comparativa <span class="tag">Fat x Lucro</span></div>
+      <canvas id="cOpsScatter" height="280"></canvas>
+    </div>
+    <div class="card">
+      <div class="card-title">Alertas de Variacao <span class="tag">Mes a Mes</span></div>
+      <div id="opsAlertas" style="max-height:320px;overflow-y:auto"></div>
+    </div>
   </div>
   <div class="full card" style="margin-bottom:20px">
     <div class="card-title">Faturamento por Operacao - Mensal <span class="tag">Variacao %</span></div>
@@ -591,10 +606,16 @@ if(sessionStorage.getItem('xmx_auth')==='1')document.getElementById('loginOverla
     <span style="margin-left:8px;color:var(--muted);font-size:11px">Selecione um ou mais meses</span>
   </div>
   <div class="g4" id="kpiCardsArea">
-    <div class="kpi accent"><div class="k-label">Faturamento</div><div class="k-value" id="kpi-fat">R$ 0</div></div>
-    <div class="kpi"><div class="k-label">Lucro Liquido</div><div class="k-value" id="kpi-ll">R$ 140,07M</div></div>
-    <div class="kpi"><div class="k-label">Ponto de Equilibrio</div><div class="k-value" id="kpi-pe">R$ 0</div></div>
-    <div class="kpi"><div class="k-label">Cobertura do PE</div><div class="k-value" id="kpi-cob">9238960,01x</div></div>
+    <div class="kpi accent"><div class="k-label">Faturamento</div><div class="k-value" id="kpi-fat">R$ 0</div><div class="k-delta" id="kpi-fat-var"></div></div>
+    <div class="kpi"><div class="k-label">Lucro Liquido</div><div class="k-value" id="kpi-ll">R$ 140,07M</div><div class="k-delta" id="kpi-ll-var"></div></div>
+    <div class="kpi"><div class="k-label">Ponto de Equilibrio</div><div class="k-value" id="kpi-pe">R$ 0</div><div class="k-delta" id="kpi-pe-var"></div></div>
+    <div class="kpi"><div class="k-label">Cobertura do PE</div><div class="k-value" id="kpi-cob">9238960,01x</div><div class="k-delta" id="kpi-cob-var"></div></div>
+  </div>
+  <div class="g4" style="margin-bottom:20px">
+    <div class="kpi"><div class="k-label">Crescimento MoM Faturamento</div><div class="k-value" id="kpi-mom-fat" style="font-size:20px">-</div></div>
+    <div class="kpi"><div class="k-label">Crescimento MoM Lucro</div><div class="k-value" id="kpi-mom-ll" style="font-size:20px">-</div></div>
+    <div class="kpi"><div class="k-label">Concentracao Top Loja</div><div class="k-value" id="kpi-conc" style="font-size:20px">-</div><div class="k-delta warn" id="kpi-conc-nome"></div></div>
+    <div class="kpi"><div class="k-label">Score Saude Financeira</div><div class="k-value" id="kpi-score" style="font-size:20px">-</div><div class="k-delta" id="kpi-score-label"></div></div>
   </div>
   <div class="g12">
     <div class="card"><div class="card-title">Painel de KPIs - Status</div><div class="kpi-list"><div class="kpi-item">
@@ -617,6 +638,10 @@ if(sessionStorage.getItem('xmx_auth')==='1')document.getElementById('loginOverla
       <span class="ki-value" id="kps-pe">R$ 0</span>
     </div></div></div>
     <div class="card"><div class="card-title">Eficiencia Operacional por Mes</div><canvas id="cKpiEfic" height="300"></canvas></div>
+  </div>
+  <div class="full card" style="margin-top:20px">
+    <div class="card-title">Alertas de Variacao Critica <span class="tag">&gt; 20% MoM</span></div>
+    <div id="kpiAlertas"></div>
   </div>
 </div>
 </div>
@@ -3849,6 +3874,70 @@ function buildCharts(page){
     mkLine('cOpsVarFatSF',meses6,varFatSF,true);
     const varLucSF=sfIdx.map((l)=>{const i=opsLbl.indexOf(l);return {label:l,data:lopMeses[l]||[],borderColor:opsColors[i],backgroundColor:opsColors[i]+'22',fill:false}});
     mkLine('cOpsVarLucSF',meses6,varLucSF,true);
+
+    // Faturamento vs Lucro por Operacao (barras agrupadas mensal)
+    (function(){
+      const datasets=[];
+      opsLbl.forEach((l,i)=>{
+        datasets.push({label:l+' - Fat',data:opsMeses[l]||[],backgroundColor:opsColors[i%opsColors.length]+'99',borderRadius:4,stack:'fat_'+i});
+        datasets.push({label:l+' - Lucro',data:lopMeses[l]||[],backgroundColor:opsColors[i%opsColors.length],borderRadius:4,stack:'luc_'+i});
+      });
+      const el=document.getElementById('cOpsFatLuc');if(!el||el._chart)return;
+      el._chart=new Chart(el,{type:'bar',data:{labels:meses6,datasets:datasets},
+        options:{responsive:true,
+          plugins:{legend:{position:'top',labels:{boxWidth:10,font:{size:10}}},
+            tooltip:{mode:'index',intersect:false,callbacks:{label:c=>c.dataset.label+': '+fmt(c.parsed.y)}}},
+          scales:{x:{grid:{display:false}},y:{ticks:{callback:v=>fmt(v)}}}
+        }
+      });
+    })();
+
+    // Scatter: Rentabilidade comparativa
+    (function(){
+      const pontos=opsLbl.map((l,i)=>({x:opsVal[i],y:opsLB[i],label:l,color:opsColors[i]}));
+      const el=document.getElementById('cOpsScatter');if(!el||el._chart)return;
+      el._chart=new Chart(el,{type:'scatter',data:{datasets:pontos.map(p=>({label:p.label,data:[{x:p.x,y:p.y}],backgroundColor:p.color,pointRadius:12,pointHoverRadius:16}))},
+        options:{responsive:true,
+          plugins:{legend:{position:'top',labels:{boxWidth:10,font:{size:10}}},
+            tooltip:{callbacks:{label:c=>c.dataset.label+': Fat '+fmt(c.parsed.x)+' | Lucro '+fmt(c.parsed.y)+' | Margem '+(c.parsed.x?(c.parsed.y/c.parsed.x*100).toFixed(1):0)+'%'}}},
+          scales:{
+            x:{title:{display:true,text:'Faturamento Acumulado',color:'#6b7194'},ticks:{callback:v=>fmt(v)},grid:{color:'#2d315044'}},
+            y:{title:{display:true,text:'Lucro Bruto Acumulado',color:'#6b7194'},ticks:{callback:v=>fmt(v)},grid:{color:'#2d315044'}}
+          }
+        }
+      });
+    })();
+
+    // Alertas de variacao mes a mes
+    (function(){
+      const box=document.getElementById('opsAlertas');
+      if(!box)return;
+      let html='';
+      opsLbl.forEach(l=>{
+        const vals=opsMeses[l]||[];
+        const lvals=lopMeses[l]||[];
+        for(let i=1;i<vals.length;i++){
+          if(!vals[i-1]||!vals[i])continue;
+          const varF=((vals[i]-vals[i-1])/Math.abs(vals[i-1])*100);
+          if(Math.abs(varF)>=20){
+            const cor=varF>0?'var(--green)':'var(--red)';
+            const icone=varF>0?'&#9650;':'&#9660;';
+            html+='<div style="padding:8px 12px;border-left:3px solid '+cor+';background:var(--surface2);margin-bottom:6px;border-radius:4px;font-size:12px"><div style="color:'+cor+';font-weight:600">'+icone+' '+l+' - Faturamento</div><div style="color:var(--muted);font-size:11px">'+meses6[i-1]+' -> '+meses6[i]+': '+varF.toFixed(1)+'% ('+fmt(vals[i-1])+' -> '+fmt(vals[i])+')</div></div>';
+          }
+        }
+        for(let i=1;i<lvals.length;i++){
+          if(!lvals[i-1]||!lvals[i])continue;
+          const varL=((lvals[i]-lvals[i-1])/Math.abs(lvals[i-1])*100);
+          if(Math.abs(varL)>=30){
+            const cor=varL>0?'var(--green)':'var(--red)';
+            const icone=varL>0?'&#9650;':'&#9660;';
+            html+='<div style="padding:8px 12px;border-left:3px solid '+cor+';background:var(--surface2);margin-bottom:6px;border-radius:4px;font-size:12px"><div style="color:'+cor+';font-weight:600">'+icone+' '+l+' - Lucro Bruto</div><div style="color:var(--muted);font-size:11px">'+meses6[i-1]+' -> '+meses6[i]+': '+varL.toFixed(1)+'% ('+fmt(lvals[i-1])+' -> '+fmt(lvals[i])+')</div></div>';
+          }
+        }
+      });
+      if(!html)html='<div style="color:var(--muted);padding:20px;text-align:center">Nenhuma variacao significativa detectada</div>';
+      box.innerHTML=html;
+    })();
   }
   if(page==='lojas'){
     mkBar('cLojasBar',lojasNomes,[{label:'Acumulado',data:lojasAcum,backgroundColor:green+'88'}],true,true);
@@ -4145,10 +4234,84 @@ function updateKpiCards(){
   const el4=document.getElementById('kps-cff');if(el4)el4.textContent=cfFatV.toFixed(2).replace('.',',')+'%';
   const el5=document.getElementById('kps-roas');if(el5)el5.textContent=roasV.toFixed(2).replace('.',',')+'x';
   const el6=document.getElementById('kps-pe');if(el6)el6.textContent=fmt(peV);
+
+  // ── KPIs NOVOS ──
+  // Variacoes MoM (comparar ultimo vs penultimo mes dos indices selecionados)
+  const getVar=(arr)=>{
+    const vals=indices.filter(i=>arr[i]).map(i=>arr[i]);
+    if(vals.length<2)return null;
+    const last=vals[vals.length-1],prev=vals[vals.length-2];
+    return prev?((last-prev)/Math.abs(prev)*100):null;
+  };
+  const setVar=(id,val,inv)=>{
+    const el=document.getElementById(id);if(!el)return;
+    if(val===null){el.textContent='';return}
+    const good=inv?val<0:val>0;
+    el.className='k-delta '+(good?'up':'down');
+    el.textContent=(val>0?'+':'')+val.toFixed(1)+'% MoM';
+  };
+  setVar('kpi-fat-var',getVar(kpiFat),false);
+  setVar('kpi-ll-var',getVar(kpiLl),false);
+  setVar('kpi-pe-var',getVar(kpiPE),true);
+  setVar('kpi-cob-var',getVar(kpiCobPE),false);
+
+  // Crescimento MoM (ultimo vs penultimo nos indices)
+  const momFat=getVar(kpiFat);
+  const momLl=getVar(kpiLl);
+  const mfEl=document.getElementById('kpi-mom-fat');
+  if(mfEl){mfEl.textContent=momFat===null?'-':(momFat>0?'+':'')+momFat.toFixed(1)+'%';mfEl.className='k-value '+(momFat>0?'pos':'neg');mfEl.style.fontSize='20px'};
+  const mlEl=document.getElementById('kpi-mom-ll');
+  if(mlEl){mlEl.textContent=momLl===null?'-':(momLl>0?'+':'')+momLl.toFixed(1)+'%';mlEl.className='k-value '+(momLl>0?'pos':'neg');mlEl.style.fontSize='20px'};
+
+  // Concentracao - Top loja (% do total)
+  if(typeof lojasAcum!=='undefined'&&lojasAcum.length){
+    const top=lojasAcum[0];
+    const totLojas=lojasAcum.reduce((a,b)=>a+b,0);
+    const concPct=totLojas?(top/totLojas*100):0;
+    const cEl=document.getElementById('kpi-conc');if(cEl){cEl.textContent=concPct.toFixed(1)+'%';cEl.style.fontSize='20px'};
+    const cnEl=document.getElementById('kpi-conc-nome');if(cnEl&&typeof lojasNomes!=='undefined'&&lojasNomes[0])cnEl.textContent=lojasNomes[0];
+  }
+
+  // Score de Saude Financeira (composto simples)
+  const scoreMgl=Math.min(100,Math.max(0,mgl*4));       // margem liquida (25% = 100pts)
+  const scoreMgb=Math.min(100,Math.max(0,mgb*2));       // margem bruta (50% = 100pts)
+  const scoreCfl=Math.min(100,Math.max(0,100-cfFatV*10)); // custo fixo/fat (inverso)
+  const scoreFinal=(scoreMgl*0.4+scoreMgb*0.3+scoreCfl*0.3).toFixed(0);
+  const sEl=document.getElementById('kpi-score');
+  if(sEl){sEl.textContent=scoreFinal+'/100';sEl.style.fontSize='20px';sEl.className='k-value '+(scoreFinal>70?'pos':scoreFinal>40?'warn-text':'neg')};
+  const slEl=document.getElementById('kpi-score-label');
+  if(slEl){const lbl=scoreFinal>70?'Saudavel':scoreFinal>40?'Atencao':'Critico';slEl.textContent=lbl;slEl.className='k-delta '+(scoreFinal>70?'up':scoreFinal>40?'warn':'down')};
+
+  // Alertas de variacao critica (>20% MoM)
+  const aEl=document.getElementById('kpiAlertas');
+  if(aEl){
+    let alertasHtml='';
+    const checks=[
+      {name:'Faturamento',arr:kpiFat,inv:false},
+      {name:'Lucro Liquido',arr:kpiLl,inv:false},
+      {name:'Lucro Bruto',arr:kpiLb,inv:false},
+      {name:'Custos e Despesas',arr:kpiCf,inv:true},
+      {name:'Ponto de Equilibrio',arr:kpiPE,inv:true},
+    ];
+    checks.forEach(c=>{
+      for(let i=1;i<c.arr.length;i++){
+        if(!c.arr[i-1]||!c.arr[i])continue;
+        const v=((c.arr[i]-c.arr[i-1])/Math.abs(c.arr[i-1])*100);
+        if(Math.abs(v)>=20){
+          const good=c.inv?v<0:v>0;
+          const cor=good?'var(--green)':'var(--red)';
+          const ic=v>0?'&#9650;':'&#9660;';
+          alertasHtml+='<div style="padding:10px 14px;border-left:3px solid '+cor+';background:var(--surface2);margin-bottom:8px;border-radius:4px"><div style="color:'+cor+';font-weight:600;font-size:13px">'+ic+' '+c.name+' - '+meses6[i-1]+' para '+meses6[i]+'</div><div style="color:var(--muted);font-size:12px;margin-top:4px">Variacao de '+(v>0?'+':'')+v.toFixed(1)+'% ('+fmt(c.arr[i-1])+' -> '+fmt(c.arr[i])+')</div></div>';
+        }
+      }
+    });
+    aEl.innerHTML=alertasHtml||'<div style="color:var(--muted);padding:20px;text-align:center">Nenhuma variacao critica detectada (limite 20%)</div>';
+  }
 }
 
 // ── Init ──
 buildCharts('overview');
+try{updateKpiCards();}catch(e){}
 </script>
 <script>
 
